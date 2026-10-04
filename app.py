@@ -17,6 +17,50 @@ except ImportError:
 # --- Config & Setup ---
 st.set_page_config(page_title="Ghana Financial Regulations Assistant", page_icon="🏦", layout="wide")
 
+# Minimal Custom CSS (The rest is handled properly by .streamlit/config.toml)
+st.markdown("""
+<style>
+    /* Hide Streamlit default elements for a cleaner look */
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+
+    /* Elegant Title */
+    h1 {
+        background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 700 !important;
+        letter-spacing: -1px;
+        padding-bottom: 0.5rem;
+    }
+    
+    /* Subtitle styling */
+    .stMarkdown p {
+        font-size: 1.05rem;
+    }
+    
+    /* Force buttons to wrap text so they don't truncate */
+    .stButton > button {
+        white-space: normal !important;
+        height: auto !important;
+        min-height: 80px;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.2s ease;
+    }
+    .stButton > button:hover {
+        border-color: #38bdf8;
+        transform: translateY(-2px);
+    }
+    
+    /* Highlighted terms (bold) */
+    strong {
+        color: #38bdf8 !important;
+    }
+</style>
+""", unsafe_allow_html=True)
+
 st.title("Ghana Financial Regulations Assistant 🏦")
 st.markdown("Ask questions about Ghana's mobile money industry, banking capital, and cybersecurity directives.")
 
@@ -46,9 +90,9 @@ with st.sidebar:
     
     st.header("Source Documents")
     st.markdown("""
-    - `The-State-of-the-Industry-Report-2026_English.pdf`
-    - `BANKS-AND-SPECIALISED-DEPOSIT-ACT-2016.pdf`
-    - `Cyber-Information-Security-Directive-2026.pdf`
+    - The-State-of-the-Industry-Report-2026_English.pdf
+    - BANKS-AND-SPECIALISED-DEPOSIT-ACT-2016.pdf
+    - Cyber-Information-Security-Directive-2026.pdf
     """)
     
     if st.button("Clear Chat"):

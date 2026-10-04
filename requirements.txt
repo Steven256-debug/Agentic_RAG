@@ -1,0 +1,7 @@
+PyMuPDF
+requests
+tiktoken
+sentence-transformers
+chromadb
+google-genai
+streamlit

@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+
+# Data
+data/raw_pdfs/
+data/chunks/
+data/vectordb/
+data/eval_results.json
+
+# IDE
+.vscode/
+.idea/

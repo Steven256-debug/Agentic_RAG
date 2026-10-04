@@ -181,14 +181,14 @@ if prompt:
                 if routing_filter:
                     results = collection.query(
                         query_embeddings=[query_embedding],
-                        n_results=5,
+                        n_results=15,
                         include=["metadatas", "documents", "distances"],
                         where=routing_filter
                     )
                 else:
                     results = collection.query(
                         query_embeddings=[query_embedding],
-                        n_results=5,
+                        n_results=15,
                         include=["metadatas", "documents", "distances"]
                     )
                 
@@ -216,14 +216,14 @@ if prompt:
                         if routing_filter:
                             results = collection.query(
                                 query_embeddings=[query_embedding],
-                                n_results=5,
+                                n_results=15,
                                 include=["metadatas", "documents", "distances"],
                                 where=routing_filter
                             )
                         else:
                             results = collection.query(
                                 query_embeddings=[query_embedding],
-                                n_results=5,
+                                n_results=15,
                                 include=["metadatas", "documents", "distances"]
                             )
                         

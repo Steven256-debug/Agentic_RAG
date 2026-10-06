@@ -36,8 +36,8 @@ def call_llm(prompt, system=None, model="gemini-3.5-flash"):
             )
             return response.text.strip()
         except Exception as e:
-            if "429" in str(e) and attempt < max_retries - 1:
-                print("Rate limit hit. Waiting 35 seconds before retrying...")
+            if ("429" in str(e) or "503" in str(e)) and attempt < max_retries - 1:
+                print("API overloaded or Rate limit hit. Waiting 35 seconds before retrying...")
                 time.sleep(35)
                 continue
             raise e

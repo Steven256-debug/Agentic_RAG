@@ -89,11 +89,17 @@ with st.sidebar:
     use_corrective = st.toggle("Enable Corrective RAG (Step 7)", value=True, help="Self-reflects on retrieved chunks and reformulates query if insufficient.")
     
     st.header("Source Documents")
-    st.markdown("""
-    - The-State-of-the-Industry-Report-2026_English.pdf
-    - BANKS-AND-SPECIALISED-DEPOSIT-ACT-2016.pdf
-    - Cyber-Information-Security-Directive-2026.pdf
-    """)
+    
+    raw_dir = os.path.join(os.path.dirname(__file__), "data", "raw")
+    if os.path.exists(raw_dir):
+        available_pdfs = [f for f in os.listdir(raw_dir) if f.endswith('.pdf')]
+    else:
+        available_pdfs = []
+        
+    st.markdown(f"**{len(available_pdfs)} Documents Loaded**")
+    with st.expander("View Document List"):
+        for pdf in available_pdfs:
+            st.markdown(f"- {pdf}")
     
     if st.button("Clear Chat"):
         st.session_state.messages = []
@@ -152,24 +158,17 @@ if prompt:
                 reformulated = False
                 
                 routing_filter = None
-                if use_routing:
+                if use_routing and available_pdfs:
+                    pdf_list_str = "\n".join([f"- {pdf}" for pdf in available_pdfs])
                     routing_prompt = (
                         f"Given this question: '{query}' and this list of available documents:\n"
-                        "- The-State-of-the-Industry-Report-2026_English.pdf (Mobile money industry trends and GSMA guidelines)\n"
-                        "- BANKS-AND-SPECIALISED-DEPOSIT-ACT-2016.pdf (Banking regulations, capital adequacy, and liquidity requirements)\n"
-                        "- Cyber-Information-Security-Directive-2026.pdf (Cybersecurity rules and information security directives)\n\n"
+                        f"{pdf_list_str}\n\n"
                         "Which document(s) is this question most likely about? Reply with EXACT filename(s) (comma-separated if multiple) or ALL if unclear. Output ONLY the filename(s) or ALL without quotes or preamble."
                     )
                     route_text = call_llm(routing_prompt, model="gemini-3.5-flash-lite")
                     
-                    valid_files = [
-                        "The-State-of-the-Industry-Report-2026_English.pdf",
-                        "BANKS-AND-SPECIALISED-DEPOSIT-ACT-2016.pdf",
-                        "Cyber-Information-Security-Directive-2026.pdf"
-                    ]
-                    
                     if "ALL" not in route_text.upper():
-                        selected = [f for f in valid_files if f in route_text]
+                        selected = [f for f in available_pdfs if f in route_text]
                         if selected:
                             if len(selected) == 1:
                                 routing_filter = {"source_filename": selected[0]}

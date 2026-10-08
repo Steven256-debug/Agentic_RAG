@@ -66,20 +66,6 @@ st.markdown("""
         background-color: rgba(56, 189, 248, 0.1);
     }
     
-    /* History Buttons */
-    .history-btn > button {
-        border: none !important;
-        background-color: transparent !important;
-        text-align: left !important;
-        padding-left: 0 !important;
-        color: #A6ACCD !important;
-        font-size: 0.9rem !important;
-    }
-    .history-btn > button:hover {
-        color: #F8F8F2 !important;
-        background-color: rgba(255,255,255,0.05) !important;
-    }
-
     strong {
         color: #38bdf8 !important;
     }
@@ -157,13 +143,10 @@ with st.sidebar:
                 title = msg["content"][:30] + ("..." if len(msg["content"]) > 30 else "")
                 break
                 
-        # Use a container to apply specific CSS class
-        with st.container():
-            st.markdown('<div class="history-btn">', unsafe_allow_html=True)
-            if st.button(f"💬 {title}", key=f"session_{session_id}", use_container_width=True):
-                st.session_state.current_session_id = session_id
-                st.rerun()
-            st.markdown('</div>', unsafe_allow_html=True)
+        # Render the history button normally
+        if st.button(f"💬 {title}", key=f"session_{session_id}", use_container_width=True):
+            st.session_state.current_session_id = session_id
+            st.rerun()
             
     st.markdown("---")
     st.markdown("**Settings**")

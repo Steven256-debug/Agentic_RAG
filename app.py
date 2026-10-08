@@ -72,7 +72,7 @@ def load_resources():
     if not db_path.exists():
         return None, None
         
-    model = SentenceTransformer("BAAI/bge-large-en-v1.5")
+    model = SentenceTransformer("all-MiniLM-L6-v2")
     client_chroma = chromadb.PersistentClient(path=str(db_path))
     collection = client_chroma.get_collection(name="rag_documents")
     return model, collection

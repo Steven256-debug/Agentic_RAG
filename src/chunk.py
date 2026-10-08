@@ -47,7 +47,7 @@ def process_chunking(processed_dir, chunks_dir):
         with open(json_file, 'r', encoding='utf-8') as f:
             document_data = json.load(f)
             
-        for page_data in document_data:
+        for block_idx, page_data in enumerate(document_data):
             source_filename = page_data.get("source_filename")
             page_number = page_data.get("page_number")
             section_title = page_data.get("section_title")
@@ -58,9 +58,9 @@ def process_chunking(processed_dir, chunks_dir):
             page_chunks = get_chunks(text, max_tokens=400, overlap=50)
             
             for chunk_index, chunk_text in enumerate(page_chunks):
-                # chunk_id: e.g. filename_page_chunkindex
+                # chunk_id: e.g. filename_page_blockidx_chunkindex
                 file_stem = os.path.splitext(source_filename)[0]
-                chunk_id = f"{file_stem}_p{page_number}_{chunk_index}"
+                chunk_id = f"{file_stem}_p{page_number}_b{block_idx}_c{chunk_index}"
                 
                 chunk_obj = {
                     "chunk_id": chunk_id,

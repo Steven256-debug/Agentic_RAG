@@ -20,9 +20,7 @@ def call_llm(prompt, system=None, model="gemini-3.5-flash"):
             sys.exit(1)
         client_llm = genai.Client(api_key=api_key)
         
-    config = types.GenerateContentConfig(
-        max_output_tokens=1024,
-    )
+    config = types.GenerateContentConfig()
     if system:
         config.system_instruction = system
 

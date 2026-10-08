@@ -17,7 +17,7 @@ except ImportError:
     st.stop()
 
 # --- Config & Setup ---
-st.set_page_config(page_title="Ghana Financial Regulations Assistant", page_icon="🏦", layout="wide")
+st.set_page_config(page_title="LexFin AI", page_icon="🏦", layout="wide")
 
 # Minimal Custom CSS for ChatGPT-like feel
 st.markdown("""
@@ -135,7 +135,7 @@ if model is None:
 
 # --- Sidebar ---
 with st.sidebar:
-    st.markdown('<div class="sidebar-title">🏦 Financial Assistant</div>', unsafe_allow_html=True)
+    st.markdown('<div class="sidebar-title">🏦 LexFin AI</div>', unsafe_allow_html=True)
     
     if st.button("➕ New Chat", use_container_width=True):
         st.session_state.current_session_id = str(uuid.uuid4())
@@ -202,6 +202,8 @@ else:
     # Display history
     for msg in st.session_state.messages:
         with st.chat_message(msg["role"]):
+            if msg["role"] == "assistant":
+                st.markdown("**LexFin AI**")
             st.markdown(msg["content"])
             if "sources" in msg and msg["sources"]:
                 with st.expander("View Sources"):
@@ -227,6 +229,7 @@ if prompt:
 
     # 2. Generate response
     with st.chat_message("assistant"):
+        st.markdown("**LexFin AI**")
         with st.spinner("Analyzing regulations..."):
             try:
                 query = prompt

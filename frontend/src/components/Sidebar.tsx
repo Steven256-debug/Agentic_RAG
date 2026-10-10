@@ -12,6 +12,8 @@ export default function Sidebar({
   onDeleteSession,
   isSidebarOpen,
   setIsSidebarOpen,
+  isTemporary,
+  setIsTemporary,
 }: {
   sessions: ChatSession[];
   currentSessionId: string | null;
@@ -20,6 +22,8 @@ export default function Sidebar({
   onDeleteSession: (id: string) => void;
   isSidebarOpen: boolean;
   setIsSidebarOpen: (v: boolean) => void;
+  isTemporary: boolean;
+  setIsTemporary: (v: boolean) => void;
 }) {
   const [theme, setTheme] = useState<"light" | "dark">("light");
 
@@ -88,7 +92,7 @@ export default function Sidebar({
                   e.stopPropagation();
                   onDeleteSession(s.id);
                 }}
-                className={`opacity-0 group-hover:opacity-100 transition-opacity p-1 rounded-md hover:bg-red-500 hover:text-white ${currentSessionId === s.id ? "text-white" : "text-gray-400"}`}
+                className={`opacity-50 hover:opacity-100 transition-opacity p-1 rounded-md hover:bg-red-500 hover:text-white ${currentSessionId === s.id ? "text-white" : "text-gray-400"}`}
               >
                 <Trash2 className="w-4 h-4" />
               </button>
@@ -116,7 +120,7 @@ export default function Sidebar({
           </button>
         </div>
 
-        <div className="px-4 pb-4">
+        <div className="px-4 pb-4 space-y-3">
           <button
             onClick={onNewChat}
             className="w-full flex items-center space-x-2 px-4 py-2 rounded-xl bg-accent text-primary font-medium hover:bg-accent-hover transition-colors"
@@ -124,6 +128,16 @@ export default function Sidebar({
             <Plus className="w-5 h-5" />
             <span>New Chat</span>
           </button>
+          
+          <div className="flex items-center justify-between px-2 text-sm text-foreground">
+            <span className="font-medium text-gray-500 dark:text-gray-400">Temporary Chat</span>
+            <button 
+              onClick={() => setIsTemporary(!isTemporary)}
+              className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${isTemporary ? 'bg-accent' : 'bg-gray-300 dark:bg-gray-600'}`}
+            >
+              <span className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${isTemporary ? 'translate-x-5' : 'translate-x-1'}`} />
+            </button>
+          </div>
         </div>
 
         <div className="flex-1 overflow-y-auto px-4 pb-4 scrollbar-thin">

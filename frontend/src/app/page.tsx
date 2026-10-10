@@ -11,6 +11,7 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isTemporary, setIsTemporary] = useState(false);
 
   useEffect(() => {
     const saved = localStorage.getItem("complygh_sessions");
@@ -31,7 +32,8 @@ export default function Home() {
 
   const saveSessions = (newSessions: ChatSession[]) => {
     setSessions(newSessions);
-    localStorage.setItem("complygh_sessions", JSON.stringify(newSessions));
+    const permanentSessions = newSessions.filter(s => !s.isTemporary);
+    localStorage.setItem("complygh_sessions", JSON.stringify(permanentSessions));
   };
 
   const handleNewChat = () => {
@@ -67,6 +69,7 @@ export default function Home() {
         title: content.length > 30 ? content.slice(0, 30) + "..." : content,
         messages: [userMsg],
         updatedAt: Date.now(),
+        isTemporary,
       };
       newSessions.unshift(newSession);
       sessionIndex = 0;
@@ -163,6 +166,8 @@ export default function Home() {
         onDeleteSession={handleDeleteSession}
         isSidebarOpen={isSidebarOpen}
         setIsSidebarOpen={setIsSidebarOpen}
+        isTemporary={isTemporary}
+        setIsTemporary={setIsTemporary}
       />
       <ChatArea
         messages={currentMessages}

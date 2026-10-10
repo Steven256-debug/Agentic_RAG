@@ -16,4 +16,5 @@ export interface ChatSession {
   title: string;
   messages: Message[];
   updatedAt: number;
+  isTemporary?: boolean;
 }

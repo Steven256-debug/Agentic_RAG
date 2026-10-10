@@ -1,0 +1,806 @@
+[
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 1,
+        "section_title": null,
+        "text": "PUBLIC\n\nLIQUIDITY RISK MANAGEMENT DIRECTIVE, 2026\n\nBANK OF GHANA\n\nLIQUIDITY RISK MANAGEMENT DIRECTIVE\n\nFOR BANKS, SAVINGS AND LOANS COMPANIES, FINANCE HOUSE COMPANIES, FINANCE\n\nAND LEASING COMPANIES AND FINANCIAL HOLDING COMPANIES\n\n(EXPOSURE DRAFT)\n\nPrepared by the Bank of Ghana\n\nFEBRUARY 2026\n\ni"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 2,
+        "section_title": null,
+        "text": "PUBLIC\n\nLIQUIDITY RISK MANAGEMENT DIRECTIVE, 2026\n\nThe Bank of Ghana (BOG) has issued the Liquidity Risk Management Directive to solicit\ncomments and inputs from the banking industry and the general public, in line with the\nBOG’s Procedures for Issuance of Directives, 2020.\n\nIn light of this, the Exposure Draft shall be made available on the BOG’s website at\nwww.bog.gov.gh from date of publication to June 30th, 2026, for comments.\n\nAll comments shall be sent to the Bank of Ghana via email at bsdletters@bog.gov.gh by\n30th June 2026. The Bank of Ghana shall consider all material comments received and\nprovide a written explanation for comments that were incorporated into the final guideline\nor otherwise.\n\nii"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 3,
+        "section_title": null,
+        "text": "PUBLIC\n\nLIQUIDITY RISK MANAGEMENT DIRECTIVE, 2026\n\nPreamble\nThe Global Financial Crisis that started in mid-2007 and the banking turmoil from\nMarch to May 2023 (including Silicon Valley and Signature Banks), highlighted the\ncritical role of liquidity to the safety and soundness of financial institutions. Prior to\nthese crises, asset prices were strong, and funding was easily accessible at low\ncost. The sudden shift in market conditions that were observed demonstrated how\nquickly liquidity can disappear and how periods of illiquidity can persist, impacting\non the viability of financial institutions.\nThe fundamental role of financial institutions in the maturity transformation of\nshort-term deposits into long-term loans makes financial institutions inherently\nvulnerable to liquidity risk. Effective liquidity risk management enables a financial\ninstitution to meet its cash flow obligations at all times, including during times of\nsignificant market stress.\nSections 36-38 of the Banks and Specialised Deposit-Taking Act, 2016 (Act 930)\nrequire Banks, Savings and Loans, Finance Houses, Finance and Leasing\nCompanies and Financial Holding Companies (herein referred to as Regulated\nFinancial Institutions (RFIs)) to comply with liquidity requirements as prescribed by\nthe Bank of Ghana (BOG). The BOG has issued this Liquidity Risk Management\nDirective (LRMD) to clarify its expectations and ensure RFIs effectively manage\ntheir liquidity risks, by implementing appropriate governance and risk\nmanagement processes.\nThe liquidity risk management principles set out in this directive provide the\nframework within which BOG assesses the content and effectiveness of the\nliquidity risk management of an RFI and whether that risk management program\nis producing adequate and appropriate forms of liquidity pursuant to Act 930.\nFor this purpose, BOG has established liquidity requirements in line with the Basel\nPrinciples for Sound Liquidity Risk Management and Supervision, Basel III Liquidity\nCoverage Ratio (LCR) and Liquidity Risk Monitoring Tools (January 2013) and\nBasel’s Monitoring Tools for Intraday Liquidity Management (April 2013).\nThis directive is complemented by the Liquidity Monitoring Tools Directive and\nLiquidity Coverage Ratio Directive (applicable to banks only) which when\nimplemented as a package, provides a comprehensive qualitative and\nquantitative perspective of an RFI’s liquidity risk management and adequacy. To\naddress increased liquidity risk in an RFI, BOG may impose a higher liquidity\nrequirement and/or other actions.\n\niii"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 4,
+        "section_title": null,
+        "text": "PUBLIC\n\nLIQUIDITY RISK MANAGEMENT DIRECTIVE, 2026\n\nTABLE OF CONTENTS\nPreamble………………………………………………………….……………………………………...iii\n\nPART I - PRELIMINARY ............................................................................................................... 1\n\nTitle ........................................................................................................................................ 1\n\nApplication ........................................................................................................................... 1\n\nDefinitions and Interpretation ............................................................................................. 1\n\nObjectives ............................................................................................................................ 4\n\nProportionality..........................................................................................................................4\n\nTransitional Arrangement and Implementation Date...................................................... ..5\n\nPART II – GOVERNANCE AND  RISK MANAGEMENT FRAMEWORK  ....................................... 6\n\nRoles and Responsibilities of the Board .............................................................................. 6\n\nRoles and Responsibilities of Senior Management ............................................................ 7\n\nRisk Management ……………………………………………….….…………………………….   8\n\nIndependent Review………………………………………………..……………...……………  10\n\nPART III – MEASUREMENT, MANAGEMENT AND MONITORING OF LIQUIDITY RISK………….11\n\nMeasurement and Management of Liquidity Risk ...........................................................11\n\nMonitoring of Liquidity Risk at the Group Level  ...............................................................13\n\nPART IV – LIQUIDITY STRESS TESTING FRAMEWORK  ...............................................................15\n\nLiquidity Stress Testing .........................................................................................................12\n\nLiquidity Buffer and Stock of High-Quality Liquid Assets (HQLA) .....................................17\n\nAdequacy of the Stock of Liquid Assets……………….………………….……………………19\n\nLiquidity Value……………………………………………..……………………………………….. 19\n\nAsset Encumbrance ...........................................................................................................20\n\nContingency Funding Plan ................................................................................................21\n\nAssignment of Liquidity Costs and Benefits .......................................................................23\n\nFunding Strategy and Managing Market Access ............................................................23\n\nManagement of Intraday Liquidity Position and Risk .......................................................24\n\nPART V - DISCLOSURE ..............................................................................................................26\n\nPART VI - SANCTIONS AND REMEDIAL MEASURES ……………………………………...………...27\n\niv"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 5,
+        "section_title": null,
+        "text": "PUBLIC\n\nLIQUIDITY RISK MANAGEMENT DIRECTIVE, 2026\n\nPART I - PRELIMINARY\nTitle"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 5,
+        "section_title": "1. This Directive shall be cited as the Bank of Ghana Liquidity Risk Management",
+        "text": "1. This Directive shall be cited as the Bank of Ghana Liquidity Risk Management\nDirective (LRMD), 2026.\nApplication"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 5,
+        "section_title": "2. This Directive is issued under the powers conferred by Sections 36(2) and 92(1)",
+        "text": "2. This Directive is issued under the powers conferred by Sections 36(2) and 92(1)\nof the Banks and Specialised Deposit-Taking Institutions Act, 2016 (Act 930)."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 5,
+        "section_title": "3. This Directive shall apply to Banks, Savings and Loans, Finance Houses, Finance",
+        "text": "3. This Directive shall apply to Banks, Savings and Loans, Finance Houses, Finance\nand Leasing and Financial Holding Companies, hereinafter referred to as\nRegulated Financial Institutions (RFIs), licensed or registered under Act 930."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 5,
+        "section_title": "4. This Directive shall be read in conjunction with the Risk Management Directive,",
+        "text": "4. This Directive shall be read in conjunction with the Risk Management Directive,\n2021, Liquidity Monitoring Tools Directive, 2026, Liquidity Coverage Ratio\nDirective, 2026 as well as the Corporate Governance Directive, 2018.\nDefinitions and Interpretation"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 5,
+        "section_title": "5. In this Directive, unless the context otherwise requires, words used have the",
+        "text": "5. In this Directive, unless the context otherwise requires, words used have the\nsame meaning as that assigned to them in the applicable law (such as Act\n930) and other Directives issued by the BOG or as follows:\n\n“Act 930” means the Banks and Specialised Deposit-Taking Institutions Act, 2016\n(Act 930).\n\n“Ancillary Systems” means other payment systems such as retail payment\nsystems, securities settlement systems and central counterparties.\n“BOG” means the Bank of Ghana.\n\n“Board” means the board of directors of a Regulated Financial Institution.\n\n“Business Day” means the opening hours for the Ghana Interbank Settlement\n(GIS) during which a bank can receive and make payments within the day.\n“Contingency Funding Plan (CFP)” means the compilation of RFI’s policies,\nprocedures and action plans for responding to severe disruption to its ability to\nfund some or all of its activities in a timely manner and at a reasonable cost.\n\n1"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 6,
+        "section_title": null,
+        "text": "PUBLIC\n\nLIQUIDITY RISK MANAGEMENT DIRECTIVE, 2026\n\nSpecifically, it is RFI’s strategy for handling a variety of prospective liquidity stress\nevents with the goal of maintaining market confidence and franchise value.\n“Eligible Collateral for Repo or Depo “means Treasury bills and notes issued by the\nGovernment of Ghana, bonds issued or guaranteed by the Government of\nGhana, Bank of Ghana bills, Eurobonds issued by the Government of Ghana,\ncorporate bonds listed on the Ghana Fixed Income Market, and any other\ncollateral eligible under the BOG Guidelines for Global Master Repurchase\nAgreement (GMRA).\n\n“Encumbered Assets” means an RFI’s asset that is tied to legal, regulatory,\ncontractual or other restrictions for which the RFI is unable to liquidate, sell,\ntransfer, or assign the asset.\n\"Enterprise-Wide Stress Test” means stress test that assesses the impact of a shock\non the RFI, as a whole, as opposed to focusing on individual business lines, sectors,\nportfolios or products within the RFI.\n“Funding Liquidity Risk” means the possibility that over a specific horizon the bank\nwill be unable to settle it’s obligations immediately as they fall due.\n“Ghana Interbank Settlement (GIS)” means Ghana’s Real Time Gross Settlement\nSystem (RTGS) which is a funds transfer system that typically handles large-value\nand high-priority payments in Ghana.\n“Group of Connected Counterparties” means two or more persons who satisfy at\nleast one of the following criteria:\n\na) Control relationship: one of the counterparties, directly or indirectly has control\n\nover the other(s);\n\nb) Economic interdependence: if one of the counterparties were to experience\n\nfinancial problems, in a particular funding or repayment problems, the\nother(s), as a result, would also be likely to encounter funding or repayment\ndifficulties.\n“Intraday Liquidity” means funds which can be accessed during the business day,\nusually to enable banks to make payments in real time.\n\n2"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 7,
+        "section_title": null,
+        "text": "PUBLIC\n\nLIQUIDITY RISK MANAGEMENT DIRECTIVE, 2026\n\n“Intraday Liquidity Risk” means the risk that a bank fails to manage its intraday\nliquidity effectively, which could leave it unable to meet a payment obligation at\nthe time expected, thereby affecting its own liquidity position and that of other\nparties.\n“Intraday Throughput” means the daily percentage of outgoing payments\nrelative to total payments that settle by specific times during the day, by value\nwithin each hour of the business day.\n“Liquidity” means the ability of a bank to fund increases in assets and meet\nobligations as they fall due, without incurring unacceptable losses.\n“Liquidity Risk” means the risk that an RFI’s financial condition or overall safety and\nsoundness is adversely affected by an inability (real or perceived) to meet its\ncontractual obligations.\n\n“Liquidity Risk Appetite” means the aggregate level and types of liquidity risk an\nRFI is willing to assume, decided in advance and within its risk capacity, to achieve\nits strategic objectives and plans.\n\n“Liquidity Risk Limits” means specific quantitative measures or limits based on, for\nexample, forward-looking assumptions that allocate the RFI’s aggregate liquidity\nrisk to business lines, RFI’s subsidiaries and relevant specific risk categories,\nconcentrations and, as appropriate, other measures.\n\n“Liquidity Risk Management” means the strategies and processes established to\nensure that liquidity risk is identified, measured, mitigated, monitored and\nreported on a timely and comprehensive basis.\n“Liquidity Risk Tolerance” means the maximum level of liquidity risk that the RFI is\nwilling to operate within, which is expressed as its risk limit based on the risk\nappetite, risk profile and capital strength.\n“Liquidity Stress Test” means the process of assessing the impact of an adverse\nscenario on an RFI’s cash flow as well as on the availability of funding sources,\nand on market prices of assets.\n“Management Actions” means actions that would be taken by an RFI in response\nto an adverse (stress) scenario that would otherwise not be taken in a base case\nscenario. These actions typically include but are not limited to raising of capital,\n\n3"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 8,
+        "section_title": null,
+        "text": "PUBLIC\n\nLIQUIDITY RISK MANAGEMENT DIRECTIVE, 2026\n\nreductions in risk-weighted assets, adjustment to business strategies, reductions in\nexpenses, hedging of exposures, revision of credit policies or disposal of assets.\n“Regulated Financial Institutions (RFI)” means a Bank, Savings & Loans, Finance\nHouse, Finance and Leasing and Financial Holding Companies licenced or\nregistered under Act 930.\n“Senior Management” means members of the Executive Management\nCommittee (EXCO) of an RFI and any other Key Management Personnel (KMP)as\nmay be determined by the RFI.\n“Time-Specific Obligations” means obligations which must be settled at a specific\ntime within the day or have an expected intraday settlement deadline.\n“Unencumbered Assets” means an RFI’s assets that are free of legal, regulatory,\ncontractual or other restrictions on the ability of the RFI to liquidate, sell, transfer,\nor assign the asset.\nObjectives"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 8,
+        "section_title": "6. The objectives of this directive are to ensure RFIs:",
+        "text": "6. The objectives of this directive are to ensure RFIs:\n\na. maintain adequate, high-quality liquidity buffers at all times to meet all\n\nobligations and commitments, plan for unforeseen obligations and survive\nperiods of liquidity stress;\n\nb. have robust systems for identifying, measuring, evaluating, controlling and\n\nreporting liquidity and funding risks; and\n\nc. clearly understand BOG’s supervisory expectations in relation to the\n\napproach to assessing the adequacy of RFIs’ liquidity risk management\nframeworks and their liquidity positions.\nProportionality"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 8,
+        "section_title": "7. RFIs shall align their liquidity risk management practices with the requirements",
+        "text": "7. RFIs shall align their liquidity risk management practices with the requirements\nof this Directive. However, in assessing the quality of RFIs’ management of\nliquidity risk, the BOG will take into account the principle of proportionality. In\nparticular, the assessment will be aimed at ensuring that:\n\n4"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 9,
+        "section_title": null,
+        "text": "PUBLIC\n\nLIQUIDITY RISK MANAGEMENT DIRECTIVE, 2026\n\na. RFIs’ processes and tools for management of liquidity risks are\n\ncommensurate with the risk profile, systemic importance, market and\nmacroeconomic conditions as well as the scale and complexity of their\nactivities; and\n\nb. the regulatory objectives of ensuring the safety and soundness of RFIs and\n\npromoting the stability of the financial system are effectively achieved.\nTransitional Arrangements and Implementation Date"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 9,
+        "section_title": "8. This Directive shall take effect from 1st January 2027.",
+        "text": "8. This Directive shall take effect from 1st January 2027."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 9,
+        "section_title": "9. RFIs are required to align their governance arrangements, risk management",
+        "text": "9. RFIs are required to align their governance arrangements, risk management\nframeworks as well as internal policies and processes with the requirements of\nthis Directive by 31st December 2026.\n\n5"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 10,
+        "section_title": null,
+        "text": "PUBLIC\n\nLIQUIDITY RISK MANAGEMENT DIRECTIVE, 2026\n\nPART II – GOVERNANCE AND RISK MANAGEMENT FRAMEWORK\nRoles and Responsibilities of the Board"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 10,
+        "section_title": "10. The Board shall be ultimately responsible for the liquidity risk assumed by the",
+        "text": "10. The Board shall be ultimately responsible for the liquidity risk assumed by the\nRFI and the approach with which this risk is managed."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 10,
+        "section_title": "11. An RFI’s Board shall review and approve the strategy, policies and practices",
+        "text": "11. An RFI’s Board shall review and approve the strategy, policies and practices\nrelated to the management of liquidity at least annually and ensure that Senior\nManagement effectively manage liquidity risk. In fulfilling its responsibility, the\nBoard shall:\n\n(a) review and approve a robust liquidity management framework including\n\nappropriate strategies and policies to ensure the RFI maintains sufficient\nliquidity to withstand a range of stress events;\n(b) develop clear and effective communication and disclosure strategies to\n\nrelevant stakeholders, particularly during stress events;\n(c) set the liquidity risk tolerance level in light of its business strategy, overall risk\n\nappetite as well as its role in the financial system to ensure that the RFI\nprudently manages its liquidity in normal times such that it is able to\nwithstand a prolonged period of stress;\n(d) approve a liquidity risk appetite which defines the level of liquidity risk that\n\nthe RFI is willing and able to assume;\n(e) review and when necessary update the RFI’s strategies, policies and\n\nprocesses, at least annually;\n(f) ensure that the RFI has the necessary resources and systems to identify,\n\nmeasure, monitor, control and report all sources of liquidity risk. This includes\nensuring that Senior Management and other officers responsible for\nmanaging liquidity risk have the necessary expertise to execute their\nassigned responsibilities effectively;\n(g) regularly review reports on the liquidity position of the RFI. This includes\n\nensuring that Senior Management also provides timely updates to the\nBoard on new or emerging liquidity vulnerabilities;\n(h) regularly review and challenge stress testing assumptions and results, even\n\nduring periods when liquidity is abundant in the market;\n\n6"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 11,
+        "section_title": null,
+        "text": "PUBLIC\n\nLIQUIDITY RISK MANAGEMENT DIRECTIVE, 2026\n\n(i) review and approve the RFI’s contingency funding plan annually, at a\n\nminimum, or more often as warranted by changes in business strategy\nand/or market conditions; and\n(j) ensure that Senior Management takes appropriate and timely remedial\n\nactions to address any liquidity risk and vulnerabilities, including those\narising from liquidity stress tests and the testing of contingency funding\nplans."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 11,
+        "section_title": "12. The Board shall, on a quarterly basis, provide its assessment of the liquidity",
+        "text": "12. The Board shall, on a quarterly basis, provide its assessment of the liquidity\nadequacy of the RFI through a Liquidity Adequacy Statement (LAS) to the\nBOG. The assessment shall be supported by Internal Liquidity Adequacy\nAssessment Process (ILAAP), and the outcome shall be embedded in the\nannual Internal Capital Adequacy Assessment Process (ICAAP) report\nsubmitted to the BOG."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 11,
+        "section_title": "13. The Board and Senior Management shall have an appropriate understanding",
+        "text": "13. The Board and Senior Management shall have an appropriate understanding\nof funding and market liquidity risks, including their inter linkages, and the\nimpact that other risks such as credit, market, operational and reputational risk\nmay have on the RFI’s overall liquidity risk strategy.\nRoles and Responsibilities of Senior Management"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 11,
+        "section_title": "14. Senior Management shall ensure the effective implementation of the liquidity",
+        "text": "14. Senior Management shall ensure the effective implementation of the liquidity\nrisk management framework, and that staff involved in its implementation\nhave a sound understanding of the framework."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 11,
+        "section_title": "15. The RFI’s Senior Management shall;",
+        "text": "15. The RFI’s Senior Management shall;\na. develop and implement strategies, policies and processes to manage\n\nliquidity risk in accordance with the Board-approved risk appetite and\nensure that the RFI maintains sufficient liquidity; and\nb. continuously review information on the RFI’s liquidity developments and\n\nreport, as appropriate, to the Board and BOG."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 11,
+        "section_title": "16. The RFI’s documented liquidity strategies, policies and processes shall be",
+        "text": "16. The RFI’s documented liquidity strategies, policies and processes shall be\ncommunicated and understood at all relevant levels of the RFI. These policies\nshall include:\n\na) Composition and maturity of both on- and off—balance sheet assets and\n\nliabilities;\n\n7"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 12,
+        "section_title": null,
+        "text": "PUBLIC\n\nLIQUIDITY RISK MANAGEMENT DIRECTIVE, 2026\n\nb) Diversity and stability of funding sources;\n\nc) Quantitative thresholds of the RFI, which, at a minimum, shall be consistent\n\nwith regulatory requirements;\n\nd) The processes for identifying, reviewing, approving and applying stress test\n\nscenarios and related assumptions1;\n\ne) The size and composition of stock of liquid assets that is available to\n\ngenerate cash in a stress environment;\n\nf) Contingency funding plans;\n\ng) The approach to managing liquidity in different currencies, across business\n\nlines and, where applicable, across borders and legal entities;\n\nh) The approach to intraday liquidity management;\n\ni) Monitoring current trends and potential market developments that may\n\nmaterially impact liquidity risks;\n\nj) Management of collateral including pledging and apportionment; and\n\nk) Limit setting and review, the process for escalating exceptions to policies\n\nand limits, as well as follow-up actions to be taken for breaches of limits2."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 12,
+        "section_title": "17. Senior Management shall ensure that the RFI has adequate internal controls",
+        "text": "17. Senior Management shall ensure that the RFI has adequate internal controls\nand clearly identifies its delegates for managing liquidity risk. To avoid potential\nconflicts of interest, Senior Management shall ensure adequate separation of\nresponsibilities in key elements of its liquidity risk management processes.\n\nRisk Management Framework"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 12,
+        "section_title": "18. RFIs shall have liquidity risk identification, measurement, monitoring, control",
+        "text": "18. RFIs shall have liquidity risk identification, measurement, monitoring, control\nand reporting functions with clearly defined skills, responsibilities and\nindependence to challenge information and assumptions provided by\nbusiness lines."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 12,
+        "section_title": "19. The liquidity risk management oversight responsibilities shall be embedded in",
+        "text": "19. The liquidity risk management oversight responsibilities shall be embedded in\nthe RFI’s risk management oversight function for which the Chief Risk Officer\n(CRO) shall be ultimately responsible as prescribed in BOG’s Corporate\nGovernance Directive, 2018 and Risk Management Directive, 2021."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 12,
+        "section_title": "1 This includes assumptions on the liquidity and marketability of assets.",
+        "text": "1 This includes assumptions on the liquidity and marketability of assets."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 12,
+        "section_title": "2 This should include the escalation procedures and follow-up actions to be taken for breaches of the set",
+        "text": "2 This should include the escalation procedures and follow-up actions to be taken for breaches of the set\nlimits.\n\n8"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 13,
+        "section_title": null,
+        "text": "PUBLIC\n\nLIQUIDITY RISK MANAGEMENT DIRECTIVE, 2026"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 13,
+        "section_title": "20. The RFI’s Assets-Liability Management Committee (ALCO) and any other",
+        "text": "20. The RFI’s Assets-Liability Management Committee (ALCO) and any other\nmanagement committee shall oversee liquidity risk management in line with\nthe Corporate Governance Directive, 2018. The committee shall be\nresponsible for managing the strategic direction of liquidity and funding risk\nwithin the RFI."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 13,
+        "section_title": "21. RFIs shall have a Board-approved and robust liquidity risk management",
+        "text": "21. RFIs shall have a Board-approved and robust liquidity risk management\nframework that is well integrated into its enterprise-wide risk management\nprocesses. The framework should ensure that the RFI maintains sufficient\nliquidity, including a cushion of unencumbered, High Quality Liquid Assets\n(HQLA), to withstand a range of stress events, including those involving the loss\nor impairment of both unsecured and secured funding sources."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 13,
+        "section_title": "22. The RFI’s liquidity risk management framework shall, at a minimum, include:",
+        "text": "22. The RFI’s liquidity risk management framework shall, at a minimum, include:\na) A statement of the liquidity risk appetite;\n\nb) The policies and procedures for identifying, measuring, monitoring,\n\ncontrolling and reporting its liquidity risk in accordance with its liquidity risk\ntolerance;\n\nc) The capacity to periodically conduct liquidity stress tests to analyse\n\nchanges to funding requirements under combinations of extreme but\nplausible RFI-specific and market-wide stress scenarios;\n\nd) The maintenance of a cushion of high quality, unencumbered liquid assets\n\nto be held against identified funding requirements under stress3;\n\ne) A Contingency Funding Plan (CFP) that reflects the outcomes from the RFI’s\n\nliquidity risk stress testing programs;\n\nf) A framework for assigning the costs and benefits to the internal use and\n\nprovision of liquidity;\n\ng) A funding strategy that ensures diversification of funding sources across\n\nseveral dimensions such as products, tenors, business lines, and RFI’s\nsubsidiaries, and critically assesses the volatility of foreign currencies;\n\nh) A methodology for managing intraday liquidity positions and risks; and\n\ni) Arrangements\nfor\ndisclosure\nof\nliquidity\npositions,\nrisks\nand\nthe\ncommensurate risk management practices undertaken."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 13,
+        "section_title": "3 The liquidity cushion should be commensurate to the complexity of the RFI’s on- and off-balance sheet",
+        "text": "3 The liquidity cushion should be commensurate to the complexity of the RFI’s on- and off-balance sheet\nactivities, liquidity of the RFI’s assets and liabilities, the extent of the RFI’s funding mismatches and diversity\nof its business mix and funding strategies.\n\n9"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 14,
+        "section_title": null,
+        "text": "PUBLIC\n\nLIQUIDITY RISK MANAGEMENT DIRECTIVE, 2026"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 14,
+        "section_title": "23. The RFI’s liquidity risk management strategy shall take into account its liquidity",
+        "text": "23. The RFI’s liquidity risk management strategy shall take into account its liquidity\nneeds under both normal and stressed market conditions and shall include\nhigh-level quantitative and qualitative targets4."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 14,
+        "section_title": "24. An RFI shall clearly articulate how the implementation and monitoring of its",
+        "text": "24. An RFI shall clearly articulate how the implementation and monitoring of its\nstrategy and risk appetite are supported by its  ILAAP, and how this effectively\nallows it to comply with the limits and thresholds set out in the Risk Appetite\nStatement (RAS).\nIndependent Review"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 14,
+        "section_title": "25. The Internal Audit Function (IAF) shall review at least annually, the",
+        "text": "25. The Internal Audit Function (IAF) shall review at least annually, the\nimplementation and effectiveness of the approved framework including\npolicies and procedures for managing liquidity risk."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 14,
+        "section_title": "26. The ILAAP outcomes and assumptions shall be subject to regular internal",
+        "text": "26. The ILAAP outcomes and assumptions shall be subject to regular internal\nreview. The review shall take due account of the limits and constraints arising\nfrom the methodologies employed, the underlying assumptions and the data\nused in quantifying the risk."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 14,
+        "section_title": "27. The outcome of the review shall be reported to the Board and Senior",
+        "text": "27. The outcome of the review shall be reported to the Board and Senior\nManagement, and any identified weaknesses should be addressed in an\neffective and timely manner."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 14,
+        "section_title": "4 The quantitative targets should be at a minimum consistent with BOG’s regulatory thresholds.",
+        "text": "4 The quantitative targets should be at a minimum consistent with BOG’s regulatory thresholds.\n\n10"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 15,
+        "section_title": null,
+        "text": "PUBLIC\n\nLIQUIDITY RISK MANAGEMENT DIRECTIVE, 2026\n\nPART III – MEASUREMENT, MANAGEMENT AND MONITORING OF LIQUIDITY RISK\nMeasurement and Management of Liquidity Risk"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 15,
+        "section_title": "28.  An RFI’s liquidity risk management process shall include a robust framework for",
+        "text": "28.  An RFI’s liquidity risk management process shall include a robust framework for\ncomprehensively projecting cash flows arising from assets, liabilities and off-\nbalance sheet items over an appropriate set of time horizons. The framework\nshall have several dimensions including:\n\na) Reliable systems and personnel to ensure timely measurement, monitoring\n\nand reporting of liquidity positions against the set limits to Board and  Senior\nManagement for information and appropriate action as necessary5.\n\nb) A rigorous and comprehensive liquidity measurement framework that is\n\nintegrated within their liquidity management strategy and Contingency\nFunding Plans (CFPs). Components of the framework shall include:\n\n(i)  A process for measuring and reporting funding requirements through the\n\nprojection of contractual and contingent cash flows under a number of\nalternative scenarios;\n\n(ii) The ability to measure liquidity in the material currencies in which the RFI\n\nconducts business, including on a subsidiary basis in all jurisdictions in\nwhich the RFI is active and on an aggregate group basis;\n\n(iii) A process for ensuring that the assumptions used in the projection of\n\nfuture cashflows are reasonable and appropriate, documented and\nperiodically reviewed and approved by the Board; and\n\n(iv) Maintenance of a stock of high-quality unencumbered liquid assets\n\nthat can be converted under stress conditions into cash inflows without\nincurring unacceptable losses.\nc) A CFP that is linked to the outcomes of the liquidity stress testing program.\n\nd) Appropriate processes for:\n\n(i)\nsetting internal limits and ensuring proper internal controls in\naccordance with the risk tolerance6;\n\n(ii) controlling risk-taking incentives of individual business lines to ensure\n\nthey are aligned with the liquidity risk exposures they create for the RFI;"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 15,
+        "section_title": "5 The liquidity position should, where applicable, take into account: (a) future cash flow of assets and",
+        "text": "5 The liquidity position should, where applicable, take into account: (a) future cash flow of assets and\nliabilities, (b) off-balance sheet positions (commitments and other contingent liabilities), (c) currencies in\nwhich the RFI is active, and (d) correspondent, custody and settlement activities."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 15,
+        "section_title": "6 The set internal limits and corresponding escalation procedures should be reviewed regularly. The limits",
+        "text": "6 The set internal limits and corresponding escalation procedures should be reviewed regularly. The limits\nshould also be relevant to the RFI given the nature of its products, currencies, markets etc.\n\n11"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 16,
+        "section_title": null,
+        "text": "PUBLIC\n\nLIQUIDITY RISK MANAGEMENT DIRECTIVE, 2026\n\n(iii) Managing access to a diversified set of funding sources and tenors; and\n\n(iv) Assessing aggregate foreign currency liquidity needs and determining\n\nthe acceptable currency mismatch.\ne) An early warning system consisting of indicators pointing to emerging\n\nvulnerabilities in liquidity risk position or potential funding needs. Such\nindicators may be qualitative or quantitative in nature.\nf) These early warning indicators must be aligned with liquidity-related\n\nrecovery indicators in the RFI’s recovery plan. RFIs shall be guided by the\nfollowing early warning indicators, but are not limited to:\n\ni.\nRapid asset growth, especially when funded with potentially volatile\nliabilities;\nii. Growing concentrations in assets or liabilities;\niii. Increases in currency mismatches;\niv. Decreases in weighted average maturity of liabilities;\nv. Repeated incidents of positions approaching or breaching internal\n\nlimits;\nvi. Significant deterioration in the financial institution’s earnings, asset\n\nquality and overall financial condition;\nvii. Widening debt spread; and\nviii. Rising wholesale or retail funding costs."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 16,
+        "section_title": "29. An RFI shall establish an appropriate Management Information System (MIS)",
+        "text": "29. An RFI shall establish an appropriate Management Information System (MIS)\nthat provides the Board, Senior Management and other relevant officers timely\nand forward-looking information on its liquidity position."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 16,
+        "section_title": "30. The MIS shall calculate liquidity positions in various currencies in which the RFI",
+        "text": "30. The MIS shall calculate liquidity positions in various currencies in which the RFI\nconducts business, both at the subsidiary level and at the consolidated level,\nwhere applicable."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 16,
+        "section_title": "31. The MIS shall identify sources of liquidity risk, and this shall entail the ability to",
+        "text": "31. The MIS shall identify sources of liquidity risk, and this shall entail the ability to\ngenerate more granular and comprehensive reports as and when required\n(such as during stress events), at a higher reporting frequency and with a\nreduced turnaround time.\n\n12"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 17,
+        "section_title": null,
+        "text": "PUBLIC\n\nLIQUIDITY RISK MANAGEMENT DIRECTIVE, 2026\n\nMonitoring Of Liquidity Risk At The Group Level7"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 17,
+        "section_title": "32. RFIs shall actively monitor and control liquidity risk exposures and funding needs",
+        "text": "32. RFIs shall actively monitor and control liquidity risk exposures and funding needs\nwithin the RFI’s business lines and currencies, and where applicable, their\nsubsidiaries as well as at the group level, taking into account legal, regulatory\nand operational limitations to the transferability of liquidity. To achieve this, RFIs\nshall have appropriate processes for:\na) aggregating data with a view of developing a group-wide view of\n\nexposure to liquidity risk; and\n\nb) identifying any constraints on transferability of liquidity within the group,\n\nwhere applicable."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 17,
+        "section_title": "33. Where foreign currency denominated liabilities or assets, in aggregate,",
+        "text": "33. Where foreign currency denominated liabilities or assets, in aggregate,\nrepresents more than 5% of its total liabilities or total assets, an RFI shall\ncomprehensively document its approach to management of its foreign\ncurrency positions within its liquidity risk management policies."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 17,
+        "section_title": "34. In addition to developing processes for sustaining continuous access to",
+        "text": "34. In addition to developing processes for sustaining continuous access to\nliquidity for the RFI and its subsidiaries in the event of a funding shortfall, the\nRFI’s liquidity risk management policies shall, amongst others, describe:\na) any internal liquidity support arrangements (i.e., intra-group transfers) that\n\nmay be provided;\n\nb) how the RFI addresses potential transferability constraints within the group\n\ndue to legal, regulatory or operational restrictions;\n\nc) measures aimed at ensuring effective communication with counterparties\n\nand other stakeholders in the event of liquidity challenges; and\n\nd) mechanisms aimed at mitigating reputational contagion which may\n\ninclude group-wide contingency plans, liquidity cushions or multiple\nsources of funding."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 17,
+        "section_title": "35. RFIs shall also, where applicable, establish internal limits:",
+        "text": "35. RFIs shall also, where applicable, establish internal limits:\na) on intragroup liquidity risk to mitigate the risk of contagion under stress;\n\nb) at subsidiary level to constrain the reliance on funding from elsewhere\n\nwithin the Group; and"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 17,
+        "section_title": "7 Shall apply to Financial Holding Companies, as well as banks and specialised deposit-taking",
+        "text": "7 Shall apply to Financial Holding Companies, as well as banks and specialised deposit-taking\ninstitutions that are part of a financial group.\n\n13"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 18,
+        "section_title": null,
+        "text": "PUBLIC\n\nLIQUIDITY RISK MANAGEMENT DIRECTIVE, 2026\n\nc) for each material currency used by the RFI8."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 18,
+        "section_title": "36. An RFI shall document how domestic and foreign currency cash flows and",
+        "text": "36. An RFI shall document how domestic and foreign currency cash flows and\nfunding needs will be met in the ordinary course of business as liquidity may\nnot be fungible under a stress contingent event."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 18,
+        "section_title": "37. RFI’s internal information systems shall have the capacity to account for",
+        "text": "37. RFI’s internal information systems shall have the capacity to account for\nsensitivities to changes in liquidity of foreign currency swap markets and\nvolatility of funding currencies. Where cash flow mismatches in an individual\ncurrency are deemed to be material, the policy on gap limits with respect to\nthat individual currency shall be addressed in the overall foreign currency\nliquidity policy."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 18,
+        "section_title": "8 These limits should be stricter where ready conversion between currencies is uncertain, particularly under",
+        "text": "8 These limits should be stricter where ready conversion between currencies is uncertain, particularly under\nstressed market conditions.\n\n14"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 19,
+        "section_title": null,
+        "text": "PUBLIC\n\nLIQUIDITY RISK MANAGEMENT DIRECTIVE, 2026\n\nPART IV - LIQUIDITY STRESS TESTING FRAMEWORK\nLiquidity Stress Testing"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 19,
+        "section_title": "38. An RFI shall conduct stress tests on a regular basis for a variety of short-term",
+        "text": "38. An RFI shall conduct stress tests on a regular basis for a variety of short-term\nand\nprotracted\ninstitution-specific\nand\nmarket-wide\nstress\nscenarios\n(individually and in combination) to identify sources of potential liquidity strain\nand to ensure that current exposures remain in accordance with an RFI’s\nestablished liquidity risk tolerance."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 19,
+        "section_title": "39. An RFI shall use stress test outcomes to adjust its liquidity risk management",
+        "text": "39. An RFI shall use stress test outcomes to adjust its liquidity risk management\nstrategies, policies, and processes and develop effective contingency plans."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 19,
+        "section_title": "40. RFIs shall develop a comprehensive liquidity stress testing program that",
+        "text": "40. RFIs shall develop a comprehensive liquidity stress testing program that\nconsiders multiple scenarios of varying degrees of severity and time horizons,\nincluding on an intraday basis."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 19,
+        "section_title": "41. An effective stress testing program shall involve the design of extreme but",
+        "text": "41. An effective stress testing program shall involve the design of extreme but\nplausible scenarios that capture the following elements:\n\na) RFI-specific events (for example: loss of major deposits; a significant\n\nincrease in demand for loans and other funding; and increases in off-\nbalance sheet exposures, including committed credit and liquidity\nfacilities);\n\nb) Market-wide disruptions (for example, those based around events that\n\nmight cause a mass flight to quality assets or a re-pricing of market prices\nor investor risk appetite); and\n\nc) Combinations of the above items."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 19,
+        "section_title": "42. In designing stress scenarios, an RFI shall take into consideration its business",
+        "text": "42. In designing stress scenarios, an RFI shall take into consideration its business\nmodel, operations and vulnerabilities. This is to ensure that the selected\nscenarios incorporate the major funding and market liquidity risks to which the\nRFI is exposed."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 19,
+        "section_title": "43. The selected scenarios shall allow the RFI to evaluate the potential adverse",
+        "text": "43. The selected scenarios shall allow the RFI to evaluate the potential adverse\nimpact these factors can have on its liquidity position."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 19,
+        "section_title": "44. In the assessment of contingent liquidity risks embedded in an RFI’s balance",
+        "text": "44. In the assessment of contingent liquidity risks embedded in an RFI’s balance\nsheet and funding profile, RFIs shall consider both contractual and legal\nrequirements needed to meet unexpected funding obligations.\n\n15"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 20,
+        "section_title": null,
+        "text": "PUBLIC\n\nLIQUIDITY RISK MANAGEMENT DIRECTIVE, 2026"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 20,
+        "section_title": "45. For RFIs with foreign currency liquidity position, the stress testing exercise shall",
+        "text": "45. For RFIs with foreign currency liquidity position, the stress testing exercise shall\nspecifically consider additional scenarios that assess the impact of a disruption\nto material cross-border funding channels and currencies."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 20,
+        "section_title": "46. In addition, it is critical that an RFI uses stress testing to assess the reputational",
+        "text": "46. In addition, it is critical that an RFI uses stress testing to assess the reputational\nimpact that failing to meet non-contractual and revocable liquidity\nobligations would have on the RFI."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 20,
+        "section_title": "47. An RFI shall consider the following, amongst others, in assessing the severity of",
+        "text": "47. An RFI shall consider the following, amongst others, in assessing the severity of\nestimated funding gaps or shortfalls and determining the appropriate\nmanagement actions:\n\na) Size and timing of the funding gap, relative to total funding;\n\nb) The level of actual stress (whether RFI-specific or market-wide) relative to\n\nthe modelled level of stress;\n\nc) The level and diversity of funding sources available to meet that shortfall;\n\nand\n\nd) Size of the stock of unencumbered HQLA to meet that shortfall."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 20,
+        "section_title": "48. The results from scenario tests shall be reported in a timely and regular manner",
+        "text": "48. The results from scenario tests shall be reported in a timely and regular manner\nto the Board and Senior Management. The stress test results shall:\na) be compared against the stated risk tolerance of the RFI; and\n\nb) be integrated into management actions, including setting internal limits,\n\nstrategic planning process and internal transfer pricing systems."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 20,
+        "section_title": "49. RFIs shall employ forward looking measures for the determination of funding",
+        "text": "49. RFIs shall employ forward looking measures for the determination of funding\nrequirements under a range of stress scenarios."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 20,
+        "section_title": "50. For stress testing purposes, the Maturity Ladder shall determine, for various time",
+        "text": "50. For stress testing purposes, the Maturity Ladder shall determine, for various time\nbuckets, the combination of normal contractual-based cash flows and\nbehaviorally modified cash flows under stress9."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 20,
+        "section_title": "9 A number greater than zero in any particular time bucket represents a net cash inflow whereas a number",
+        "text": "9 A number greater than zero in any particular time bucket represents a net cash inflow whereas a number\nless than zero is a net cash outflow. This process can be repeated over a series of adjacent time buckets\n(which are usually quite granular in the short-term and then coarser past one year) enabling the RFI to\nidentify (depending on assumptions) funding gaps, or net outflows, within any future time period. A net\ncumulative stressed outflow position at any future time bucket can be ascertained by adding the net flow\npositions from all earlier time buckets.\n\n16"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 21,
+        "section_title": null,
+        "text": "PUBLIC\n\nLIQUIDITY RISK MANAGEMENT DIRECTIVE, 2026\n\nBehavioral assumptions under stress"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 21,
+        "section_title": "51. RFIs shall carefully review and, where necessary, update their behavioral",
+        "text": "51. RFIs shall carefully review and, where necessary, update their behavioral\nassumptions under stress. Contingent cash flows arising under stress are often\nlow probability events, but they can have potentially large funding\nimplications. As such, RFIs shall apply an extra degree of conservatism in the\ndesign of these assumptions by, for example, assigning later dates to cash\ninflows and earlier dates to cash outflows, in uncertain situations."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 21,
+        "section_title": "52. For each secured and unsecured funding source, an RFI shall use behavioral",
+        "text": "52. For each secured and unsecured funding source, an RFI shall use behavioral\nassumptions to determine whether each liability with contractual maturity\nwould be repaid or be partially/fully rolled over."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 21,
+        "section_title": "53. For liabilities without contractual maturities, or those with embedded options",
+        "text": "53. For liabilities without contractual maturities, or those with embedded options\nthat would reduce the effective term, the RFI shall design a schedule for run-\noff assumptions over the relevant stress horizon. Additionally, where the RFI\ndepends on secured funding, it must incorporate assumptions about the\ncapacity of the funding market to continue to roll over in an environment\nwhere the RFI’s creditworthiness may be in question."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 21,
+        "section_title": "54. RFIs shall take conservative approach when defining their stress testing",
+        "text": "54. RFIs shall take conservative approach when defining their stress testing\nassumptions, taking into account, the type and severity of the scenario. RFIs\nshall use assumptions which are plausible and relevant to its business model\nand shall consider the appropriateness of such assumptions, which shall\ninclude but not limited to the following:\n\ni.\nThe run-off of retail funding;\nii.\nThe loss/unavailability of wholesale funding sources;\niii.\nThe correlation between funding markets or the effectiveness of\ndiversification across sources of funding;\niv.\nAdditional margin calls and collateral requirements;\nv.\nFunding tenors;\nvi.\nThe availability of contingent lines extended to the RFI;\nvii.\nForeign Exchange (FX) convertibility and access to FX markets;\nviii.\nThe access to BOG facilities (e.g. Emergency Liquidity Assistance); and\nix.\nEstimates of future balance sheet growth.\nLiquidity Buffer and Stock of High-Quality Liquid Assets (HQLA)"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 21,
+        "section_title": "55. An RFI shall maintain a cushion of unencumbered, HQLA to mitigate against a",
+        "text": "55. An RFI shall maintain a cushion of unencumbered, HQLA to mitigate against a\nrange of liquidity stress scenarios, including those that involve the loss or\nimpairment of unsecured and typically available secured funding sources.\n\n17"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 22,
+        "section_title": null,
+        "text": "PUBLIC\n\nLIQUIDITY RISK MANAGEMENT DIRECTIVE, 2026"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 22,
+        "section_title": "56. In order to satisfy potential funding gaps, RFIs shall maintain adequate liquidity",
+        "text": "56. In order to satisfy potential funding gaps, RFIs shall maintain adequate liquidity\nbuffers consisting of high-quality unencumbered assets that can be easily and\nimmediately converted into cash at little or no loss of value10. Such assets shall:\n\na) be traded in broad and active secondary markets and RFIs should be able\n\nto demonstrate to BOG that such assets can be liquidated through their\nsale, or pledged through a repurchase agreement at all times, to a wide\nrange of counterparties without incurring a substantial discount;\nb) share the common characteristics of, but not limited to, instruments that are\n\neligible in BOG and, where applicable, other central banks for open market\noperations and instruments that are marketable; and\nc) be available at all times to meet the RFI’s liquidity needs as and when they\n\narise, i.e., there shall be no legal, regulatory or operational impediment to\nthe use of these assets to obtain funding."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 22,
+        "section_title": "57. The conditions in (a) and (b) above are particularly necessary for the assets to",
+        "text": "57. The conditions in (a) and (b) above are particularly necessary for the assets to\nbe deemed as HQLA, which are dependable sources of cash flow under a\ndiverse set of stress contingencies."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 22,
+        "section_title": "58. The purpose of the stock of liquid assets is to provide the RFI with a source of",
+        "text": "58. The purpose of the stock of liquid assets is to provide the RFI with a source of\navailable funds to meet normal and contingent cash flow needs as\ndetermined from stress testing outcomes so that the RFI has the necessary time\nto:\n\na) access alternative sources of funding, upon initiation of a contingency\n\nfunding plan, provided circumstances giving rise to a liquidity problem are\ntemporary; and\n\nb) survive an RFI-specific and/or market-wide liquidity stress event until other\n\nlonger-term measures or solutions can take effect."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 22,
+        "section_title": "59. The stock of liquid assets should be adequate to ensure that the RFI is",
+        "text": "59. The stock of liquid assets should be adequate to ensure that the RFI is\ncontinuously compliant with both internal limits and any prescribed regulatory\nrequirements."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 22,
+        "section_title": "10 The assessment of potential funding gap during period of stress should incorporate contractual and non-",
+        "text": "10 The assessment of potential funding gap during period of stress should incorporate contractual and non-\ncontractual cash flows, including the possibility of funds being withdrawn, and should include the\nassumption (possibility) of inability to obtain unsecured funding as well as the loss or impairment of access\nto funds secured by assets other than the safest, most liquid assets.\n\n18"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 23,
+        "section_title": null,
+        "text": "PUBLIC\n\nLIQUIDITY RISK MANAGEMENT DIRECTIVE, 2026\n\nAdequacy of the Stock of Liquid Assets"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 23,
+        "section_title": "60. RFIs shall consider the relevant factors when determining the level of the stock",
+        "text": "60. RFIs shall consider the relevant factors when determining the level of the stock\nof liquid assets relative to the liquidity risk profile, these shall include:\n\na) The stability of funding sources - RFIs relying on less “sticky” forms of deposits,\n\nand/or using wholesale funding sources shall hold a larger stock of liquid\nassets;\n\nb) The cost and diversity of funding - RFIs with higher funding costs shall hold a\n\nlarger stock of liquid assets;\n\nc) Short-term funding requirements – RFIs with a funding mix geared towards\n\nshorter term maturity liabilities shall hold a larger stock of liquid assets;\n\nd) The level of contingent funding needs - in times of stress, contingent funding\n\nneeds might be elevated, which shall be covered by holding a larger stock\nof liquid assets;\n\ne) The degree of integration of liquidity management with that of a parent RFI\n\nas well as the financial strength of an RFI’s parent; and\n\nf) The regulatory regime of the country in which the parent of the RFI is\n\nlocated."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 23,
+        "section_title": "61. The liquidity policies of an RFI shall clearly define the role of the stock of liquid",
+        "text": "61. The liquidity policies of an RFI shall clearly define the role of the stock of liquid\nassets within the overall liquidity management framework (including a\nmethodology for classifying, ranking and adjusting the liquidity value of assets)\nand establish minimum targets for holdings of liquid assets.\n\nLiquidity Value"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 23,
+        "section_title": "62. Part of the consideration in determining the adequacy of the stock of liquid",
+        "text": "62. Part of the consideration in determining the adequacy of the stock of liquid\nassets is the assignment of liquidity values to particular asset classes. Such\nvalues represent an assessment of the possible discounts an RFI may face in\nselling down or borrowing against its stock of liquid assets to meet a funding\nshortfall. Such an assessment shall reflect the level of stress. Liquidity values shall\nbe:\na) more conservative than, for instance, the more generalised haircuts\n\nassociated with collateral pledged to meet margin requirements;\n\nb) re-assessed by Senior Management annually as part of the normal review\n\nprocess of the appropriateness of the RFI’s stress testing program; and\n\nc) assessed with greater frequency in periods of market-wide stress.\n\n19"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 24,
+        "section_title": null,
+        "text": "PUBLIC\n\nLIQUIDITY RISK MANAGEMENT DIRECTIVE, 2026"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 24,
+        "section_title": "63. RFIs shall consider the following factors while determining liquidity values or",
+        "text": "63. RFIs shall consider the following factors while determining liquidity values or\nhaircuts:\n\na) The quality of the asset – instruments that are highly liquid and easily\n\naccepted as collateral in repo transactions during various stress scenarios\nare preferable. Generally, the higher the credit quality of the underlying\nasset, the greater its marketability;\n\nb) The structure of the market for the asset – an active number of market\n\nparticipants with transparent price discovery, enhances the potential\nliquidity value of an asset;\n\nc) Diversity within the stock of liquid assets – capacity to liquidate or repo\n\nparticular assets can vary across scenarios for reasons beyond the RFI’s\ncontrol. A concentrated portfolio of liquid assets reduces its overall liquidity\nvalue, particularly when those assets are to be liquidated in a narrow\nmarket; and\n\nd) The presence of any legal or practical encumbrance to the sale or\n\nborrowing against the asset.\n\nAsset Encumbrance"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 24,
+        "section_title": "64. An RFI shall manage its collateral positions, by distinguishing between",
+        "text": "64. An RFI shall manage its collateral positions, by distinguishing between\nencumbered and unencumbered assets. An RFI shall monitor the legal entity\nand/or its affiliates that own the collateral, as well as, the physical location\nwhere the collateral is kept, ensuring that it can be accessed and mobilized\npromptly when needed."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 24,
+        "section_title": "65. When determining which assets can be included in a stock of liquid assets, an",
+        "text": "65. When determining which assets can be included in a stock of liquid assets, an\nRFI shall also consider which assets are subject to any encumbrances that\nwould prevent a quick sale. For example, assets pledged to secure specific\nobligations – like advances to settle payments in a large value payment\nsystem, overnight advances from a central bank, or margin requirements –\nshall not be considered part of the stock of liquid assets."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 24,
+        "section_title": "66. An RFI shall have internal policies for the pledging of assets and monitoring of",
+        "text": "66. An RFI shall have internal policies for the pledging of assets and monitoring of\nits execution."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 24,
+        "section_title": "67. An evaluation of current level of asset encumbrance and the likelihood that",
+        "text": "67. An evaluation of current level of asset encumbrance and the likelihood that\nassets within the stock of liquid assets could become encumbered in the\nfuture, shall also be taken into account. If such assessments cannot be\n\n20"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 25,
+        "section_title": null,
+        "text": "PUBLIC\n\nLIQUIDITY RISK MANAGEMENT DIRECTIVE, 2026\n\nconducted, the RFI shall hold a larger stock of liquid assets or impose lower\nliquidity values to compensate for uncertainty of encumbrance."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 25,
+        "section_title": "68. RFIs shall actively monitor their pledging and apportionment of assets to",
+        "text": "68. RFIs shall actively monitor their pledging and apportionment of assets to\nclearing and settlement organizations, as part of their ongoing liquidity\nmanagement program. Pledges of assets for these purposes require special\nfocus because they can involve encumbrances on an intraday basis that are\ntypically released at the end of a settlement cycle. To the extent that these\nassets are included in an end-of-day measure of liquidity, they shall be\nseparately identified."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 25,
+        "section_title": "69. Cash flow measures are generally used to identify funding mismatches,",
+        "text": "69. Cash flow measures are generally used to identify funding mismatches,\nwhether contingent (arising under stress scenarios) or structural (persistent\nimbalances in the funding profile). An RFI shall apply measures to assess\nstructural imbalances between its illiquid assets and sources of long-term\nfunding.\nContingency Funding Plan"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 25,
+        "section_title": "70. An RFI shall have a Contingency Funding Plan (CFP) that clearly sets out the",
+        "text": "70. An RFI shall have a Contingency Funding Plan (CFP) that clearly sets out the\nstrategies for addressing liquidity shortfalls in emergency situations."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 25,
+        "section_title": "71. The RFI’s Board shall review and approve the CFP at least annually, or more",
+        "text": "71. The RFI’s Board shall review and approve the CFP at least annually, or more\noften as changing business or market circumstances may require."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 25,
+        "section_title": "72. The CFP shall include policies for managing a range of stress scenarios, define",
+        "text": "72. The CFP shall include policies for managing a range of stress scenarios, define\nclear lines of responsibilities, outline explicit procedures for activation and\nescalation, and be regularly tested and updated to ensure that it is\noperationally robust. An effective CFP shall, at a minimum, consist of the\nfollowing:\n\na) A set of early warning indicators (potentially informed by stress test results)\n\nthat identify the emergence of increased risk or vulnerabilities to the RFI’s\nliquidity risk position or potential funding needs11. Any identified negative\ntrends in these indicators shall be assessed, and escalated for appropriate\nmanagement actions, including the likely trigger of the CFP;\n\nb) An outline of diversified set of viable, readily accessible and flexibly\n\ndeployable funding options to maintain liquidity and cover cash flow"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 25,
+        "section_title": "11 Early warning indicators may either be qualitative or quantitative and include rapid asset growth,",
+        "text": "11 Early warning indicators may either be qualitative or quantitative and include rapid asset growth,\ngrowing concentrations in assets or liabilities, increases in currency mismatches, and negative publicity.\n\n21"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 26,
+        "section_title": null,
+        "text": "PUBLIC\n\nLIQUIDITY RISK MANAGEMENT DIRECTIVE, 2026\n\nshortfalls during adverse situations. These measures shall address both RFI-\nspecific and market-wide stress events at multiple time horizons;\nc) Action plans to manage assets and liabilities of the RFI to protect or realize\n\ntheir value. These plans include, marketing assets more aggressively, selling\nassets originally intended to be held, extending maturity profile of liabilities,\nraising interest rates on deposits and utilizing off-balance sheet sources;\n\nd) An identification of alternative sources of funds to address liquidity shortfalls.\n\nThis shall include designating primary and secondary sources of liquidity as\nwell as activities that consume liquidity;\n\ne) Clear escalation/prioritization procedures detailing when and how each of\n\nthe proposed actions can and shall be activated;\n\nf) An identification of borrowers and trading customers in terms of their\n\nimportance to the RFI in order to maintain customer relationships; and\n\ng) Plans and procedures for communicating with the providers of funding, the\n\nBOG, the media and the public."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 26,
+        "section_title": "73. Contingency plans shall include procedures for making up cash flow shortfalls",
+        "text": "73. Contingency plans shall include procedures for making up cash flow shortfalls\nin emergency situations. The plan shall spell out as clearly as possible the\nsources of funds an RFI expects to have available from various sources and,\nwhere possible, the time periods for which the proposed contingency\nmeasures can be carried out under various assumptions and stresses."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 26,
+        "section_title": "74. RFIs shall notify the BOG in emergency situations and upon the initialization or",
+        "text": "74. RFIs shall notify the BOG in emergency situations and upon the initialization or\nde-escalation of a CFP and provide regular updates in a timely manner.\nFurther, the BOG may, on a case-by-case basis, impose additional reporting\nrequirements on a specific RFI."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 26,
+        "section_title": "75. The development, and ongoing maintenance of CFPs shall be integrated",
+        "text": "75. The development, and ongoing maintenance of CFPs shall be integrated\nwithin the RFI’s liquidity stress testing program. The potential action plans\noutlining the process for the escalation of the CFP shall particularly be informed\nby the outcome of robust liquidity stress tests exercise. Further:\n\na) if a scenario is designed where activation of the CFP shall be needed, then\n\nthe underlying assumptions shall be aligned to reflect this requirement; and\n\nb) the CFP shall address issues over a range of time horizons, including intraday\n\ntransactions."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 26,
+        "section_title": "76. In designing their CFPs, RFIs shall also take into consideration:",
+        "text": "76. In designing their CFPs, RFIs shall also take into consideration:\n\na) the impact of stressed market conditions on its ability to sell assets;\n\n22"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 27,
+        "section_title": null,
+        "text": "PUBLIC\n\nLIQUIDITY RISK MANAGEMENT DIRECTIVE, 2026\n\nb) reputational effects related to execution of contingency funding measures;\n\nand\n\nc) legal, regulatory and operational restrictions and constraints on the transfer\n\nof liquidity across business lines, group entities and, where applicable,\nacross borders."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 27,
+        "section_title": "77. The CFP shall be consistent with the RFI’s business continuity plans and shall be",
+        "text": "77. The CFP shall be consistent with the RFI’s business continuity plans and shall be\noperational under situations where business continuity arrangements have\nbeen invoked.\nAssignment of Liquidity Costs and Benefits"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 27,
+        "section_title": "78. An RFI shall incorporate liquidity costs, benefits and risks into its internal pricing,",
+        "text": "78. An RFI shall incorporate liquidity costs, benefits and risks into its internal pricing,\nperformance evaluation and new product approval processes for all\nsignificant business activities (both on - and off -balance sheet). This is to ensure\nthat the risk-taking incentives of individual business lines are aligned with the\nliquidity risk exposures their activities create for the RFI."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 27,
+        "section_title": "79. RFIs shall incorporate liquidity costs and benefits into their internal funds transfer",
+        "text": "79. RFIs shall incorporate liquidity costs and benefits into their internal funds transfer\npricing program. This program shall charge business lines for the cost of funding\nall significant activities based on the liquidity consumed, while also crediting\nbusiness lines that generate liquidity at a cost lower than the RFI’s funding\nrate12.\nFunding Strategy and Managing Market Access"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 27,
+        "section_title": "80. An RFI shall develop and document a three (3)-year funding strategy which",
+        "text": "80. An RFI shall develop and document a three (3)-year funding strategy which\nshould be consistent with its business strategy. The funding strategy shall be\nreviewed and updated annually and approved by the Board13."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 27,
+        "section_title": "81. An RFI shall carefully design its funding diversification strategies with the aim of",
+        "text": "81. An RFI shall carefully design its funding diversification strategies with the aim of\nimproving its capacity to withstand a range of institution-specific and market-\nwide stress scenarios. These funding strategies shall be complemented with\nlimit setting practices, where deemed appropriate, given that breaches of the\nset limits can represent a good indicator of emerging funding gaps."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 27,
+        "section_title": "12 This will initially apply to Banks ONLY. SDIs are however encouraged to build capacity to be able to meet this",
+        "text": "12 This will initially apply to Banks ONLY. SDIs are however encouraged to build capacity to be able to meet this\nexpectation"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 27,
+        "section_title": "13 The review should consider any changes in the internal and/or external environment.",
+        "text": "13 The review should consider any changes in the internal and/or external environment.\n\n23"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 28,
+        "section_title": null,
+        "text": "PUBLIC\n\nLIQUIDITY RISK MANAGEMENT DIRECTIVE, 2026"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 28,
+        "section_title": "82. As a check for adequate diversification of liabilities, an RFI shall regularly",
+        "text": "82. As a check for adequate diversification of liabilities, an RFI shall regularly\nexamine the level of reliance on individual funding sources by instrument type,\ntenor, provider of funds, currency and geographical market, and set internal\nlimits on the maximum amount of funds it will accept from any one\ncounterparty or specific funding markets."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 28,
+        "section_title": "83. An RFI shall maintain an active and ongoing presence in its funding markets",
+        "text": "83. An RFI shall maintain an active and ongoing presence in its funding markets\nand strong relationships with funding providers outside the RFI’s group to,\namongst others, provide a line of defence in liquidity management14. An RFI\nshall also:\n\na) regularly gauge its capacity to raise funds quickly;\n\nb) identify the main factors that affect its ability to raise funds and monitor\n\nthose factors closely to ensure that estimates of fund-raising capacity\nremain valid;\n\nc) assess the potential impact of market disruption and other adverse\n\nscenarios on access to funding markets in the short and long term; and\n\nd) consider the effects that losses and the resulting reduction in capital could\n\nhave on its ability to maintain funding relationships.\n\nManagement of Intraday Liquidity Position and Risk (Banks Only)"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 28,
+        "section_title": "84. An RFI shall actively manage its intraday liquidity positions and risks to meet",
+        "text": "84. An RFI shall actively manage its intraday liquidity positions and risks to meet\npayment and settlement obligations on a timely basis under both normal and\nstressed conditions and thus contribute to the smooth functioning of payment\nand settlement systems."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 28,
+        "section_title": "85. RFIs shall implement measures, such as developing contingency plans to",
+        "text": "85. RFIs shall implement measures, such as developing contingency plans to\naddress the liquidity implications of a disruption in the payment system. The RFI\nshall also have back-up service arrangements to avoid cashflow disruptions."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 28,
+        "section_title": "86. An RFI’s strategy for managing intraday liquidity risk shall include the following",
+        "text": "86. An RFI’s strategy for managing intraday liquidity risk shall include the following\noperational elements:\n\na) The capacity to measure expected daily gross liquidity inflows and outflows,\n\nanticipate the intraday timing of these flows where possible, and forecast\npotential net funding shortfalls that might arise at different points during the\nday;"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 28,
+        "section_title": "14 This may require ongoing commitment and investment in adequate and appropriate infrastructures, and",
+        "text": "14 This may require ongoing commitment and investment in adequate and appropriate infrastructures, and\nprocesses.\n\n24"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 29,
+        "section_title": null,
+        "text": "PUBLIC\n\nLIQUIDITY RISK MANAGEMENT DIRECTIVE, 2026\n\nb) The capacity to monitor intraday liquidity positions such as account\n\nbalances, remaining intraday credit capacity, and eligible collateral in real\ntime, comparing them against expected activities and available resources;\n\nc) Mechanisms to acquire sufficient intraday funding to meet its intraday\n\ncommitments;\n\nd) The ability to manage and mobilize collateral as necessary to obtain\n\nintraday funds;\n\ne) Capability to manage the timing of its liquidity outflows in line with its\n\nintraday commitments; and\n\nf) Preparedness to deal with unexpected disruptions to its intraday liquidity\n\nflows.\n\n25"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 30,
+        "section_title": null,
+        "text": "PUBLIC\n\nLIQUIDITY RISK MANAGEMENT DIRECTIVE, 2026\n\nPART V - DISCLOSURE"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 30,
+        "section_title": "87. An RFI shall publicly disclose information on a regular basis that enables market",
+        "text": "87. An RFI shall publicly disclose information on a regular basis that enables market\nparticipants to make informed judgment about the soundness of its liquidity\nrisk management framework, ability to meet its liquidity needs and its liquidity\nposition. This information shall include:\n\na) The organisational structure and framework for the management of\n\nliquidity risk. In particular, the disclosure shall describe the roles and\nresponsibilities of the Board, Senior Management and relevant committees,\nas well as those of different functional and business units;\n\nb) The degree of centralisation in its liquidity risk management practice and\n\nhow that degree impacts funding activities, limit setting and intra-group\nlending strategies;\nc) An articulation of liquidity risk appetite and tolerance as well as details of\n\nhow compliance with that appetite and tolerance are assessed;\n\nd) Quantitative measures such as the composition and size of the stock of\n\nliquid assets, the value of internal ratios and other key metrics that\nmanagement monitors;\n\ne) Qualitative discussion of its metrics such as the time span covered, whether\n\ncomputed under normal or stressed conditions, and assumptions applied\nin the assessment of the RFI’s liquidity position, liquidity risk and liquidity\ncushion;\n\nf) A description of limit setting policies including limits placed on internal ratios\n\nand key metrics; and\n\ng) An overview of stress tests used, including description of scenarios used and\n\nthe role of stress testing in management of liquidity risk."
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 30,
+        "section_title": "88. RFIs shall disclose the above information on their websites and submit same to",
+        "text": "88. RFIs shall disclose the above information on their websites and submit same to\nBOG by 31st March of the ensuing year.  The disclosure shall be made in the\nAudited Financial Statements and shall be done in a manner that is clear,\nunambiguous and meaningful to all RFIs’ stakeholders.\n\n26"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 31,
+        "section_title": null,
+        "text": "PUBLIC\n\nLIQUIDITY RISK MANAGEMENT DIRECTIVE, 2026\n\nPART VI - SANCTIONS AND REMEDIAL MEASURES"
+    },
+    {
+        "source_filename": "Liquidity-Risk-Management-Directive-Cleaned-11.12.25.pdf",
+        "page_number": 31,
+        "section_title": "89. An RFI that fails to comply with the requirements of this Directive shall be",
+        "text": "89. An RFI that fails to comply with the requirements of this Directive shall be\nsanctioned in accordance with section 40 and section 92 (8) of Act 930, in\naddition to any other relevant remedial measures and related sanctions as\nstipulated in this Act.\n\n27"
+    }
+]

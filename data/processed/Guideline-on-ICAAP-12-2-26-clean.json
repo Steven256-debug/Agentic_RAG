@@ -1,0 +1,860 @@
+[
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 1,
+        "section_title": null,
+        "text": "BANK OF GHANA\n\nPUBLI\n\nGuideline on Internal Capital Adequacy\n\nAssessment Process (ICAAP)\n\nfor Banks and Financial Holding Companies licensed and\n\nregistered under the Banks and Specialised Deposit-\n\nTaking Institutions Act, 2016 (Act 930)\n\n(EXPOSURE DRAFT)\n\nFebruary 2026"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 2,
+        "section_title": null,
+        "text": "PUBLIC\n\nThe Bank of Ghana (BOG) has issued the Guideline On Internal Capital Adequacy Assessment\nProcess (ICAAP) to solicit comments and inputs from the banking industry and the general\npublic, in line with the BOG’s Procedures for Issuance of Directives, 2020.\n\nIn light of this, the Exposure Draft shall be made available on the BOG’s website at\nwww.bog.gov.gh from date of publication to June 30th, 2026, for comments.\n\nAll comments shall be sent to the Bank of Ghana via email at bsdletters@bog.gov.gh by\n30th June 2026. The Bank of Ghana shall consider all material comments received and provide\na written explanation for comments that were incorporated into the final guideline or\notherwise.\n\nPUBLIC"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 3,
+        "section_title": null,
+        "text": "PUBLIC\n\nPREAMBLE\n\nOver the past two decades, developments in the international financial system have\nexposed significant weaknesses in banking practices, regulatory standards, and\nsupervisory oversight. The 2007–2009 global financial crisis demonstrated that minimum\ncapital ratios alone are insufficient to ensure the safety and soundness of financial\ninstitutions. Subsequent episodes—including the Eurozone sovereign debt crisis, the\nCOVID-19 pandemic, tightening global financial conditions, and recent bank failures in\nadvanced economies—have confirmed the need for stronger risk management, improved\ngovernance, and more forward-looking capital planning frameworks.\nIn response, the Basel Committee on Banking Supervision strengthened the capital\nframework under Pillar 2, which is based on four key principles. Principle 1 requires banks\nto maintain a sound Internal Capital Adequacy Assessment Process (ICAAP). Principle 2\nrequires supervisors to carry out a Supervisory Review Process (SRP) to assess the\nadequacy of a bank’s capital. Principle 3 requires supervisors to ensure that banks operate\nwith capital above the minimum requirements. Principle 4 requires supervisors to take\nearly action where deficiencies in capital, governance, or risk management are identified.\nThese principles establish a forward-looking and risk-sensitive approach to capital\nadequacy.\nIn Ghana, the financial sector reform programme and the recapitalisation exercise have\nstrengthened the resilience of the banking sector. However, recent macroeconomic\ndevelopments—including exposure to external shocks, inflationary pressures, exchange\nrate volatility, and changes in market conditions—require banks to adopt enhanced,\nforward-looking assessments of capital adequacy consistent with international standards.\nThe financial system has also become more interconnected due to cross-border activities\nof Ghanaian banks, increased reliance on international funding, expansion of digital\nfinancial services, and broader exposure to global macro-financial conditions. These\ndevelopments introduce risks that extend beyond those captured under Pillar 1.\nWithin this context, ICAAP is a critical component of the capital management framework\nfor banks and financial holding companies. ICAAP enables institutions to identify and\nassess all material risks, determine the level of capital required to support these risks,\nand ensure that capital levels are commensurate with current and future exposures.\nICAAP also supports the maintenance of adequate capital buffers, the protection of\ndepositors, and the continued provision of financial intermediation under both normal and\nstressed conditions. In this regard, ICAAP must clearly demonstrate how capital is\nallocated to absorb material risks and must incorporate the cost of capital and the impact\nof unexpected losses. ICAAP further ensures that strategic objectives, risk appetite, and\ncapital planning remain aligned to promote the long-term safety, soundness, and stability\nof institutions operating within the Ghanaian financial system.\n\nPUBLIC"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 4,
+        "section_title": null,
+        "text": "PUBLIC\n\nTABLE OF CONTENTS\n\nPART I-PRELIMINARY ................................................................................................... 1\n\nTitle\nApplication ................................................................................................................... 1\nInterpretation ............................................................................................................... 1\nObjectives .................................................................................................................... 6\nProportionality .............................................................................................................. 6\nTransitional Arrangements and Implementation Date .................................................. 6\n\nPART II-GUIDANCE ON THE ICAAP ............................................................................. 7\n\nGovernance of the ICAAP ........................................................................................... 7\n\nPART III- RECOMMENDED SUBMISSION FORMAT AND CONTENT ....................... 15\n\nThe ICAAP Document ............................................................................................... 15\nOrganisation of the ICAAP Report ............................................................................. 15\n\nPART IV - REPORTING AND DISCLOSURE OF THE ICAAP .................................... 26\n\nRegulatory reporting of the ICAAP............................................................................. 26\nDisclosures ................................................................................................................ 26\n\nAPPENDIX – CATEGORIES OF RISKS TO BE ANALYSED ...................................... 28\n\nPUBLIC"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 5,
+        "section_title": null,
+        "text": "PUBLIC\n\nPART I-PRELIMINARY\n\nTitle"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 5,
+        "section_title": "1. This Guideline shall be cited as the Bank of Ghana Guideline on Internal Capital",
+        "text": "1. This Guideline shall be cited as the Bank of Ghana Guideline on Internal Capital\nAdequacy Assessment Process (ICAAP), 2026.\nApplication"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 5,
+        "section_title": "2. This Guideline is issued pursuant to sections 29(3) and 92(1) of the Banks and",
+        "text": "2. This Guideline is issued pursuant to sections 29(3) and 92(1) of the Banks and\nSpecialised Deposit-Taking Institutions Act, 2016 (Act 930). They shall apply to all\nbanks and financial holding companies licensed and registered, respectively, under\nthe Banks and Specialised Deposit-Taking Institutions Act, 2016 (Act 930),\nhereinafter referred to as Regulated Financial Institutions (RFIs)."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 5,
+        "section_title": "3. For an RFI with subsidiaries, Pillar 2 of the Basel capital framework shall apply on",
+        "text": "3. For an RFI with subsidiaries, Pillar 2 of the Basel capital framework shall apply on\nboth a stand-alone basis and at the group level, with the BOG monitoring capital\nadequacy at both the solo and consolidated levels. Where an RFI has foreign\nsubsidiaries, the BOG, as the home supervisor, will coordinate with host supervisors\nto obtain consolidated-level information."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 5,
+        "section_title": "4. For subsidiaries of foreign banks operating in Ghana, the BOG will assess the",
+        "text": "4. For subsidiaries of foreign banks operating in Ghana, the BOG will assess the\nstrength and reliability of support from the parent, along with relevant information\nfrom the home supervisor."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 5,
+        "section_title": "5. This Guideline shall be read in conjunction with the Bank of Ghana’s Capital",
+        "text": "5. This Guideline shall be read in conjunction with the Bank of Ghana’s Capital\nRequirements Directive, 2018, and other relevant Bank of Ghana Guidelines and\nDirectives1.\nInterpretation"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 5,
+        "section_title": "6. Unless the context otherwise requires, terms used in this guideline have the same",
+        "text": "6. Unless the context otherwise requires, terms used in this guideline have the same\nmeanings assigned to them in Act 930 and other Directives issued by the Bank of\nGhana or as defined below:\n“Act 930” means the Banks and Specialised Deposit-Taking Institutions Act, 2016 (Act\n930);\n“BOG” means the Bank of Ghana;"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 5,
+        "section_title": "1 Guidelines and Directives on credit concentration risk, interest rate risk in the banking book (IRRBB), stress testing,",
+        "text": "1 Guidelines and Directives on credit concentration risk, interest rate risk in the banking book (IRRBB), stress testing,\nand other applicable regulations.\n\n1"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 6,
+        "section_title": null,
+        "text": "PUBLIC\n\n\"Bank” means a body corporate that engages in the deposit-taking business and is\nissued with a banking licence in accordance with Act 930;\n\"Base Case Scenario” means a set of economic and financial conditions that are as\ngenerally consistent with the best or average estimate of future economic and financial\nconditions and does not usually lead to a stressed result. The purpose of the base case\nscenario is to, amongst others, provide a benchmark to compare results of other\nscenarios such as adverse, historical, and hypothetical.\n“Board” means the Board of Directors of a Regulated Financial Institution;\n“CRD” means the BOG Capital Requirements Directive, 2018;\n“CRM” means credit risk mitigation, which refers to techniques used by banks to reduce\nthe credit risk associated with an exposure by using collateral, guarantees, or netting\narrangements;\n“Economic Capital” means the internal methods and practices that enable a bank to\nconsistently assess its risks and determine the amount of capital needed to absorb\npotential economic losses. It represents a regulated financial institution’s own estimate\nof capital required to support its risk profile, beyond the regulatory minimum;\n“Financial Holding Company” means a company that controls a bank or specialised\ndeposit-taking institution which is subject to the registration requirements of Act 930;\n“Foreign Bank” means a foreign company that is authorised to engage in a deposit-\ntaking business in the country where its head office is located;\n“Foreign Company” means a company incorporated under the laws of a country other\nthan Ghana;\n“Key Management Personnel” means the chief executive officer or managing\ndirector, deputy chief executive officer, chief operating officer, chief financial officer,\nboard secretary, treasurer, chief internal auditor, chief risk officer, head of compliance,\nanti-money laundering reporting officer, head of internal control functions, chief legal\nofficer, and manager of a significant business unit of the Regulated Financial Institution;\n“Material Risks” means risks that could have a significant impact, both financial and\nnon-financial, on the institution and its subsidiaries or on the interests of depositors and\nother stakeholders;\n\n2"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 7,
+        "section_title": null,
+        "text": "PUBLIC\n\n“Management Actions” means actions that an RFI would take in response to an\nadverse (stress) scenario, which would not be taken in a base case scenario. These\nactions typically include but are not limited to raising of capital, reductions in risk-\nweighted assets, adjustments to business strategies, reductions in expenses, hedging\nof exposures, revision of credit policies, or disposal of assets.\n“Pillar 2” means the Supervisory Review Process under the Basel Capital Framework.\nIt ensures that regulated financial institutions maintain adequate capital and liquidity to\ncover all material risks, including those not fully addressed under Pillar 1. It also\npromotes the development and implementation of robust risk management practices\nfor identifying, monitoring, and managing these risks;\n“Pillar 2 Capital Add-ons” means the additional capital, above minimum regulatory\nrequirements, that the supervisor requires an RFI to hold to address risks not fully\ncaptured under Pillar 1 and to ensure alignment with the RFI’s overall risk profile;\n“Regulated Financial Institution (RFI)” means a bank or financial holding company\ncovered under this Directive;\n“Regulatory Capital” means the sum of Tier 1 Capital and Tier 2 Capital, net of\nregulatory adjustments. Tier 1 Capital (going-concern capital), which supports an RFI’s\nongoing operation and can absorb losses as they occur, consists of Common Equity Tier"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 7,
+        "section_title": "1 (CET1) and Additional Tier 1 (AT1) instruments. Tier 2 Capital (gone-concern capital)",
+        "text": "1 (CET1) and Additional Tier 1 (AT1) instruments. Tier 2 Capital (gone-concern capital)\nabsorbs losses in resolution or could be converted to equity if an RFI is wound up. All\nregulatory capital instruments must be able to fully absorb losses at the point of non-\nviability, ensuring that public funds are not exposed;\n“Risk Appetite” means the aggregate level and types of risk an RFI is willing to\nassume, decided in advance and within its risk capacity, to achieve its strategic\nobjectives and plan;\n“Risk Appetite Framework (RAF)” means the overall approach, including policies,\nprocesses, controls and systems, through which the approved risk appetite is\nestablished, communicated and monitored. It includes a risk appetite statement, risk\nlimits, and an outline of the roles and responsibilities of those overseeing the\nimplementation and monitoring of the RAF. The RAF should consider material risks to\nthe bank as well as to its reputation vis-à-vis depositors and other stakeholders. The\nRAF aligns with the RFI’s strategy;\n“Risk Appetite Statement (RAS)” means the written articulation of the aggregate\nlevel and types of risk that an RFI will accept, or avoid, in order to achieve its strategic\n\n3"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 8,
+        "section_title": null,
+        "text": "PUBLIC\n\nobjectives. It includes quantitative measures expressed relative to earnings, capital, risk\nmeasures, liquidity, and other relevant measures as appropriate. It shall also include\nqualitative statements to address reputation and conduct risks, as well as money\nlaundering and unethical practices;\n“Risk-Taking Capacity” means the maximum amount of risk an RFI is able to assume\ngiven its capital base, risk management and control capabilities, as well as its regulatory\nconstraints;\n“Risk Culture” means an RFI’s norms, attitudes, and behaviours related to risk\nawareness, risk-taking, and risk management, as well as the controls that shape\ndecisions on risks. Risk culture influences the decisions of management and employees\nduring the day-to-day activities and has an impact on the risks they assume;\n“Risk Exposure” means the amount of loss (financial or non-financial) that an RFI\nfaces from a particular risk type, before considering any mitigating actions or controls;\n“Risk Limits” means specific quantitative measures or limits based on, for example,\nforward-looking assumptions that allocate the RFI’s aggregate risk to business lines,\nlegal entities, as relevant specific risk categories, concentrations and, as appropriate,\nother measures;\n“Risk Management” means the processes established to ensure that all material risks\nand associated risk concentrations are identified, measured, evaluated, controlled,\nmitigated and reported on a timely and comprehensive basis;\n“Risk Management Framework” means the totality of systems, structures, policies,\nprocesses and people within an institution that identify, measure, evaluate, control or\nmitigate, monitor and report all internal and external sources of material risk;\n“Risk Management Oversight Function” means a key component of the RFI’s\nsecond line of defence in the three-lines-of-defence model. This function is responsible\nfor overseeing risk-taking activities across the bank and should have authority within\nthe organisation to do so;\n“Risk Management Strategy” means the strategy for managing risk and the basis\non which the Board will evaluate the success of its RMF and its approach;\n“Risk Profile” means a point-in-time assessment of an RFI’s gross risk exposures (i.e.,\nbefore the application of any mitigants) or, as appropriate, net risk exposures (i.e., after\ntaking into account mitigants) aggregated within and across each relevant risk category\nbased on current or forward-looking assumptions;\n\n4"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 9,
+        "section_title": null,
+        "text": "PUBLIC\n\n“Risk Tolerance” means the maximum level of risk that the institution is willing to\naccept in its business activities, expressed through measurable risk limits based on its\nrisk appetite, risk profile and capital strength;\n“RMD” means the BOG Risk Management Directive, 2021;\n“Senior Management” means members of the Executive Management Committee\n(EXCO) of a Regulated Financial Institution and any other Key Management Personnel\nas may be determined by the Regulated Financial Institution.\n\n5"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 10,
+        "section_title": null,
+        "text": "PUBLIC\n\nObjectives"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 10,
+        "section_title": "7. The purpose of this Guideline is to:",
+        "text": "7. The purpose of this Guideline is to:\n\na. provide a comprehensive overview of the key elements required by the BOG in\n\nthe Internal Capital Adequacy Assessment Process (ICAAP)2;\n\nb. serve as criteria for evaluating the effectiveness of an RFI’s assessment of its\n\ncapital needs relative to its risk exposures and existing risk management\nsystems; and\n\nc. establish a standard format for ICAAP submission3.\nProportionality"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 10,
+        "section_title": "8. RFIs are required to fully comply with this Directive. However, when assessing the",
+        "text": "8. RFIs are required to fully comply with this Directive. However, when assessing the\ncomprehensiveness of an RFI's ICAAP, the BOG will take into account the principle\nof proportionality, having regard to the design and implementation of an RFI’s\nICAAP, which should be proportionate to its risk profile and systemic importance,\nas well as the scale and complexity of its activities.\nTransitional Arrangements and Implementation Date"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 10,
+        "section_title": "9. These Guidelines shall be effective from 1st January 2027.",
+        "text": "9. These Guidelines shall be effective from 1st January 2027."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 10,
+        "section_title": "10. RFIs shall therefore align their governance arrangements, risk management",
+        "text": "10. RFIs shall therefore align their governance arrangements, risk management\nframeworks, internal policies and processes with the provisions of this Guideline by\n31st December 2026."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 10,
+        "section_title": "2 The ICAAP summarises the RFI’s risk assessment and capital allocation for unexpected losses, as expected losses",
+        "text": "2 The ICAAP summarises the RFI’s risk assessment and capital allocation for unexpected losses, as expected losses\nare captured as part of IFRS 9 Expected Credit Loss (ECL) impairment."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 10,
+        "section_title": "3  While the level of detail should reflect the RFI’s size, nature, and complexity, using the standard format will ensure",
+        "text": "3  While the level of detail should reflect the RFI’s size, nature, and complexity, using the standard format will ensure\nall relevant topics are covered and minimise the need for follow-up discussions with the BOG.\n\n6"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 11,
+        "section_title": null,
+        "text": "PUBLIC\n\nPART II-GUIDANCE ON THE ICAAP\n\nGOVERNANCE OF THE ICAAP"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 11,
+        "section_title": "11. The Capital Requirements Directive (CRD) mandates that the Board of RFIs",
+        "text": "11. The Capital Requirements Directive (CRD) mandates that the Board of RFIs\nestablish and govern the following:\n\na. The RFI’s risk culture through its overall risk management strategy and specific\n\nframeworks for managing all material risks; and\n\nb. A capital management framework that aligns capital allocation with the Board-\n\napproved strategy and risk appetite."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 11,
+        "section_title": "12. RFIs should comprehensively document their ICAAP methodology and outcomes,",
+        "text": "12. RFIs should comprehensively document their ICAAP methodology and outcomes,\nsubjecting both to a rigorous governance process that includes internal challenge\nand annual reviews by the Board."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 11,
+        "section_title": "13. The governance process for the ICAAP must generally cover the following aspects:",
+        "text": "13. The governance process for the ICAAP must generally cover the following aspects:\n\na. Board and Senior Management oversight;\n\nb. Established risk management policies, procedures, limits and controls;\n\nc. Comprehensive assessment of risks;\n\nd. Sound capital assessment and setting of capital targets;\n\ne. Monitoring and reporting;\n\nf. Stress testing;\n\ng. Internal control review; and\n\nh. General Expectations."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 11,
+        "section_title": "14. RFIs should consider additional capital buffers, such as countercyclical buffers and",
+        "text": "14. RFIs should consider additional capital buffers, such as countercyclical buffers and\nbuffers for Domestic Systemically Important Banks (DSIBs), where applicable, to\nensure robust capital adequacy.\n\nBoard Oversight"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 11,
+        "section_title": "15. The Board shall:",
+        "text": "15. The Board shall:\n\na. have the ultimate responsibility over the ICAAP;\n\nb. robustly challenge and approve the ICAAP document, risk appetite statement,\n\ncapital management framework and sound risk management policies and\nprocedures;\n\nc. develop a thorough understanding of the nature and materiality of the risks\n\ninherent in the RFI’s activities;\n\n7"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 12,
+        "section_title": null,
+        "text": "PUBLIC\n\nd. understand and critically evaluate key aspects of the ICAAP, including its\n\nassumptions and methodologies, and oversee its ongoing implementation;\n\ne. ensure the bank maintains adequate capital commensurate with its risk profile\n\nand aligned with regulatory expectations on an ongoing basis;\n\nf. integrate ICAAP outcomes into the RFI’s strategic planning and decision-making\n\nprocess; and\n\ng. ensure Senior Management effectively communicates risk-related policies\n\nthroughout the organisation.\nSenior Management Oversight"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 12,
+        "section_title": "16. Senior Management shall:",
+        "text": "16. Senior Management shall:\n\na. develop and effectively implement the ICAAP;\n\nb. establish a comprehensive risk assessment framework that covers all material\n\nrisks, including those that may appear minor individually but could lead to\nsignificant losses when combined under stress scenarios;\n\nc. establish detailed institution-wide policies aligned with the RFI’s risk appetite and\n\ncapacity as well as the BOG Risk Management Directive and relevant guidelines;\n\nd. monitor compliance with Board-approved internal policies and risk limits as well\n\nas prudential limits, through robust internal controls and regular reporting;\n\ne. implement systems that link risk exposures to capital levels as part of the ICAAP;\n\nf. ensure consistent communication and enforcement of internal controls and\n\ncompliance processes across the institution;\nRisk Management Policies, Procedures, Limits and Controls"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 12,
+        "section_title": "17. In identifying and measuring material risk, RFIs shall:",
+        "text": "17. In identifying and measuring material risk, RFIs shall:\n\na. Develop comprehensive policies and procedures for identifying, measuring, and\n\nreporting all material and emerging risks. These should include:\n\ni.\nRigorous risk measurement systems that accurately capture the nature\nand magnitude of risks faced by the bank;\nii.\nControls that ensure objectivity and consistency in risk identification and\nmeasurement;\niii.\nTechniques based on high-quality inputs for accurate risk assessment;\niv.\nSound judgement in the assessment of non-quantifiable risks;\nv.\nMechanism for promptly enhancing the quality of risk management in\nresponse to changes in the RFI’s risk profile, shifts in the macroeconomic\nenvironment and the evolution of regulatory standards; and\n\n8"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 13,
+        "section_title": null,
+        "text": "PUBLIC\n\nvi.\nStress testing to assess the impact of adverse scenarios on the RFI’s\ncapital adequacy and demonstrate the appropriateness of the selected\nscenarios and underlying assumptions to the BOG.\n\nb. Establish a process that links capital levels to the RFI’s risk profile, demonstrating\n\nconceptual soundness and reasonableness of outcomes to the BOG;\n\nc. Define capital targets aligned with the RFI’s strategic objectives, business plan,\n\nand operating environment;\n\nd. Implement a robust system of internal controls, reviews and audits to ensure the\n\nintegrity of the overall risk management process; and"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 13,
+        "section_title": "18. The ICAAP should outline enhancements in the management of material risks aimed",
+        "text": "18. The ICAAP should outline enhancements in the management of material risks aimed\nat reducing the likelihood and impact of losses. This includes changes in risk\nownership, functional responsibilities, and audit oversight.\nComprehensive Assessment of Risks"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 13,
+        "section_title": "19. The identification of risks faced by an RFI should be based on a comprehensive",
+        "text": "19. The identification of risks faced by an RFI should be based on a comprehensive\nassessment of current and potential risk factors related to transactions, products,\nactivities, and processes. RFIs are also required to include an analysis of the\nexternal environment in their risk identification approaches."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 13,
+        "section_title": "20. Given that ICAAP is an institution-wide initiative, the Board and all relevant",
+        "text": "20. Given that ICAAP is an institution-wide initiative, the Board and all relevant\nfunctions, including business lines, should actively participate in the risk\nidentification process. The risk management function should coordinate,\nconsolidate, and disseminate identified risks across the bank."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 13,
+        "section_title": "21. RFIs shall continuously review the materiality of identified risks, taking into account",
+        "text": "21. RFIs shall continuously review the materiality of identified risks, taking into account\nmarket conditions, counterparty information, and the potential impact on earnings,\ncapital, and reputation."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 13,
+        "section_title": "22. As part of the ICAAP, RFIs should:",
+        "text": "22. As part of the ICAAP, RFIs should:\n\na. Identify all material risks across the institution;\n\nb. Measure risks that can be reliably quantified; and\n\nc. Recognise the limitations of Pillar 1 capital requirements in capturing all relevant\n\nrisks."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 13,
+        "section_title": "23. RFIs shall also establish a clearly defined risk identification process, specifying the",
+        "text": "23. RFIs shall also establish a clearly defined risk identification process, specifying the\nfrequency of reviews of the risks included in the ICAAP and explicitly outlining the\nroles and responsibilities of the relevant functions involved in the ICAAP.\nSound Capital Assessment and Setting of Capital Targets"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 13,
+        "section_title": "24. To effectively calculate internal (Pillar 2) capital, RFIs shall implement the following:",
+        "text": "24. To effectively calculate internal (Pillar 2) capital, RFIs shall implement the following:\n\n9"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 14,
+        "section_title": null,
+        "text": "PUBLIC\n\na. Clear policies and procedures for identifying, measuring, and reporting all\n\nmaterial risks;\n\nb. A framework that links capital adequacy to the level of risks assumed;\n\nc. A process that aligns capital adequacy goals with the RFI’s strategic objectives\n\nand business plan; and\n\nd. A robust system of internal controls that continuously reviews and audits the\n\nRFI’s activities, ensuring the integrity of the overall risk management framework."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 14,
+        "section_title": "25. RFIs using internal models to determine capital requirements under Pillar II should",
+        "text": "25. RFIs using internal models to determine capital requirements under Pillar II should\ndemonstrate the ability of such models to accurately and consistently capture the\nrelevant risks. These models should accurately measure risks linked to the bank’s\nactivities and take into account the bank’s portfolio structure, prevailing and\nprojected macroeconomic conditions, and potential shocks. Such models should\nalso be subjected to rigorous, ongoing validation to ensure that they continue to be\nfit for purpose."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 14,
+        "section_title": "26. When linking Pillar 2 capital to risk levels, RFIs should consider:",
+        "text": "26. When linking Pillar 2 capital to risk levels, RFIs should consider:\na. Comparison of capital ratios with regulatory standards and those of their peers;\n\nb. The potential impact of severe adverse events, informed by historical data,\n\nexternal economic conditions and hypothetical events; and\n\nc. Planned changes in business strategy and shifts in the operating environment\n\nthat may impact their risk profile."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 14,
+        "section_title": "27. The ICAAP documentation should include a reconciliation between total internal",
+        "text": "27. The ICAAP documentation should include a reconciliation between total internal\ncapital and eligible regulatory capital. Where applicable, RFIs should clarify whether\ncapital instruments that do not qualify as regulatory capital are included."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 14,
+        "section_title": "28. RFIs shall comply with the applicable BOG guidelines on Pillar 2 risks, including",
+        "text": "28. RFIs shall comply with the applicable BOG guidelines on Pillar 2 risks, including\nthose on credit concentration risk and interest rate risk in the banking book, during\nthe assessment and quantification of relevant risk types."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 14,
+        "section_title": "29. In determining internal capital requirements as part of the ICAAP, RFIs should",
+        "text": "29. In determining internal capital requirements as part of the ICAAP, RFIs should\nensure that:\na. All material risks, including Pillar 1 risks, Pillar 2 risks: risks considered under\n\nPillar 1 that are not fully captured by the Pillar 1 process (e.g., credit\nconcentration risk); those factors not taken into account by the Pillar 1 process\n(e.g., IRRBB, business and strategic risk); and factors external to the RFI (e.g.,\nbusiness cycle effects);\n\nb. The approach is forward-looking, considering the RFI’s strategic plans and their\n\nrelationship with macroeconomic factors;\n\n10"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 15,
+        "section_title": null,
+        "text": "PUBLIC\n\nc. Short- and long-term capital needs and strategic objectives are considered;\n\nd. Adequate capital projections are developed to address all material risks over the\n\nspecified time horizon;\n\ne. The sensitivity of capital to economic and financial cycles (business risk) is\n\nassessed as a critical factor for current and future capital targets;\n\nf. Differences in the loss-absorption capacity of various capital components are\n\nevaluated;\n\ng. Capital targets align with the RFI’s risk profile and operating environment, with\n\na focus on the quality of managing risks that are not easily measurable, such as\nreputational and strategic risks;\n\nh. Risk management policies are integrated into the day-to-day activities and\n\ndecision-making processes within the RFI and effectively communicated to all\nrelevant staff; and\n\ni. The ICAAP and risk management policies are periodically reviewed to ensure\n\ncontinued alignment with the RFI’s risk profile."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 15,
+        "section_title": "30. Effective capital planning and management is critical in achieving the RFI’s strategic",
+        "text": "30. Effective capital planning and management is critical in achieving the RFI’s strategic\nobjectives and ensuring ongoing resilience to external shocks. The Board and Senior\nManagement should therefore:\na. Establish a capital management policy4 that includes, at a minimum:\n\ni.\nCurrent and future internal capital requirements that are aligned with its\nstrategic objectives, risk profile and risk management capacity;\n\nii.\nBoard approved capital targets consistent with the RFI’s risk tolerance;\n\niii.\nMeasures to be implemented if capital falls below the regulatory minimum\nor internal targets; and\n\niv.\nAn outline of the RFI’s capital needs, anticipated expenditures, desired\ncapital level, and external funding sources.\n\nb. Develop and regularly update supplementary policies, such as stress testing,\n\nrecovery planning and dividend policies, that enhance the capital management\npolicy;\n\nc. Develop internal control systems and written policies for capital planning and\n\nassessment, ensuring effective communication throughout the RFI; and\n\nd. Establish methods for monitoring compliance with regulatory capital standards\n\nand internal policies."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 15,
+        "section_title": "4 The Capital Management Policy shall be submitted together with the ICAAP Report as part of the reporting",
+        "text": "4 The Capital Management Policy shall be submitted together with the ICAAP Report as part of the reporting\ndocuments.\n\n11"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 16,
+        "section_title": null,
+        "text": "PUBLIC"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 16,
+        "section_title": "31. The ICAAP should address the capital implications arising from both on-balance",
+        "text": "31. The ICAAP should address the capital implications arising from both on-balance\nsheet and off-balance sheet positions, including contingent liabilities and other\ncommitments.\nMonitoring and Reporting"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 16,
+        "section_title": "32. RFIs should establish a robust IT infrastructure and implement effective internal",
+        "text": "32. RFIs should establish a robust IT infrastructure and implement effective internal\nprocesses for monitoring and reporting risk exposures. This framework is crucial for\nevaluating the impact of evolving risk profiles on capital requirements. Accordingly,\nRFIs’ IT infrastructure should generate reports that facilitate the Board and Senior\nManagement to:\na. Evaluate the level and trends of material risks and their implications on regulatory\n\nand internal capital requirements;\n\nb. Assess the sensitivity and reasonableness of key assumptions used in capital\n\nassessments; and\n\nc. Project future capital requirements based on evolving risk profiles and\n\nmacroeconomic conditions to inform the adjustment of strategic plans where\nnecessary."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 16,
+        "section_title": "33. The ICAAP should incorporate a system for:",
+        "text": "33. The ICAAP should incorporate a system for:\na. Monitoring and reporting risk exposures against established risk limits;\n\nb. Assessing the impact of changes in the RFI’s risk profile on capital needs; and\n\nc. Providing regular and timely reports to the Board and Senior Management on the\n\nRFI’s risk profile and capital adequacy."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 16,
+        "section_title": "34. The RFI’s report on risk profile and capital needs should enable Senior Management",
+        "text": "34. The RFI’s report on risk profile and capital needs should enable Senior Management\nto:\na. Evaluate the level and trends of material risks and their impact on capital levels;\n\nb. Assess the sensitivity and reasonableness of key assumptions in the capital\n\nassessments;\n\nc. Determine whether the bank maintains sufficient capital against various risks and\n\ncomplies with approved capital adequacy targets; and\n\nd. Assess future capital requirements based on the RFI’s risk profile and adjust the\n\nstrategic plan as necessary.\n\nStress Testing and Management Actions"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 16,
+        "section_title": "35. RFIs should regularly conduct stress tests to evaluate the effectiveness of their risk",
+        "text": "35. RFIs should regularly conduct stress tests to evaluate the effectiveness of their risk\nmitigation and control systems and to determine whether their internal capital is\nsufficient to cover potential risks.\n\n12"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 17,
+        "section_title": null,
+        "text": "PUBLIC"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 17,
+        "section_title": "36. In developing their stress testing framework, RFIs should adhere to the BOG",
+        "text": "36. In developing their stress testing framework, RFIs should adhere to the BOG\nGuideline on Stress Testing. Additionally, RFIs should assess the relevance of the\nBOG’s stress scenarios and suggested risk drivers to their specific business models\nand risk profiles."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 17,
+        "section_title": "37. RFIs should outline realistic management actions to reduce risk or restore capital",
+        "text": "37. RFIs should outline realistic management actions to reduce risk or restore capital\nadequacy when:\na. Severe and plausible stress scenarios cause the Capital Adequacy Ratio (CAR) to\n\nfall below the regulatory minimum; or\n\nb. The current capital ratio is below the RFI’s capital target."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 17,
+        "section_title": "38. In assessing the quality of their management actions, RFIs are expected to:",
+        "text": "38. In assessing the quality of their management actions, RFIs are expected to:\na. Ensure\nproposed\nmanagement\nactions\nare\nfeasible\nunder\nadverse\nmacroeconomic conditions and take into account potential reputational impacts;\n\nb. Evaluate factors that may limit the effectiveness of management actions, such\n\nas debt covenants and legal or regulatory constraints;\n\nc. Assess how these management actions would likely affect the overall business\n\nmodel;\n\nd. Assess and document, in the ICAAP report, the impact of the proposed\n\nmanagement actions on projected metrics under various scenarios; and\n\ne. Where applicable, provide evidence of execution of similar management actions\n\nin the past, such as Board reports and minutes of relevant meetings.\nInternal Control and Independent Review"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 17,
+        "section_title": "39. RFIs should implement a comprehensive internal controls system, supported by",
+        "text": "39. RFIs should implement a comprehensive internal controls system, supported by\nindependent reviews and audits, to ensure the adequacy, effectiveness, and\nreliability of the ICAAP and the broader capital planning framework. These controls\nshould enable effective monitoring of the RFI’s business environment and alignment\nwith strategic objectives."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 17,
+        "section_title": "40. The Board is responsible for overseeing the internal control systems to ensure they",
+        "text": "40. The Board is responsible for overseeing the internal control systems to ensure they\nsupport the RFI’s capital planning and risk management efforts. RFIs should also\nestablish mechanisms to monitor actual performance against approved capital\ntargets and verify consistency with ICAAP strategies."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 17,
+        "section_title": "41. The ICAAP should be subjected to regular and independent review by the Internal",
+        "text": "41. The ICAAP should be subjected to regular and independent review by the Internal\nAudit Function (IAF) and/or an external reviewer to maintain integrity, accuracy,\nand reasonableness. These reviews should assess:\n\n13"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 18,
+        "section_title": null,
+        "text": "PUBLIC\n\na. The suitability of the capital assessment process relative to the RFI’s size, scope\n\nand complexity;\n\nb. The appropriateness of risk appetite and tolerance levels;\n\nc. The effectiveness of the ICAAP and the robustness of the internal controls;\n\nd. The approach to the identification and evaluation of material risks;\n\ne. The accuracy and completeness of data used for the ICAAP;\n\nf. The reasonableness and validity of scenarios used in the assessment process;\n\ng. The reliability of the stress testing process, assumptions, and inputs; and\n\nh. The accuracy and reliability of third-party tools and data, including credit ratings,\n\nrisk assessment models and macroeconomic projections."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 18,
+        "section_title": "42. Independent reviews and audits of the ICAAP should be conducted at least annually,",
+        "text": "42. Independent reviews and audits of the ICAAP should be conducted at least annually,\nwith more frequent reviews where there are material changes in macroeconomic\nconditions and regulatory requirements, as well as the RFI’s risk profile, business\nstrategy and structure (e.g., unanticipated mergers and acquisitions).\n\n14"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 19,
+        "section_title": null,
+        "text": "PUBLIC\n\nPART III- RECOMMENDED SUBMISSION FORMAT AND CONTENT\n\nTHE ICAAP DOCUMENT"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 19,
+        "section_title": "43. The RFI uses the ICAAP document to outline its internal capital adequacy",
+        "text": "43. The RFI uses the ICAAP document to outline its internal capital adequacy\nassessment process to the regulator. BOG recognises that ICAAP submissions may\nvary in length and scope, reflecting differences in RFIs’ business models, risk\nprofiles and risk management systems. Therefore, the ICAAP document should\naccurately represent the size, nature, and complexity of each RFI’s operations."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 19,
+        "section_title": "44. To streamline the review process and ensure comprehensiveness of the ICAAP, RFIs",
+        "text": "44. To streamline the review process and ensure comprehensiveness of the ICAAP, RFIs\nare encouraged to adopt the prescribed format, which captures the key areas\ntypically assessed by the BOG. While this format can improve efficiency, it does not\nreplace the need to ensure compliance with applicable laws and regulations and\nthat all material information is reported."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 19,
+        "section_title": "45. The ICAAP should be derived from, as well as be consistent with, existing internal",
+        "text": "45. The ICAAP should be derived from, as well as be consistent with, existing internal\nstrategies, policies and procedures, and should include a clear summary of key\nfindings. The Board should robustly challenge and approve the document before\nsubmission to BOG."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 19,
+        "section_title": "46. The ICAAP document should inform the Board about the RFI’s ongoing risk",
+        "text": "46. The ICAAP document should inform the Board about the RFI’s ongoing risk\nassessment and mitigation strategies, as well as current and projected capital\nrequirements. It should be presented in a clear and concise format that enables\nboth the RFI and BOG to make informed judgements about capital targets and risk\nmanagement practices."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 19,
+        "section_title": "47. Where necessary, technical details including risk measurement methodologies,",
+        "text": "47. Where necessary, technical details including risk measurement methodologies,\ncapital models, scenario analysis and stress testing should be attached to the ICAAP\nreport."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 19,
+        "section_title": "48. The ICAAP should identify loss factors associated with general and specific risks and",
+        "text": "48. The ICAAP should identify loss factors associated with general and specific risks and\nprovide estimates of the cost of capital attributable to these risks based on potential\nlosses. Stress testing of material risks or the overall strategy should be conducted\nto validate ICAAP conclusions.\nCONTENT OF THE ICAAP REPORT"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 19,
+        "section_title": "49. At a minimum, RFIs are expected to include the following key components in their",
+        "text": "49. At a minimum, RFIs are expected to include the following key components in their\nICAAP report or as part of the supplementary submissions:\n\na. Executive Summary\n\nb. Structure and Operations\n\n15"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 20,
+        "section_title": null,
+        "text": "PUBLIC\n\nc. Governance and Management of the ICAAP\n\nd. Business Model and Strategy\n\ne. Risk Management Framework5\n\nf. Risk Appetite Statement\n\ng. Risk Identification and Materiality Assessment\n\nh. Quantification of Pillar 2 Capital Requirements\n\ni. Stress Testing\n\nj. Capital planning\n\nk. Liquidity Planning and Management\n\nl. Capital Allocation and Reconciliation of Internal Capital\n\nm. Management Actions\n\nn. Internal Audit and Review of ICAAP\n\no. Challenge and Adoption of the ICAAP\n\np. Approval, Review, and Use of ICAAP within the bank\n\nq. Use of Internal Models for Capital Assessment\n\nExecutive Summary"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 20,
+        "section_title": "50. The Executive Summary of the ICAAP report should provide a clear and concise",
+        "text": "50. The Executive Summary of the ICAAP report should provide a clear and concise\noverview of the methodology, key findings, and strategic implications. At a\nminimum, it should include:\n\na. The objective of the ICAAP report and the entities covered, including subsidiaries;\n\nb. Key findings from the ICAAP analysis, such as:\n\ni.\nThe level and composition of internal capital compared to Pillar 1\nrequirements; and\n\nii.\nAn assessment of the robustness of the RFI’s risk management systems.\n\nc. A summary of the RFI’s financial position, strategic outlook, balance sheet\n\nstrength, and projected profitability;\n\nd. A brief overview of the RFI’s capital plan, dividend policies, and future capital\n\nmanagement objectives;\n\ne. An overview of material risks, justification for current risk levels, and planned\n\nactions to address any unacceptable risks;"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 20,
+        "section_title": "5 RFIs should align with the BOG Risk Management Directive",
+        "text": "5 RFIs should align with the BOG Risk Management Directive\n\n16"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 21,
+        "section_title": null,
+        "text": "PUBLIC\n\nf. Whether the RFI has adequate capital resources over its planning horizon,\n\nincluding periods of economic downturn.\n\ng. Identification of key areas requiring further analysis and decision-making; and\n\nh. The body and functions responsible for conducting the ICAAP assessment,\n\nchallenges encountered during the process, and the entity that approved the\nfinal report.\nStructure and Operations"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 21,
+        "section_title": "51. This section should provide a concise overview of the RFI’s organisational structure",
+        "text": "51. This section should provide a concise overview of the RFI’s organisational structure\nand historical financial performance. At a minimum, it should include:\n\na. Description of the RFI’s legal entity status, group affiliation (if any), and\n\noperational structure;\n\nb. Summary of key financial metrics, including operating profit and its main drivers,\n\nprofit before and after tax, dividend distributions, and shareholders’ funds;\n\nc. Comparison of eligible capital resources against regulatory capital requirements;\n\nd. Overview of customer deposits and interbank funding sources;\n\ne. Snapshot of the balance sheet, including total assets and key components; and\n\nf. Conclusions drawn from historical data trends and their implications for the RFI’s\n\nfuture financial and strategic positioning.\nGovernance of the ICAAP"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 21,
+        "section_title": "52. This section should describe the governance framework and internal processes",
+        "text": "52. This section should describe the governance framework and internal processes\nsupporting the preparation, review, and implementation of the ICAAP. At a\nminimum, it should include:\n\na. Description of the procedures for preparing, updating and reviewing the ICAAP;\n\nb. Definition of responsibilities assigned to the Board, Senior Management, and key\n\nfunctions (e.g., internal audit, finance, compliance, and risk management)\nregarding the ICAAP;\n\nc. Description of organisational and contractual safeguards of any outsourced\n\nICAAP components;\n\nd. Overview of internal policies and procedures relevant to the ICAAP governance\n\nand execution;\n\ne. Minutes from Board and committee meetings evidencing ICAAP implementation\n\nand oversight (should be added as supplementary documents);\n\n17"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 22,
+        "section_title": null,
+        "text": "PUBLIC\n\nf. Documentation of discussions on changes in the RFI’s risk and capital position,\n\nincluding limit breaches and decisions on management actions, or rationale for\ninaction; and\n\ng. Decisions related to internal capital estimates, their aggregation, and comparison\n\nwith available capital (current and forward-looking).\n\nBusiness Model and Strategy"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 22,
+        "section_title": "53. This section should present a clear overview of the RFI’s current financial position,",
+        "text": "53. This section should present a clear overview of the RFI’s current financial position,\nbusiness strategy, and capital planning framework. At a minimum, it should include:\n\na. Summary of the RFI’s financial position, including the most recent audited figures\n\nand projections of key balance sheet items, available capital, and capital\nrequirements under base and stress scenarios;\n\nb. Description of the current business model, including main business lines,\n\nmarkets, geographical areas of operation, subsidiaries, and products;\n\nc. Identification of income and cost drivers across main business lines, markets,\n\ngeographical areas and subsidiaries;\n\nd. Description of the anticipated changes to the current business model and\n\nunderlying activities;\n\ne. Overview of the external environment in which the bank expects to operate;\n\nf. Outline of the business plan, including a schedule of reviews and triggers for\n\nextraordinary reviews;\n\ng. Reconciliation between the time horizons of the business plan and the capital\n\nplan; and\n\nh. Explanation of how the business strategy informs and aligns with the ICAAP\n\nframework.\ni. Financial forecasts covering a three- to five-year period, based on business plans\n\nand capital adequacy calculations6;\n\nRisk Appetite Statement"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 22,
+        "section_title": "54. This section should outline the RFI’s risk appetite and its integration into strategy,",
+        "text": "54. This section should outline the RFI’s risk appetite and its integration into strategy,\ngovernance, and risk management. At a minimum, it should include:\n\na. A copy of the Board-approved risk appetite statement (as an attachment);\n\nb. Brief description of how the RFI’s strategy and business model align with its risk\n\nappetite statement;"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 22,
+        "section_title": "6 The forecast should include both base and adverse scenarios.",
+        "text": "6 The forecast should include both base and adverse scenarios.\n\n18"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 23,
+        "section_title": null,
+        "text": "PUBLIC\n\nc. Brief description of the governance arrangements, including the roles and\n\nresponsibilities of the Board and Senior Management in designing, implementing,\nand overseeing the risk appetite statement;\n\nd. Overview of procedures for reviewing and updating risk thresholds and limits;\n\ne. Overview of how limits are allocated across the RFI or group; and\n\nf. Brief description of how the risk appetite statement is embedded into the RFI’s\n\nrisk management process and overall governance structure.\n\ng. Details of stress scenarios or events that could push the RFI outside its risk\n\nappetite and/or risk capacity.\nRisk Identification and Materiality Assessment"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 23,
+        "section_title": "55. This section should at a minimum include:",
+        "text": "55. This section should at a minimum include:\n\na. Brief description of the approach to risk identification, detailing risk categories\n\nwithin the ICAAP and the methodology for assessing their materiality;\n\nb. Brief description of risk categories and sub-categories covered in the ICAAP;\n\nc. The ICAAP time horizon(s), noting any differences across risk categories and\n\nsubsidiaries, where applicable;\n\nd. Brief description of any deviations in the ICAAP process and key assumptions\n\nwithin the group and its subsidiaries;\n\ne. Explanation of any differences between risks included in the ICAAP and those in\n\nthe risk appetite statement, particularly where the scope of risks varies;\n\nf. The primary characteristics of risk control and mitigation instruments for each\n\nmeasurable risk category; and\n\ng. A general description of systems used to control, mitigate and report risks that\n\nare not easily measurable.\nQuantification of Pillar 2 Capital Requirements"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 23,
+        "section_title": "56. The BOG does not prescribe a specific quantification methodology for the ICAAP.",
+        "text": "56. The BOG does not prescribe a specific quantification methodology for the ICAAP.\nRFIs are encouraged to adopt approaches that align with their unique circumstances\nand risk management practices. However, all ICAAP submissions should include all\nthe essential elements outlined in this Guideline. Furthermore, RFIs should be able\nto demonstrate that their ICAAP is robust and meets the BOG’s supervisory\nexpectations."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 23,
+        "section_title": "57. Where RFIs adopt the ICAAP methodology used by their parent, they must",
+        "text": "57. Where RFIs adopt the ICAAP methodology used by their parent, they must\nsufficiently demonstrate to the BOG that the methodology:\n\n19"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 24,
+        "section_title": null,
+        "text": "PUBLIC\n\na. has been adapted to reflect the specific characteristics of the Ghanaian\n\nmacroeconomic environment;\n\nb. appropriately captures the risk profile of the RFI;\n\nc. is adequately understood by all the relevant internal stakeholders, including the\n\nBoard, risk management and internal audit functions; and\n\nd. aligns with the BOG’s relevant directives and guidelines."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 24,
+        "section_title": "58. This section should include:",
+        "text": "58. This section should include:\n\na. Overview of the key features of the models and methodologies used to quantify\n\nand measure risks, including metrics, assumptions, and parameters (e.g.,\nconfidence intervals, holding periods) across all risk categories and sub-\ncategories;\n\nb. Evaluation of the robustness of the internal challenge process regarding capital\n\nadequacy;\n\nc. Justification of the reasonableness of internal capital estimates relative to the\n\nRFI’s risk profile;\n\nd. Description of the data used, including the duration of the time series and how\n\nthe data reflects the scope of entities covered by the ICAAP;\n\ne. Explanation of key differences between ICAAP measurement methodologies and\n\nthose used for calculating the minimum capital requirements;\n\nf. Presentation of capital estimates for all material risks on a risk-by-risk basis;\n\ng. Description of the approach used to assess capital for each material risk,\n\nincluding key assumptions and the risks covered by each modelling or calculation\nmethod;\n\nh. Justification for any material risks assigned zero capital, including the rationale\n\nbehind such judgements;\n\ni. Details of the methodology and rationale for calculating risks across identified\n\ncategories (as an attachment);\n\nj. Explanation of how the bank determines its capital needs, considering:\n\ni.\nThe limitation of the adopted modelling approach;\n\nii.\nWeaknesses in the RFI’s risk management systems, procedures, or\ncontrols;\n\niii.\nDifferences between regulatory capital and internal capital; and\n\n20"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 25,
+        "section_title": null,
+        "text": "PUBLIC\n\niv.\nThe multiple roles of capital (e.g., shareholder returns, regulatory buffer,\nprotection against uncertainty, depositor protection, working capital,\nrating objectives, strategic acquisitions).\n\nk. Disclosure of the effective date of the ICAAP calculations and any material events\n\noccurring between that date and the submission date, including their impact;\n\nl. Rationale for the selected period over which capital has been assessed;\n\nm. Where applicable, a detailed explanation of ICAAP calculations broken down per\n\nsubsidiary;\n\nn. If scenario analyses are used to determine Pillar 2 Capital, clearly define the\n\ncriteria for determining the severity of the scenarios.\n\nStress Testing in ICAAP"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 25,
+        "section_title": "59. This section should include, where applicable:",
+        "text": "59. This section should include, where applicable:\na. Overview of stress tests and scenario analyses conducted under the ICAAP,\n\nincluding confidence levels, key assumptions and the distribution of outcomes\nfor significant risk factors;\n\nb. Brief description of adverse scenarios considered, including macroeconomic\n\nassumptions and variables that are severe but plausible and how these scenarios\nwere derived;\n\nc. Description of how reverse stress testing (RST) is used to calibrate the severity\n\nof scenarios;\n\nd. Details of stress tests tailored to specific business units or strategic plans, where\n\napplicable;\n\ne. Presentation of scenario outcomes and their impact on key metrics, such as profit\n\nand loss, internal and regulatory capital, prudential ratios, and liquidity position;\n\nf. Justification of how scenario outcomes align with the RFI’s business model,\n\nstrategy, material risks and scope of the ICAAP;\n\ng. Key assumptions used in the scenario modelling, including management actions,\n\nbusiness assumptions, reference dates, time horizons, and balance sheet\nprojections;\n\nh. Overview of governance arrangements for the stress testing process, including\n\ndata infrastructure and validation mechanisms; and\n\ni. Explanation of how stress testing outputs inform management decision-making.\n\n21"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 26,
+        "section_title": null,
+        "text": "PUBLIC\n\nCapital Planning"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 26,
+        "section_title": "60. This section should include:",
+        "text": "60. This section should include:\na. Brief description of the capital planning process, including key dimensions (e.g.,\n\ninternal, regulatory), time horizons, capital instruments, and capital measures;\n\nb. Summary of the main assumptions informing capital planning;\n\nc. Documented capital policy addressing all the material risks considered in the\n\ncapital planning process (as an attachment);\n\nd. Description of the framework for preserving capital and managing business\n\noperations under various conditions;\n\nExplanation of how general economic conditions or market downturns may affect\nthe RFI’s operations and capital adequacy;\n\ne. Assessment of the impact of economic downturn on capital resources, earnings\n\nand required capital, including projected changes in the balance sheet;\n\nf. Evaluation of additional capital planning actions needed to ensure compliance\n\nwith regulatory capital requirements (RCR), such as capital injections or share\nissuances;\n\ng. Illustration of the effects of management actions, including strategic shifts and\n\ncontingency plan implementation, on capital projections;\n\nh. Details of any contractual, commercial, regulatory, or statutory restrictions on\n\ntransferring capital into or out of the covered businesses; and\n\nLiquidity Planning and Management"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 26,
+        "section_title": "61. This section should clearly outline how liquidity risk is managed, independently from",
+        "text": "61. This section should clearly outline how liquidity risk is managed, independently from\ncapital held to cover losses during liquidity stress events. It should summarise key\nassumptions and conclusions from cash flow stress testing used to assess and\nmanage liquidity risk."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 26,
+        "section_title": "62. The ICAAP should include, as attachments where relevant, the following",
+        "text": "62. The ICAAP should include, as attachments where relevant, the following\ndocumentation to support liquidity and funding risk management:\na. Asset-Liability Committee (ALCO) papers and samples of Management\n\nInformation (MI) used for cash flow forecasting;\n\nb. Organisation chart detailing liquidity and funding risk management roles,\n\ndelegated authorities, and reporting lines;\n\nc. Internal audit reports related to the treasury operations;\n\nd. Liquidity and funding policies (both standalone and group-level, where relevant);\n\ne. Policies addressing limit breaches and escalation protocols;\n\n22"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 27,
+        "section_title": null,
+        "text": "PUBLIC\n\nf. Documentation of intra-group liquidity arrangements, especially for cross-border\n\noperations;\n\ng. Liquidity stress testing documentation, including scenarios, methodologies and\n\nresults (as an attachment);\n\nh. Analysis of liquidity demands and sources, covering funding risk and market\n\nliquidity risk;\n\ni. Liquidity Plan and Quantified Contingency Funding Plans (CFPs); and\n\nj. Detailed account of the formal and informal commitments, including timelines\n\nand scale, related to:\n\ni.\nOff-balance sheet financing vehicles;\n\nii.\nMarket counterparties (including margin or collateral obligations); and\n\niii.\nClient-related liquidity exposures.\n\nk. Details of the liquidity buffers required to cover maturity mismatches in the\n\nshorter window under severe stress, including a potential run on the RFI and\nspecific contingency arrangements to meet any shortfalls.\n\nl. Details of internal processes for estimating required liquidity buffers and\n\nmanaging liquidity risk adequately."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 27,
+        "section_title": "63. Although capital is not a direct mitigant for liquidity risk, stress scenarios may lead",
+        "text": "63. Although capital is not a direct mitigant for liquidity risk, stress scenarios may lead\nto increased funding costs and fire sales of assets that could erode capital reserves.\nRFIs should therefore consider scenarios in which liquidity stress indirectly affects\ncapital adequacy and incorporate them into their liquidity and capital planning.\nCapital Allocation and Reconciliation of Internal Capital"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 27,
+        "section_title": "64. This section should outline the methodology, monitoring and assessment of internal",
+        "text": "64. This section should outline the methodology, monitoring and assessment of internal\ncapital allocation across the RFI. This should include:\n\na. Description of the approach and assumptions used to allocate internal capital to\n\noperating units, subsidiaries, business segments and products;\n\nb. Listing and defining capital components included in the internal capital\n\nassessment;\n\nc. Actual amounts of internal capital allocated to business lines, and where\n\napplicable, subsidiaries;\n\nd. Quantitative comparison of actual capital usage relative to the internal capital\n\nallocated based on ICAAP estimates, with explanations for instances where there\nare variations; and\n\n23"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 28,
+        "section_title": null,
+        "text": "PUBLIC\n\ne. Description of the monitoring process, including assessment of capital utilisation\n\nand comparison between estimated risk-adjusted return on capital and\nestablished hurdle rate at business line level and the associated escalation\nprotocols."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 28,
+        "section_title": "65. The ICAAP should include an assessment of the total capital the bank needs to hold,",
+        "text": "65. The ICAAP should include an assessment of the total capital the bank needs to hold,\nas well as the capital required for each identified material risk.\nManagement Actions"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 28,
+        "section_title": "66. This section should outline the management actions considered in the ICAAP,",
+        "text": "66. This section should outline the management actions considered in the ICAAP,\nfocusing on their role in risk mitigation and improving capital position:\n\na. Brief description of risk management and control measures used to mitigate\n\nmaterial risks;\n\nb. Quantification of the financial impact of proposed management actions;\n\nc. Documentation of management actions taken during previous periods of\n\neconomic stress, to demonstrate practical effectiveness; and\n\nd. Description of how the bank plans to manage its business and capital to navigate\n\nadverse conditions while maintaining minimum regulatory standards7.\nInternal Audit Review of ICAAP"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 28,
+        "section_title": "67. This section should include:",
+        "text": "67. This section should include:\na. Overview of the scope and frequency of the internal audit review conducted on\n\nthe ICAAP;\nb. Description of the internal audit function’s independence and adequacy of\n\nresources to ensure objective and effective review;\nc. Description of the process for tracking open audit issues and verifying\n\nmanagement actions before closure;\nd. Evaluation of the methods, techniques, assumptions, and data sources used in\n\nthe ICAAP; and\ne. Summary of the outcomes from the independent validation of risk measurement\n\nmodels used in ICAAP.\nChallenge and Adoption of the ICAAP"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 28,
+        "section_title": "68. This section should include:",
+        "text": "68. This section should include:\n\na. A description of the scope and rigour of the ICAAP testing and challenge\n\nprocesses, including assumptions applied to models and the review and sign-off\nprocedures by the Board and Senior Management;"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 28,
+        "section_title": "7 The plans described therein should align with the RFI’s Recovery Plan.",
+        "text": "7 The plans described therein should align with the RFI’s Recovery Plan.\n\n24"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 29,
+        "section_title": null,
+        "text": "PUBLIC\n\nb. Copies of all relevant reports submitted to the Board and Senior Management,\n\nalong with their response;\n\nc. Information on any reliance on third parties in the generation of ICAAP or its\n\ncomponents;\n\nd. Copies of reports from external reviewers or internal audit functions;\n\ne. An outline of planned future enhancements to the ICAAP, including areas still\n\nunder development.\nUse of ICAAP within the RFI"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 29,
+        "section_title": "69. This section should include:",
+        "text": "69. This section should include:\n\na. Details of how the ICAAP is embedded within the bank, including how it\n\ninfluences pricing, risk appetite, risk management, capital and liquidity planning,\nas well as its business strategy;\n\nb. Details of capital decisions approved by the Board;\n\nUse of Internal Models for Capital Assessment"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 29,
+        "section_title": "70. If the bank uses internal models to quantify risks, this section should include:",
+        "text": "70. If the bank uses internal models to quantify risks, this section should include:\n\na. The key assumptions and parameters in the capital modelling exercise, including\n\nbackground information on how these assumptions were derived;\n\nb. The confidence level, time horizon, and description of the modelled event;\n\nc. The criteria for selecting parameters, including the historical data period and\n\ncalibration methodology;\n\nd. Model limitations and sensitivity to changes in assumptions or parameters; and\n\ne. The validation activities conducted to assess the model’s ongoing adequacy;\n\n25"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 30,
+        "section_title": null,
+        "text": "PUBLIC\n\nPART IV - REPORTING AND DISCLOSURE OF THE ICAAP\n\nREGULATORY REPORTING OF THE ICAAP"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 30,
+        "section_title": "71. The ICAAP report shall be submitted to the BOG together with relevant Board",
+        "text": "71. The ICAAP report shall be submitted to the BOG together with relevant Board\nresolutions and Senior Management reports. These accompanying documents\nshould include comments on the ICAAP reflecting the respective responsibilities of\nthe Board and Senior Management. The report should be structured, at a minimum,\ninto the areas outlined in Part III of this Guideline."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 30,
+        "section_title": "72. RFIs shall submit annually to the BOG their ICAAP report, along with relevant",
+        "text": "72. RFIs shall submit annually to the BOG their ICAAP report, along with relevant\nsupporting documents, no later than three months after the year-end. The ICAAP\nreport should be forward-looking with a starting position reflecting the status as of\n31st December of the preceding year."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 30,
+        "section_title": "73. RFIs shall, at a minimum, review and update their ICAAP annually to capture any",
+        "text": "73. RFIs shall, at a minimum, review and update their ICAAP annually to capture any\nchanges in their business strategies, structure or operating environment. Where\nthere are material changes at any time during the year which render the existing\nICAAP no longer applicable, the RFI shall update its ICAAP and submit same to the\nBOG in a timely manner8."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 30,
+        "section_title": "74. BOG reserves the right to require RFIs to submit an updated ICAAP at any time.",
+        "text": "74. BOG reserves the right to require RFIs to submit an updated ICAAP at any time."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 30,
+        "section_title": "75. The ICAAP should reflect the RFI’s risk management strategy and address all",
+        "text": "75. The ICAAP should reflect the RFI’s risk management strategy and address all\nmaterial risks identified by the RFI’s Board, including those considered under Pillar"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 30,
+        "section_title": "1 minimum capital requirements. It should present a concise yet comprehensive",
+        "text": "1 minimum capital requirements. It should present a concise yet comprehensive\nrisk profile that avoids duplicating existing policies. While not a substitute for\ndetailed policies, the ICAAP should adhere to established guidelines and use\nconsistent descriptions of material risks."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 30,
+        "section_title": "76. The ICAAP should include an overarching strategy that identifies material risks and",
+        "text": "76. The ICAAP should include an overarching strategy that identifies material risks and\narticulates the RFI’s risk appetite for each risk. Risk appetite statements should\ncover both qualitative and quantitative dimensions, including thresholds and\ndirectional indicators approved by the Board.\n\nDISCLOSURES"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 30,
+        "section_title": "77. The ICAAP shall provide accurate, up-to-date measures of the RFI’s risk profile and",
+        "text": "77. The ICAAP shall provide accurate, up-to-date measures of the RFI’s risk profile and\nfinancial performance projections, consistent with the latest strategic plans. Any\nmaterial changes, such as expansion, acquisitions, or adjustments to incentive\nstructures, should be clearly documented."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 30,
+        "section_title": "78. A summary of external factors influencing the RFI’s strategy and risk management",
+        "text": "78. A summary of external factors influencing the RFI’s strategy and risk management\nshould be included, covering macroeconomic, industry, market, and competitive\nconditions."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 30,
+        "section_title": "8 This may include instances where there are mergers and acquisitions, material changes in business models,",
+        "text": "8 This may include instances where there are mergers and acquisitions, material changes in business models,\nsignificant shifts in macroeconomic factors, sale of significant business lines or subsidiaries, force majeure, etc.\n\n26"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 31,
+        "section_title": null,
+        "text": "PUBLIC"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 31,
+        "section_title": "79. RFIs should provide comprehensive disclosures regarding their Capital Management",
+        "text": "79. RFIs should provide comprehensive disclosures regarding their Capital Management\nPlan.  Disclosures regarding capital sources and capital conservation practices\nshould be incorporated into the Capital Management Plan disclosures."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 31,
+        "section_title": "80. RFIs should disclose any restrictions on capital transfer within the group, whether",
+        "text": "80. RFIs should disclose any restrictions on capital transfer within the group, whether\ncontractual, commercial, regulatory, or statutory. These may include dividend caps\nor regulatory limits on minimum capital levels post-distribution."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 31,
+        "section_title": "81. RFIs should provide a comprehensive description of their environment, social, and",
+        "text": "81. RFIs should provide a comprehensive description of their environment, social, and\ngovernance (ESG) framework and activities, as well as any larger-than-normal\nmark-to-market losses and potential sovereign risk exposures."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 31,
+        "section_title": "82. The capital adequacy section of the ICAAP should describe the RFI’s risk appetite,",
+        "text": "82. The capital adequacy section of the ICAAP should describe the RFI’s risk appetite,\naligned with risk management principles established by the CRD, BOG Risk\nManagement Directive and other relevant guidelines, and the ICAAP requirements.\nThe results should be published with each update of the ICAAP report on the RFI’s\nwebsite. RFIs shall disclose this information on their websites and submit same to\nBOG by 31st March of the ensuing year.\n\n27"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 32,
+        "section_title": null,
+        "text": "PUBLIC\n\nAPPENDIX – CATEGORIES OF RISKS TO BE ANALYSED\n\nWhere material, the following risk categories should be analysed:"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 32,
+        "section_title": "1. Credit Risk (including credit concentration risk)",
+        "text": "1. Credit Risk (including credit concentration risk)\n\na. Assess the extent to which credit risk is appropriately and comprehensively\n\ncaptured under the Pillar 1 capital framework to ensure the correct risk weights\nas prescribed by the CRD have been applied.\n\nb. Evaluate credit facilities to ensure that they have been appropriately classified\n\nand the adequacy of provisioning for non-performing facilities.\n\nc. Validate the methodology and calculation of credit risk-weighted assets.\n\nd. Review credit risk mitigation (CRM) policies, instruments, and compliance with\n\nthe minimum CRM requirements, ensuring that associated risks (such as legal,\ndocumentation, and liquidity risks) are adequately managed.\n\ne. Assess exposure limits and concentration risks by counterparty, currency, sector,\n\ngeography, asset class, product and other factors."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 32,
+        "section_title": "2. Operational Risk",
+        "text": "2. Operational Risk\n\nAnalysis of operational risk should include, but not be limited to, the following\nexpectations for RFIs:\n\na. The structure and complexity of the RFI’s business models and operations.\n\nb. Validation of the business mapping process.\n\nc. Review of policies and practices affecting people, processes, and systems.\n\nd. Examination of external factors likely to affect the RFI’s operations and its ability\n\nto maintain critical functions.\n\ne. Assessment of the impact of losing key personnel on the RFI’s operations and\n\nrevenues.\n\nf. Evaluation of the consequences of management decisions on business conduct.\n\ng. Approach to identification and documentation of operational loss events,\n\nincluding near misses, and the role of operational loss experience and scenarios\nin the enhancement of internal controls.\n\n28"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 33,
+        "section_title": null,
+        "text": "PUBLIC"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 33,
+        "section_title": "3. Market Risk",
+        "text": "3. Market Risk\n\nAnalysis of market risk should include, but not be limited to, the following\nexpectations for RFIs:\n\na. Appropriateness of the criteria and approach to classification of financial\n\ninstruments and commodities into the trading and banking books.\n\nb. Assessment of market risks in the banking and trading books, including the\n\nadequacy of risk management techniques and estimated capital to cushion\nagainst potential losses."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 33,
+        "section_title": "4. Cyber and Information Technology (CIT) Risk",
+        "text": "4. Cyber and Information Technology (CIT) Risk\n\nAnalysis of CIT risk should include, but not be limited to, the following expectations for\nRFIs:\n\na. Assessment of the adequacy of information technology resources, as well as the\n\nrobustness of CIT risk management strategy, policies, controls and prompt\nreporting.\n\nb. The comprehensiveness of coverage of CIT risk within the ICAAP (should be\n\nassessed independently).\n\nc. Evaluation of the RFI’s business continuity planning and operational resilience.\n\nd. Review of the extent of reliance on third parties for CIT services, including risks\n\nand vulnerabilities."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 33,
+        "section_title": "5. Legal and Compliance Risk",
+        "text": "5. Legal and Compliance Risk\n\nAnalysis of legal and compliance risk should include, but not be limited to, the following\nexpectations for RFIs:\n\na. Identification of potential sources of legal and compliance risk, including the RFI’s\n\nbusiness lines, liabilities, affiliated operations, new laws and regulations and\nmarkets in which they operate.\n\nb. Evaluation of any breaches or non-compliance with existing laws, regulations and\n\nethical standards.\n\nc. Assessment of adequacy of internal policies, practices and controls for managing\n\nlegal and compliance risk.\n\nd. Review of all ongoing legal disputes and the costs that may arise from adverse\n\njudgement.\n\ne. Assessment of prompt rectification of deficiencies identified by BOG and other\n\nregulatory authorities (Ghana Revenue Authority, Environmental Protection\nAuthority, etc.).\n\n29"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 34,
+        "section_title": null,
+        "text": "PUBLIC"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 34,
+        "section_title": "6. Liquidity Risk",
+        "text": "6. Liquidity Risk\n\nAnalysis of liquidity risk should include, among other factors:\n\na. The RFI’s liquidity risk management policies, procedures, practices, and limits;\n\nb. The RFI’s liquidity risk profile, including:\n\ni.\nThe level, trend, and volatility of customer deposits.\n\nii.\nMaturity profile of assets and liabilities.\n\niii.\nStability and concentration of funding sources.\n\niv.\nThe RFI’s borrowing capability and access to money markets.\n\nv.\nMarket liquidity of RFI’s assets, including under stress conditions.\n\nvi.\nResults of scenario analysis and stress tests.\n\nc. The quality of the RFI’s contingency funding plan, including access to support\n\nfrom the parent (if any).\n\nd. Assess the potential impact of reputational risk events on the liquidity position\n\nand the second-round effect on capital adequacy."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 34,
+        "section_title": "7. Interest Rate Risk in the Banking Book (IRRBB)",
+        "text": "7. Interest Rate Risk in the Banking Book (IRRBB)\n\nIn the analysis of IRRBB, RFIs should at a minimum:\n\na. Assess the quality of the stress test, including underlying scenarios and\n\nassumptions and the adequacy of the capital.\n\nb. Evaluate the robustness of internal policies, procedures, controls and reporting."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 34,
+        "section_title": "8. Business and Strategic Risk",
+        "text": "8. Business and Strategic Risk\n\nThe analysis of business and strategic risk should include:\n\na. Assessment of the potential impact of changing economic conditions and\n\nbusiness environments on the viability and sustainability of the RFI’s business\nmodel.\n\nb. Evaluation of the robustness and quality of implementation of the RFI’s business\n\nstrategy.\n\nc. Review of risks and vulnerabilities of the RFI’s business model.\n\nd. Assessment of the compatibility of the strategic goals with the prevailing\n\nenvironment in which the RFI has material operations.\n\n30"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 35,
+        "section_title": null,
+        "text": "PUBLIC"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 35,
+        "section_title": "9. Reputational Risk",
+        "text": "9. Reputational Risk\nThe analysis of reputational risk should include:\n\na. Adequacy of policies and procedures for identifying sources of reputational risk,\n\nincluding those arising from negative mentions in traditional or social media.\n\nb. Measures to deal with reputational risk events, including strategies for engaging\n\nrelevant stakeholders and managing liquidity pressures.\n\nc. Approach to quantification and validation of Pillar 2 capital."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 35,
+        "section_title": "10. Model Risk",
+        "text": "10. Model Risk\n\nAnalysis of the model risk should at a minimum:\n\na. Assess the adequacy of the RFI’s model risk management framework.\n\nb. Review the inventory of models used for risk measurement, capital calculation,\n\nvaluation of financial instruments, Expected Credit Loss (IFRS 9), stress testing,\ncredit granting decisions, and other material processes to ensure completeness,\nappropriate categorisation, and proper documentation (model purpose, scope,\nassumptions, and limitations).\n\nc. Evaluate the model development and implementation processes, including data\n\nquality controls and the appropriateness of statistical, analytical, or expert-\njudgement approaches used in model construction.\n\nd. Assess the independence, robustness, and frequency of model validation\n\nactivities, ensuring that it covers conceptual soundness, performance monitoring,\noutcome analysis, and sensitivity testing, and the findings are addressed in a\ntimely and effective manner.\n\ne. Review governance over model use, including approval protocols, overrides,\n\nusage restrictions, model classifications, and procedures for the escalation and\nremediation of model weaknesses or breaches of model-related policies.\n\nf. Evaluate model risk arising from data, assumptions, and system interfaces,\n\nincluding the accuracy, completeness, timeliness, and integrity of input data; the\nappropriateness and stability of model assumptions; and the reliability of IT\nsystems supporting model deployment.\n\ng. Assess the adequacy of controls around model change management, including\n\nrequirements for redevelopment, revalidation, recalibration, or approval when\nmaterial changes occur in business conditions, data, methodologies, or system\nenvironments.\n\nh. Examine the RFI’s approach to quantifying and incorporating model risk into its\n\ninternal capital assessment, including the use of model overlays, add-ons,\n\n31"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 36,
+        "section_title": null,
+        "text": "PUBLIC\n\nparameter floors, or conservative assumptions to address uncertainty,\nlimitations, or instability in model outputs.\n\ni. Review the RFI’s monitoring of model performance under normal and stressed\n\nconditions, and assess the extent to which model outputs are used appropriately\nin decision-making, risk management, pricing, provisioning, and capital planning\nprocesses.\n\nj. Assess the adequacy of Board and Senior Management understanding and\n\noversight of model risk, including the effectiveness of reporting, challenge\nprocesses, and the institution’s ability to ensure that models remain fit-for-\npurpose and aligned with regulatory expectations."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 36,
+        "section_title": "11. Country and Transfer Risk",
+        "text": "11. Country and Transfer Risk\nThe analysis of country and transfer risk should at a minimum:\n\na. Review policies and processes for the identification, measurement, monitoring,\n\ncontrol and reporting of country and transfer risk.\n\nb. Assess the RFI’s approach to monitoring and evaluation of developments in the\n\ncountry and transfer risk, and the appropriateness of countermeasures.\n\nc. Evaluate RFI’s information systems, risk management systems, and internal\n\ncontrol framework to ascertain the accuracy, timeliness, and comprehensiveness\nof monitoring and control of exposures to country and transfer risk.\n\nd. Evaluate RFI’s compliance with all applicable regulatory and internally approved\n\nlimits governing country and transfer risk."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 36,
+        "section_title": "12. Anti-Money",
+        "text": "12. Anti-Money\nLaundering/Combating\nthe\nFinancing\nof\nTerrorism/\nCountering Proliferation Financing (AML/CFT/CPF) Risk\nThe analysis of AML/CFT/CPF risk should include an assessment of:\n\na. The RFI’s internal procedures for detecting and reporting money laundering,\n\nterrorist financing and proliferation financing to ensure alignment with regulatory\nrequirements.\n\nb. Procedures for implementing any new legal and regulatory provision.\n\nc. The process for collecting relevant information on large, unusual and complex\n\ntransactions and reporting same.\n\nd. The adequacy of the Board and Senior Management's understanding and\n\noversight of AML/CFT/CPF risk.\n\ne. The effectiveness of the tools used to monitor, detect and report suspicious\n\ntransactions and counterparties.\n\n32"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 37,
+        "section_title": null,
+        "text": "PUBLIC"
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 37,
+        "section_title": "13. Climate-Related Financial Risk",
+        "text": "13. Climate-Related Financial Risk\nThe analysis of climate-related financial risk should, at a minimum:\n\na. Assess the governance, management, control, monitoring and reporting of\n\nclimate-related risk to ensure alignment with the BOG climate-related financial\nrisk directive.\n\nb. Review the adequacy of mitigants against climate-related financial risk, including\n\nany risk transfer mechanism and additional capital and liquidity buffers."
+    },
+    {
+        "source_filename": "Guideline-on-ICAAP-12-2-26-clean.pdf",
+        "page_number": 37,
+        "section_title": "14. Any other identified material emerging risks.",
+        "text": "14. Any other identified material emerging risks.\n\nThe analysis of any other material emerging risk should, at a minimum, consider the\nprocesses for identification of emerging risks and new vulnerabilities and the RFI’s\nresponsiveness to such risks and vulnerabilities.\n\n33"
+    }
+]

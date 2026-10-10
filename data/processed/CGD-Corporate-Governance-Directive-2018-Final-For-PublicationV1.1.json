@@ -1,0 +1,938 @@
+[
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 1,
+        "section_title": null,
+        "text": "BANK OF GHANA\n\nCORPORATE GOVERNANCE DIRECTIVE 2018\n\nFor Banks, Savings and Loans Companies, Finance Houses and\n\nFinancial Holding Companies\n\nDECEMBER 2018"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 2,
+        "section_title": null,
+        "text": "TABLE OF CONTENTS\nPART I - PRELIMINARY ................................................................................................... 3\n\nTitle ......................................................................................................................................... 3\n\nApplication ........................................................................................................................... 3\n\nInterpretation ........................................................................................................................ 3\n\nObjectives ............................................................................................................................. 6\n\nPART II— RELEVANT LEGAL REQUIREMENTS ............................................................... 7\n\nDisqualification of Directors, Employees and Key Management Personnel ............... 7\n\nIntervention of the Bank of Ghana in Appointments ..................................................... 8\n\nPART III— SOUND CORPORATE GOVERNANCE STANDARDS ............................... 10\n\nBoard’s Overall Responsibility .......................................................................................... 10\n\nAnnual Certification .......................................................................................................... 10\n\nBusiness Strategy ................................................................................................................ 11\n\nDuty of Care and Loyalty ................................................................................................. 11\n\nCorporate culture and values ......................................................................................... 11\n\nRelated Party Transactions ............................................................................................... 12\n\nPlan for Succession ............................................................................................................ 12\n\nKey Management Oversight – Board ............................................................................. 12\n\nSeparation of Powers ........................................................................................................ 13\n\nIndependent Director ....................................................................................................... 14\n\nBoard Qualifications and Composition .......................................................................... 15\n\nBoard Size and Structure ................................................................................................... 16\n\nDirectors’ Appointments and Managing Director/Chief Executive Officer Tenure . 16\n\nAppointment of Key Management Personnel .............................................................. 16\n\nAlternate Director .............................................................................................................. 17\n\nBoard Chairperson............................................................................................................. 17\n\nRole of Board Secretary .................................................................................................... 18\n\nBoard Meetings .................................................................................................................. 18\n\nOther Engagements of Directors ..................................................................................... 19\n\nBoard Performance Evaluation ....................................................................................... 20\n\nReport on Board Evaluation ............................................................................................. 20\n\nBoard Sub-Committees ..................................................................................................... 20\n\nAudit Committee ........................................................................................................... 21\n\nRisk Committee .............................................................................................................. 21\n\nOther Committees ......................................................................................................... 22\n\n1"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 3,
+        "section_title": null,
+        "text": "Conflicts of Interest ............................................................................................................ 22\n\nGroup Structures ................................................................................................................ 23\n\nSenior Management Duties .............................................................................................. 23\n\nRisk Management and Internal Controls ........................................................................ 24\n\nRisk Management Function ............................................................................................. 24\n\nChief Risk Officer ................................................................................................................ 25\n\nInternal Controls ................................................................................................................. 25\n\nChief Internal Auditor ........................................................................................................ 25\n\nGroup-wide and Bank-wide Risk Management ............................................................ 26\n\nRisk management in Subsidiary Banks ............................................................................ 26\n\nInternal and External Audit Functions ............................................................................. 26\n\nCompensation System ...................................................................................................... 27\n\n“Know Your Structure” ....................................................................................................... 28\n\nDisclosure and Transparency ........................................................................................... 28\n\nEthics and Professionalism ................................................................................................ 28\n\nCooling-off Period .............................................................................................................. 29\n\nPART V – REMEDIAL MEASURES AND SANCTIONS .................................................. 30\n\nRelevant Provisions of the Act 930 .................................................................................. 30\n\nPART VI - TRANSITIONAL PROVISIONS ...................................................................... 32\n\nTenure of Managing Director/Chief Executive Officer ................................................ 32\n\nTenure of Board Chair ....................................................................................................... 33\n\nTenure of Non-Executive Director.................................................................................... 34\n\nEffective Implementation Date ....................................................................................... 35\n\nAPPENDIX ..................................................................................................................... 36\n\nRisk Governance Structure ............................................................................................... 36\n\n2"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 4,
+        "section_title": null,
+        "text": "PART I - PRELIMINARY\n\nTitle\n\n1.\nThis Directive may be cited as the Corporate Governance Directive, 2018.\n\nRevocation\n2.\nThis Directive shall supersede the Banking Business - Corporate\nGovernance Directive 2018 issued in March 2018. The Banking Business-\nCorporate Governance Directive 2018 issued in March 2018 is hereby\nrevoked.\n\nApplication\n\n3.\nThis Directive is issued under the powers conferred by Sections 56 and\n92(1) of the Banks & Specialised Deposit Taking Institutions Act, 2016 (Act\n930)) and shall apply to Banks, Savings and Loans Companies, Finance\nHouses and Financial Holding Companies licensed or registered under\nAct 930.\n\nInterpretation\n\n4.\nIn this  Directive, unless the context otherwise requires,\n“Act 930” means the Banks & Specialised Deposit-Taking Institutions Act,"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 4,
+        "section_title": "2016 (Act 930).",
+        "text": "2016 (Act 930).\n\n“Alternate Director” means a person appointed by an existing director to\nact in his absence from the jurisdiction or inability for any other reason to\nact as a director.  Such a person shall have the same powers to attend,\nspeak and vote at meetings as the principal director would have had for\na period not exceeding six (6) months.\n\n“Board” means the board of directors of a Regulated Financial Institution.\n\n“Corporate Governance” means the manner in which the business and\naffairs of  a Regulated Financial Institution is governed by its Board and\nSenior Management, including how its strategy and objectives are set;  its\n\n3"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 5,
+        "section_title": null,
+        "text": "risk appetite/tolerance are determined; its day-to-day business is\noperated; interests of depositors are protected and shareholders\nobligations are met, taking into account the interests of other recognised\nstakeholders; and aligning corporate activities and behaviour with the\nexpectation that it will operate in a safe and sound manner, with integrity\nand in compliance with applicable laws and regulations.\n\n“Cross Directorship” means a situation where two (2) or more directors of\na Regulated Financial Institution serve on the board of another institution.\n\n“Duty of Care” includes  the duty of a director to act in utmost good faith\ntowards a Regulated Financial Institution  and to act at all times in the\nbest interest of the Regulated Financial Institution so as to preserve its\nassets, further its business and promote the purposes for which it was\nformed.\n\n“Duty of Loyalty” includes a director’s duty not to act in his own interest,\nor the interests of another person(s), so as not to conflict with the interest\nof the Regulated Financial Institution or the director’s fiduciary duty to the\nRegulated Financial Institution.\n\n“Executive Director” means a director who has defined management\nresponsibilities in addition to their function as director.\n\n“Independent Director” means a non-executive director who has the\nability\nto\nexercise\nobjective,\nindependent\njudgment\nafter\nfair\nconsideration of all relevant information and views without undue\ninfluence from management or from inappropriate external parties or\ninterests. However, a non-executive director who represent the interests\nof shareholders or has some form of connection with the Regulated\nFinancial Institutions will not be considered as an independent director.\n\n“Key Management Personnel” means the chief executive officer or\nmanaging director, deputy chief executive officer, chief operating\nofficer, chief finance officer, Board secretary, treasurer, chief internal\nauditor, the chief risk officer, the head of compliance, the anti-money\nlaundering reporting officer, the head of internal control functions, the\nchief legal officer, the manager of a significant business unit of the a\nRegulated Financial Institution.\n\n4"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 6,
+        "section_title": null,
+        "text": "“Non-Executive Director” means a director other than an executive\ndirector, who is not an employee of the Regulated Financial Institution\nand does not hold any other office in the institution in conjunction with his\noffice as a director.\n\n“Regulated Financial Institution” means a bank, savings and loans\ncompany, finance house or financial holding company regulated under\nAct 930.\n\n“Related Persons” includes a spouse, son, daughter, step son, step\ndaughter, brother, sister, father and mother, cousin, nephew, niece, aunt,\nuncle, step sister and step brother of a shareholder, director or Key\nManagement Personnel.\n\n“Related\nParty”\nin\nrelation\nto\nbusiness\ntransactions\nmeans\na\ncompany/entity in which\n\na) The Regulated Financial Institution or any of its Directors or Key\n\nManagement Personnel  have equity interest of at least 5%;\n\nb) A director(s) of the Regulated Financial Institution also serves as a\n\ndirector(s) of the company/entity;\n\nc) A director or Key Management Personnel of the Regulated Financial\n\nInstitution has influence in the company/entity.\n\n“Senior Management” means members of the Executive Management\nCommittee (EXCO) of a Regulated Financial Institution and any other Key\nManagement Personnel as may be determined by the Regulated\nFinancial Institution.\n“Significant Shareholder” means a shareholder with direct or indirect\nholdings which represent five percent (5%) or more of the capital or of the\nvoting rights.\n\n“Specialised Deposit-Taking Institution” means a body corporate which\nengages in deposit taking business and is issued with a licence to engage\nin the deposit-taking business in accordance with Act 930.\n\n5"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 7,
+        "section_title": null,
+        "text": "Objectives\n\n5.\nThe objectives of this directive are  —\n\na) to require Regulated Financial Institutions to adopt sound corporate\n\ngovernance principles and best practices to enable them under\ntake their licensed business in a sustainable manner.\nb) to promote the interest of depositors and other stakeholders by\n\nenhancing corporate performance and accountability of the\nRegulated Financial Institutions.\n\nc) to promote and maintain public trust and confidence in Regulated\n\nFinancial Institutions by prescribing sound corporate governance\nstandards which are critical to the proper functioning of the banking\nsector and the economy as a whole.\n\n6"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 8,
+        "section_title": null,
+        "text": "PART II— RELEVANT LEGAL REQUIREMENTS\n\nDisqualification of Directors, Employees and Key Management Personnel\n6."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 8,
+        "section_title": "Section 58 of Act, 930 prohibits a person from being appointed or elected",
+        "text": "Section 58 of Act, 930 prohibits a person from being appointed or elected\nor from accepting an appointment or election as a director, Chief\nExecutive Officer or Key Management Personnel of a Regulated Financial\nInstitution  if that person\n\na) has been adjudged to be of unsound mind or is detained as a person\n\nwith a mental disorder under any relevant enactment;\nb) has been declared insolvent, has entered into any agreement with\n\nanother  person for payment of that person’s debt and has\nsuspended payment of the  debt;\n\nc) has been convicted of an offence involving fraud, dishonesty or\n\nmoral turpitude;\n\nd) has been a director, Key Management Personnel associated with\n\nthe management of an institution which is being or has been wound\nup by a court of competent jurisdiction on account of bankruptcy or\nan offence committed under an enactment;\n\ne) is a director or Key Management Personnel of another bank,\n\nspecialised deposit taking institution or financial holding company in\nthe country;\n\nf)\nis under the age of eighteen years (18 years);\n\ng) does not have the prior written approval of the Bank of Ghana ; or\n\nh) has defaulted in the repayment of the financial exposure of that\n\nperson.\n\nDisclosure of Interest by Directors\n7."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 8,
+        "section_title": "Section 59 of Act 930 requires a person, before assuming office as a",
+        "text": "Section 59 of Act 930 requires a person, before assuming office as a\ndirector or Key Management Personnel of a Regulated Financial\n\n7"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 9,
+        "section_title": null,
+        "text": "Institution , to declare to the Board of that Regulated Financial Institution\nand the Bank of Ghana;\n\na)  the professional interests of that person or the office that person\n\nholds as manager, director, trustee or by any other designation; and\nb) the investment or business interests of that person in a firm, company\n\nor institution as a significant shareholder, director, partner, proprietor\nor guarantor, with a view to prevent a conflict of interest with the\nduties or interests of that person as a director, or Key Management\nPersonnel of the Regulated Financial Institution.\n\nc) A director or Key Management Personnel of a Regulated Financial\n\nInstitution shall declare to the Board of that Regulated Financial\nInstitution and the Bank of Ghana any material change in business\ninterest or holding of an office when a change in (a) and (b) above\noccurs.\n8."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 9,
+        "section_title": "Section 59 (3) of Act 930 requires a director of a Regulated Financial",
+        "text": "Section 59 (3) of Act 930 requires a director of a Regulated Financial\nInstitution who has an interest in a\n\na) proposed credit facility to be given to a person by the Regulated\n\nFinancial Institution or\n\nb) transaction that is proposed to be entered into with any other person\n\nto declare the nature and the extent of that interest to the Boards\nwhether directly or indirectly and shall not take part in the deliberations\nand the decision of the Board with respect to that request.\n\nIntervention of the Bank of Ghana in Appointments\n9."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 9,
+        "section_title": "Section 60 of Act 930 prescribes, among others, the following:",
+        "text": "Section 60 of Act 930 prescribes, among others, the following:\n\na) A Regulated Financial Institution shall seek prior written approval of\n\nthe Bank of Ghana before it appoints a Chief Executive Officer or a\nDeputy Chief Executive Officer, each of whom shall be ordinarily\nresident in the country;\n\n8"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 10,
+        "section_title": null,
+        "text": "b) A Regulated Financial Institution shall not appoint a Key\n\nManagement Personnel without the prior written approval of the\nBank of Ghana;\nc) The Bank of Ghana shall not grant approval for a person to be\n\nappointed as a Chief Executive or Deputy Chief Executive of a\nRegulated Financial Institution, if in the opinion of the Bank of Ghana\nthat person is not a “fit and proper person, in accordance with Act\n930” to be appointed in that capacity;\n\nd) Where the Bank of Ghana considers, after hearing representations\n\nmade by that Regulated Financial Institution, that a director or Key\nManagement Personnel is not a fit and proper person, to act in that\ncapacity, the Bank of Ghana shall direct the removal of such\nperson(s) from the Board within one (1) month from the date of the\ndirective.\n\n9"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 11,
+        "section_title": null,
+        "text": "PART III— SOUND CORPORATE GOVERNANCE STANDARDS\n\nBoard’s Overall Responsibility"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 11,
+        "section_title": "10. The Boards shall have overall responsibility for the Regulated Financial",
+        "text": "10. The Boards shall have overall responsibility for the Regulated Financial\nInstitution, including approving and overseeing the implementation of the\nstrategic objectives, risk strategy, corporate governance and corporate\nvalues. The Board shall be responsible for appointing and providing\noversight of Senior Management. These responsibilities should be set out\nin the formal charter of the Board."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 11,
+        "section_title": "11. The Board shall ensure that a well-structured and rigorous selection system",
+        "text": "11. The Board shall ensure that a well-structured and rigorous selection system\nis in place for the appointment of Key Management Personnel of the\nRegulated Financial Institution.\n\nAnnual Certification"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 11,
+        "section_title": "12. a) Within 90 days after the beginning of each financial year, the Board",
+        "text": "12. a) Within 90 days after the beginning of each financial year, the Board\nshall provide a certification in the annual report as to the compliance of\nthe Regulated Financial Institution or otherwise with the contents of this\nDirective. Additionally, the certification should state that,\n\n(i)\nThe Board has independently assessed and documented whether\nthe corporate governance process of the Regulated Financial\nInstitution is effective and has successfully achieved its objectives\nor otherwise.\n(ii)\nDirectors are aware of the responsibilities to the Regulated\nFinancial Institution as persons charged with governance.\n\nb)\nThe Board shall report any material deficiencies and weaknesses that\nhave been identified in the course of the year, along with action\nplans and timetables for corrective action by the Board to the Bank\nof Ghana.\n\nc)\nDirectors are required to obtain certification from the National\nBanking College or any other institution recognised by the Bank of\nGhana to the effect that they have participated in a corporate\n\n10"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 12,
+        "section_title": null,
+        "text": "governance programme and have completed a programme on\ndirectors’ responsibilities.\n\nBusiness Strategy"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 12,
+        "section_title": "13. a) Pursuant to its overall responsibility, the Board shall approve and",
+        "text": "13. a) Pursuant to its overall responsibility, the Board shall approve and\nmonitor the overall business strategy of the Regulated Financial Institution,\ntaking into account long-term financial interest of the Regulated Financial\nInstitution, its exposure to risk, and its ability to manage risk effectively.\nb)\nThe Board shall approve and oversee the formulation and\nimplementation of the following in relation to the Regulated\nFinancial Institution;\n\n(i) overall risk strategy, including its risk tolerance/appetite;\n\n(ii) policies for risk, risk management and compliance, including\n\nanti-money laundering and combating the financing of\nterrorism (AML/CFT) risk;\n\n(iii) internal controls system;\n\n(iv) corporate governance framework, principles and corporate\n\nvalues including a code of conduct or comparable document;\nand\n\n(v) compensation system.\n\nDuty of Care and Loyalty"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 12,
+        "section_title": "14. The members of the Board shall exercise a “duty of care” and a “duty of",
+        "text": "14. The members of the Board shall exercise a “duty of care” and a “duty of\nloyalty” to the Regulated Financial Institution at all times.\n\nCorporate culture and values"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 12,
+        "section_title": "15. The Board shall establish the corporate culture and values of the",
+        "text": "15. The Board shall establish the corporate culture and values of the\nRegulated Financial Institution that promote and reinforces norms for\nresponsible and ethical behaviour in terms of the Regulated Financial\nInstitution’s risk awareness, risk-taking and risk management.\n\n11"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 13,
+        "section_title": null,
+        "text": "To promote sound corporate culture in the Regulated Financial Institution,\nthe Board shall take the lead in establishing the “tone at the top” by;\n(i)\nSetting and adhering to corporate values for itself, key management\nand employees that create expectations that business should be\nconducted in a legal and ethical manner at all times\n\n(ii)\nEnsuring that appropriate steps are taken to communicate\nthroughout the Regulated Financial Institution, the corporate values,\nprofessional standards it sets together with supporting policies and\nappropriate sanctions for unacceptable behaviours.\n\nRelated Party Transactions"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 13,
+        "section_title": "16. The Board shall ensure that transactions with related parties (including",
+        "text": "16. The Board shall ensure that transactions with related parties (including\ninternal group transactions) are reviewed to assess risk and are subject to\nappropriate restrictions (e.g., by requiring that such transactions be\nconducted on non-preferential terms/basis) and applicable legislation\nand other requirements such as those prescribed under sections 67 to 70\nof Act 930 regarding exposure limits for loans to related parties and staff.\n\nPlan for Succession"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 13,
+        "section_title": "17. The Board shall select, subject to approval by the Bank of Ghana where",
+        "text": "17. The Board shall select, subject to approval by the Bank of Ghana where\napplicable, and replace, where necessary, Key Management Personnel\nand put in place an appropriate plan for succession. The succession plan\nshall focus on developing human resources to enable the Regulated\nFinancial Institution to retain a pool of qualified candidates who are ready\nto compete for key positions and areas when they become vacant to\nensure effective continuity of the deposit-taking business.\n\nKey Management Oversight – Board"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 13,
+        "section_title": "18. The Board shall provide oversight of Senior Management as part of the",
+        "text": "18. The Board shall provide oversight of Senior Management as part of the\nRegulated Financial Institution checks and balances and shall;\na)\nmonitor and ensure the actions of Senior Management are\nconsistent with the strategy and policies approved by the Board,\nincluding the risk tolerance/appetite and risk culture;\n\n12"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 14,
+        "section_title": null,
+        "text": "b)\nmeet regularly with Senior Management;\nc)\nquestion and review critically explanations and information provided\nby senior management;\n\nd)\nensure that the knowledge and expertise of senior management\nremain appropriate given the nature of the business and the\nRegulated Financial Institution’s risk profile.\n\ne)\nOversee the implementation of appropriate governance framework\nfor the Regulated Financial Institution.\n\nf)\nEnsure that appropriate succession plans are in place for senior\nmanagement positions.\n\ng)\nOversee the design and operation of the Regulated Financial\nInstitution, compensation system, monitor and review the system to\nensure that it is aligned with the desired risk culture and risk appetite\nof the Regulated Financial Institution.\n\nh)\nHave the responsibility to approve the overall internal control\nframework of the Regulated Financial Institution and monitor its\neffectiveness\n\nSeparation of Powers"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 14,
+        "section_title": "19. There shall be a clear division of responsibilities at the top hierarchy of the",
+        "text": "19. There shall be a clear division of responsibilities at the top hierarchy of the\nRegulated Financial Institution. The positions of the Board Chair and the\nManaging Director/Chief Executive Officer shall be separate. No one\nindividual shall have unfettered powers of decision in any Regulated\nFinancial Institution and therefore no individual shall combine the two (2)\ntop positions in any Regulated Financial Institution at the same time.\nThe two (2) top positions of Board Chair and Managing Director/Chief\nExecutive Officer in a Regulated Financial Institution shall not\nsimultaneously be occupied by foreigners. One of these positions shall be\noccupied by a Ghanaian national.\n\n13"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 15,
+        "section_title": "20. No two (2) Related Persons shall occupy the positions of Board Chair and",
+        "text": "20. No two (2) Related Persons shall occupy the positions of Board Chair and\nManaging Director/Chief Executive Officer of a Regulated Financial\nInstitution.\n\nIndependent Director"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 15,
+        "section_title": "21. An independent director shall be non-executive and shall not;",
+        "text": "21. An independent director shall be non-executive and shall not;\n\na)\nhave more than five percent (5% )equity interest directly or indirectly\nin the Regulated Financial Institutions or in its related companies;\nb)\nbe employed in an executive position in the Regulated Financial\nInstitution or its related company at least two (2) years prior to his\nappointment date;\n\nc)\nhave relatives employed by the Regulated Financial Institution or any\nof its related companies as Key Management Personnel in the last\ntwo (2) years;\n\nd)\nhave engaged in any  transaction within the last two (2) years with\nthe Regulated Financial Institution on terms that are less favourable\nto the Regulated Financial Institution than those normally offered to\nother persons; or\n\ne)\nhave served as a director in the Regulated Financial Institution\ncontinuously for more than two (2) terms unless the director can\naffirm that his/her independence is not impaired.\n\nf)\nbe related to persons with significant shareholding in the Regulated\nFinancial Institution or have any business or employment connections\nto a significant shareholder.\n\ng)\nhold cross directorship position(s) with another director(s) on the\nBoard of other institutions\n\nh)\nbe a director on the Board of an institutional shareholder with\nsignificant equity interest in the Regulated Financial Institution.\n\n14"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 16,
+        "section_title": "22. Independent directors in the case of state-owned banks, are directors",
+        "text": "22. Independent directors in the case of state-owned banks, are directors\nappointed by government of Ghana in its capacity as a shareholder who\nin the reasonable opinion of the Bank of Ghana, are able to exercise\nindependent judgement in relation to their role as directors of the\nRegulated Financial Institution and who are neither employees of the\nRegulated Financial Institutions, civil or public servants or other\ngovernment officials, persons with direct links with government, nor\npersons who are actively engaged in party politics.\n\nBoard Qualifications and Composition"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 16,
+        "section_title": "23. Board members shall be and remain qualified, including through training,",
+        "text": "23. Board members shall be and remain qualified, including through training,\nfor their positions. They shall have a clear understanding of their role in\ncorporate governance and be able to exercise sound and objective\njudgement about the affairs of the Regulated Financial Institution. They\nshall possess, individually and collectively, appropriate experience,\ncompetencies and personal qualities, including professionalism and\nintegrity."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 16,
+        "section_title": "24. The competencies of Boards shall be diverse to facilitate effective",
+        "text": "24. The competencies of Boards shall be diverse to facilitate effective\noversight of Management and shall ideally cover a blend of the following\nfields: Banking, Law, Finance, Accounting, Economics, Information\nTechnology, Business Administration, financial analysis, Entrepreneurship,\nRisk Management, Strategic planning and Corporate Governance and\nother areas that the Bank of Ghana deems fit."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 16,
+        "section_title": "25. The Board shall collectively have a reasonable knowledge and",
+        "text": "25. The Board shall collectively have a reasonable knowledge and\nunderstanding of local, regional and where appropriate, global\neconomic market forces as well as legal and regulatory environment in\nwhich the Regulated Financial Institution and its subsidiaries operate."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 16,
+        "section_title": "26. Ghanaian nationals, ordinarily resident in Ghana, shall constitute at least",
+        "text": "26. Ghanaian nationals, ordinarily resident in Ghana, shall constitute at least\nthirty percent (30%) of the Board composition of a Regulated Financial\nInstitution."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 16,
+        "section_title": "27. Independent Directors shall constitute at least 30% (thirty percent) of the",
+        "text": "27. Independent Directors shall constitute at least 30% (thirty percent) of the\ncomposition of the Board of a Regulated Financial Institution.\n\n15"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 17,
+        "section_title": "28. No Regulated Financial Institution shall have more than two (2) members",
+        "text": "28. No Regulated Financial Institution shall have more than two (2) members\nserving on its Board that are Related Persons.\n\nBoard Size and Structure"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 17,
+        "section_title": "29. The Board shall have at least five (5) members including the Chairperson",
+        "text": "29. The Board shall have at least five (5) members including the Chairperson\nand a maximum of thirteen (13) members, the majority of which must be\nnon-executive and ordinarily resident in Ghana. There shall be an\nappropriate balance of power and authority on the Board between the\nexecutive and non-executive directors such that no one individual or\ngroup shall dominate the Board’s decision-making process."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 17,
+        "section_title": "30. Where a Regulated Financial Institution is a member of a financial holding",
+        "text": "30. Where a Regulated Financial Institution is a member of a financial holding\ncompany, NOT more than two (2) Related Persons shall be allowed to\nserve on the Boards of the bank and the financial holding company.\n\nDirectors’ Appointments and Managing Director/Chief Executive Officer Tenure"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 17,
+        "section_title": "31. The procedure for appointment of directors to the Board shall be formal",
+        "text": "31. The procedure for appointment of directors to the Board shall be formal\nand transparent and shall conform to the Directive issued by the Bank of\nGhana on fit and proper persons."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 17,
+        "section_title": "32. The tenure of the Managing Director/Chief Executive Officer of a",
+        "text": "32. The tenure of the Managing Director/Chief Executive Officer of a\nRegulated Financial Institution shall be in accordance with the terms of\nengagement with the Regulated Financial Institution which shall be\nsubject to a maximum of twelve (12) years. Such tenure may be split into\nthree (3) terms not exceeding four (4) years per term.\n\nAppointment of Key Management Personnel"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 17,
+        "section_title": "33. Every Regulated Financial Institution shall submit to the Bank of Ghana",
+        "text": "33. Every Regulated Financial Institution shall submit to the Bank of Ghana\nbefore it appoints a Key Management Personnel, a comprehensive report\non the due diligence conducted on proposed nominees as Key\nManagement Personnel.  This submission shall be made in conjunction\nwith the requirements under of Section 60 of Act 930."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 17,
+        "section_title": "34. Where a director or Key Management Personnel associated with the",
+        "text": "34. Where a director or Key Management Personnel associated with the\nmanagement of an institution whose licence has been revoked by the\n\n16"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 18,
+        "section_title": null,
+        "text": "Bank of Ghana is to be appointed by a Regulated Financial Institution,\nthe Bank of Ghana may exercise its discretion on whether to approve\nsuch appointment after hearing representations made by the appointee.\n\nAlternate Director\n\n35.\nA director may in respect of any period not exceeding six (6) months in\nwhich he/she is absent from Ghana or unable  for any reason to act as\na director, appoint another director or any person approved by a\nresolution of the Boards, as an alternate director.  Such a director shall\nnot be required to hold any share qualification and shall be appointed\nin accordance with section 188 of the Companies Act, 1963 (Act 179)\n\nBoard Chairperson"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 18,
+        "section_title": "36. (a) The Chairperson of the Board shall be an independent director and",
+        "text": "36. (a) The Chairperson of the Board shall be an independent director and\nshall be ordinarily resident in Ghana unless it can be demonstrated to the\nBank of Ghana that the position can be held effectively by a non-resident\nwho is able to attune the strategic direction of the Regulated Financial\nInstitution with the developments in Ghana. The Chairperson shall provide\nleadership to the Board and ensure that Board decisions are taken on a\nsound and well-informed basis. The Chairperson should encourage and\npromote critical discussion and ensure that dissenting views can be\nexpressed and discussed within the decision-making process.\nb)\nThe Chairperson shall encourage constructive relationship within the\nBoard and between the Board and Management.\nc)\nTo promote checks and balances in the governance structure of\nRegulated Financial Institutions, the Board chairperson shall not serve\nas a chair of any of its Board sub-committee.\n37.\nThe Board Chair shall be proposed for re-election within the maximum\ntenure of two (2) terms consisting of three (3) years per term.\n\n17"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 19,
+        "section_title": null,
+        "text": "Role of Board Secretary"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 19,
+        "section_title": "38. The Board Secretary shall serve as an interface between the Board and",
+        "text": "38. The Board Secretary shall serve as an interface between the Board and\nManagement and shall support the Chairperson in ensuring the smooth\nfunctioning of the Board.  The Board Secretary shall advise the Board on\nmatters relating to statutory duties of the directors under the law,\ndisclosure obligations, and company law regulations as well as on matters\nof corporate governance requirements and effective Board processes.\n\nThe Board Secretary shall ensure that directors are provided with\ncomplete, adequate and timely information prior to Board meetings.\nThe Secretary shall be appointed by the directors for such term and\nremunerations they may think fit, and may be removed by the Board, but\nwithout prejudice to any claim for damages for breach of any contract\nof service with the Regulated Financial Institution.\n\nBoard Meetings"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 19,
+        "section_title": "39. A Regulated Financial Institution shall hold at least four (4) Board meetings",
+        "text": "39. A Regulated Financial Institution shall hold at least four (4) Board meetings\nper financial year. For convenience Board meetings can also be\narranged and conducted via teleconference."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 19,
+        "section_title": "40. A director has a duty to attend Board meetings regularly and to",
+        "text": "40. A director has a duty to attend Board meetings regularly and to\neffectively participate in the conduct of the business of the Board. A\nRegulated Financial Institution shall have a policy that requires the Board\nto meet at least once every quarter."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 19,
+        "section_title": "41. A member of the Board shall attend at least 50% (fifty percent) of the",
+        "text": "41. A member of the Board shall attend at least 50% (fifty percent) of the\nBoard meetings of the Regulated Financial Institution in any financial year.\nThis is to ensure that every Board member discharges his or her duties and\nresponsibilities effectively and to qualify for re-election. In the event that\na member of the Board does not attend the meetings regularly in a\nfinancial year, the Board Chairperson shall recommend the removal of\nsuch persons from the Board based on non-performance subject to\nshareholders approval."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 19,
+        "section_title": "42. A Director is deemed to have attended a Board meeting if that Director",
+        "text": "42. A Director is deemed to have attended a Board meeting if that Director\nparticipates in the meeting via teleconference for the entire duration of\nthe meeting.\n\n18"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 20,
+        "section_title": "43. The Board shall disclose in the corporate governance section of its annual",
+        "text": "43. The Board shall disclose in the corporate governance section of its annual\nreport, the total number of Board meetings held in the financial year and\nthe attendance by each director."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 20,
+        "section_title": "44. The Board shall discuss the business affairs of the Regulated Financial",
+        "text": "44. The Board shall discuss the business affairs of the Regulated Financial\nInstitution through reports as submitted by management in writing. The\nreports should include among others:\n\na)\na summary of financial statements and performance review against\nthe approved budget, business plan, peers and industry;\nb)\nthe extent to which the bank is exposed to various risks such as credit,\nliquidity, interest rate, foreign exchange, operational and other risks;\n\nc)\nreview of non-performing loans, related party transactions and credit\nconcentration;\n\nd)\nactivities of the Regulated Financial Institution in the financial market\nand in its “nostro” accounts;\n\ne)\neffectiveness of internal control systems and human resource issues;\nf)\noutstanding litigations and contingent liabilities;\ng)\nCompliance with Anti-Money Laundering/ Counter Financing of\nTerrorism (AML/CFT)  policies, laws and regulations;\n\nh)\nList of related party exposures and their classification.\nOther Engagements of Directors"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 20,
+        "section_title": "45. To ensure that directors give greater time commitment to their oversight",
+        "text": "45. To ensure that directors give greater time commitment to their oversight\nfunction in the Regulated Financial Institution, no director shall\na)\nhold more than five (5) directorship positions at a time in both\nfinancial\nand\nnon-financial\ncompanies\n(including\noff-shore\nengagements) subject to the restriction against concurrent\ndirectorships in banks under section 58(1)(e) of Act 930. Directors’\nother engagements shall be disclosed in the annual accounts of the\nRegulated Financial Institution.\n\n19"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 21,
+        "section_title": null,
+        "text": "Board Performance Evaluation"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 21,
+        "section_title": "46. The Board shall carry out regular evaluation or self-assessment of its",
+        "text": "46. The Board shall carry out regular evaluation or self-assessment of its\nperformance as a whole, including its sub-committees, and of individual\nBoard members in order to review the effectiveness of its own\ngovernance practices and procedures including on Anti-Money\nLaundering and Counter Financing of Terrorism (AML/CFT) issues, to\ndetermine where improvements may be needed and make any\nnecessary changes."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 21,
+        "section_title": "47. The Board shall in addition to the above, undertake a formal and rigorous",
+        "text": "47. The Board shall in addition to the above, undertake a formal and rigorous\nevaluation of its performance with external facilitation of the process\nevery two (2) years.\n\nReport on Board Evaluation"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 21,
+        "section_title": "48. An in-house performance evaluation of the Board shall be conducted",
+        "text": "48. An in-house performance evaluation of the Board shall be conducted\nannually and a copy of the results shall be submitted to the Bank of\nGhana not later than 30th June of each year.\n\na)\nA separate in-house performance evaluation of the Board on\nAML/CFT issues shall be submitted to the Bank of Ghana and the\nFinancial Intelligence Centre for June and December each year\nbefore the end of the quarter following the evaluation period.\nb)\nA statement on the external evaluation of the Board shall be\nincluded as a separate section of the annual report of Regulated\nFinancial Institution and a detailed copy of the report submitted to\nthe Bank of Ghana.\n\nBoard Sub-Committees"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 21,
+        "section_title": "49. The Board shall establish certain specialized Board sub-committees, the",
+        "text": "49. The Board shall establish certain specialized Board sub-committees, the\nnumber and nature of which depends on the size and complexity of the\nRegulated Financial Institution and its Board and risk profile.\n\n20"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 22,
+        "section_title": "50. At a minimum, a Regulated Financial Institution shall have two (2) Board",
+        "text": "50. At a minimum, a Regulated Financial Institution shall have two (2) Board\nsub-committees, namely: an Audit Committee and a Risk Committee\nboth of which shall be chaired by independent directors."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 22,
+        "section_title": "51. Other Board sub-committees may be established on optional basis per",
+        "text": "51. Other Board sub-committees may be established on optional basis per\nsize, complexity, business lines and risk profile of the Regulated Financial\nInstitution. Such committee(s) shall be chaired by a non-executive\ndirector(s) with the requisite qualification and experience in the specific\nfunctions of the committee."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 22,
+        "section_title": "52. The Board Chairperson shall not head or chair any of the Board sub-",
+        "text": "52. The Board Chairperson shall not head or chair any of the Board sub-\ncommittees and is only permitted to serve on one (1) Board sub-\ncommittee as a member other than the risk and audit sub-committees."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 22,
+        "section_title": "53. The Board shall issue in writing the terms of reference for each sub-",
+        "text": "53. The Board shall issue in writing the terms of reference for each sub-\ncommittee which shall be contained in a charter which sets out the\ncommittee’s mandate, scope and procedures. A copy of the charter\nshall be submitted to the Bank of Ghana.\n\nAudit Committee"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 22,
+        "section_title": "54. The audit committee of the Board shall consist solely of non-executive",
+        "text": "54. The audit committee of the Board shall consist solely of non-executive\ndirectors, the majority of which shall be Independent Directors. Members\nof the committee must be competent in accounting, auditing and\nfinance and the committee shall have oversight of the Regulated\nFinancial Institution’s internal and external audit functions, among others\nas may be prescribed by the Board. The chairperson of the committee\nshall be an independent director and shall not be the chair of the Board\nor any other committee.\n\nRisk Committee"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 22,
+        "section_title": "55. The Risk Committee should be responsible for advising the Board on the",
+        "text": "55. The Risk Committee should be responsible for advising the Board on the\nRegulated\nFinancial\nInstitution’s\noverall\ncurrent\nand\nfuture\nrisk\ntolerance/appetite and strategy of the Regulated Financial Institution for\nvarious risks including AML/CFT risk and for overseeing Senior\nManagement’s implementation of the risk strategy. The committee shall\nbe\nchaired\nby\nan\nexperienced\nindependent\ndirector\nwho\nis\nknowledgeable in risk management, finance, accounting, economics\n\n21"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 23,
+        "section_title": null,
+        "text": "and other business skills. The Bank of Ghana’s minimum requirement for\nrisk governance structure is set out in Appendix 1."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 23,
+        "section_title": "56.  Each of the two (2) sub-committees shall have at least thirty percent",
+        "text": "56.  Each of the two (2) sub-committees shall have at least thirty percent\n(30%) of its members being Ghanaians who are ordinarily resident in\nGhana."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 23,
+        "section_title": "57. The Chief Risk Officer and the Chief Internal Auditor shall report directly to",
+        "text": "57. The Chief Risk Officer and the Chief Internal Auditor shall report directly to\nthe MD/CEO and Audit Sub-Committee of the Board respectively.\n\nOther Committees"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 23,
+        "section_title": "58. The Board may establish on an optional basis other committee such as",
+        "text": "58. The Board may establish on an optional basis other committee such as\nthe:\na)\nRemuneration committee to oversee the design and operation of\nthe compensation system, and ensures that compensation is\nappropriate and consistent with the culture, long-term business\ninterest and risk strategy of the Regulated Financial Institution.\nb)\nNominations/human\nresources/governance\ncommittee\nto\nrecommend new members of the Board or Senior Management and\nto undertake assessment of Board and Senior Management.\nc)\nEthics/compliance committee to ensure that the Regulated\nFinancial Institution has the appropriate means for promoting proper\ndecision making and compliance with laws, regulations and internal\nrules.\n\nConflicts of Interest"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 23,
+        "section_title": "59. The Board should have formal written conflicts of interest policy and an",
+        "text": "59. The Board should have formal written conflicts of interest policy and an\nobjective compliance process for implementing the policy. The policy\nshould at the minimum include:\n\na)\nthe duty of the director to avoid possible activities that could create\nconflicts of interest;\n\n22"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 24,
+        "section_title": null,
+        "text": "b)\na review or approval process for directors to follow before they\nengage in certain activity so as to ensure that such activity will not\ncreate a conflict of interest;\nc)\nthe duty of the director  to disclose in addition to section 59 of the\nAct, any matter that may result, or has already resulted in a conflict\nof interest;\nd)\nthe responsibility of the director to abstain from voting as prescribed\nunder section 59 of the Act and on any matter where the director\nmay have conflict of interest;\ne)\nadequate procedures for transactions with related parties to be\nmade on a non-preferential basis; and\nf)\nthe way in which the Board will deal with any non-compliance with\nthe policy."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 24,
+        "section_title": "60. The Board shall ensure that appropriate public disclosure is made in the",
+        "text": "60. The Board shall ensure that appropriate public disclosure is made in the\nannual reports and information relating to the policies of the Regulated\nFinancial Institution on conflict of interest and potential material conflicts\nof interest as provided to the Bank of Ghana on quarterly basis."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 24,
+        "section_title": "61. The Board shall maintain an up-to-date register for documenting and",
+        "text": "61. The Board shall maintain an up-to-date register for documenting and\nmanaging conflict of interest situations in the Regulated Financial\nInstitution.\n\nGroup Structures"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 24,
+        "section_title": "62. The Board of a financial holding company shall have the ultimate",
+        "text": "62. The Board of a financial holding company shall have the ultimate\nresponsibility for the adequate corporate governance across the group.\nThe Board shall ensure that there are governance policies and\nmechanisms appropriate to the structure, business and risk of the group\nand its entities.\n\nSenior Management Duties"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 24,
+        "section_title": "63. Under the direction of the Board, Senior Management shall:",
+        "text": "63. Under the direction of the Board, Senior Management shall:\n\n23"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 25,
+        "section_title": null,
+        "text": "a)\nensure that the regulated activities of the Regulated Financial\nInstitution\nis\nconsistent\nwith\nthe\nbusiness\nstrategy,\nrisk\ntolerance/appetite and policies approved by the Board;\nb)\nestablish a management structure that promotes accountability and\ntransparency; and\n\nc)\nImplement appropriate systems for managing risks – both financial\nand non-financial - to which the Regulated Financial Institution is\nexposed.\n\nd)\nEngage skilled and competent staff and provide training and\ndevelopment opportunities to sustain the delivery of short and long-\nterm business objectives, the risk management framework and\nprotect the reputation of the Regulated Financial Institution.\n\nRisk Management and Internal Controls"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 25,
+        "section_title": "64. The Board shall ensure that the Regulated Financial Institution has",
+        "text": "64. The Board shall ensure that the Regulated Financial Institution has\neffective internal controls systems and a risk management function\n(including Chief Risk Officer or equivalent) with sufficient authority, stature,\nindependence, resources and access to the Board.\n\nRisk Management Function"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 25,
+        "section_title": "65. The Board shall establish the risk management function as set out in",
+        "text": "65. The Board shall establish the risk management function as set out in\nAppendix 1 which shall be responsible for: identifying key risks to the\nRegulated Financial Institution; assessing those risks and the Regulated\nFinancial Institution’s exposure to the identified risks; monitoring the risk\nexposures and determining the corresponding capital needs on an on-\ngoing basis; monitoring and assessing decisions to accept particular risks,\nrisk mitigation measures and whether risk decisions are in line with the\nBoard approved risk tolerance/appetite and risk policy; and submitting\nrisk management reports to Senior Management and the Board.\n\n24"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 26,
+        "section_title": null,
+        "text": "Chief Risk Officer"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 26,
+        "section_title": "66. A bank shall have a Chief Risk Officer (CRO) as set out in Appendix who",
+        "text": "66. A bank shall have a Chief Risk Officer (CRO) as set out in Appendix who\nshall be an independent Key Management Personnel (who has no\ninvolvement in the operations of the bank) with distinct responsibility for\nthe risk management function and the comprehensive risk management\nframework of the bank across the entire organization. The independence\nof the CRO is paramount and the role shall be distinct from other\nexecutive functions and business line responsibilities. The CRO shall report\nto the Chief Executive Officer with an unfettered reporting access to\nBoard and its risk committee. Interaction between the Board and the CRO\nshall be regular and comprehensively documented.\n\nInternal Controls"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 26,
+        "section_title": "67. Internal controls shall be designed to ensure that each key risk has a",
+        "text": "67. Internal controls shall be designed to ensure that each key risk has a\npolicy, process or other measure, as well as a control to ensure that such\npolicy, process or other measure is being applied and works as intended.\nInternal controls shall help provide comfort that financial and\nmanagement information is reliable, timely and complete and that the\nRegulated Financial Institution is in compliance with its various obligations,\nincluding applicable laws and regulations.\n\nChief Internal Auditor"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 26,
+        "section_title": "68. Every Regulated Financial Institution shall have a Chief Internal Auditor",
+        "text": "68. Every Regulated Financial Institution shall have a Chief Internal Auditor\n(CIA) as set out in Appendix 1 who shall be an independent Key\nManagement Personnel who has no involvement in the audited activities\nand business line responsibilities of the Regulated Financial Institution. The\nCIA shall be competent to examine all areas in which the Regulated\nFinancial Institution operates and shall;\na)\nhave the professional competence to collect and analyze financial\ninformation as well as evaluate audit evidence   and to\ncommunicate with the stakeholders of the internal audit function;\nb)\npossess\nsufficient\nknowledge\nof\nauditing\ntechniques\nand\nmethodologies;\n\n25"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 27,
+        "section_title": null,
+        "text": "c)\nbe a member of a relevant recognized professional body;\n\nThe CIA shall report directly to the Board sub-committee on audit or the\nfull Board (depending on size and complexity) and shall have direct\naccess to the Board and its audit committee.  Interaction between the\nBoard and the CIA must be regular and comprehensively documented.\n\nGroup-wide and Bank-wide Risk Management"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 27,
+        "section_title": "69. Risks shall be identified and monitored on an on-going group-wide and",
+        "text": "69. Risks shall be identified and monitored on an on-going group-wide and\nbank-wide basis, and the sophistication of the risk management and\ninternal control infrastructure - including, in particular, a sufficiently robust\ninformation technology infrastructure shall keep pace with developments\nsuch as balance sheet and revenue growth, increasing complexity of the\ndeposit-taking business or operating structure and introduction of new\nbusiness lines.\n\nRisk management in Subsidiary Banks"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 27,
+        "section_title": "70. The Board and Senior Management of parent banks or financial holding",
+        "text": "70. The Board and Senior Management of parent banks or financial holding\ncompanies shall conduct strategic, group-wide risk management and\nprescribe group risk policies. The Board and Senior Management of\nsubsidiary Regulated Financial Institution shall have appropriate input into\nthe group-wide risk management policies and assessments of local risks.\nAdequate stress-testing of subsidiary portfolios shall be done based on\nboth the economic and operating environment of the subsidiary and on\npotential stress of the parent bank or Financial Holding Company.  The\nresults of stress tests and other risk management reports shall be\ncommunicated to the Board and Senior Management.\n\nInternal and External Audit Functions"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 27,
+        "section_title": "71. The Board and Senior Management shall effectively utilize the work",
+        "text": "71. The Board and Senior Management shall effectively utilize the work\nconducted by the internal audit functions, external auditors and internal\ncontrol functions. The Board should recognize and acknowledge that\nindependent, competent and qualified internal and external auditors, as\nwell as other internal control functions, are vital to the corporate\n\n26"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 28,
+        "section_title": null,
+        "text": "governance process and shall engage the auditors to judge the\neffectiveness of the risk management function and the compliance\nfunction.\n\nCompensation System"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 28,
+        "section_title": "72. In terms of compensation:",
+        "text": "72. In terms of compensation:\na)\nThe Board shall actively oversee the design and operation of the\ncompensation system. The Board shall monitor and review the\ncompensation system to ensure that it is effectively aligned with\nprudent risk taking;\nb)\nLevels of remuneration shall be sufficient to attract, retain and\nmotivate executive officers of the bank and this shall be balanced\nagainst the interest of the bank in not paying excessive\nremuneration;\n\nc)\nWhere remuneration is tied to performance, it shall be designed in\nsuch a way as to prevent excessive risk taking;\n\nd)\nA committee of independent directors shall determine the\nremuneration of executive directors;\n\ne)\nExecutive directors shall not be entitled to sitting allowances and\ndirectors’ fees;\n\nf)\nNon-executive directors’ remuneration shall be limited to directors’\nfees, sitting allowances for Board and committee meetings and shall\nnot be performance-related.\n\ng)\nWhere share options are adopted as part of executive remuneration\nor compensation, it shall be tied to performance and subject to\nshareholders’ approval at an annual general meeting (AGM).\n\nh)\nBanks shall disclose in the annual reports, details of shares held by\ndirectors and related parties.\n\n27"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 29,
+        "section_title": null,
+        "text": "“Know Your Structure”"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 29,
+        "section_title": "73. The Board and Senior Management shall understand the structure and",
+        "text": "73. The Board and Senior Management shall understand the structure and\nthe organization of the group including the aims of its different\nunits/entities and the formal and informal links and relationships among\nthe entities and with the parent company. This includes understanding the\nlegal and operational risks and constraints of the various types of intra-\ngroup exposures and transactions and how they affect funding, capital\nand risk profile under normal and adverse circumstances of the group.\n\nDisclosure and Transparency"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 29,
+        "section_title": "74. A Regulated Financial Institution shall submit a list of its significant",
+        "text": "74. A Regulated Financial Institution shall submit a list of its significant\nshareholders, directors and Key Management personnel as at 31st of\nDecember of every year to the Bank of Ghana by 15th January of the\nfollowing year.  The governance of the bank shall also be adequately\ntransparent to its shareholders, depositors, other relevant stakeholders\nand shall be disclosed in its annual report. The disclosure shall include,\nbut not be limited to, material information on the organizational and\ngovernance structures and policies, (in particular the content of any\ncorporate governance code or policy and the process by which it is\nimplemented), major share ownership and voting rights and related\nparties transactions of the Regulated Financial Institution.\n\nEthics and Professionalism"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 29,
+        "section_title": "75. Regulated Financial Institutions shall establish a code of conduct which",
+        "text": "75. Regulated Financial Institutions shall establish a code of conduct which\nshall be made available to all persons to whom it applies. The code shall\nbe reviewed regularly when necessary and shall contain among others:\na)\npractices necessary to maintain confidence in the integrity of the\nRegulated Financial Institution;\nb)\ncommit\nthe\nRegulated\nFinancial\nInstitution,\nits\nemployees,\nmanagement and Board to the highest standards of professional\nbehaviour, business conduct and sustainable business practices;\nand\n\n28"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 30,
+        "section_title": null,
+        "text": "c)\nestablish a policy to govern trading in the shares of the Regulated\nFinancial Institution by directors, Key Management Personnel and\nemployees.\n\nd)\nSign off by directors and employees that they understand the Code\nand sanctions for breaching the policy;\n\nCooling-off Period"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 30,
+        "section_title": "76. Former Bank of Ghana officers, directors or senior executives shall not be",
+        "text": "76. Former Bank of Ghana officers, directors or senior executives shall not be\neligible for appointment as a director of a Regulated Financial Institution\nuntil after a period of two (2) years following the expiration or termination\nof their contract of employment or service from the Bank of Ghana."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 30,
+        "section_title": "77. A practicing audit professional or partner who is rendering services or had",
+        "text": "77. A practicing audit professional or partner who is rendering services or had\nrendered auditing services in the banking industry shall not be appointed\nas a director of a bank until one (1) year has elapsed since last\nengagement with any Regulated Financial Institution by that person\n\n29"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 31,
+        "section_title": null,
+        "text": "PART V – REMEDIAL MEASURES AND SANCTIONS\nRelevant Provisions of the Act 930"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 31,
+        "section_title": "78. The following remedial measures and sanctions under Act 930 shall apply",
+        "text": "78. The following remedial measures and sanctions under Act 930 shall apply\nin addition to any other corrective measures and specific directives that\nthe Bank of Ghana may require:\na)\nUnder section 58 of Act 930 where a person is disqualified to be\nelected or appointed as a director, Chief Executive Officer or\nemployee of a Regulated Financial Institution, that person shall\nimmediately cease to hold office and the Regulated Financial\nInstitution shall immediately terminate the appointment of that\nperson, otherwise the Regulated Financial Institution or that person\nshall be subject to fine or imprisonment as provided for in Act 930;\nb)\nUnder section 59 of Act 930, a person who contravenes the required\ndisclosure of interest shall cease to be a director of the bank;\n\nc)\nAny non-compliance by a Regulated Financial Institution with the\nrequirements under section 60 of Act 930 shall make that Regulated\nFinancial Institution liable to a payment of a fine of One Thousand\n(1,000) penalty units to the Bank of Ghana;\n\nd)\nA Regulated Financial Institution which fails to comply with the Bank\nof Ghana directives is liable to pay to the Bank of Ghana under"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 31,
+        "section_title": "section 92(8) of Act 930,  an administrative fine of not less than two",
+        "text": "section 92(8) of Act 930,  an administrative fine of not less than two\nthousand (2,000) penalty units and not more than ten thousand\n(10,000) penalty units ; and\n\ne)\nUnder section 102(3) of Act 930, the Bank of Ghana may, amongst\nothers, suspend or remove from office the Chief Executive of that\nRegulated Financial Institution or restrict the powers of the Chief\nExecutive, or recommend the removal from any or all of  the directors\non the Board of the Regulated Financial Institution or restrict their\npowers if it is satisfied that Regulated Financial Institution has, failed\nto comply with a provision of the Act or rules or directives issued\nunder Act 930, or if a Regulated Financial Institution has been\nconducting its affairs in a manner detrimental to the interests of its\ndepositors and creditors, or if a Regulated Financial Institution no\n\n30"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 32,
+        "section_title": null,
+        "text": "longer possesses sufficient net own funds or is unlikely to fulfil its\nobligations towards its depositors and creditors.\n\n31"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 33,
+        "section_title": null,
+        "text": "PART VI - TRANSITIONAL PROVISIONS\nFor the purpose of compliance with this Directive, the following transitional\nprovisions are to be followed:"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 33,
+        "section_title": "79. A Regulated Financial Institution in existence before the coming into force",
+        "text": "79. A Regulated Financial Institution in existence before the coming into force\nof this Directive that does not meet the required standard, shall have a\ngrace period up till 31st March, 2019 to ensure full compliance with the\nprovisions of the Directive in relation to the following:\na)\nBusiness strategy;\n\nb)\nBoard qualification and composition;\n\nc)\nBoard size and structure;\n\nd)\nDirectors’ independence;\n\ne)\nBoard Secretary;\n\nf)\nSeparation of  powers;\n\ng)\nOther engagement of directors; and\n\nh)\nBoard sub-committees.\n\nTenure of Managing Director/Chief Executive Officer"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 33,
+        "section_title": "80. a) The term of office of a Managing Director or Chief Executive Officer",
+        "text": "80. a) The term of office of a Managing Director or Chief Executive Officer\n(MD/CEO) of a Regulated Financial Institution shall not be more than four\n(4) years and may be renewed for additional two (2) terms only in that\nRegulated Financial Institution.\nb) Despite sub paragraph 80(a), the term of office for a MD/CEO of a\n\nRegulated Financial Institution indicated in the contract of\nemployment executed with the Regulated Financial Institution before\nthe coming into force of this Directive may run in full and shall not be\nrenewed where that MD/CEO has cumulatively served for more than\ntwelve (12) years in that Regulated Financial Institution.\n\n32"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 34,
+        "section_title": null,
+        "text": "c) A renewal or extension of a contract under sub paragraph 80(b) shall\n\nbe subject to the renewal guidelines under sub paragraph 80(a) and\nshall not be for any additional term that brings the cumulated years of\nservice of the MD/CEO in that Regulated Financial Institution and in\nthat capacity, to more than twelve(12) years.\nd) Where the existing contract of the MD/CEO of a Regulated Financial\n\nInstitution as of the date of coming into force of this Directive does not\nstipulate a fixed term of office for the MD/CEO, and the MD/CEO has\nserved for twelve years, or more in that Regulated Financial Institution,\nthe Regulated Financial Institution shall by 31st January 2019 submit to\nthe Bank of Ghana for consideration, a succession plan for the\nappointment of a new MD/CEO. The appointment of the new\nMD/CEO must be made by 31st December, 2019.\ne) Where the existing MD/CEO does not have a fixed term contract as\n\nof the time of coming into force of this Directive and the MD/CEO has\nserved a term less than twelve (12) years cumulatively in that\nRegulated Financial Institution, the Regulated Financial Institution shall\nby 31st January, 2019 furnish the Bank of Ghana with a written contract\nstipulating a fixed term of office for the MD/CEO.\n\nTenure of Board Chair"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 34,
+        "section_title": "81. a) The term of office of a Board Chairperson of a Regulated Financial",
+        "text": "81. a) The term of office of a Board Chairperson of a Regulated Financial\nInstitution shall not be more than three (3) years and may be renewed for\none (1) additional term only in that Regulated Financial Institution.\n\nb) Despite paragraph 81(a) a Board Chairperson of a Regulated\n\nFinancial Institution who has been in office for more than six (6) years\nprior to the coming into force of this Directive shall not be eligible for\nanother term upon the expiration of the current term of his/her\nappointment in that Regulated Financial Institution.\nc) Where the existing appointment of the Board Chairperson of a\n\nRegulated Financial Institution as of the date of coming into force of\nthis Directive does not stipulate a fixed term and the Board\nChairperson has served for a period of more than six (6) years in that\nRegulated Financial Institution, the Regulated Financial Institution shall\n\n33"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 35,
+        "section_title": null,
+        "text": "by 31st January, 2019 submit to the Bank of Ghana for consideration,\na succession plan for the appointment of a new Board    Chairperson.\nThe appointment of the new MD/CEO must be made by 31st\nDecember, 2019.\n\nd) Where the existing Board Chairperson does not have a fixed term\n\ncontract as of the time of coming into force of this Directive and the\nBoard Chairperson has served a term less than six (6) years\ncumulatively in that Regulated Financial Institution, the Regulated\nFinancial Institution shall by 31st January, 2019 furnish the Bank of\nGhana with a written contract stipulating a fixed term of office for the\nBoard Chairperson.\ne) Where the existing Board Chairperson of a Regulated Financial\n\nInstitution is not an independent Director as of the date of coming into\nforce of this directive, the Board shall take steps to appoint an\nindependent Chairperson by 31st December, 2019.\n\nTenure of Non-Executive Director"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 35,
+        "section_title": "82. a) The tenure of office of a non-executive director of a regulated",
+        "text": "82. a) The tenure of office of a non-executive director of a regulated\nfinancial   institution shall not be more than three (3) years and may be\nrenewed for not more than two (2) additional terms in that Regulated\nFinancial Institution.\nb) Despite sub paragraphs 82(a) a non-executive director of a\n\nRegulated Financial Institution who prior to the coming into force of\nthis Directive had served in that capacity for nine (9) years or more\nshall not be eligible for another term upon the expiration of the current\nterm in that Regulated Financial Institution.\nc) Where the existing appointment of the non-executive director of a\n\nRegulated Financial Institution as of the date of coming into force of\nthis Directive does not stipulate a fixed term, and the non-executive\ndirector has served for a period of more than nine (9) years in that\nRegulated Financial Institution, the Regulated Financial Institution shall\nby 31st January, 2019 submit to the Bank of Ghana for consideration,\na succession plan for the appointment of a new non-executive\n\n34"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 36,
+        "section_title": null,
+        "text": "director. The appointment of the new non-executive director must be\nmade by 31st December, 2019.\nd) Where the existing non-executive director does not have a fixed term\n\ncontract as of the time of coming into force of this Directive and the\nnon-executive director has served a term less than nine (9) years\ncumulatively in that Regulated Financial Institution, the Regulated\nFinancial Institution shall by 31st January, 2019 furnish the Bank of\nGhana with a written contract stipulating a fixed term for the non-\nexecutive director.\ne) Sections 82(a) to (d) by extension are applicable to Independent\n\nDirectors of the Regulated Financial Institutions\n\nEffective Implementation Date"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 36,
+        "section_title": "83. The effective date for the implementation of all other sections of the",
+        "text": "83. The effective date for the implementation of all other sections of the\nCorporate Governance Directive not mentioned in the transitional\nprovisions is effective 31st March, 2019.\n\n35"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 37,
+        "section_title": null,
+        "text": "APPENDIX\n\nRisk Governance Structure\nThe risk management governance structure of an institution shall comprise the\nfollowing:\n\na)\nBoard\nb)\nBoard Risk Committee;\nc)\nBoard Audit Committee;\nd)\nSenior/Executive Management;\ne)\nChief Risk Officer;\nf)\nChief Internal Auditor;\ng)\nCompliance Officer; and\nh)\nOperational Management.\ni)\nCompany Secretary or Head of Legal (Legal & Reputational risk)\nA.\nBoards’ Oversight Responsibilities\n1.\nThe Board shall show concern for and set the tone for risk management in\nthe institution. The overall responsibility for risk management including that\nof AML/CFT risk within the institution shall rest with the Boards.\n2.\nThe Board shall approve all significant policies relating to the\nmanagement of risks including AML/CFT risk throughout the institution, as\nwell as discuss and approve the organizational arrangement for\nmanaging and controlling the overall exposure to risks of the institution.\nThe risk management policies shall be consistent with broader business\nstrategies, capital strength, management expertise and the overall\nwillingness to take risk or risk appetite of the institution.\n3.\nThe Board shall regularly re-evaluate its approved policies and\nprocedures with special emphasis on those that define the risk tolerance\nlimits of the institution including AML/CFT for significant activities.\n4.\nThe Boards shall discuss and grade the risks, and set acceptable limits for\nexposures in the various activity segments after considering the quality of\nthe existing tools for managing and controlling every type of risk in each\nsignificant activity of the institution.\n\n36"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 38,
+        "section_title": null,
+        "text": "5.\nThe Board shall receive and review reports on risk exposures in respect of:\n\na) the nature and level of the exposure as against the approved limit;\n\nb) controls and mitigation actions for the exposure (s);\nc) deviations, reasons for deviations and action taken;\n\nd) results of scenario analysis and stress tests and  the responses of\n\nmanagement to the results; and\n\ne) any other information that the Board may from time to time\n\ndetermine.\n6.\nThe Board shall ensure that it approves every new activity of the institution\n(e.g. new products that are significantly different from existing ones,\ncreation of new types of exposure, new markets, etc.) after it has:\n\na) considered all the risks involved in the new activity;\n\nb) checked the mechanisms which the institution will use to measure\n\nand control the risks;\n\nc) set quantitative limits required as a result of the risks inherent in the\n\nactivity; and\n\nd) ascertain that the institution has the necessary manpower, sources\n\nof finance, and the technological infrastructure to ensure the proper\nabsorption and management of the activity and its consistency with\nthe  business strategy of the institution.\n7.\nThe Board shall also conduct and encourage discussions between its\nmembers and Senior Management, as well as between Senior\nManagement and others in the institution, in respect of risk management\nprocess and risk exposures of the institution.\n\nB.\nBoard Risk Committee\n8.\nThe Board Risk Committee shall be responsible for advising the Board on\nthe overall current and future risk tolerance/appetite of the institution and\n\n37"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 39,
+        "section_title": null,
+        "text": "strategy including on AML/CFT and for overseeing implementation of that\nstrategy by Senior Management. The objective of the Board Risk\nCommittee shall be to provide an independent review and critique of:\n\na) the risk management policies and procedures of the Regulated\n\nFinancial Institution;\nb) the composition of the risk portfolios and concentrations;\n\nc) the risk-taking decisions of the institution covering all aspects of risk\n\nexposures including credit, market, liquidity, operational and country\nrisks; and\nd) perform any other assignments relating to the management of risk in\n\nthe institution as may be delegated by the Board.\n9.\nThe Board Risk Committee shall be chaired by an experienced\nindependent director who is knowledgeable in risk management,\nfinance, accounting and economics. The members of the Board Risk\nCommittee shall comprise of all categories of directors and shall exclude\nthe Chairman of the Board."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 39,
+        "section_title": "10. Appointment to the Board Risk Committee shall be for a period of up to",
+        "text": "10. Appointment to the Board Risk Committee shall be for a period of up to\nthree (3) years, which may be extended by not more than two (2)\nadditional years."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 39,
+        "section_title": "11. The Chairman of the Board Risk Committee shall be appointed by the",
+        "text": "11. The Chairman of the Board Risk Committee shall be appointed by the\nBoard. In the absence of the Risk Committee Chairman and/or an\nappointed deputy, the remaining members present shall elect one of\nthemselves to chair the meeting."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 39,
+        "section_title": "12. The Board Risk Committee shall operate under a charter.",
+        "text": "12. The Board Risk Committee shall operate under a charter."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 39,
+        "section_title": "13. The Board Risk Committee shall meet at least quarterly and their meeting",
+        "text": "13. The Board Risk Committee shall meet at least quarterly and their meeting\nshall be attended by the head of finance, chief risk officer, chief internal\nauditor, head of credit or corporate banking and head of business\npromotion.\n\n38"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 40,
+        "section_title": "14. The chairman of the Board, chief executive officer, and heads of",
+        "text": "14. The chairman of the Board, chief executive officer, and heads of\ndepartments or their representatives may also be invited to attend all or\npart of any meeting as and when appropriate."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 40,
+        "section_title": "15. The Board Risk Committee shall at minimum, on annual basis or more",
+        "text": "15. The Board Risk Committee shall at minimum, on annual basis or more\nfrequently as deemed fit, review, establish and recommend to the Board\nthe risk appetite as well as assess the appropriateness of the corporate\nplan in the context of the risk appetite of the Regulated Financial\nInstitution."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 40,
+        "section_title": "16. The Board Risk Committee shall annually or more frequently as deemed",
+        "text": "16. The Board Risk Committee shall annually or more frequently as deemed\nappropriate,\nreview\nand\nmake\nrecommendations\non\nthe\nrisk\nmanagement of the Regulated Financial Institution (i.e. policies,\nprocesses, models and limits) to manage and mitigate risk within the\napproved strategy and risk appetite to the Board for approval."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 40,
+        "section_title": "17. The Board Risk Committee shall also:",
+        "text": "17. The Board Risk Committee shall also:\n\na) challenge the assessment and measurement of key risks of the\n\ninstitution;\nb) provide advice, oversight and the encouragement necessary to\n\nembed and maintain a supportive risk culture throughout the\ninstitution;\n\nc) provide high level oversight and critique of the day-to-day risk\n\nmanagement and oversight arrangements of Senior Management;\n\nd) provide high level oversight and critique of the design and execution\n\nof the scenario analysis and stress-testing of the institution;\n\ne) review the internal capital adequacy assessment and internal\n\nliquidity adequacy assessment of the institution;\n\nf)\nreview the  external risk information disclosures including annual\nreport and accounts and quarterly disclosures of the institution ; and\n\ng) provide oversight and critique of due diligence on risk issues relating\n\nto material transactions and strategic proposals that are subject to\napproval by the Board.\n\n39"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 41,
+        "section_title": "18. The Board Risk Committee shall also monitor the risk exposures of the",
+        "text": "18. The Board Risk Committee shall also monitor the risk exposures of the\nRegulated Financial Institution through the:\n\na) review of the  risk profile of the institution(i.e. performance indicators)\n\nagainst the risk appetite, approved limits and risk trends;\nb) review of management report on the nature and extent of risk\n\nexposures of the institution;\n\nc) review of key performance indicators on risk, controls and\n\ncompliance; and\n\nd) review of current risk exposures and future risk strategy, considering\n\nthe macro-economic environment.\n\ne) Review the litigation portfolio of the institution.\nC.\nBoard Audit Committee"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 41,
+        "section_title": "19. The Board Audit Committee is responsible for overseeing the financial",
+        "text": "19. The Board Audit Committee is responsible for overseeing the financial\nreporting process including the establishment of accounting policies and\npractices by the Regulated Financial Institution, providing oversight of the\ninternal and external audit functions, the appointment, compensation\nand removal of auditors, reviewing and approving the audit scope and\nfrequency, receiving key audit reports and ensuring that Senior\nManagement is taking necessary corrective actions in a timely manner to\naddress control weaknesses, non-compliance with policies, laws and\nregulations and other problems identified by auditors as well as any other\nrelevant matter referred to the committee by the Board.\nD.\nSenior Management"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 41,
+        "section_title": "20. Senior Management shall have the responsibility of transforming the",
+        "text": "20. Senior Management shall have the responsibility of transforming the\nstrategic direction set by the Board into policies and procedures and to\ninstitute an effective structure to execute those policies. Senior\nManagement is also responsible for oversight of the day-day\nmanagement of risk.\n\n40"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 42,
+        "section_title": "21. Senior Management must ensure that policies relating to risk",
+        "text": "21. Senior Management must ensure that policies relating to risk\nmanagement are clear and communicated down the line and that these\npolicies are embedded in the culture of the institution."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 42,
+        "section_title": "22. Risk tolerance levels for quantifiable risks shall be communicated as limits",
+        "text": "22. Risk tolerance levels for quantifiable risks shall be communicated as limits\nto operational management, while those relating to qualitative risk may\nbe communicated as guidelines."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 42,
+        "section_title": "23. Senior Management shall have appropriate committees which shall",
+        "text": "23. Senior Management shall have appropriate committees which shall\nreview among others, reports on market and liquidity risks, credit risk,\noperational risk, country risk and legal/regulatory risk."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 42,
+        "section_title": "24. Senior Management shall be responsible for ensuring that there are",
+        "text": "24. Senior Management shall be responsible for ensuring that there are\nadequate policies and procedures for carrying out the significant\nactivities of the institution on both long-term and day-to-day basis. This\nresponsibility includes ensuring that there are:\n\na) clear lines of responsibility for managing risk;\nb) adequate systems for measuring risk;\nc) appropriately planned limits on risk-taking;\nd) effective internal controls; and\ne) comprehensive risk-reporting process."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 42,
+        "section_title": "25. Senior Management shall regularly evaluate the procedures in place to",
+        "text": "25. Senior Management shall regularly evaluate the procedures in place to\nmanage risk to ensure that those procedures are appropriate and sound.\nSenior management shall also foster and participate in active discussions\nwith the Board and with staff of the risk management functions regarding\nprocedures for measuring and managing risk."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 42,
+        "section_title": "26. Senior Management shall also ensure that the significant activities of the",
+        "text": "26. Senior Management shall also ensure that the significant activities of the\ninstitution are allocated sufficient resources and staff to manage and\ncontrol inherent risks.\nE.\nManagement Committees"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 42,
+        "section_title": "27. Senior Management shall have the following committees for the",
+        "text": "27. Senior Management shall have the following committees for the\nmanagement of the risk exposures of the institution:\n\n41"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 43,
+        "section_title": null,
+        "text": "a) Credit Committee - The credit committee shall have clearly defined\n\nmandate, membership and delegated authority which shall be\nreviewed at least annually. The responsibilities of the credit\ncommittee  shall include:\n\ni.\nexercising credit governance oversight;\nii.\nrecommending credit risk appetite;\niii.\nestablishing credit counterparty and portfolio risk limits;\niv.\nsetting concentration limits relating to industry, market, product,\ncustomer segment, and maturity;\nv.\napproving and overseeing credit risk mitigation; and\nvi.\nreviewing and taking action on watch list and non-performing\naccounts.\nb) Assets-Liability Management Committee (ALCO) - The ALCO shall be\n\nresponsible for managing and overseeing the asset/liability\nmanagement procedures of the institution.\nc) Management Risk Committee - The management (or executive) risk\n\ncommittee shall be responsible for:\n\ni.\nreviewing amongst others, summaries of market and liquidity,\ncredit, operational, country and regulatory risks; and\nii.\nreviewing the appropriateness and effectiveness of mitigation\nactions taken.\nd) Business Strategy Committee - The business strategy committee shall\n\nhave the responsibility to:\n\ni.\ncontrol implementation of the strategic plan;\nii.\ninitiate timely corrective actions in case of deviation from the\nplan in order to address the situation;\n\niii.\nreport detailed progress of implementation of the plans and\nobjectives, including comparison of actual performance against\nthe business plan and budget; and\n\n42"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 44,
+        "section_title": null,
+        "text": "iv.\nconstantly review internal and external conditions with the view\nto designing alternative strategies for unusual circumstances and\nto respond appropriately to unexpected changes in the\nenvironment.\ne)\nExecutive Management Committee (EXCO) – The EXCO Committee\nwill support the CEO/MD to guide and steer the direction of the\ninstitution and to facilitate the flow of information between the\nBoards and its Senior Management staff\n\nF.\nIndependent Risk Management Oversight Function (RMOF)"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 44,
+        "section_title": "28. An important aspect of the risk management philosophy is the concept",
+        "text": "28. An important aspect of the risk management philosophy is the concept\nof independent oversight review, i.e., those who take or accept risk shall\nnot be the people to measure, monitor, and evaluate the risks and report\nto management and Board."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 44,
+        "section_title": "29. The RMOF which collectively renders independent oversight reviews",
+        "text": "29. The RMOF which collectively renders independent oversight reviews\ncomprises risk management oversight, internal audit, compliance and\nfinancial analysis."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 44,
+        "section_title": "30. For effectiveness, the risk management oversight reviews shall have",
+        "text": "30. For effectiveness, the risk management oversight reviews shall have\nsufficient authority, expertise and management status so that their\nfunctions and reporting of their findings will be accomplished without any\nhindrance. The findings of their reviews shall be reported to business units,\nSenior Management and where appropriate, the Board."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 44,
+        "section_title": "31. To the extent warranted by the size and scope of activities of the",
+        "text": "31. To the extent warranted by the size and scope of activities of the\ninstitution, risk management oversight shall be done independently of\nindividuals conducting the activities up to the Senior Management level\nof the institution and shall include an independent system for reporting\nexposures to both Senior Management and Boards."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 44,
+        "section_title": "32. Where the size of the institution does not support a separate structure to",
+        "text": "32. Where the size of the institution does not support a separate structure to\ncarry out this independent risk management oversight function, Senior\nManagement shall be responsible for the performance of this function.\n\n43"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 45,
+        "section_title": "33. The personnel of the independent risk management oversight functions",
+        "text": "33. The personnel of the independent risk management oversight functions\nshall have a thorough understanding of the risks associated with all the\nsignificant activities.\nG.\nChief Risk Officer"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 45,
+        "section_title": "34. The independent risk management oversight function shall be headed by",
+        "text": "34. The independent risk management oversight function shall be headed by\na Chief Risk Officer (CRO) who is an independent senior executive with\ndistinct responsibility for the risk management function and the\ncomprehensive\nrisk\nmanagement\nframework\nacross\nthe\nentire\norganization. The independence of the CRO is paramount and his/her\nrole shall be distinct from other executive functions and business line\nresponsibilities, and there generally shall be no “dual hatting”, i.e., the\nchief operating officer, chief internal auditor or other Senior Management\nshould not serve as CRO."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 45,
+        "section_title": "35. The Board shall appoint the CRO and the CRO shall report directly to CEO",
+        "text": "35. The Board shall appoint the CRO and the CRO shall report directly to CEO\nand be assessed by the Board Risk Committee."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 45,
+        "section_title": "36. The CRO shall advise Board and Senior Management on the control and",
+        "text": "36. The CRO shall advise Board and Senior Management on the control and\nmeasurement of risks, develop and implement best practices in the\nmanagement of risks. He may also advise Board and management on\nissues relating to risk exposures, prior to decision making."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 45,
+        "section_title": "37. The independent risk management oversight function shall:",
+        "text": "37. The independent risk management oversight function shall:\n\na)\nOversee and direct the enterprise-wide management of risk\nexposures;\nb)\nFormulate policies and measurement models for the various units\ninvolved in carrying out the  significant activities that create\nexposures in the various activity segments in the institution;\n\nc)\nMake recommendations to the Boards and Senior Management on\nthe type and level of exposures in each activity segment permitted\nby policy;\nd)\nAdvise and recommend to the Boards and Senior Management on\nall matters relating to risk exposure management;\n\n44"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 46,
+        "section_title": null,
+        "text": "e)\nRegulate, monitor, review control procedures and report on matters\nrelating to exposures management and report deviations from set\nlimits and exception to policy to the Board and Senior Management\nfor their appropriate actions;\nf)\nPerform monthly stress-tests on risk portfolios and at least on a\nquarterly basis, review and approve the appropriateness of the\nstresses applied at the business levels;\n\ng)\nIncorporate the results of the stress-tests (which will inform\nmanagement of the expected risk tendency of the portfolio as\nagainst the  approved risk appetite of the institution) into the  risk\ngovernance structure of the institution;\n\nh)\nBe empowered where appropriate, to initiate management action\nto contain the potential risk levels within the approved risk appetite\nto ensure discipline in the  risk management process of the\ninstitution; and\n\ni)\nIn addition to the monthly stress tests, perform semi-annual reverse\nstress-testing to examine the impact of selected scenarios from a\n‘bottom up’ perspective.\nH.\nInternal Audit"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 46,
+        "section_title": "38. A Regulated Financial Institution shall have an internal audit function",
+        "text": "38. A Regulated Financial Institution shall have an internal audit function\nwhich shall be headed by a person of the status of a member of the Senior\nManagement of the Regulated Financial Institution appointed and\nassessed by the Board Audit Committee, and who reports directly to such\ncommittee."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 46,
+        "section_title": "39. The Internal Audit shall operate under a charter approved by the Board",
+        "text": "39. The Internal Audit shall operate under a charter approved by the Board\nand in compliance with International Standards for the Professional\nPractice of Internal Audit."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 46,
+        "section_title": "40. Internal audit shall incorporate in its annual work program an assessment",
+        "text": "40. Internal audit shall incorporate in its annual work program an assessment\nof the overall procedures that the institution follows in the management\nof its risk exposures.\n\n45"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 47,
+        "section_title": "41. Internal Audit shall examine and review:",
+        "text": "41. Internal Audit shall examine and review:\n\na)\nthe extent to which policies of the Boards are carried out;\nb)\nthe extent to which Board decisions and instructions regarding the\nmanagement, estimation and control of risks are implemented;\nc)\nthe extent to which the units comply with the limits imposed;\n\nd)\nthe adequacy and reliability of management information, financial\nand operational reports to the Boards and senior management;\nand\n\ne)\nthe adequacy of risk management activities at the operational\nlevels and the scope and effectiveness of the independent risk\nmanagement oversight function in terms of its mandate and their\nresponsibilities.\n\nI.\nCompliance Function"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 47,
+        "section_title": "42. A Regulated Financial Institution shall appoint a Compliance Officer who",
+        "text": "42. A Regulated Financial Institution shall appoint a Compliance Officer who\nis competent, experienced, and knowledgeable enough to discharge\nhis/her duties and responsibilities."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 47,
+        "section_title": "43. The Compliance Officer must be of the status of a member of the Senior",
+        "text": "43. The Compliance Officer must be of the status of a member of the Senior\nManagement of the institution or directly subordinate to such a member,\nappointed by the CEO subject to the approval of the Boards or Board\naudit committee."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 47,
+        "section_title": "44. The Compliance Officer shall be responsible for monitoring and reporting",
+        "text": "44. The Compliance Officer shall be responsible for monitoring and reporting\non the adherence or otherwise to various obligations incumbent upon the\ninstitution in its business relations with customers."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 47,
+        "section_title": "45. The Compliance Officer shall assist management and the Board in",
+        "text": "45. The Compliance Officer shall assist management and the Board in\nmeeting the  responsibilities of the institution with regard to:\n\na)\nthe requirements of the law and other regulatory and ethical\ndemands in respect of customer relations and anti-money\nlaundering;\n\n46"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 48,
+        "section_title": null,
+        "text": "b)\nreducing the likelihood of violations of the laws and regulations;\n\nc)\nreducing the exposure of the institution and its management to\nclaims, including those pertaining to the obligation to exercise\ncaution; and\n\nd)\npreventing any breach of confidence by office-holders to prevent\nfinancial losses to the institution.\nJ.\nOperational Management"
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 48,
+        "section_title": "46. Regulated Financial Institutions shall have in place the following",
+        "text": "46. Regulated Financial Institutions shall have in place the following\ncomponents of sound operational management processes which are\nfundamental to all significant activities:\n\na)\na comprehensive risk measurement approach;\nb)\na detailed structure of limits;\n\nc)\na set of Guidelines or operating manuals and other parameters to\ngovern risk-taking relating to each activity; and\n\nd)\na\nstrong\nmanagement\ninformation\nsystem\nfor\ncontrolling,\nmonitoring and reporting risks."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 48,
+        "section_title": "47. The risk management activities for each significant activity shall be",
+        "text": "47. The risk management activities for each significant activity shall be\ndocumented in a work manual and integrated into the  overall risk\nmanagement system of the institution, to enable the institution manage\nits risk exposures more effectively, since the various individual risks involved\nin an activity are often interconnected and transcend specific activities."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 48,
+        "section_title": "48. The management of business units shall by policy have the responsibility",
+        "text": "48. The management of business units shall by policy have the responsibility\nof ensuring that the requirements of risk governance standards, policies\nand procedures are implemented within the business units and\nindependently monitored by the designated risk management teams of\nthe unit."
+    },
+    {
+        "source_filename": "CGD-Corporate-Governance-Directive-2018-Final-For-PublicationV1.1.pdf",
+        "page_number": 48,
+        "section_title": "49. Business units shall have in place a system to self-assess their compliance",
+        "text": "49. Business units shall have in place a system to self-assess their compliance\nwith the risk standards and policies of the institution at least annually.\n\n47"
+    }
+]

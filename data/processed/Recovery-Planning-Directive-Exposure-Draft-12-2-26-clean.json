@@ -1,0 +1,806 @@
+[
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 1,
+        "section_title": null,
+        "text": "BANK OF GHANA\n\nRECOVERY PLANNING DIRECTIVE\nfor Banks and Specialised Deposit-Taking Institutions,\nFinancial Holding Companies (FHC), Mortgage Finance,\n\nand Finance and Leasing Companies\n\n(EXPOSURE DRAFT)\n\nFebruary 2026"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 2,
+        "section_title": null,
+        "text": "PUBLIC\n\nThe Bank of Ghana (BOG) has issued the Recovery Planning Directive to solicit comments\nand inputs from the banking industry and the general public, in line with the BOG’s\nProcedures for Issuance of Directives, 2020.\n\nIn light of this, the Exposure Draft shall be made available on the BOG’s website at\nwww.bog.gov.gh from date of publication to June 30th, 2026, for comments.\n\nAll comments shall be sent to the Bank of Ghana via email at bsdletters@bog.gov.gh by\n30th June 2026. The Bank of Ghana shall consider all material comments received and provide\na written explanation for comments that were incorporated into the final guideline or\notherwise.\n\n1"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 3,
+        "section_title": null,
+        "text": "PUBLIC\n\nPREAMBLE\nRecovery planning is a crucial element of the regulatory reform agenda introduced by\nauthorities worldwide following the 2007-2008 financial crisis. It addresses the risk that\nthe management of a Regulated Financial Institution (RFI) focuses disproportionately on\ngrowth opportunities at the expense of managing downside risk. It supports the\nauthorities’ overarching objective to promote the safety and soundness of the RFIs they\nregulate.\nRFIs are expected to engage in recovery planning to prepare for periods of financial\nstress, stabilise their financial position, and recover from economic losses in order to\nprevent failure. They should have multiple recovery options and regularly maintain and\ntest their plans to ensure their effectiveness. The recovery plan must include measures\nto reduce the RFI's risk profile and conserve capital, as well as strategic options such as\ndivesting business lines and restructuring liabilities.\nRFIs should view recovery planning as an integral part of their corporate governance, risk\nmanagement framework, and processes rather than a regulatory compliance task. They\nshould explicitly outline the policies, procedures, and internal controls that govern the\ncreation and approval of their recovery plan. This includes identifying the key\nmanagement personnel responsible for overseeing its development, maintenance, and\nimplementation. The recovery plan should clearly describe the nature, extent, and\nfrequency of reporting to senior management and the Board concerning these activities.\nAdditionally, the mechanism for revising and updating the recovery plan must be\nspecified, ensuring it is reviewed annually and in response to material changes in the\nRFI’s financial status or macroeconomic conditions.\nThe Financial Stability Board (FSB) promotes global financial stability by coordinating with\nnational and international bodies to develop strong regulatory and financial policies.\nRecent financial crises have underscored the inadequacy of RFIs in handling severe stress\nevents. In response, the FSB issued standards in 2011 for recovery and resolution\nplanning in its “Key Attributes of Effective Resolution Regimes for Financial Institutions”.\nThese attributes require recovery and resolution plans for institutions that may be\nsystemically important if they fail (Key Attributes 11.1 and 11.2). In 2013, the FSB also\nprovided guidance on recovery triggers and stress scenarios for firms that may impact\nfinancial stability in the event of failure.\nEvery FSB member jurisdiction must ensure that financial institutions are ready for risk\nevents. To achieve this, the Bank of Ghana (BOG) issues this Directive to provide\nregulatory certainty and transparency and to align with FSB standards. This Directive\naligns with the Key Attributes for Effective Resolution Regimes and the Key Attributes\nAssessment Methodology for the Banking Sector, as outlined by the Financial Stability\nBoard.\n\n2"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 4,
+        "section_title": null,
+        "text": "PUBLIC\n\nTABLE OF CONTENTS\n\nPART I -\nPRELIMINARY .............................................................................................. 4\n\nTitle ...................................................................................................................... 4\nApplication ............................................................................................................ 4\nInterpretation ........................................................................................................ 4\nObjectives ............................................................................................................. 5\nProportionality ....................................................................................................... 5\n\nPART II -\nGOVERNANCE AND RISK MANAGEMENT FRAMEWORK ................... 7\n\nGovernance ........................................................................................................... 7\nRoles and Responsibilities of the Board ................................................................... 7\nRoles and Responsibilities of Senior Management .................................................... 8\nRisk Management Framework ................................................................................. 9\nIndependent Review .............................................................................................. 9\n\nPART III -\nCOMPONENTS OF THE RECOVERY PLAN ......................................... 10\n\nKey Components ................................................................................................. 10\n\nA.\nEXECUTIVE SUMMARY ................................................................................................ 10\n\nB.\nDESCRIPTION OF CRITICAL FUNCTIONS AND SERVICES ............................................. 11\n\nC.\nRECOVERY OPTIONS .................................................................................................. 11\n\nD.\nRECOVERY CAPACITY ................................................................................................. 16\n\nE.\nRECOVERY INDICATORS ............................................................................................ 16\n\nF.\nSCENARIO TESTING.................................................................................................... 18\n\nG.\nTESTING AND REVIEW ................................................................................................ 19\n\nI.\nMANAGEMENT INFORMATION SYSTEMS ..................................................................... 20\n\nJ.\nRECOVERY PLANNING FOR RFIs WITH CROSS-BORDER AFFILIATES ............................ 21\n\nPART IV -\nSUPERVISORY APPROACH ................................................................. 23\n\nPART V -\nAPPENDIX .............................................................................................. 25\n\nAPPENDIX 1 ........................................................................................................ 25\nAPPENDIX 2 ........................................................................................................ 25\nAPPENDIX 3 ........................................................................................................ 27\nList of Potential Recovery Options ......................................................................... 27\nAPPENDIX 4(a) .................................................................................................... 28\nAPPENDIX 4(b) .................................................................................................... 28\nAPPENDIX 5 - List of Potential Critical Functions .................................................... 29\n\n3"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 5,
+        "section_title": null,
+        "text": "PUBLIC\n\nPART I -\nPRELIMINARY\nTitle"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 5,
+        "section_title": "1. This Directive shall be cited as the Bank of Ghana Recovery Planning Directive, 2025.",
+        "text": "1. This Directive shall be cited as the Bank of Ghana Recovery Planning Directive, 2025.\nApplication"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 5,
+        "section_title": "2. This Directive is issued under the powers conferred by Section 92 of the Banks and",
+        "text": "2. This Directive is issued under the powers conferred by Section 92 of the Banks and\nSpecialised Deposit-Taking Institutions Act, 2016 (Act 930), as well as Section 44 of\nthe Non-Bank Financial Institutions (NBFI) Act, 2008 (Act 774), and shall apply to all\nbanks, Specialised Deposit-Taking Institutions (SDIs), Financial Holding Companies\n(FHC), Mortgage Finance Companies, and Finance and Leasing Companies,\ncollectively referred to in this Directive as “Regulated Financial Institutions (RFIs)”.\nInterpretation"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 5,
+        "section_title": "3. In this Directive, unless the context otherwise requires, words used have the same",
+        "text": "3. In this Directive, unless the context otherwise requires, words used have the same\nmeaning as that assigned to them in the applicable law (e.g., Act 930 and Act 1032)\nand other Directives issued by the BOG or as follows:\n“Act 930” means the Banks and Specialised Deposit-Taking Institutions Act, 2016 (Act\n930);\n“Act 774” means the Non-Bank Financial Institutions (NBFI) Act, 2008 (Act 774);\n“Bank” means a body corporate which engages in the deposit-taking business and is\nissued with a banking licence under Act 930;\n“Board” means the Board of Directors of a Regulated Financial Institution;\n\n“BOG” means Bank of Ghana;\n“Eligible Collateral” means Securities (Bills, Notes, and Bonds) issued by the\nGovernment of Ghana; Bonds guaranteed by the Government of Ghana; Bank of Ghana\nBills; and Eurobonds issued by the Government of Ghana or any other collateral as may\nbe specified under the Bank of Ghana Liquidity Assistance Framework;\n“Function” means a process, service, task or activity that is ordinarily undertaken by an\nRFI in the normal course of business;\n“Insider” means a director, an executive director, key management personnel and a\nsignificant shareholder other than a financial holding company;\n\n4"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 6,
+        "section_title": null,
+        "text": "PUBLIC\n\n“Material Entity” means a subsidiary or foreign office of an RFI that:\n\na. has more than 5% of the consolidated risk-weighted assets of the group;\nb. generates more than 5% of the total operating income of the group;\nc. has a total leverage exposure measure that is larger than 5% of the group’s\n\nconsolidated leverage exposure measure;\nd. has been identified as critical to the RFI’s critical operation or core business line;\n\nor\ne. is financially or operationally significant to the resolution of the RFI.\n“Public Financial Support” means financial support by the Government from taxpayers’\nfunds or any financial support that exposes taxpayers to the risk of loss that is provided\nto preserve or restore the viability, liquidity or solvency of an RFI;\n“Recovery Capacity” means the extent to which the recovery options allow the RFI to\nrecover in a range of scenarios of severe macroeconomic and financial stress;\n“Regulated Financial Institution (RFI)” means a bank, specialised deposit-taking\ninstitution or financial holding company covered under this Directive;\n“Senior Management” means members of the Executive Management Committee\n(EXCO) of an RFI and any other Key Management Personnel (KMP) as may be determined\nby the Regulated Financial Institution;\n“Specialised Deposit-Taking Institution” (SDI) means a body corporate which\nengages in the deposit-taking business and is issued with a licence to engage in the\ndeposit-taking business in accordance with Act 930;\nObjectives"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 6,
+        "section_title": "4. The objectives of the Directive are to:",
+        "text": "4. The objectives of the Directive are to:\n\na. provide guidance to RFIs for developing a recovery plan that safeguards their\n\ncritical functions and preserves public confidence in the financial system during\nsevere stress scenarios;\n\nb. set out regulatory and supervisory expectations, in line with the key principles by\n\nFSB, for developing, maintaining and implementing recovery plans;\n\nc. enable an RFI to demonstrate its readiness to adequately restore its financial\n\nhealth and regulatory compliance following an adverse shock that impacts its\ncapital, liquidity, or operational capacity; and\n\nd. ensure the resilience of RFIs against financial stress.\n\nProportionality"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 6,
+        "section_title": "5. RFIs are required to fully comply with this Directive. However, when assessing the",
+        "text": "5. RFIs are required to fully comply with this Directive. However, when assessing the\nquality and effectiveness of the RFI's recovery plan, the BOG will take into account\n\n5"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 7,
+        "section_title": null,
+        "text": "PUBLIC\n\nthe principle of proportionality, having regard to their size, scope, nature, structure,\nbusiness mix and the systemic risks associated with their activities. In particular, the\nBOG expects that:\n\na. RFIs with fewer and simpler business lines will have less complex stress test\n\nscenarios, recovery options, recovery triggers and communication plans, which\nwould be easier to develop and implement; and\n\nb. the recovery plan for all RFIs, regardless of size, shall encompass, where\n\napplicable, all the key components outlined in paragraph 23 of this Directive.\nEffective Implementation and Transitional Arrangements"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 7,
+        "section_title": "6. RFIs shall develop a recovery plan, which must be approved by the Board and",
+        "text": "6. RFIs shall develop a recovery plan, which must be approved by the Board and\nsubmitted to the BOG for review by 31st December 2026."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 7,
+        "section_title": "7. RFIs shall test the plan and submit the results to the BOG by 30th June 2027.",
+        "text": "7. RFIs shall test the plan and submit the results to the BOG by 30th June 2027."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 7,
+        "section_title": "8. This directive shall take effect from 1st January 2027.",
+        "text": "8. This directive shall take effect from 1st January 2027.\nPublic Financial Support"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 7,
+        "section_title": "9. RFIs shall prepare a documented recovery plan that does not assume or rely on",
+        "text": "9. RFIs shall prepare a documented recovery plan that does not assume or rely on\naccess to, receipt of, or likelihood of public financial support.\n\n6"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 8,
+        "section_title": null,
+        "text": "PUBLIC\n\nPART II -\nGovernance and Risk Management Framework\nGovernance"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 8,
+        "section_title": "10. RFIs shall establish effective governance arrangements to oversee and manage the",
+        "text": "10. RFIs shall establish effective governance arrangements to oversee and manage the\nrecovery planning process, allocating sufficient resources to support both the planning\nprocess and the implementation of the recovery plan, including any associated\ndecision-making processes."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 8,
+        "section_title": "11. Governance of the RFI’s recovery plan shall be clearly defined in its policies and",
+        "text": "11. Governance of the RFI’s recovery plan shall be clearly defined in its policies and\ninternal controls governing the preparation and approval of the recovery plan, with\nwell-defined roles, responsibilities, and accountabilities for the Board, senior\nmanagement, business units, and control functions.  It must also identify senior\nmanagement officials responsible for its development, maintenance, and\nimplementation, as well as reporting to the Board."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 8,
+        "section_title": "12. RFIs shall ensure that the governance arrangements (including policies, procedures,",
+        "text": "12. RFIs shall ensure that the governance arrangements (including policies, procedures,\nprocesses, and management information systems) enable informed decision-making,\nidentify early warning signs, and manage recovery risks. This ensures the recovery\nplan is executed efficiently."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 8,
+        "section_title": "13. The RFI’s governance arrangements shall clearly describe the nature, extent, and",
+        "text": "13. The RFI’s governance arrangements shall clearly describe the nature, extent, and\nfrequency of reporting to key management and the Board regarding the RFI's\ndevelopment, maintenance, and implementation of the recovery plan."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 8,
+        "section_title": "14. The governance arrangements shall also specify the mechanism for revising and",
+        "text": "14. The governance arrangements shall also specify the mechanism for revising and\nupdating the recovery plan, ensuring it is updated at least annually and/or upon a\nmaterial change to an RFI's structure, operations, strategy, risk exposure, financial\ncondition, or overall macroeconomic conditions. The periodic review should also\ninclude all assumptions underlying the plan, as well as its relevance and applicability.\nRoles and Responsibilities of the Board"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 8,
+        "section_title": "15. The Board of an RFI shall:",
+        "text": "15. The Board of an RFI shall:\n\na. have the ultimate responsibility for overseeing the development, maintenance\n\nand implementation of the RFI’s recovery plan;\n\nb. review and approve the recovery plan at the initial formulation and thereafter, at\n\nleast annually or when significant changes are made by management;\n\nc. understand how the recovery plan can be effectively deployed to restore financial\n\nviability in a crisis;\n\nd. ensure the availability of sufficient resources to support the maintenance of the\n\nrecovery plan;\n\n7"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 9,
+        "section_title": null,
+        "text": "PUBLIC\n\ne. ensure that the recovery plan is integrated with the existing risk management\n\nframework of the RFI and is linked to the institution’s contingency plans and\nplanning processes by involving the risk management function."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 9,
+        "section_title": "16. RFIs shall provide evidence that the Board sufficiently challenged the recovery plan",
+        "text": "16. RFIs shall provide evidence that the Board sufficiently challenged the recovery plan\nas and when the BOG may request. The Board should articulate its view on the extent\nto which the recovery plan is credible and executable under severe stress, along with\nan explanation for that view.\nRoles and Responsibilities of Senior Management"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 9,
+        "section_title": "17. Recovery planning is a key responsibility of the RFI's senior management, which is",
+        "text": "17. Recovery planning is a key responsibility of the RFI's senior management, which is\nresponsible for developing, maintaining, activating, and implementing the recovery\nplan and for integrating it into the RFI’s risk management framework as a second line\nof defence, with proper Board oversight."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 9,
+        "section_title": "18. Senior management shall:",
+        "text": "18. Senior management shall:\n\na. develop a recovery plan along with the necessary policies and strategies to\n\nmanage, control and report stress event(s), thereby ensuring the continuity of\ncritical business functions;\n\nb. evaluate the organisational structure of the RFI to determine its effectiveness in\n\nfacilitating recovery;\n\nc. develop comprehensive recovery options for the specific stress events identified\n\nin the recovery plan;\n\nd. designate a senior-level “owner” of the recovery plan, with responsibility for\n\noverseeing its development, review, and submission for approval; e.g., the Chief\nFinancial Officer or the Chief Risk Officer or a similar senior-level executive; and\n\ne. document how the recovery plan was developed, the processes for obtaining\n\nsenior management approval, and the processes for obtaining Board approval."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 9,
+        "section_title": "19. Management shall notify the BOG in advance of its intentions to activate the recovery",
+        "text": "19. Management shall notify the BOG in advance of its intentions to activate the recovery\nplan, and the notification shall include:\n\na. an explanation of the circumstances leading to the breach of the recovery\n\nthreshold;\n\nb. management actions that have been taken, if any; and\n\nc. management actions intended for implementation, including adopting recovery\n\noptions derived from the preferred recovery strategy or any other options\ndeemed suitable under the circumstances.\n\n8"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 10,
+        "section_title": null,
+        "text": "PUBLIC\n\nRisk Management Framework"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 10,
+        "section_title": "20. RFIs shall integrate the recovery plan into their corporate governance structure, risk",
+        "text": "20. RFIs shall integrate the recovery plan into their corporate governance structure, risk\nmanagement framework, and processes, for example, by linking it to the Risk Appetite\nStatement, the Internal Capital Adequacy Assessment Process (ICAAP), the Crisis\nManagement Framework, and the Business Continuity Plan (BCP). RFIs shall provide\ndetails on how the preparation of the plan is integrated with these structures,\nframeworks, and processes."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 10,
+        "section_title": "21. RFIs shall conduct a comprehensive, system-wide risk assessment annually, covering",
+        "text": "21. RFIs shall conduct a comprehensive, system-wide risk assessment annually, covering\nthe business strategy, core business functions, and critical shared services, to identify\npotential major disruptions. The assessment should achieve, at a minimum, the\nfollowing objectives:\n\na. identify unacceptable risk concentrations;\n\nb. ensure that the recovery plans are updated regularly to reflect changes in the\n\nsystem and the institution’s risk profile; and\n\nc. specify the events that should trigger the activation and implementation of the\n\nrecovery plan.\n\nIndependent Review"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 10,
+        "section_title": "22. An RFI shall ensure that its recovery plan is reviewed by the internal audit function.",
+        "text": "22. An RFI shall ensure that its recovery plan is reviewed by the internal audit function.\nIn addition, RFIs may engage an independent external party1 to review the recovery\nplan. Such reviews should provide independent assurance of the accuracy of the\nplan's data and information, as well as the robustness of the processes and\nmethodology used to develop the plan."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 10,
+        "section_title": "1 Banks shall ensure that the review of the recovery plan is done by both the internal audit function and an",
+        "text": "1 Banks shall ensure that the review of the recovery plan is done by both the internal audit function and an\nindependent external party.\n\n9"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 11,
+        "section_title": null,
+        "text": "PUBLIC\n\nPART III - COMPONENTS OF THE RECOVERY PLAN\nKey Components"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 11,
+        "section_title": "23. The recovery plan shall be approved by the Board and shall cover the following at a",
+        "text": "23. The recovery plan shall be approved by the Board and shall cover the following at a\nminimum (where applicable):\n\na. Executive Summary\nb. Governance2\nc. Overview of the RFI and group\nd. Critical Functions and Services\ne. Recovery Options\nf.\nRecovery Capacity\ng. Recovery Indicators\nh. Scenario Testing\ni.\nTesting and Review\nj.\nCommunication\nk. Management Information Systems\nl.\nCross-border cooperation and coordination\n\nA. EXECUTIVE SUMMARY"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 11,
+        "section_title": "24. The executive summary should be concise and include information on the trigger",
+        "text": "24. The executive summary should be concise and include information on the trigger\nframework, internal escalation and decision-making processes, recovery options, and\nthe communication strategy. The executive summary should provide a summary of\nthe components in the plan, including:\n\na. The objective and scope;\n\nb. Governance;\n\nc. A brief description of critical functions and services;\n\nd. Its integration with the risk management framework, ICAAP, BCP, liquidity\n\ncontingency plans and related matters;\n\ne. The triggers for activating, escalating, and implementing the recovery plan, as\n\nwell as the arrangements for these actions;\n\nf.\nA brief description of the recovery options;\n\ng. A brief description of the scenarios;\n\nh. Communication;\n\ni.\nProcess for regular review and testing; and"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 11,
+        "section_title": "2 Should reflect the provisions in paragraphs 10 to 19 on governance.",
+        "text": "2 Should reflect the provisions in paragraphs 10 to 19 on governance.\n\n10"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 12,
+        "section_title": null,
+        "text": "PUBLIC\n\nj.\nA brief description of cross-border cooperation and coordination (where\napplicable)."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 12,
+        "section_title": "25. The executive summary shall contain a short checklist of decisions and actions that",
+        "text": "25. The executive summary shall contain a short checklist of decisions and actions that\nthe Board and senior management can use to:\n\na. determine whether to invoke the recovery plan;\n\nb. ascertain the nature of the problem affecting the RFI, its cause, and its impact;\n\nand\n\nc. determine\nthe\nrecovery\nstrategy,\nincluding\nrecovery\nactions\nand\ncommunications.\nB. DESCRIPTION OF CRITICAL FUNCTIONS AND SERVICES"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 12,
+        "section_title": "26. The recovery plan should outline the RFI's business model at a high level, detailing",
+        "text": "26. The recovery plan should outline the RFI's business model at a high level, detailing\nits key activities and significant business lines."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 12,
+        "section_title": "27. An RFI shall identify its critical functions and services delivered or received from",
+        "text": "27. An RFI shall identify its critical functions and services delivered or received from\ncounterparties during its operations (see Appendices 5 and 6 for examples). In\nidentifying critical functions and services, the RFI shall consider the following:\n\na. whether a failure or discontinuity of these functions or services would likely result\n\nin the disruption of operations essential to the entity's functioning;\n\nb. the contribution of the business line to its profit, assets, capital, liabilities or risk\n\nprofile; and\n\nc. strategic significance of the business line in relation to:\n\ni.\ncustomer base, geographic reach, and branch network;\n\nii.\nmarket potential and growth outlook;\n\niii.\nattractiveness to competitors as a potential acquisition target; and\n\niv.\nother factors that contribute to the business line’s significance to the RFI.\n\nC. RECOVERY OPTIONS"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 12,
+        "section_title": "28. RFIs shall provide a “menu of recovery options” that allow them to respond to financial",
+        "text": "28. RFIs shall provide a “menu of recovery options” that allow them to respond to financial\nstress, whether idiosyncratic or systemic, and evaluate the feasibility and impact of\neach option. Considering recovery options in advance is a crucial part of an RFI’s\npreparedness and significantly increases the likelihood of recovery."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 12,
+        "section_title": "29. RFIs shall provide a general description of all available recovery options and outline",
+        "text": "29. RFIs shall provide a general description of all available recovery options and outline\nthe actions required to enable the timely execution of each option. RFIs should include\na sufficiently broad range of recovery options in their plans to maximise the likelihood\n\n11"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 13,
+        "section_title": null,
+        "text": "PUBLIC\n\nthat implementable options exist across different types of stress. Plans should be\ncomprehensive, not just limited to easily implementable recovery options."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 13,
+        "section_title": "30. Recovery actions will vary by RFI based on its size, structure, complexity, and scale",
+        "text": "30. Recovery actions will vary by RFI based on its size, structure, complexity, and scale\nof operation. The BOG expects RFIs to explain how their recovery plans would be\nused to restore their financial position and viability during or following a stress event.\nFor RFIs with simple business models, the BOG recognises that recovery options may\nbe limited in number but expects RFIs to consider possible options carefully."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 13,
+        "section_title": "31. RFIs shall not limit the scope of their recovery plan to only extreme stress. Focusing",
+        "text": "31. RFIs shall not limit the scope of their recovery plan to only extreme stress. Focusing\nsolely on recovery options likely to be implemented late in an RFI’s deterioration\nprovides only a limited view to senior management and the BOG of the available\noptions for the RFI. The feasibility of later-stage options may also depend on actions\nthat could have been taken earlier during the stress.\nChoice of Options"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 13,
+        "section_title": "32. The choice of recovery options shall be aligned with the RFI's business model and",
+        "text": "32. The choice of recovery options shall be aligned with the RFI's business model and\nbased on realistic assumptions, supported by high-quality analysis (see Appendix 3\nfor examples of recovery options)."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 13,
+        "section_title": "33. RFIs shall select options that are practical in real-world situations and provide",
+        "text": "33. RFIs shall select options that are practical in real-world situations and provide\nsufficient benefits to be worthwhile. However, RFIs should also identify options that\nmay not be straightforward to implement at present, as well as radical options with\nlong-term structural implications, such as exiting a business line, debt restructuring,\nor the partial or full disposal of the RFI. The steps needed to make these options\nmore viable are discussed below under Recovery Capacity."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 13,
+        "section_title": "34. RFIs should explain under which circumstances each option would be used. The plan",
+        "text": "34. RFIs should explain under which circumstances each option would be used. The plan\nshould also set out situations where each option would not be credible, for example,\ndue to market conditions or because options are mutually exclusive.\nQuantification of the impact"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 13,
+        "section_title": "35. An RFI shall quantify the impact of its recovery options by:",
+        "text": "35. An RFI shall quantify the impact of its recovery options by:\n\na. assessing and quantifying the impact of each recovery option in isolation\n\n(discussed in this section, ‘Quantification and impact’);\nb. assessing the total impact of all options that can be implemented simultaneously\n\nunder different stress scenarios, taking into account their dependencies\n(discussed in ‘Recovery capacity’ below); and\n\nc. selecting the subset of options likely to be chosen to respond to specific stresses\n\n(examined in ‘Scenario testing’ below).\n\n12"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 14,
+        "section_title": null,
+        "text": "PUBLIC"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 14,
+        "section_title": "36. RFIs shall provide details and explain the expected impact of each recovery option in",
+        "text": "36. RFIs shall provide details and explain the expected impact of each recovery option in\nthe analysis included in the recovery plan. The analysis should be of sufficient quality\nfor the BOG to assess whether the impacts are credible."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 14,
+        "section_title": "37. RFIs shall ensure that the selected recovery options support their recovery while",
+        "text": "37. RFIs shall ensure that the selected recovery options support their recovery while\nmaintaining a viable post-recovery business model. They should provide evidence\ndemonstrating that they have assessed the impact of each recovery option on\nthemselves and the wider group, and the implementation of each option must be\ncredible. Additionally, RFIs need to consider the systemic implications and potential\ncombinations of options for Ghana’s financial sector."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 14,
+        "section_title": "38. RFIs shall assess the financial impact of recovery options on capital, liquidity, the",
+        "text": "38. RFIs shall assess the financial impact of recovery options on capital, liquidity, the\nbalance sheet, and profitability. The benefits of recovery options should be quantified\npre-tax and post-tax (including deferred tax assets)."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 14,
+        "section_title": "39. RFIs shall consider the valuation approach for asset disposal options and actual sale",
+        "text": "39. RFIs shall consider the valuation approach for asset disposal options and actual sale\nvalues from similar entities. RFIs should conservatively value disposals by applying\nprice adjustments to account for distress levels. RFIs must document and explain\ntheir valuation methodology and underlying assumptions. Asset disposal options\nshould identify potential purchasers (at least by type) and the realistic discounts\nnecessary for a sale, considering prevailing market conditions (including the forced\nsale value)."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 14,
+        "section_title": "40. Where a merger or sale of the whole RFI is a relevant recovery option, the RFI shall",
+        "text": "40. Where a merger or sale of the whole RFI is a relevant recovery option, the RFI shall\nstart with a fair valuation of the balance sheet and explain the risks inherent in that\nvaluation, linking to the scenario tests it undertakes. RFIs should have the operational\nand systems capacity to conduct such fair value valuations in a stress scenario. The\nmerger or sale shall align with the Bank of Ghana’s Mergers and Acquisitions Directive."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 14,
+        "section_title": "41. RFIs shall consider the options available to them to raise liquidity by encumbering",
+        "text": "41. RFIs shall consider the options available to them to raise liquidity by encumbering\nassets in each stress scenario. When assessing the impact of such actions, RFIs\nshould consider the full range of potential secondary effects, including those on the\ncost and stability of other funding sources, as well as the RFI’s risk profile and\nreputation.\nImpact on Resolvability"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 14,
+        "section_title": "42. Work done by RFIs on recovery and resolution should be consistent and seen as",
+        "text": "42. Work done by RFIs on recovery and resolution should be consistent and seen as\ncomplementary. This includes interactions between recovery and resolution planning,\nstructural reform, and operational continuity in resolution. For instance, actions taken\nmainly for resolution planning may also help with recovery planning. Conversely, RFIs\nshould acknowledge and explain how recovery options might affect resolvability, such\nas the sale of a subsidiary providing critical services to other group entities.\n\n13"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 15,
+        "section_title": null,
+        "text": "PUBLIC"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 15,
+        "section_title": "43. RFIs must include the impact of choosing recovery options – and groups of recovery",
+        "text": "43. RFIs must include the impact of choosing recovery options – and groups of recovery\noptions – on the subsequent resolution in their recovery plans. For example, RFIs\nshould assess how recovery options would affect existing barriers to resolution, the\nviability and sustainability of the business model, the ability to provide or support\ncritical functions, and the potential consequences of recovery options on post-\nresolution restructuring.\nTimelines"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 15,
+        "section_title": "44. RFIs shall include timelines for implementing recovery options, clearly separating the",
+        "text": "44. RFIs shall include timelines for implementing recovery options, clearly separating the\ntime required to execute an option from the time required to realise its benefits.\nExecution time covers preparing and implementing recovery options, including\ngovernance processes, regulatory approvals, and other factors. Realising the benefits\nusually means the time it takes for any part of the financial impact to be achieved.\nHowever, the recovery plan should also include a timeline showing how the estimated\nbenefits of each recovery option will accrue over time, especially if the benefits are\nnot immediate.\nDependencies"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 15,
+        "section_title": "45. RFIs shall detail and explain the dependencies among recovery options and identify",
+        "text": "45. RFIs shall detail and explain the dependencies among recovery options and identify\nwhere they are mutually exclusive."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 15,
+        "section_title": "46. RFIs shall outline operational dependencies and impacts when detailing the selection",
+        "text": "46. RFIs shall outline operational dependencies and impacts when detailing the selection\nof recovery options. RFIs should also specify whether recovery options are contingent\non third-party involvement. This includes identifying where operational, technical, and\nfinancial support from third parties is required to execute recovery options. RFIs\nshould highlight the key regulatory and legal issues associated with executing each\noption, along with the necessary actions to mitigate these risks."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 15,
+        "section_title": "47. Considering the various scenarios, work-up plans for the disposal of assets and",
+        "text": "47. Considering the various scenarios, work-up plans for the disposal of assets and\nbusiness lines should be developed in conjunction with pricing assumptions and other\npertinent risks, such as exchange rate risk. For disposal options, the recovery plan\nshould:\n\na. explain the interconnectedness of businesses and the feasibility of separating\n\nthem from the wider group, while identifying measures that would facilitate this\nprocess;\n\nb. include an outline of the financial, operational, and legal connections, as well as\n\nthe feasibility of separation, the necessary steps for a smooth separation, and\npotential effects on critical service provision. The RFI shall conduct a detailed\nseparability analysis, which must assess the impact of the disposal on critical\nservices and the business, including all significant intra-group exposures, funding\nrelationships, and capital flows, as well as existing and expected intra-group\nguarantees during recovery actions;\n\n14"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 16,
+        "section_title": null,
+        "text": "PUBLIC\n\nc. describe any third-party consent, approvals or notices required, and any\n\ncontractual obstacles that might restrict the disposal, explaining the steps that\nwould be required to overcome these;\n\nd. comment on potential competition issues and how these would be mitigated;\n\ne. assess whether the disposal changes the tax status of the remaining business,\n\ne.g., resulting from changes in the manner in which the entity’s activities are\nconducted with respect to applicable tax laws and regulations;\n\nf.\ndescribe any significant pensions or human resources issues that would need to\nbe dealt with and how these would be overcome; and\n\ng. explain what due diligence information would need to be available and explain\n\nhow the information would be quickly assembled, whether there would be any\nbarriers to sharing it and how these would be overcome.\nBank of Ghana Intraday and Emergency Liquidity Facilities"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 16,
+        "section_title": "48. BOG assumes that all RFIs that meet the BOG Intraday Liquidity Facility (ILF) and the",
+        "text": "48. BOG assumes that all RFIs that meet the BOG Intraday Liquidity Facility (ILF) and the\nBOG Emergency Liquidity Assistance (ELA) eligibility criteria can borrow from these\nfacilities for which they have signed up."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 16,
+        "section_title": "49. When planning the use of ILF or ELA as recovery options, RFIs should:",
+        "text": "49. When planning the use of ILF or ELA as recovery options, RFIs should:\n\na. familiarise themselves with the purpose of those liquidity facilities and their\n\neligibility criteria as outlined in the Bank of Ghana Liquidity Assistance\nFramework;\n\nb. consider the circumstances in which they would need to access those facilities\n\nand discuss options with the BOG at an early planning stage;\n\nc. test the operational aspects of their plan for accessing the BOG liquidity facilities\n\n(including by carrying out periodic test trades with the BOG where required,\ninternal testing of the speed of collateral processing, taking actions to address\nany specific BOG requirements and to mitigate any other hurdles);\n\nd. raise funds from a representative portfolio of the assets they would expect to\n\nprovide as eligible collateral to access the BOG liquidity facilities (e.g.,\ngovernment debt securities if using the ILF);\n\ne. undertake an analysis of eligible collateral and the drawing capacity against\n\nthese; and\n\nf.\nensure that an appropriate amount of eligible collateral is pre-positioned and\nsubmitted to the BOG."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 16,
+        "section_title": "50. In the recovery plan, the RFI should identify the range of recovery options that would",
+        "text": "50. In the recovery plan, the RFI should identify the range of recovery options that would\nenable the RFI to repay any BOG liquidity support received.\n\n15"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 17,
+        "section_title": null,
+        "text": "PUBLIC\n\nD. RECOVERY CAPACITY"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 17,
+        "section_title": "51. The recovery capacity of an RFI represents the extent to which the recovery options",
+        "text": "51. The recovery capacity of an RFI represents the extent to which the recovery options\nallow the RFI to recover in a range of scenarios of severe macroeconomic and financial\ndistress."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 17,
+        "section_title": "52. RFIs are expected to understand the total financial benefits they can realistically",
+        "text": "52. RFIs are expected to understand the total financial benefits they can realistically\nachieve across various stress scenarios, if needed. The recovery capacity should cover\nthe combined benefits of all options under different stress types. This differs from\nscenario testing, in which RFIs assess which options are most likely to be selected\nunder specific conditions across multiple scenarios."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 17,
+        "section_title": "53. For each recovery option, the RFI shall conduct an impact assessment (see Appendix",
+        "text": "53. For each recovery option, the RFI shall conduct an impact assessment (see Appendix\n1) that considers the financial and operational impact on the RFI as well as the\nexternal impact. The RFI should also conduct a risk assessment on the option’s\nfeasibility, specifically examining the risk that it may not be implemented, as well as\nthe systemic consequences that could arise from its implementation. Additionally, the\nRFI should outline a decision-making process for implementing each recovery option,\ntailored to that option."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 17,
+        "section_title": "54. In determining the recovery capacity, RFIs may consider the guide set out in Appendix",
+        "text": "54. In determining the recovery capacity, RFIs may consider the guide set out in Appendix\n2, having regard for their size, nature, structure and complexity."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 17,
+        "section_title": "55. RFIs shall include a range of estimated potential impacts and assumed timelines for",
+        "text": "55. RFIs shall include a range of estimated potential impacts and assumed timelines for\neach recovery option in this exercise (and consequently, a range of recovery\ncapacities). However, for scenario testing, a conservative point estimate should be\nemployed (see ‘Scenario testing’ below)."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 17,
+        "section_title": "56. RFIs shall ensure that they have sufficient credible options to restore their capital and",
+        "text": "56. RFIs shall ensure that they have sufficient credible options to restore their capital and\nliquidity positions to appropriate levels during or following a stress. When assessing\nthe capacity of these options, RFIs should consider the likely actions of peers under\nstress.\n\nE. RECOVERY INDICATORS"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 17,
+        "section_title": "57. Recovery indicators determine the point at which an RFI begins to consider",
+        "text": "57. Recovery indicators determine the point at which an RFI begins to consider\nappropriate recovery options in a given situation. This is critical because an\nappropriate recovery indicator framework supports effective plan implementation.\nRFIs shall therefore ensure that the scope of their indicators is sufficient and that the\ncalibration levels are adequate to allow the timely implementation of the required\nrecovery measures."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 17,
+        "section_title": "58. RFIs shall ensure that they have a coherent process for monitoring indicator metrics",
+        "text": "58. RFIs shall ensure that they have a coherent process for monitoring indicator metrics\nwithin their management information framework. RFIs should outline the governance\nframework for monitoring indicators and associated escalation procedures."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 17,
+        "section_title": "59. An RFI's recovery plan shall provide details on how recovery indicators are",
+        "text": "59. An RFI's recovery plan shall provide details on how recovery indicators are\nincorporated into its risk management framework. It should also include how\n\n16"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 18,
+        "section_title": null,
+        "text": "PUBLIC\n\nindicators align with liquidity or capital contingency plan triggers. RFIs should monitor\nthe same set of metrics in both the contingency planning and recovery planning\nframeworks to provide a consistent approach to monitoring risk across the RFI.\nScope of indicators"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 18,
+        "section_title": "60. An RFI shall ensure that the scope of the recovery indicator framework adequately",
+        "text": "60. An RFI shall ensure that the scope of the recovery indicator framework adequately\ncaptures and identifies the key vulnerabilities faced by the RFI. An appropriate scope\nof indicators is crucial to encompass a wide range of developments and enable the\nRFI to monitor all relevant areas."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 18,
+        "section_title": "61. RFIs shall ensure that their indicator framework maximises the chance of being",
+        "text": "61. RFIs shall ensure that their indicator framework maximises the chance of being\nalerted to an oncoming stress with sufficient notice to implement and realise the\nbenefits of any necessary recovery options."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 18,
+        "section_title": "62. The BOG recognises that RFIs face very different risks due to diverse structures and",
+        "text": "62. The BOG recognises that RFIs face very different risks due to diverse structures and\nactivities, as well as business and funding models—and therefore, the indicators each\ninstitution must monitor may differ. Consequently, a minimum list of categories and\nindicators for inclusion in all recovery plans has been specified in Appendix 4(a) and\n(b) of this Directive.\nSelection of Indicators"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 18,
+        "section_title": "63. The categories of recovery indicators outlined in Appendix 4(a) are mandatory and",
+        "text": "63. The categories of recovery indicators outlined in Appendix 4(a) are mandatory and\nshall be included in the recovery plans of all RFIs; however, categories of recovery\nindicators outlined in Appendix 4(b) may be excluded by an RFI subject to satisfactory\njustification to the BOG."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 18,
+        "section_title": "64. RFIs shall develop a set of recovery indicators comprising both quantitative and",
+        "text": "64. RFIs shall develop a set of recovery indicators comprising both quantitative and\nqualitative indicators, relating to the solvency and liquidity of the RFI under stressed\nscenarios. RFIs shall ensure that the indicators are capable of being monitored and\nare clearly defined."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 18,
+        "section_title": "65. The selected recovery indicators shall be tailored to the nature, structure,",
+        "text": "65. The selected recovery indicators shall be tailored to the nature, structure,\norganisation, size and complexity of the RFI as well as the complexity of its business\nmodel or operations and the inherent risk drivers."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 18,
+        "section_title": "66. RFIs shall ensure that the recovery indicators are sufficiently diverse to capture an",
+        "text": "66. RFIs shall ensure that the recovery indicators are sufficiently diverse to capture an\nextensive range of stress scenarios of varying nature and severity.\nEstablishment of thresholds"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 18,
+        "section_title": "67. The thresholds set for recovery indicators should act as recovery triggers and",
+        "text": "67. The thresholds set for recovery indicators should act as recovery triggers and\nshould be used as a prompt to consider the situation and whether it is appropriate\nto take any actions; for example, it might trigger the convening of a decision-\nmaking committee of either senior management or the Board. This is meant to\n\n17"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 19,
+        "section_title": null,
+        "text": "PUBLIC\n\nallow RFIs flexibility in their responses; therefore, the indicator trigger should not be\nused as an automatic trigger for predefined management actions."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 19,
+        "section_title": "68. RFIs shall ensure that the thresholds for the recovery indicators are calibrated to be",
+        "text": "68. RFIs shall ensure that the thresholds for the recovery indicators are calibrated to be\ntimely and sufficiently forward-looking to provide enough notice for RFIs to take\ncorrective action."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 19,
+        "section_title": "69. The BOG expects RFIs to explain and justify the calibration of the indicators in their",
+        "text": "69. The BOG expects RFIs to explain and justify the calibration of the indicators in their\nrecovery plans. This should be based on the following factors:\n\na. The range of credible recovery options available to the RFI should be significant.\n\nCredible later-stage options that could be implemented quickly and easily would\nalleviate concerns about calibrating indicators to trigger later in a stress situation.\n\nb. The expected time needed to carry out recovery options, taking into account\n\ngovernance arrangements, regulatory approvals required in all relevant\njurisdictions, and operational challenges to implementation. RFIs that depend on\noptions that are likely to take considerable time to execute should have indicators\nadjusted accordingly to give sufficient advance warning."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 19,
+        "section_title": "70. Where the RFI has defined its risk appetite and/or risk tolerance for a specific indicator",
+        "text": "70. Where the RFI has defined its risk appetite and/or risk tolerance for a specific indicator\nmetric, indicators should be calibrated against these levels so that recovery options\ncan be implemented to diminish the likelihood of the RFI exceeding its risk tolerance\n(or to explicitly acknowledge that the Board may alter the RFI’s tolerance under\nspecific, defined circumstances).\n\nF. SCENARIO TESTING"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 19,
+        "section_title": "71. An RFI shall conduct scenario testing to demonstrate that the recovery plan is suitable",
+        "text": "71. An RFI shall conduct scenario testing to demonstrate that the recovery plan is suitable\nfor use in a range of different types of stress and to test how various components of\nthe plan (such as indicators, governance, and options) interact under these stresses."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 19,
+        "section_title": "72. RFIs shall define a set of stress scenarios (idiosyncratic, systemic, and a combination",
+        "text": "72. RFIs shall define a set of stress scenarios (idiosyncratic, systemic, and a combination\nof the two) under which the efficiency of various recovery options can be evaluated\nbased on their impact on capital, liquidity, profitability, strategic plan, the\nsustainability of their business model, and operations. The scenario generation for\nthe recovery plan will incorporate instructions issued by the BOG from time to time.\nIt should also take into account the Financial Stability Review3 publication on stress\ntesting."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 19,
+        "section_title": "73. RFIs shall use an adequate range of scenarios that are relevant to its business model",
+        "text": "73. RFIs shall use an adequate range of scenarios that are relevant to its business model\nand are sufficiently severe to test the plan. The RFI should define and justify its point"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 19,
+        "section_title": "3 This is published on the Bank of Ghana’s website.",
+        "text": "3 This is published on the Bank of Ghana’s website.\n\n18"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 20,
+        "section_title": null,
+        "text": "PUBLIC\n\nof near failure, and the scenarios should be sufficiently severe to push the RFI to this\npoint (i.e., a reverse stress test). In determining the scenario, RFIs should consider\nhow it relates to their risk appetite, as well as the impact, severity, duration, and pace\nof materialisation of stress scenarios."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 20,
+        "section_title": "74. RFIs shall provide a detailed explanation of each scenario. Additionally, RFIs shall",
+        "text": "74. RFIs shall provide a detailed explanation of each scenario. Additionally, RFIs shall\nclearly show which recovery indicators are triggered in each scenario and at what\npoint they are triggered. RFIs shall also specify the impact of the scenario on the RFI\nand include any relevant context (e.g., macroeconomic environment) that could\ninfluence the RFI’s ability to execute recovery options or affect the benefits of those\noptions needed to respond to the stress. RFIs are encouraged to ensure their\nscenario-testing approach is consistent with and builds on their existing stress-testing\ncapabilities.\nUse of scenarios for testing the plan:"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 20,
+        "section_title": "75. RFIs shall employ scenario testing to enhance the consistency of various components",
+        "text": "75. RFIs shall employ scenario testing to enhance the consistency of various components\nof the recovery plan (i.e., options, indicators, governance arrangements, etc.) and\ndemonstrate that the plan is credible. The scenario testing ought to assist in\nevaluating the range of financial and non-financial factors that could affect the RFI’s\nability to recover from different types of stress."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 20,
+        "section_title": "76. RFIs shall explain which recovery options would be used in each scenario and show",
+        "text": "76. RFIs shall explain which recovery options would be used in each scenario and show\nthat these options are suitable for restoring the RFI to viability. RFIs should model\nthe capital and liquidity profiles over time for each stress scenario, illustrating both\nwith and without the recovery options in place. RFIs should provide a detailed\nbreakdown of liquidity needs, where relevant by currency, for each stress scenario\nover time. RFIs must identify the point at which they consider themselves no longer\nin recovery and explain the viability of the business model after the stress scenario.\nG. TESTING AND REVIEW"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 20,
+        "section_title": "77. An RFI shall test and review the recovery plan to help ensure its effective",
+        "text": "77. An RFI shall test and review the recovery plan to help ensure its effective\nimplementation, for instance, by conducting periodic simulation and scenario\nexercises. Such testing and review shall occur at least annually or in the event of a\nmaterial change in an RFI's structure, operations, strategy, risk exposure, financial\nconditions, or overall macroeconomic conditions that would significantly impact the\nrecovery plan."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 20,
+        "section_title": "78. RFIs shall also review all assumptions (exogenous and firm-specific) that underpin",
+        "text": "78. RFIs shall also review all assumptions (exogenous and firm-specific) that underpin\nthe recovery plan and continuously assess their relevance and applicability to the\nplan."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 20,
+        "section_title": "79. The RFI shall update its recovery plan as needed following the completion of each",
+        "text": "79. The RFI shall update its recovery plan as needed following the completion of each\ntest and review.\n\n19"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 21,
+        "section_title": null,
+        "text": "PUBLIC\n\nFire Drill"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 21,
+        "section_title": "80. Fire drill exercises are ‘live’ simulation-type exercises where RFIs act out key parts of",
+        "text": "80. Fire drill exercises are ‘live’ simulation-type exercises where RFIs act out key parts of\na response to a designed scenario. This is a useful way to test the effectiveness of\nthe recovery plan in a ‘live’ situation. RFIs shall conduct at least one fire drill exercise\non their recovery plan biennially."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 21,
+        "section_title": "81. Fire drill exercises ought to be supervised by senior management and should include",
+        "text": "81. Fire drill exercises ought to be supervised by senior management and should include\nsenior personnel who will need to utilise the relevant sections of the plan to make\ndecisions under stress. The outcome of the fire drill shall be reported to the Board."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 21,
+        "section_title": "82. RFIs should use the findings of these exercises to improve their plans and",
+        "text": "82. RFIs should use the findings of these exercises to improve their plans and\ndemonstrate how the arrangements set out would work in practice. RFIs should\ninclude a self-assessment of the fire drill in their subsequent recovery plan.\n\nH. COMMUNICATION PLAN"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 21,
+        "section_title": "83. Recovery plans shall include a clear communication plan for sharing timely and",
+        "text": "83. Recovery plans shall include a clear communication plan for sharing timely and\nrelevant information with stakeholders (both internal and external) during the RFI’s\nrecovery process. Specifically, RFIs must consider how to manage any negative\nmarket reaction to recovery options, minimise the potential impact on their financial\nposition and brand, and outline how the approach aims to reduce the wider impact\non the financial system."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 21,
+        "section_title": "84. RFIs shall establish a clear implementation plan for communication, tailored to each",
+        "text": "84. RFIs shall establish a clear implementation plan for communication, tailored to each\nrecovery option. Scenario testing should explain how the communication plan would\nmitigate risks associated with implementing the various recovery options."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 21,
+        "section_title": "85. RFIs shall include in their recovery plans guidance on who their key stakeholders are,",
+        "text": "85. RFIs shall include in their recovery plans guidance on who their key stakeholders are,\nwhat information they would reasonably expect to receive during the recovery\nprocess, the communication channels for disseminating the information, and the\nauthorised persons responsible for the timely and effective provision of information."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 21,
+        "section_title": "86. RFIs shall ensure that the communication source is centralised to maintain",
+        "text": "86. RFIs shall ensure that the communication source is centralised to maintain\nconsistency in messages sent to internal and external stakeholders and include a list\nof persons responsible for approving communications in the recovery plan."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 21,
+        "section_title": "87. RFIs shall include the contact list of those who need to be informed and a protocol of",
+        "text": "87. RFIs shall include the contact list of those who need to be informed and a protocol of\nwhat can be communicated as well as how it should be communicated in the recovery\nplan."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 21,
+        "section_title": "88. RFIs shall review and update the communication plan whenever there is a review of",
+        "text": "88. RFIs shall review and update the communication plan whenever there is a review of\nthe recovery plan.\n\nI. MANAGEMENT INFORMATION SYSTEMS"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 21,
+        "section_title": "89. An RFI shall outline its overall policy for managing information, along with a detailed",
+        "text": "89. An RFI shall outline its overall policy for managing information, along with a detailed\nbreakdown of the specific information needs for each recovery option. It should also\n\n20"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 22,
+        "section_title": null,
+        "text": "PUBLIC\n\nshow it can meet its own information needs under each recovery option, as well as\nthose of its regulator."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 22,
+        "section_title": "90. RFIs shall provide a detailed inventory and description of the key management",
+        "text": "90. RFIs shall provide a detailed inventory and description of the key management\ninformation systems and applications, including those for risk management,\naccounting, financial and regulatory reporting, used by the RFI and its material\nentities."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 22,
+        "section_title": "91. For each system or application, the description shall include the legal owner or",
+        "text": "91. For each system or application, the description shall include the legal owner or\nlicensor, its use or function, any related service level agreements, software and\nsystem licences, and associated intellectual property. At a minimum, the following\ndetails should be provided:\n\na. a mapping of the key management information systems and applications to the\n\nmaterial entities, critical operations, and core business lines of the RFI that utilise\nor depend on such systems and applications;\n\nb. the procedure for restoring backup systems in the event of sudden disruption or\n\nfailure of key systems;\n\nc. an identification of the scope, content, and frequency of key internal reports that\n\nthe RFI utilises to monitor its financial health, risks, and operations;\n\nd. a description of the process for appropriate supervisory or regulatory authorities\n\nto access management information systems and applications;\n\ne. a description of the capabilities of the RFI’s management information systems to\n\ncollect, maintain, and report on information underlying the recovery plan to senior\nmanagement and the Board of the RFI in a timely manner;\n\nf.\nany deficiencies or weaknesses in these capabilities should be described, along\nwith the actions the RFI plans to take to address these deficiencies or weaknesses\npromptly and the time frame for implementing those actions; and\n\ng. a description of the methodology used to establish exposure limits and\n\nparticipation in trading and derivative activities. Identify significant off-balance\nsheet exposures of the RFI and its material entities, including a mapping to its\nessential operations and core business lines.\n\nJ. RECOVERY PLANNING FOR RFIs WITH CROSS-BORDER AFFILIATES"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 22,
+        "section_title": "92. RFIs with cross-border affiliates shall grant access to the BOG with respect to the",
+        "text": "92. RFIs with cross-border affiliates shall grant access to the BOG with respect to the\ngroup’s recovery plan, including details regarding financial and non-financial\ndependencies between group entities, consistency of recovery operations, and the\nimpact of group recovery options on that RFI. The BOG may request this information\nin times of crisis and normal business periods, which shall be promptly provided.\n\n21"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 23,
+        "section_title": null,
+        "text": "PUBLIC"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 23,
+        "section_title": "93. Each RFI shall prepare its own separate recovery plan, regardless of the group",
+        "text": "93. Each RFI shall prepare its own separate recovery plan, regardless of the group\nrecovery plan."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 23,
+        "section_title": "94. An RFI with foreign operations shall ensure that the recovery plan encompasses",
+        "text": "94. An RFI with foreign operations shall ensure that the recovery plan encompasses\nrecovery strategies for the entire group while incorporating separate recovery plans\nfor its subsidiaries and branches.\n\n22"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 24,
+        "section_title": null,
+        "text": "PUBLIC\n\nPART IV -\nSUPERVISORY APPROACH"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 24,
+        "section_title": "95. The BOG will review the effectiveness and credibility of an RFI’s submitted recovery",
+        "text": "95. The BOG will review the effectiveness and credibility of an RFI’s submitted recovery\nplan to determine the extent to which the plan is aligned with regulatory requirements\nduring off-site reviews and/or on-site examinations. In conducting its review, BOG\nwill consider the following:\na. the degree of integration of the recovery planning process into the RFI’s risk\n\nmanagement framework;\nb. the robustness of the RFI’s governance framework, including the level of\n\nunderstanding and involvement of the RFI’s Board and/or senior management in\nthe recovery plan;\nc. the comprehensiveness and clarity of the escalation process and decision-making\n\nmechanism upon trigger of a recovery plan, and the notification arrangements and\ncommunication plan with stakeholders, including the BOG;\nd. the capability of the RFI’s management information system to facilitate timely\n\nmonitoring and reporting of recovery triggers;\ne. the appropriateness of recovery triggers, stress scenarios and recovery options\n\ndeveloped in respect of the recovery plan;\nf. the credibility of the assumptions underpinning the recovery plan;\ng. the comprehensiveness of the recovery plan, in particular, whether a suitably\n\nbroad range of recovery options has been considered;\nh. the execution readiness and feasibility of each recovery option;\ni. whether the recovery planning process is adequately resourced by the RFI in terms\n\nof staffing and expertise, with sufficient Board and senior management ownership\nand oversight.\nj. Where an RFI identifies any implication for the BOG’s preferred resolution strategy,\n\nBOG will consider the firm’s assessment as part of its recovery plan review process."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 24,
+        "section_title": "96. RFIs shall submit their recovery plans for review annually and whenever the BOG",
+        "text": "96. RFIs shall submit their recovery plans for review annually and whenever the BOG\ndeems it necessary. In reviewing and interpreting individual RFIs’ plans, the BOG will\nbe mindful of the rule of proportionality as outlined in Paragraph 5."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 24,
+        "section_title": "97. When assessing an RFI’s recovery planning process, the BOG may request additional",
+        "text": "97. When assessing an RFI’s recovery planning process, the BOG may request additional\ninformation from the RFI, if needed. This may include information to help evaluate\nthe Board and senior management's understanding of the recovery plan and its\nintegration into the RFI’s risk management framework. This includes information\npresented to the RFI’s Board for review and approval of the recovery plan or\ninformation on monitoring the status of the RFI’s trigger framework."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 24,
+        "section_title": "98. Board and senior management understanding is essential to an RFI’s recovery",
+        "text": "98. Board and senior management understanding is essential to an RFI’s recovery\nplanning process, as the RFI has to be able to utilise the plan swiftly and effectively\nto manage a crisis. As part of the supervisory assessment process, the BOG may\nengage in discussions with the Board and/or senior management of the RFI on its\nrecovery planning, governance framework, policies and processes supporting it.\n\n23"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 25,
+        "section_title": null,
+        "text": "PUBLIC"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 25,
+        "section_title": "99. BOG will review the execution readiness and the feasibility of each recovery option.",
+        "text": "99. BOG will review the execution readiness and the feasibility of each recovery option.\nTo ensure that an RFI’s recovery plan is comprehensive, BOG may ask the RFI to test\nits recovery options against scenarios determined by the BOG. The RFI may also be\nrequested to explore additional recovery options not considered in the submitted\nrecovery plan if its menu of recovery options is assessed to be incomplete or\ninadequate."
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 25,
+        "section_title": "100. Following the BOG’s review of an RFI’s recovery plan, the BOG will communicate its",
+        "text": "100. Following the BOG’s review of an RFI’s recovery plan, the BOG will communicate its\nfeedback in writing to the RFI. Any shortfalls and gaps identified by the BOG shall be\naddressed by the RFI within 180 days upon receipt of the notice. The RFI shall outline\na remedial plan that includes the necessary remedial actions, along with an indicated\ntimeframe for their completion. If an RFI fails to take corrective actions within the\nstipulated time, the BOG may take appropriate remedial measures under Act 930.\n\n24"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 26,
+        "section_title": null,
+        "text": "PUBLIC\n\nPART V -\nAPPENDIX\n\nAPPENDIX 1\nImpact Assessment\n\nImpact assessment would inter alia include financial (liquidity, capital, profitability, etc.),\noperational, external and systemic assessments (impact on interconnected and\nunconnected stakeholders) and any valuation assumptions for the value and marketability\nof core business lines, operations and assets. The impact on the balance sheet or critical\nratios can be presented in tabular form (sample attached below).\nReco\nvery\nOpti\nons\n\nCapital\nImpact\n\nRisk-\nWeig\nhted\nAsset\nImpa\nct\n\nLiquidit\ny\nImpact\n\nExpecte\nd\nBalance\nSheet\nContract\nion\n\nAssumpt\nions\nto\nQuantify\nLiquidity\nand\nCapital\nImpact\n\nProfita\nbility\nImpact\n\nExpecte\nd Time\nto\nRealisati\non\nof\nBenefits\n\nSummar\ny\nof\nRisks/H\nurdles to\nImplem\nentation\n\nFranchis\ne Impact\n(Low,\nMedium,\nHigh)\n\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\nFeasibility assessment would inter alia include risks associated with each recovery option\nbased on the RFI’s experience or other market participants’ experience in the\nimplementation of such options or other similar measures; Material impediments in the\neffective and timely execution, Assessment of the continuity of operations; Assessment\nof the expected time frame (implementation and effects); assessment of the effectiveness\nof recovery options; Adequacy of the indicators which will trigger the recovery options;\nAssessment of impact on resolvability of the bank in case an option is employed.\nAPPENDIX 2\nMethodology for Calculating Recovery Capacity\n\nBOG considers the following to be an appropriate methodology for calculating recovery\ncapacity:\n\na. Total recovery capacity should be calculated individually for each stress scenario\n\nincluded in the RFI’s recovery plan;\n\nb. To assess the RFI’s existing total recovery capacity for a scenario, it should first\n\nidentify all available recovery options that could credibly be used to respond to\nthe scenario. The depth of the analysis should match the RFI's size and\ncomplexity;\n\nc. For each of these credible options, the RFI should establish the expected impact\n\nand its timeline, considering the likely actions of peers and other RFIs during the\nstress;\n\n25"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 27,
+        "section_title": null,
+        "text": "PUBLIC\n\nd. the RFI should specify the most effective and credible combination of these\n\noptions that can be used to respond to the stress. The credibility of the\ncombination should take into account the dependencies between options,\nincluding operational ones, and the viability of the business model after recovery;\n\ne. the RFI should sum up the expected impact of each of the options that feature\n\nin this combination. The result is the RFI’s existing total recovery capacity for the\nspecific scenario. RFI should show how the recovery capacity accumulates over\ntime;\n\nf.\nthe RFI should assess factors that could hinder successful recovery option use\nand ways to mitigate them. If it plans to improve or establish new recovery\noptions, it should calculate its potential recovery capacity; and\n\ng. the RFI can calculate its potential recovery capacity by following the same method\n\nused to calculate existing recovery capacity but shall now include the impact of\noptions dependent on the planned changes or improvements mentioned in (f)\nabove. Potential recovery capacity should be shown separately from existing\nrecovery capacity.\n\n26"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 28,
+        "section_title": null,
+        "text": "PUBLIC\n\nAPPENDIX 3\nList of Potential Recovery Options\nRecovery Option\nDescriptions\nCapital raising\na) External share capital increase\nb) Share capital increase by the parent institution\nc) Additional Tier 1 capital increase\nd) Tier 2 capital increase\nDisposal\na) Sale of banking branch/subsidiary\nb) Initial public offering of banking subsidiary\nc) Sale of banking minority stake\nd) Sale of a non-banking entity\ne) Sale and lease-back transactions\nAsset sales\na) Stocks\nb) Bonds\nc) Real estate\nd) Transfer of assets\ne) Other illiquid assets\nLiability management\na) Rollover issuance of Additional Tier 1 instruments\nb) Rollover issuance of Tier 2 instruments\nc) Internal liquidity support from the parent institution\nd) Internal liquidity support from an affiliated (non-parent)\n\ninstitution\ne) Repurchase of liabilities under book value\nf) Liquidation of collateral in case of customer default\ng) Adjustment of existing credit lines within the credit business\nh) Utilisation of existing lines\ni) Cease trading activities\nj) Intensify deposit retention efforts, i.e., customer incentives\nCost savings\na) Containment/reduction of staff costs (e.g., cancel bonus\n\npayments, reduction of working time, cut in voluntary\nbenefits)\nb) Stop/delay investments in facilities and equipment\nc) Stop/delay investments in IT\nd) Major expenditure cutbacks\ne) Renegotiation of existing contracts\nEarnings retention\na) Non-payment of coupons on Tier 1/Tier 2 issues\nb) No distribution of dividends\n\nAccess to wholesale funding\na) Repurchase agreement\nb) Issuance of covered bonds\nc) Issuance of unsecured bonds\nReduction of\nriskiness/improvement of risk\nprofile\n\na) Reduction of new business origination\nb) Syndication of existing loans\nc) Sale of existing loans\nd) Securitisation\ne) Synthetic securitisations\nf) Early termination of derivatives in the banking book\nMergers\nMerger with an affiliated institution or a non-affiliated institution\n\n27"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 29,
+        "section_title": null,
+        "text": "PUBLIC\n\nAPPENDIX 4(a)\nInstitution-Specific Recovery Indicators\n\nCategories of Recovery\nIndicators\nRecovery Indicators\n\nCapital Indicators\n\ng) Common Equity Tier I ratio\nh) Total capital ratio\ni) Leverage ratio\nj) (Retained earnings and reserves) / Total equity\nk) Adverse information on the financial position of significant\n\ncounterparties\nLiquidity Indicators\n\na) Liquidity Coverage Ratio\nb) Cost of Wholesale Funding\nc) Net Stable Funding Ratio\nd) Concentration of liquidity and funding sources\ne) Cost of total funding (retail and wholesale funding)\nf) Average tenure of wholesale funding\ng) Contractual maturity mismatch\nh) Available unencumbered assets\nProfitability Indicators\n\na) Return on Assets or Return on Equity\nb) Operational Losses\nc) Cost-income ratio (operating costs / operating income)\nd) Net interest margin\nAsset Quality Indicators\n\na) Growth rate of gross non-performing loans\nb) Gross Non-Performing Loans to Total Loans\nc) Coverage ratio (specific provisions to total non-performing\n\nloans)\nd) Net non-performing loans / Equity\ne) Growth rate of impairments on financial assets\nf) Non-performing loans by significant geographic or sector\n\nconcentration\nAPPENDIX 4(b)\nExternal Recovery Indicators\n\nCategories of Recovery\nIndicators\nRecovery Indicators\n\nMarket-Based Indicators\na) Rating under a negative review or rating downgrade\nb) Stock price variation\nc) Reputational threat to the institution or significant\n\nreputational damage\nMacroeconomic Indicators\na) GDP variations\nb) Rating under a negative review or rating downgrade of\n\nsovereigns\nc) Unemployment rate\n\n28"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 30,
+        "section_title": null,
+        "text": "PUBLIC\n\nAPPENDIX 5 - List of Potential Critical Functions\nCritical Function\nDetails\nDeposit-taking and savings  a) Customers' demand and savings deposits\n\nb) Fixed or short-term customer term deposits\nc) Demand and saving deposits from corporates\nd) Term deposits from corporates\nLending and loan servicing  a) Secured lending to individuals\n\nb) Unsecured lending to individuals\nc) Secured lending to SMEs\nd) Unsecured lending to SMEs\ne) Secured lending to private corporates\nf) Unsecured lending to private companies\ng) Secured and unsecured lending to the\n\ngovernment and public institutions\nh) Trade finance\ni) Leasing\nj) Project financing\nPayment, clearing and\nsettlements\n\na) Payment infrastructure through TISS, ACH,\n\nInternet, ATMs, mobile money, and cross-\nborder transactions such as PAPSS,\nMoneyGram, and Western Union\nb) Payment and Settlement of Foreign Currency\nc) Remittances\nFinancial and capital\nmarkets\n\na) Money market\nb) Treasury bills and bond market\nc) Equity market\nd) Corporate bond market\nWholesale Funding Market  a) REPO market\n\nb) Reverse REPO market\nc) Interbank cash markets\nd) Borrowing and lending among institutions\n\n29"
+    },
+    {
+        "source_filename": "Recovery-Planning-Directive-Exposure-Draft-12-2-26-clean.pdf",
+        "page_number": 31,
+        "section_title": null,
+        "text": "PUBLIC\n\nAPPENDIX 6 – List of Potential Critical Services\n\nServices\nDetails\nTreasury services\na) Treasury Activities\nb) Booking arrangements\nc) Collateral management\nRisk management and\nvaluation\n\na) Centralised risk management\nb) Risk management units, by business line and\n\nrisk type\nc) Embedded risk managers\nd) Risk report generation\ne) Risk IT infrastructure and personnel\nAccounting\na) Statutory reporting\nb) Regulatory reporting\nc) Valuation activities for market positions\nd) Management reporting\nPhysical operations\na) Cash handling\nb) Access control\nc) Security\nHuman resource support\na) Payroll\nb) Staff administration (contracts)\nc) Communication for human resources\nInformation Technology\na) Data storage and processing\nb) IT infrastructure, workstations, servers, data\n\ncentres and related services\nc) Software licences and applications\nd) Access to external providers (e.g., Bloomberg,\n\nstock exchanges)\ne) Application maintenance (software application\n\nmaintenance and related data flows, to be\nlimited to corrective maintenance during stress)\nf) User support\ng) Disaster recovery solution\nLegal services and\ncompliance\n\na) Corporate legal support\nb) Business/transactional legal services\nc) Compliance support\n\n30"
+    }
+]

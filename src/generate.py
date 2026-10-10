@@ -87,8 +87,8 @@ def main():
         print(f"Vector database not found at {db_path}. Please run Step 3 first.")
         sys.exit(1)
         
-    print("Loading embedding model (BAAI/bge-large-en-v1.5)...")
-    model = SentenceTransformer("BAAI/bge-large-en-v1.5")
+    print("Loading embedding model (all-MiniLM-L6-v2)...")
+    model = SentenceTransformer("all-MiniLM-L6-v2")
     
     print(f"Connecting to ChromaDB at {db_path}...")
     client_chroma = chromadb.PersistentClient(path=str(db_path))

@@ -5,3 +5,7 @@ sentence-transformers
 chromadb
 google-genai
 streamlit
+fastapi
+uvicorn
+slowapi
+python-dotenv

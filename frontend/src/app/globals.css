@@ -1,0 +1,53 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: #0B3D2E;
+  --color-primary-light: #125a44;
+  --color-accent: #F5B700;
+  --color-accent-hover: #d9a100;
+  --color-sidebar: var(--sidebar-bg);
+  --color-card: var(--card-bg);
+  --color-border: var(--border-color);
+}
+
+@layer base {
+  :root {
+    --background: #FAFAF7; /* Near-white */
+    --foreground: #111827;
+    --sidebar-bg: #F0F0E9;
+    --card-bg: #FFFFFF;
+    --border-color: #E5E7EB;
+  }
+
+  .dark {
+    --background: #0F1412; /* Charcoal */
+    --foreground: #F9FAFB;
+    --sidebar-bg: #161D1A;
+    --card-bg: #1B2420;
+    --border-color: #2F3E38;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom scrollbar for chat */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}

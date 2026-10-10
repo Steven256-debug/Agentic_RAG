@@ -1,0 +1,3 @@
+@echo off
+echo Starting AI-powered sync...
+python auto_push.py

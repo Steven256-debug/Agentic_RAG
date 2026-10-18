@@ -9,10 +9,15 @@ venv/
 .env
 
 # Data
+data/raw/
 data/raw_pdfs/
+data/processed/
 data/chunks/
 data/vectordb/
+data/vectordb_copy/
+data/chat_history.json
 data/eval_results.json
+data/archive_duplicates/
 
 # IDE
 .vscode/

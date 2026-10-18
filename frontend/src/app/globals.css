@@ -16,19 +16,19 @@
 
 @layer base {
   :root {
-    --background: #FAFAF7; /* Near-white */
-    --foreground: #111827;
-    --sidebar-bg: #F0F0E9;
+    --background: #FFFFFF;
+    --foreground: #0D0D0D;
+    --sidebar-bg: #F9F9F9;
     --card-bg: #FFFFFF;
-    --border-color: #E5E7EB;
+    --border-color: #E5E5E5;
   }
 
   .dark {
-    --background: #0F1412; /* Charcoal */
-    --foreground: #F9FAFB;
-    --sidebar-bg: #161D1A;
-    --card-bg: #1B2420;
-    --border-color: #2F3E38;
+    --background: #212121;
+    --foreground: #ECECEC;
+    --sidebar-bg: #171717;
+    --card-bg: #212121;
+    --border-color: #333333;
   }
 }
 

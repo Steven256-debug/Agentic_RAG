@@ -30,7 +30,10 @@ def download_pdfs(output_dir):
                 filename += ".pdf"
                 
             filepath = os.path.join(output_dir, filename)
-            
+            if os.path.exists(filepath) and os.path.getsize(filepath) > 0:
+                print(f"Skipping {filename} (already exists at {filepath})\n")
+                continue
+
             with open(filepath, 'wb') as f:
                 for chunk in response.iter_content(chunk_size=8192):
                     f.write(chunk)
@@ -40,5 +43,5 @@ def download_pdfs(output_dir):
             print(f"Failed to download {url}: {e}\n")
 
 if __name__ == "__main__":
-    RAW_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "raw")
-    download_pdfs(RAW_DIR)
+    from .config import RAW_DATA_DIR
+    download_pdfs(RAW_DATA_DIR)

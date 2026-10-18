@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { Message, Source } from "@/lib/types";
-import { Send, Settings2, Copy, CheckCircle2, ChevronDown, ChevronRight, ShieldCheck, RefreshCw } from "lucide-react";
+import { Send, Plus, ChevronDown, ChevronRight, Copy, CheckCircle2, MoreHorizontal, FileText, PenLine, Globe, BookOpen, ShieldCheck } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -20,10 +20,12 @@ export default function ChatArea({
   onRetry: () => void;
 }) {
   const [input, setInput] = useState("");
+  // In a real ChatGPT clone, these settings might be buried in a top menu, but we'll keep them simple.
   const [corrective, setCorrective] = useState(false);
   const [routing, setRouting] = useState(false);
-  const [showSettings, setShowSettings] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  const isEmpty = messages.length === 0;
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -44,184 +46,199 @@ export default function ChatArea({
   };
 
   return (
-    <div className="flex-1 flex flex-col bg-background h-screen overflow-hidden">
+    <div className="flex-1 flex flex-col bg-background h-screen relative">
       {/* Header Mobile Support */}
-      <div className="md:hidden h-14 border-b border-border bg-card flex items-center justify-center">
-        <span className="font-bold text-primary dark:text-accent">ComplyGH</span>
+      <div className="md:hidden h-14 border-b border-border/50 bg-background/80 backdrop-blur-md flex items-center justify-center sticky top-0 z-10">
+        <span className="font-semibold text-foreground tracking-tight">ComplyGH</span>
       </div>
 
-      {/* Messages */}
-      <div className="flex-1 overflow-y-auto p-4 md:p-6 scrollbar-thin">
-        <div className="max-w-3xl mx-auto space-y-6">
-          {messages.length === 0 ? (
-            <EmptyState setInput={setInput} />
-          ) : (
-            <AnimatePresence>
-              {messages.map((msg, idx) => (
-                <MessageBubble key={idx} message={msg} />
-              ))}
-              {isLoading && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="flex space-x-3 items-start"
-                >
-                  <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-1">
-                    <ShieldCheck className="w-5 h-5 text-accent" />
-                  </div>
-                  <div className="bg-card border border-border p-4 rounded-2xl rounded-tl-sm flex space-x-2">
-                    <span className="w-2 h-2 rounded-full bg-gray-400 animate-bounce" style={{ animationDelay: "0ms" }}></span>
-                    <span className="w-2 h-2 rounded-full bg-gray-400 animate-bounce" style={{ animationDelay: "150ms" }}></span>
-                    <span className="w-2 h-2 rounded-full bg-gray-400 animate-bounce" style={{ animationDelay: "300ms" }}></span>
-                  </div>
-                </motion.div>
-              )}
-              {error && (
-                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="p-4 bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 rounded-xl border border-red-200 dark:border-red-800 text-center">
-                  <p className="mb-2">{error}</p>
-                  <button onClick={onRetry} className="flex items-center space-x-2 mx-auto bg-red-100 dark:bg-red-800 px-4 py-2 rounded-lg hover:opacity-80 transition-opacity">
-                    <RefreshCw className="w-4 h-4" /> <span>Retry</span>
-                  </button>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          )}
-          <div ref={messagesEndRef} />
-        </div>
-      </div>
-
-      {/* Input Area */}
-      <div className="p-4 bg-background">
-        <div className="max-w-3xl mx-auto relative">
-          {showSettings && (
-            <div className="absolute bottom-full mb-2 right-0 bg-card border border-border rounded-xl shadow-lg p-4 w-64 z-10">
-              <h4 className="text-sm font-semibold mb-3 border-b border-border pb-2 text-foreground">Advanced Settings</h4>
-              <div className="space-y-3">
-                <label className="flex items-center justify-between cursor-pointer">
-                  <span className="text-sm text-gray-600 dark:text-gray-300">Corrective Retrieval</span>
-                  <input type="checkbox" checked={corrective} onChange={(e) => setCorrective(e.target.checked)} className="w-4 h-4 accent-primary" />
-                </label>
-                <label className="flex items-center justify-between cursor-pointer">
-                  <span className="text-sm text-gray-600 dark:text-gray-300">Query Routing</span>
-                  <input type="checkbox" checked={routing} onChange={(e) => setRouting(e.target.checked)} className="w-4 h-4 accent-primary" />
-                </label>
+      {isEmpty ? (
+        // --- EMPTY STATE ---
+        <div className="flex-1 flex flex-col items-center justify-center px-4 -mt-20">
+          <h1 className="text-3xl md:text-4xl font-semibold text-foreground mb-8 tracking-tight">
+            Research Ghanaian financial regulations.
+          </h1>
+          
+          <div className="w-full max-w-3xl relative">
+            <form 
+              onSubmit={handleSubmit} 
+              className="w-full bg-card shadow-sm border border-border rounded-2xl flex items-center overflow-hidden focus-within:ring-2 focus-within:ring-primary/20 focus-within:border-primary transition-all p-2"
+            >
+              <div className="pl-3 text-gray-400">
+                <Globe className="w-5 h-5" />
               </div>
+              
+              <input
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                placeholder="Ask a question or search for a directive..."
+                className="flex-1 bg-transparent outline-none py-3 px-4 text-foreground text-base placeholder-gray-400"
+              />
+              
+              <div className="flex items-center space-x-3 pr-2">
+                <label className="hidden sm:flex items-center space-x-1.5 text-xs text-gray-500 cursor-pointer hover:text-foreground transition-colors" title="Filter search to specific regulatory documents">
+                  <input type="checkbox" checked={routing} onChange={(e) => setRouting(e.target.checked)} className="accent-primary" />
+                  <span>Routing</span>
+                </label>
+                <label className="hidden sm:flex items-center space-x-1.5 text-xs text-gray-500 cursor-pointer hover:text-foreground transition-colors" title="Self-reflection and query reformulation">
+                  <input type="checkbox" checked={corrective} onChange={(e) => setCorrective(e.target.checked)} className="accent-primary" />
+                  <span>Corrective RAG</span>
+                </label>
+                <button
+                  type="submit"
+                  disabled={!input.trim() || isLoading}
+                  className={`p-2 rounded-xl transition-colors ${
+                    input.trim() && !isLoading 
+                      ? "bg-primary text-white hover:bg-primary-light" 
+                      : "bg-gray-100 dark:bg-gray-800 text-gray-400"
+                  }`}
+                >
+                  <Send className="w-4 h-4" />
+                </button>
+              </div>
+            </form>
+
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-3">
+              <button onClick={() => setInput("Summarize the Anti-Money Laundering Act")} className="p-4 bg-gray-50 dark:bg-gray-800/30 rounded-xl text-left hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors border border-transparent hover:border-border text-sm text-foreground/80 group">
+                <FileText className="w-4 h-4 text-primary/60 mb-2 group-hover:text-primary transition-colors" />
+                Summarize the AML Act
+              </button>
+              <button onClick={() => setInput("What are the KYC rules for mobile money?")} className="p-4 bg-gray-50 dark:bg-gray-800/30 rounded-xl text-left hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors border border-transparent hover:border-border text-sm text-foreground/80 group">
+                <ShieldCheck className="w-4 h-4 text-primary/60 mb-2 group-hover:text-primary transition-colors" />
+                Mobile Money KYC Rules
+              </button>
+              <button onClick={() => setInput("What are the penalties for non-compliance?")} className="p-4 bg-gray-50 dark:bg-gray-800/30 rounded-xl text-left hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors border border-transparent hover:border-border text-sm text-foreground/80 group">
+                <BookOpen className="w-4 h-4 text-primary/60 mb-2 group-hover:text-primary transition-colors" />
+                Penalties for non-compliance
+              </button>
             </div>
-          )}
-          
-          <form onSubmit={handleSubmit} className="relative shadow-sm rounded-2xl bg-card border border-border focus-within:border-primary transition-colors flex items-end">
-            <button
-              type="button"
-              onClick={() => setShowSettings(!showSettings)}
-              className="p-3 text-gray-400 hover:text-primary transition-colors"
-              title="Settings"
-            >
-              <Settings2 className="w-5 h-5" />
-            </button>
-            
-            <textarea
-              value={input}
-              onChange={(e) => {
-                setInput(e.target.value);
-                e.target.style.height = 'auto';
-                e.target.style.height = `${Math.min(e.target.scrollHeight, 150)}px`;
-              }}
-              onKeyDown={handleKeyDown}
-              placeholder="Ask about Ghana&apos;s financial regulations..."
-              className="flex-1 max-h-[150px] bg-transparent resize-none outline-none py-3 px-2 text-foreground placeholder-gray-400"
-              rows={1}
-            />
-            
-            <button
-              type="submit"
-              disabled={!input.trim() || isLoading}
-              className="m-2 p-2 rounded-xl bg-primary text-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-primary-light transition-colors"
-            >
-              <Send className="w-5 h-5" />
-            </button>
-          </form>
-          
-          <div className="text-center mt-2">
-            <span className="text-[10px] text-gray-400 dark:text-gray-500">
-              ComplyGH can make mistakes. Informational only, not legal advice. Verify against the official documents.
-            </span>
           </div>
         </div>
-      </div>
+      ) : (
+        // --- ACTIVE CHAT STATE ---
+        <>
+          <div className="flex-1 overflow-y-auto scrollbar-none pb-40">
+            <div className="max-w-4xl mx-auto px-4 md:px-8 py-6 space-y-6">
+              <AnimatePresence initial={false}>
+                {messages.map((msg, idx) => (
+                  <MessageRow key={idx} message={msg} />
+                ))}
+                
+                {isLoading && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="flex space-x-5 py-6"
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <BookOpen className="w-4 h-4 text-primary dark:text-accent" />
+                    </div>
+                    <div className="flex-1 pt-2 flex space-x-1.5 items-center">
+                      <span className="w-1.5 h-1.5 rounded-full bg-gray-400 animate-pulse" style={{ animationDelay: "0ms" }}></span>
+                      <span className="w-1.5 h-1.5 rounded-full bg-gray-400 animate-pulse" style={{ animationDelay: "200ms" }}></span>
+                      <span className="w-1.5 h-1.5 rounded-full bg-gray-400 animate-pulse" style={{ animationDelay: "400ms" }}></span>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+              <div ref={messagesEndRef} className="h-4" />
+            </div>
+          </div>
+
+          <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-background via-background to-transparent pt-10 pb-6 px-4">
+            <div className="max-w-3xl mx-auto relative">
+              <form 
+                onSubmit={handleSubmit} 
+                className="w-full bg-card shadow-lg shadow-black/5 border border-border rounded-2xl flex items-end overflow-hidden focus-within:ring-2 focus-within:ring-primary/20 focus-within:border-primary transition-all p-2"
+              >
+                <textarea
+                  value={input}
+                  onChange={(e) => {
+                    setInput(e.target.value);
+                    e.target.style.height = 'auto';
+                    e.target.style.height = `${Math.min(e.target.scrollHeight, 200)}px`;
+                  }}
+                  onKeyDown={handleKeyDown}
+                  placeholder="Ask a follow-up question..."
+                  className="flex-1 max-h-[200px] bg-transparent resize-none outline-none py-3 px-4 text-foreground text-base placeholder-gray-400"
+                  rows={1}
+                />
+                
+                <div className="flex items-center space-x-3 mb-1 pr-2">
+                  <label className="hidden sm:flex items-center space-x-1.5 text-xs text-gray-500 cursor-pointer hover:text-foreground transition-colors" title="Filter search to specific regulatory documents">
+                    <input type="checkbox" checked={routing} onChange={(e) => setRouting(e.target.checked)} className="accent-primary" />
+                    <span>Routing</span>
+                  </label>
+                  <label className="hidden sm:flex items-center space-x-1.5 text-xs text-gray-500 cursor-pointer hover:text-foreground transition-colors" title="Self-reflection and query reformulation">
+                    <input type="checkbox" checked={corrective} onChange={(e) => setCorrective(e.target.checked)} className="accent-primary" />
+                    <span>Corrective RAG</span>
+                  </label>
+                  <button
+                    type="submit"
+                    disabled={!input.trim() || isLoading}
+                    className={`p-2.5 rounded-xl transition-colors ${
+                      input.trim() && !isLoading 
+                        ? "bg-primary text-white hover:bg-primary-light" 
+                        : "bg-gray-100 dark:bg-gray-800 text-gray-400"
+                    }`}
+                  >
+                    <Send className="w-4 h-4" />
+                  </button>
+                </div>
+              </form>
+              <div className="text-center mt-2">
+                <span className="text-[11px] text-gray-400">
+                  ComplyGH may provide inaccurate information. Verify against official frameworks.
+                </span>
+              </div>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 }
 
-const EmptyState = ({ setInput }: { setInput: (s: string) => void }) => (
-  <div className="flex-1 flex flex-col items-center justify-center p-6 text-center">
-    <motion.div 
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="mb-8 flex flex-col items-center"
-    >
-      <ShieldCheck className="w-20 h-20 text-primary dark:text-accent mb-4" />
-      <h2 className="text-3xl font-bold text-primary dark:text-gray-100 mb-2">ComplyGH</h2>
-      <p className="text-gray-500 dark:text-gray-400 text-lg">Your AI guide to Ghana&apos;s financial regulations</p>
-    </motion.div>
-    
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-2xl">
-      {[
-        "What is the minimum capital adequacy ratio for banks?",
-        "What are the KYC rules for mobile money agents?",
-        "What is the penalty for non-compliance?",
-        "Summarize the Cyber Information Security Directive."
-      ].map((q, i) => (
-        <motion.button
-          key={i}
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: i * 0.1 }}
-          onClick={() => setInput(q)}
-          className="p-4 bg-card border border-border rounded-xl text-left hover:shadow-md hover:border-accent transition-all text-sm text-foreground"
-        >
-          {q}
-        </motion.button>
-      ))}
-    </div>
-  </div>
-);
-
-const MessageBubble = ({ message }: { message: Message }) => {
+const MessageRow = ({ message }: { message: Message }) => {
   const isUser = message.role === "user";
   
   return (
     <motion.div
-      initial={{ opacity: 0, y: 10 }}
+      initial={{ opacity: 0, y: 5 }}
       animate={{ opacity: 1, y: 0 }}
-      className={`flex space-x-3 ${isUser ? "justify-end" : "justify-start"}`}
+      className="w-full flex justify-center py-2"
     >
-      {!isUser && (
-        <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-1">
-          <ShieldCheck className="w-5 h-5 text-accent" />
-        </div>
-      )}
-      
-      <div className={`max-w-[85%] ${isUser ? "bg-gray-100 dark:bg-gray-800 text-foreground rounded-2xl rounded-tr-sm px-5 py-3" : "w-full"}`}>
+      <div className={`w-full max-w-3xl flex ${isUser ? "justify-end" : "justify-start"} group`}>
         {isUser ? (
-          <p className="whitespace-pre-wrap">{message.content}</p>
+          <div className="bg-gray-100 dark:bg-gray-800 px-5 py-3 rounded-3xl max-w-[80%] text-[15px] text-foreground">
+            {message.content}
+          </div>
         ) : (
-          <div className="bg-card border border-border p-5 rounded-2xl rounded-tl-sm shadow-sm text-foreground prose dark:prose-invert max-w-none">
-            <ReactMarkdown>{message.content}</ReactMarkdown>
-            
-            <div className="mt-4 flex justify-end border-t border-border pt-2">
-               <CopyButton text={message.content} />
+          <div className="flex space-x-4 w-full">
+            <div className="w-8 h-8 rounded-full border border-gray-200 dark:border-gray-700 flex items-center justify-center flex-shrink-0 mt-1 bg-white dark:bg-[#10A37F]">
+              <span className="text-gray-500 dark:text-white font-bold text-xs">GH</span>
             </div>
             
-            {message.sources && message.sources.length > 0 && (
-              <div className="mt-4 pt-4 border-t border-border">
-                <h4 className="text-xs font-semibold uppercase text-gray-500 mb-3">Sources Retrieved</h4>
-                <div className="space-y-2">
+            <div className="flex-1 min-w-0">
+              <div className="text-foreground prose dark:prose-invert prose-p:leading-relaxed max-w-none text-[15px]">
+                <ReactMarkdown>{message.content}</ReactMarkdown>
+              </div>
+              
+              <div className="mt-3 flex items-center space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <CopyButton text={message.content} />
+                <button className="p-1.5 text-gray-400 hover:text-foreground hover:bg-gray-100 dark:hover:bg-gray-800 rounded">
+                  <MoreHorizontal className="w-4 h-4" />
+                </button>
+              </div>
+              
+              {message.sources && message.sources.length > 0 && (
+                <div className="mt-4 flex flex-wrap gap-2">
                   {message.sources.map((src, i) => (
                     <SourceCard key={i} source={src} index={i+1} />
                   ))}
                 </div>
-              </div>
-            )}
+              )}
+            </div>
           </div>
         )}
       </div>
@@ -231,28 +248,49 @@ const MessageBubble = ({ message }: { message: Message }) => {
 
 const SourceCard = ({ source, index }: { source: Source; index: number }) => {
   const [open, setOpen] = useState(false);
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+  const pdfUrl = `${apiUrl}/pdfs/${encodeURIComponent(source.source_filename)}#page=${source.page_number}`;
+
   return (
-    <div className="border border-border rounded-lg overflow-hidden text-sm bg-gray-50 dark:bg-gray-900/50">
+    <div className="flex flex-col border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden bg-gray-50 dark:bg-gray-800/50 transition-colors w-full sm:w-[350px]">
       <button 
         onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between p-3 text-left hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+        className="flex items-center justify-between p-2.5 hover:bg-gray-100 dark:hover:bg-gray-800 w-full text-left"
       >
-        <div className="flex items-center space-x-2 overflow-hidden">
-          <span className="bg-primary/10 text-primary dark:text-accent font-mono text-xs px-2 py-0.5 rounded">[{index}]</span>
-          <span className="font-medium truncate">{source.source_filename} (Pg {source.page_number})</span>
+        <div className="flex items-center overflow-hidden pr-2">
+          <span className="font-mono text-[10px] text-gray-500 mr-2 flex-shrink-0">[{index}]</span>
+          <span className="font-medium text-xs text-foreground/80 truncate">{source.source_filename}</span>
         </div>
-        {open ? <ChevronDown className="w-4 h-4 text-gray-500" /> : <ChevronRight className="w-4 h-4 text-gray-500" />}
+        {open ? <ChevronDown className="w-3.5 h-3.5 text-gray-400 flex-shrink-0" /> : <ChevronRight className="w-3.5 h-3.5 text-gray-400 flex-shrink-0" />}
       </button>
+      
       <AnimatePresence>
         {open && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="px-3 pb-3 pt-1 border-t border-border"
+            className="border-t border-gray-200 dark:border-gray-700 bg-card"
           >
-            <p className="text-xs font-semibold text-gray-500 mb-1">{source.section_title}</p>
-            <p className="text-xs text-gray-600 dark:text-gray-400 line-clamp-4">{source.text}</p>
+            <div className="p-3">
+              <div className="flex justify-between items-center mb-2">
+                <span className="text-[10px] font-semibold text-gray-500 uppercase tracking-wider truncate mr-2">
+                  {source.section_title !== "Unknown" ? source.section_title : `Page ${source.page_number}`}
+                </span>
+                <a 
+                  href={pdfUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-[10px] text-primary hover:underline whitespace-nowrap flex items-center space-x-1"
+                >
+                  <Globe className="w-3 h-3" />
+                  <span>Open PDF</span>
+                </a>
+              </div>
+              <p className="text-[11px] text-foreground/70 leading-relaxed font-serif line-clamp-6">
+                "{source.text}"
+              </p>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -270,10 +308,10 @@ const CopyButton = ({ text }: { text: string }) => {
   return (
     <button 
       onClick={handleCopy}
-      className="flex items-center space-x-1 text-xs text-gray-500 hover:text-primary transition-colors"
+      className="p-1.5 text-gray-400 hover:text-foreground hover:bg-gray-100 dark:hover:bg-gray-800 rounded transition-colors"
+      title="Copy"
     >
       {copied ? <CheckCircle2 className="w-4 h-4 text-green-500" /> : <Copy className="w-4 h-4" />}
-      <span>{copied ? "Copied!" : "Copy"}</span>
     </button>
   );
 };

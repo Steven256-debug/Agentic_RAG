@@ -6,8 +6,10 @@ from google import genai
 from google.genai import types
 
 def run_cmd(cmd):
-    result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
-    return result.stdout.strip(), result.stderr.strip(), result.returncode
+    result = subprocess.run(cmd, shell=True, capture_output=True, text=True, encoding="utf-8", errors="replace")
+    stdout = result.stdout.strip() if result.stdout else ""
+    stderr = result.stderr.strip() if result.stderr else ""
+    return stdout, stderr, result.returncode
 
 def main():
     print("Staging files...")
@@ -30,8 +32,9 @@ def main():
             client = genai.Client(api_key=api_key)
             prompt = f"Write a concise, single-line git commit message (max 10 words) that describes these code changes. Do not include quotes or any extra text, just the message itself:\n\n{stdout[:5000]}"
             
+            fast_model = os.getenv("FAST_MODEL", "gemini-2.5-flash-lite")
             response = client.models.generate_content(
-                model="gemini-3.5-flash-lite",
+                model=fast_model,
                 contents=prompt
             )
             commit_msg = response.text.strip().replace('"', '').replace('\n', ' ')

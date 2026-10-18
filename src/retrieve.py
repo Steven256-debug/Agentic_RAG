@@ -1,94 +1,80 @@
+"""
+RAG Retrieval Verification & Testing Module.
+Allows querying the vector database with dense embeddings and hybrid BM25 search.
+"""
+
 import os
 import sys
 from pathlib import Path
-from sentence_transformers import SentenceTransformer
-import chromadb
+from .config import VECTORDB_DIR, CHROMA_COLLECTION_NAME, EMBEDDING_MODEL_NAME
+from .rag_pipeline import RAGPipeline
+
 
 def main():
-    VECTORDB_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "vectordb")
-    db_path = Path(VECTORDB_DIR)
-    
-    if not db_path.exists():
-        print(f"Vector database not found at {db_path}. Please run Step 3 first.")
+    if not VECTORDB_DIR.exists():
+        print(f"Error: Vector database not found at {VECTORDB_DIR}. Please run ingestion/embedding first.")
         sys.exit(1)
-        
-    print("Loading embedding model (BAAI/bge-large-en-v1.5)...")
-    model = SentenceTransformer("BAAI/bge-large-en-v1.5")
+
+    print(f"Initializing RAG Pipeline with model: {EMBEDDING_MODEL_NAME}...")
+    pipeline = RAGPipeline.get_instance()
     
-    print(f"Connecting to ChromaDB at {db_path}...")
-    client = chromadb.PersistentClient(path=str(db_path))
-    
-    collection_name = "rag_documents"
     try:
-        collection = client.get_collection(name=collection_name)
+        collection = pipeline.chroma_collection
+        count = collection.count()
     except Exception as e:
-        print(f"Could not find collection '{collection_name}'. Error: {e}")
+        print(f"Could not load ChromaDB collection '{CHROMA_COLLECTION_NAME}': {e}")
         sys.exit(1)
-        
-    print(f"Successfully loaded collection '{collection_name}' with {collection.count()} documents.")
-    print("\n--- RAG Retrieval Tester ---")
+
+    print(f"Successfully loaded '{CHROMA_COLLECTION_NAME}' ({count} chunks indexed).")
+    print("\n--- LexFin AI: Vector & Hybrid Retrieval Tester ---")
     print("Type your query below. Type 'exit' to quit.\n")
-    
+
     while True:
         try:
-            query = input("\nEnter query: ").strip()
+            query = input("Enter query: ").strip()
             if not query:
                 continue
-            if query.lower() == 'exit':
+            if query.lower() in ("exit", "quit"):
                 print("Exiting...")
                 break
-                
-            # Embed the query
-            query_embedding = model.encode(query).tolist()
-            
-            # Query the Chroma collection
-            # By default, ChromaDB uses L2 (Euclidean) distance for similarity.
-            # What the similarity score means:
-            # A lower distance score indicates that the vectors are closer together in the vector space,
-            # which generally means higher semantic similarity. So, smaller distance = more relevant!
-            results = collection.query(
-                query_embeddings=[query_embedding],
-                n_results=5,
-                include=["metadatas", "documents", "distances"]
-            )
-            
-            if not results["ids"][0]:
-                print("No results found.")
+
+            # Execute hybrid retrieval via pipeline
+            docs, metadatas, distances = pipeline.retrieve(query, top_k=5, use_hybrid=True)
+
+            if not docs:
+                print("No relevant chunks found.")
                 continue
-                
-            print("\n" + "="*50)
-            print(f"TOP 5 RESULTS FOR: '{query}'")
-            print("="*50 + "\n")
-            
-            # results is a dictionary with lists of lists (since we queried with 1 embedding, we take index 0)
-            ids = results["ids"][0]
-            distances = results["distances"][0]
-            metadatas = results["metadatas"][0]
-            documents = results["documents"][0]
-            
-            for rank in range(len(ids)):
-                chunk_id = ids[rank]
-                distance = distances[rank]
-                metadata = metadatas[rank]
-                text = documents[rank]
-                
-                source_file = metadata.get("source_filename", "Unknown")
-                page_num = metadata.get("page_number", "Unknown")
-                section_title = metadata.get("section_title", "Unknown")
-                
-                print(f"Rank: {rank + 1} | Score (L2 Distance): {distance:.4f} (lower is better)")
-                print(f"Chunk ID: {chunk_id}")
-                print(f"Source: {source_file} (Page {page_num})")
+
+            print("\n" + "=" * 60)
+            print(f"TOP {len(docs)} RETRIEVED CHUNKS FOR: '{query}'")
+            print("=" * 60)
+
+            for rank in range(len(docs)):
+                text = docs[rank]
+                meta = metadatas[rank]
+                score = distances[rank]
+
+                source_file = meta.get("source_filename", "Unknown Document")
+                page_num = meta.get("page_number", "Unknown")
+                section_title = meta.get("section_title") or "Unknown Section"
+
+                print(f"Rank: {rank + 1} | Score: {score:.4f}")
+                print(f"Source:  {source_file} (Page {page_num})")
                 print(f"Section: {section_title}")
-                print("-" * 50)
-                print(f"Text:\n{text}")
-                print("="*50 + "\n")
-                
+                print("-" * 60)
+                # Print clean snippet (up to 400 chars)
+                snippet = text.strip()
+                if len(snippet) > 400:
+                    snippet = snippet[:400] + "..."
+                print(snippet)
+                print("=" * 60 + "\n")
+
         except KeyboardInterrupt:
             print("\nExiting...")
             break
         except Exception as e:
-            print(f"\nAn error occurred: {e}")
+            print(f"\n[Error during retrieval] {e}\n")
+
 
 if __name__ == "__main__":
     main()

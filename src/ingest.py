@@ -105,22 +105,21 @@ def process_pdfs(raw_dir, processed_dir):
             print(f"Error processing {pdf_file.name}: {e}")
 
 if __name__ == "__main__":
-    RAW_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "raw")
-    PROCESSED_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "processed")
-    
-    # Ensure raw directory exists so user can place files there
-    os.makedirs(RAW_DIR, exist_ok=True)
-    
+    from .config import RAW_DATA_DIR, PROCESSED_DATA_DIR
+
+    RAW_DATA_DIR.mkdir(parents=True, exist_ok=True)
+    PROCESSED_DATA_DIR.mkdir(parents=True, exist_ok=True)
+
     if len(sys.argv) > 1:
-        target_file = Path(RAW_DIR) / sys.argv[1]
+        target_file = RAW_DATA_DIR / sys.argv[1]
         print(f"Processing {target_file.name}...")
         try:
             document_data = extract_metadata_and_text(target_file)
-            output_file = Path(PROCESSED_DIR) / (target_file.stem + ".json")
+            output_file = PROCESSED_DATA_DIR / (target_file.stem + ".json")
             with open(output_file, 'w', encoding='utf-8') as f:
                 json.dump(document_data, f, indent=4, ensure_ascii=False)
             print(f"Saved extracted data to {output_file}")
         except Exception as e:
             print(f"Error processing {target_file.name}: {e}")
     else:
-        process_pdfs(RAW_DIR, PROCESSED_DIR)
+        process_pdfs(RAW_DATA_DIR, PROCESSED_DATA_DIR)

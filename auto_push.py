@@ -44,43 +44,55 @@ def generate_ai_commit_message(diff_text: str, api_key: str) -> str:
         f"{diff_text[:4000]}"
     )
     
-    model = os.getenv("FAST_MODEL", "gemini-2.5-flash-lite")
-    # Clean model name if needed
-    if model.startswith("models/"):
-        model = model.replace("models/", "")
+    models_to_try = [
+        os.getenv("FAST_MODEL", "gemini-2.0-flash"),
+        "gemini-2.0-flash",
+        "gemini-1.5-flash",
+        "gemini-2.5-flash",
+    ]
+    # Deduplicate preserving order
+    unique_models = list(dict.fromkeys(models_to_try))
     
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={api_key}"
-    payload = {
-        "contents": [
-            {
-                "parts": [{"text": prompt}]
+    for current_model in unique_models:
+        if current_model.startswith("models/"):
+            current_model = current_model.replace("models/", "")
+            
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/{current_model}:generateContent?key={api_key}"
+        payload = {
+            "contents": [
+                {
+                    "parts": [{"text": prompt}]
+                }
+            ],
+            "generationConfig": {
+                "temperature": 0.2,
+                "maxOutputTokens": 60,
             }
-        ],
-        "generationConfig": {
-            "temperature": 0.2,
-            "maxOutputTokens": 60,
         }
-    }
-    
-    req = urllib.request.Request(
-        url,
-        data=json.dumps(payload).encode("utf-8"),
-        headers={"Content-Type": "application/json"},
-        method="POST"
-    )
-    
-    with urllib.request.urlopen(req, timeout=15) as resp:
-        res_data = json.loads(resp.read().decode("utf-8"))
-        candidates = res_data.get("candidates", [])
-        if candidates:
-            parts = candidates[0].get("content", {}).get("parts", [])
-            if parts and "text" in parts[0]:
-                text = parts[0]["text"].strip()
-                cleaned = text.replace('"', '').replace("'", "").replace('`', '').replace('\n', ' ').strip()
-                if not cleaned.lower().startswith("i "):
-                    cleaned = f"I {cleaned[0].lower()}{cleaned[1:]}"
-                return cleaned
+        
+        try:
+            req = urllib.request.Request(
+                url,
+                data=json.dumps(payload).encode("utf-8"),
+                headers={"Content-Type": "application/json"},
+                method="POST"
+            )
+            
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                res_data = json.loads(resp.read().decode("utf-8"))
+                candidates = res_data.get("candidates", [])
+                if candidates:
+                    parts = candidates[0].get("content", {}).get("parts", [])
+                    if parts and "text" in parts[0]:
+                        text = parts[0]["text"].strip()
+                        cleaned = text.replace('"', '').replace("'", "").replace('`', '').replace('\n', ' ').strip()
+                        if not cleaned.lower().startswith("i "):
+                            cleaned = f"I {cleaned[0].lower()}{cleaned[1:]}"
+                        return cleaned
+        except Exception:
+            continue
     return "I updated ComplyGH with mobile responsive interface improvements"
+
 
 def main():
     print("Staging files...")

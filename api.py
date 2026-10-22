@@ -38,6 +38,8 @@ class AskRequest(BaseModel):
     routing: bool = Field(default=False, description="Enable query routing to specific documents")
     use_hybrid: bool = Field(default=True, description="Enable dense + BM25 hybrid retrieval")
     top_k: int = Field(default=5, ge=1, le=20, description="Number of context chunks to retrieve")
+    institution_type: Optional[str] = Field(default=None, description="Optional target tier: COMMERCIAL_BANK, SDI, EMI_MOBILE_MONEY, PSP")
+    session_id: Optional[str] = Field(default=None, description="Optional chat session identifier")
 
 
 class SourceItem(BaseModel):
@@ -67,13 +69,17 @@ async def lifespan(app: FastAPI):
     logger.info("Initializing ComplyGH RAG Service on startup...")
     # Pre-warm singleton pipeline instance in background threadpool
     pipeline = await asyncio.to_thread(RAGPipeline.get_instance)
-    _ = await asyncio.to_thread(lambda: pipeline.chroma_collection)
-    _ = await asyncio.to_thread(lambda: pipeline.embedder)
-    # Pre-warm BM25 inverted index & embedding model so the 1st request responds in seconds
-    logger.info("Warming up BM25 lexical index...")
-    await asyncio.to_thread(pipeline._init_bm25_if_needed)
     logger.info("Warming up embedding encoder...")
     await asyncio.to_thread(lambda: pipeline.embedder.encode("warmup query"))
+
+    if pipeline.is_neon_enabled:
+        logger.info("Connecting & warming up Neon Serverless Postgres...")
+        await asyncio.to_thread(pipeline._get_pg_conn)
+    else:
+        logger.info("Warming up ChromaDB & BM25 fallback...")
+        _ = await asyncio.to_thread(lambda: pipeline.chroma_collection)
+        await asyncio.to_thread(pipeline._init_bm25_if_needed)
+
     app.state.pipeline = pipeline
     logger.info("ComplyGH RAG Service successfully warmed up.")
     yield
@@ -150,7 +156,9 @@ async def ask_question(request: Request, body: AskRequest):
             corrective=body.corrective,
             routing=body.routing,
             use_hybrid=body.use_hybrid,
-            top_k=body.top_k
+            top_k=body.top_k,
+            institution_type=body.institution_type,
+            session_id=body.session_id
         )
 
         sources_formatted = [

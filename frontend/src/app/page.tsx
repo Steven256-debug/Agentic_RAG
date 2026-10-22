@@ -114,7 +114,8 @@ export default function Home() {
             question: content,
             history,
             corrective,
-            routing
+            routing,
+            session_id: sessionId
           }),
           signal: controller.signal
         });

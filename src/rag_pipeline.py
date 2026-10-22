@@ -7,15 +7,24 @@ import logging
 from typing import List, Dict, Any, Optional, Tuple
 from pathlib import Path
 
+import numpy as np
 from sentence_transformers import SentenceTransformer
 import chromadb
 from google import genai
 from google.genai import types
 
+try:
+    import psycopg
+    from pgvector.psycopg import register_vector
+    HAS_PSYCOPG = True
+except ImportError:
+    HAS_PSYCOPG = False
+
 from .config import (
     RAW_DATA_DIR,
     VECTORDB_DIR,
     CHROMA_COLLECTION_NAME,
+    DATABASE_URL,
     EMBEDDING_MODEL_NAME,
     GENERATION_MODEL_NAME,
     FAST_MODEL_NAME,
@@ -120,12 +129,31 @@ class RAGPipeline:
         self._llm_client: Optional[genai.Client] = None
         self._bm25_index: Optional[BM25Index] = None
         self._indexed_docs_cache: Dict[str, Dict[str, Any]] = {}
+        self._pg_conn: Optional[Any] = None
 
     @classmethod
     def get_instance(cls) -> "RAGPipeline":
         if cls._instance is None:
             cls._instance = cls()
         return cls._instance
+
+    @property
+    def is_neon_enabled(self) -> bool:
+        return bool(DATABASE_URL and HAS_PSYCOPG)
+
+    def _get_pg_conn(self):
+        if not self.is_neon_enabled:
+            return None
+        if self._pg_conn is None or self._pg_conn.closed:
+            try:
+                conn = psycopg.connect(DATABASE_URL, autocommit=True)
+                register_vector(conn)
+                self._pg_conn = conn
+                logger.info("Connected to Neon Serverless Postgres.")
+            except Exception as e:
+                logger.error(f"Failed to connect to Neon Postgres: {e}")
+                return None
+        return self._pg_conn
 
     @property
     def embedder(self) -> SentenceTransformer:
@@ -193,12 +221,10 @@ class RAGPipeline:
 
         models_to_try = [
             model,
-            "gemini-3.8-flash",
-            "gemini-3.7-flash",
-            "gemini-3.6-flash",
             "gemini-3.5-flash",
             "gemini-3.5-flash-lite",
-            "gemini-flash-latest"
+            "gemini-flash-lite-latest",
+            "gemini-3.8-flash"
         ]
         # Deduplicate preserving order
         unique_models = [m for m in dict.fromkeys(models_to_try) if m]
@@ -218,26 +244,39 @@ class RAGPipeline:
                     err_str = str(e)
                     is_not_found = "404" in err_str or "not found" in err_str.lower()
                     if is_not_found:
-                        # Model not available in this tier/API version, immediately try next candidate
                         logger.warning(f"Model {current_model} unavailable (404 Not Found). Trying fallback...")
                         break
 
                     is_rate_limit = "429" in err_str or "quota" in err_str.lower() or "resource_exhausted" in err_str.lower()
+                    if is_rate_limit:
+                        logger.warning(f"Model {current_model} quota reached (429 Resource Exhausted). Instantly switching to next model...")
+                        break
+
                     is_server_error = "500" in err_str or "503" in err_str or "overloaded" in err_str.lower()
                     is_network_timeout = "timeout" in err_str.lower() or "connect" in err_str.lower() or "10060" in err_str or "10054" in err_str or "connection" in err_str.lower()
 
-                    if (is_rate_limit or is_server_error or is_network_timeout) and attempt < max_retries - 1:
-                        # Exponential backoff with jitter: 2s, 4s, 8s + random 0-1s
-                        sleep_seconds = (2 ** (attempt + 1)) + random.uniform(0.5, 1.5)
-                        logger.warning(f"Gemini API transient failure ({current_model}: {err_str[:80]}...). Retrying in {sleep_seconds:.1f}s...")
+                    if (is_server_error or is_network_timeout) and attempt < max_retries - 1:
+                        sleep_seconds = 1.0 + random.uniform(0.2, 0.8)
+                        logger.warning(f"Gemini API transient network failure ({current_model}: {err_str[:80]}...). Retrying in {sleep_seconds:.1f}s...")
                         time.sleep(sleep_seconds)
                         continue
-                    # Break attempt loop to try next model fallback if rate limit persists
                     break
         raise last_error or RuntimeError("LLM generation failed across all models.")
 
     def get_available_documents(self) -> List[str]:
-        """Returns filenames of regulatory PDFs present on disk or in the database."""
+        """Returns filenames of regulatory PDFs present in Neon Postgres, disk, or ChromaDB."""
+        if self.is_neon_enabled:
+            conn = self._get_pg_conn()
+            if conn:
+                try:
+                    with conn.cursor() as cur:
+                        cur.execute("SELECT filename FROM documents WHERE status = 'ACTIVE' ORDER BY filename;")
+                        rows = cur.fetchall()
+                        if rows:
+                            return [r[0] for r in rows]
+                except Exception as e:
+                    logger.warning(f"Failed to fetch documents from Neon: {e}")
+
         available_files: List[str] = []
         if RAW_DATA_DIR.exists():
             available_files = [f.name for f in RAW_DATA_DIR.glob("*.pdf")]
@@ -313,16 +352,122 @@ class RAGPipeline:
             logger.warning(f"Query rewrite skipped due to error: {e}")
             return current_question
 
+    def retrieve_neon(
+        self,
+        query: str,
+        top_k: int = DEFAULT_TOP_K,
+        routing_filter: Optional[Dict[str, Any]] = None,
+        use_hybrid: bool = True,
+        institution_type: Optional[str] = None
+    ) -> Tuple[List[str], List[Dict[str, Any]], List[float]]:
+        """
+        Executes single-statement hybrid retrieval on Neon Postgres:
+        - Relational filters (status, institution tier, document routing)
+        - Dense vector cosine similarity via HNSW index (pgvector)
+        - Lexical full-text search via GIN tsvector index
+        - Relational metadata joins (documents + sections + applicability)
+        """
+        conn = self._get_pg_conn()
+        if not conn:
+            return [], [], []
+
+        query_emb = np.array(self.embedder.encode(query), dtype=np.float32)
+
+        where_clauses = ["d.status = 'ACTIVE'"]
+        where_params: List[Any] = []
+
+        # 1. Routing filter (by document filename)
+        if routing_filter and "source_filename" in routing_filter:
+            target = routing_filter["source_filename"]
+            if isinstance(target, str):
+                where_clauses.append("c.source_filename = %s")
+                where_params.append(target)
+            elif isinstance(target, dict) and "$in" in target:
+                where_clauses.append("c.source_filename = ANY(%s)")
+                where_params.append(list(target["$in"]))
+
+        # 2. Relational institution tier filter
+        if institution_type:
+            where_clauses.append("a.institution_type = %s")
+            where_params.append(institution_type)
+
+        where_sql = " AND ".join(where_clauses)
+
+        # Hybrid scoring combining dense cosine similarity (70%) and full-text keyword rank (30%)
+        if use_hybrid:
+            order_sql = "((0.7 * (1 - (c.embedding <=> %s))) + (0.3 * LEAST(ts_rank(c.tsv_tokens, plainto_tsquery('english', %s)), 1.0))) DESC"
+            order_params = [query_emb, query]
+        else:
+            order_sql = "(c.embedding <=> %s) ASC"
+            order_params = [query_emb]
+
+        select_params = [query_emb]
+        all_params = select_params + where_params + order_params + [top_k]
+
+        sql = f"""
+        SELECT 
+            c.chunk_text,
+            c.source_filename,
+            c.page_number,
+            c.section_title,
+            d.title AS doc_title,
+            d.category AS doc_category,
+            1 - (c.embedding <=> %s) AS cosine_sim
+        FROM document_chunks c
+        JOIN documents d ON c.document_id = d.id
+        LEFT JOIN document_applicability a ON d.id = a.document_id
+        WHERE {where_sql}
+        ORDER BY {order_sql}
+        LIMIT %s;
+        """
+
+        with conn.cursor() as cur:
+            cur.execute(sql, all_params)
+            rows = cur.fetchall()
+
+        docs = []
+        metas = []
+        dists = []
+        for r in rows:
+            text, fname, page, section, title, category, sim = r
+            docs.append(text)
+            metas.append({
+                "source_filename": fname,
+                "page_number": str(page),
+                "section_title": section or "Unknown",
+                "document_title": title,
+                "document_category": category,
+            })
+            dists.append(1.0 - float(sim))
+
+        return docs, metas, dists
+
     def retrieve(
         self,
         query: str,
         top_k: int = DEFAULT_TOP_K,
         routing_filter: Optional[Dict[str, Any]] = None,
-        use_hybrid: bool = True
+        use_hybrid: bool = True,
+        institution_type: Optional[str] = None
     ) -> Tuple[List[str], List[Dict[str, Any]], List[float]]:
         """
-        Retrieves relevant chunks using dense vector similarity or Reciprocal Rank Fusion (hybrid).
+        Retrieves relevant chunks using Neon Postgres (pgvector) if available,
+        or ChromaDB + inverted-index BM25 fallback.
         """
+        if self.is_neon_enabled:
+            try:
+                neon_docs, neon_metas, neon_dists = self.retrieve_neon(
+                    query=query,
+                    top_k=top_k,
+                    routing_filter=routing_filter,
+                    use_hybrid=use_hybrid,
+                    institution_type=institution_type
+                )
+                if neon_docs:
+                    return neon_docs, neon_metas, neon_dists
+            except Exception as e:
+                logger.warning(f"Neon retrieval failed: {e}. Falling back to local ChromaDB.")
+
         query_embedding = self.embedder.encode(query).tolist()
         
         dense_kwargs: Dict[str, Any] = {
@@ -472,10 +617,12 @@ class RAGPipeline:
         corrective: bool = False,
         routing: bool = False,
         use_hybrid: bool = True,
-        top_k: int = DEFAULT_TOP_K
+        top_k: int = DEFAULT_TOP_K,
+        institution_type: Optional[str] = None,
+        session_id: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        Executes complete RAG pipeline synchronously.
+        Executes complete RAG pipeline synchronously with Neon Postgres or local fallback.
         """
         start_time = time.time()
         active_query = question
@@ -494,7 +641,13 @@ class RAGPipeline:
             routing_filter, routed_to = self.route_query(active_query)
 
         # 3. Retrieval
-        docs, metas, dists = self.retrieve(active_query, top_k=top_k, routing_filter=routing_filter, use_hybrid=use_hybrid)
+        docs, metas, dists = self.retrieve(
+            active_query,
+            top_k=top_k,
+            routing_filter=routing_filter,
+            use_hybrid=use_hybrid,
+            institution_type=institution_type
+        )
 
         if not docs:
             return {
@@ -514,13 +667,33 @@ class RAGPipeline:
             if new_query and new_query.strip():
                 reformulated_query = new_query.strip()
                 active_query = reformulated_query
-                new_docs, new_metas, _ = self.retrieve(active_query, top_k=top_k, routing_filter=routing_filter, use_hybrid=use_hybrid)
+                new_docs, new_metas, _ = self.retrieve(
+                    active_query,
+                    top_k=top_k,
+                    routing_filter=routing_filter,
+                    use_hybrid=use_hybrid,
+                    institution_type=institution_type
+                )
                 if new_docs:
                     docs, metas = new_docs, new_metas
                     context_prompt, cited_sources = self.format_context_prompt(active_query, docs, metas)
 
         # 5. Answer Generation
         answer = self.call_llm(context_prompt, system=SYSTEM_PROMPT, model=GENERATION_MODEL_NAME)
+        elapsed_latency = round(time.time() - start_time, 2)
+
+        # Record compliance audit log if Neon is available
+        if self.is_neon_enabled:
+            try:
+                conn = self._get_pg_conn()
+                if conn:
+                    with conn.cursor() as cur:
+                        cur.execute("""
+                        INSERT INTO chat_audit_logs (session_id, user_query, assistant_answer, routed_to, latency_sec)
+                        VALUES (%s, %s, %s, %s, %s);
+                        """, (session_id or "web-session", question, answer, routed_to, elapsed_latency))
+            except Exception as e:
+                logger.warning(f"Could not record audit log to Neon: {e}")
 
         # Build structured sources for UI
         detailed_sources = []
@@ -540,5 +713,5 @@ class RAGPipeline:
             "rewritten_query": rewritten_query,
             "routed_to": routed_to,
             "reformulated_query": reformulated_query,
-            "latency_sec": round(time.time() - start_time, 2)
+            "latency_sec": elapsed_latency
         }

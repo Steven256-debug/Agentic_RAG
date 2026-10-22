@@ -18,12 +18,13 @@ VECTORDB_DIR = DATA_DIR / "vectordb"
 EVAL_RESULTS_FILE = DATA_DIR / "eval_results.json"
 CHAT_HISTORY_FILE = DATA_DIR / "chat_history.json"
 
-# ChromaDB configuration
+# ChromaDB & Database configuration
 CHROMA_COLLECTION_NAME = "rag_documents"
+DATABASE_URL = os.getenv("DATABASE_URL")
 
 # Model configuration
 EMBEDDING_MODEL_NAME = os.getenv("EMBEDDING_MODEL", "all-MiniLM-L6-v2")
-GENERATION_MODEL_NAME = os.getenv("GENERATION_MODEL", "gemini-3.8-flash")
+GENERATION_MODEL_NAME = os.getenv("GENERATION_MODEL", "gemini-3.5-flash")
 FAST_MODEL_NAME = os.getenv("FAST_MODEL", "gemini-3.5-flash-lite")
 
 # RAG hyper-parameters

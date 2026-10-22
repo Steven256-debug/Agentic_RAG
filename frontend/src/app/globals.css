@@ -36,19 +36,37 @@ body {
   color: var(--foreground);
   background: var(--background);
   transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Safe area padding utilities */
+.pt-safe {
+  padding-top: max(1rem, env(safe-area-inset-top));
+}
+.pb-safe {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}
+
+/* Mobile smooth scrolling */
+.smooth-scroll {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
 }
 
 /* Custom scrollbar for chat */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 5px;
+  height: 5px;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
   background: #cbd5e1;
-  border-radius: 4px;
+  border-radius: 9999px;
 }
 .dark ::-webkit-scrollbar-thumb {
   background: #334155;
 }
+

@@ -154,7 +154,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex h-screen w-full overflow-hidden bg-background">
+    <div className="flex h-[100dvh] w-full overflow-hidden bg-background">
       <Sidebar
         sessions={sessions}
         currentSessionId={currentSessionId}
@@ -175,14 +175,15 @@ export default function Home() {
         isLoading={isLoading}
         error={error}
         onRetry={() => {
-           const lastUserMessage = currentMessages.slice().reverse().find(m => m.role === "user");
-           if (lastUserMessage) {
-             // In a real app we'd pop the error and resend. Here we'll just try to send again 
-             // without duplicating it if we wanted, but easiest is just to fire the send with the same content.
-             handleSendMessage(lastUserMessage.content, true, true);
-           }
+          const lastUserMessage = currentMessages.slice().reverse().find((m) => m.role === "user");
+          if (lastUserMessage) {
+            handleSendMessage(lastUserMessage.content, true, true);
+          }
         }}
+        onToggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}
+        onNewChat={handleNewChat}
       />
     </div>
   );
 }
+

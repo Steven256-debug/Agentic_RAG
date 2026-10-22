@@ -1,3 +1,8 @@
 @echo off
 echo Starting AI-powered sync...
-python auto_push.py
+if exist ".venv\Scripts\python.exe" (
+    ".venv\Scripts\python.exe" auto_push.py
+) else (
+    python auto_push.py
+)
+

@@ -13,10 +13,11 @@ from src.rag_pipeline import RAGPipeline
 
 # --- Page Configuration ---
 st.set_page_config(
-    page_title="LexFin AI - Regulatory Compliance Assistant",
-    page_icon="🏦",
+    page_title="ComplyGH - Regulatory Compliance Assistant",
+    page_icon="🛡️",
     layout="wide"
 )
+
 
 # --- Clean Custom Styling ---
 st.markdown("""
@@ -46,9 +47,9 @@ st.markdown("""
 
     .hero-title {
         text-align: center;
-        font-size: 2.2rem;
+        font-size: clamp(1.4rem, 5vw, 2.2rem);
         font-weight: 700;
-        margin-top: 4vh;
+        margin-top: 2vh;
         margin-bottom: 0.5rem;
         color: #F8FAFC;
     }
@@ -56,8 +57,10 @@ st.markdown("""
     .hero-subtitle {
         text-align: center;
         color: #94A3B8;
-        font-size: 1rem;
-        margin-bottom: 2.5rem;
+        font-size: clamp(0.85rem, 2.5vw, 1rem);
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+        padding: 0 0.5rem;
     }
 
     .stButton > button {
@@ -66,6 +69,7 @@ st.markdown("""
         background-color: transparent;
         transition: all 0.2s ease;
         text-align: left;
+        min-height: 42px;
     }
     .stButton > button:hover {
         border-color: #38BDF8;
@@ -82,8 +86,24 @@ st.markdown("""
         font-weight: 600;
         margin-bottom: 0.5rem;
     }
+
+    @media (max-width: 768px) {
+        .hero-title {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+        }
+        .hero-subtitle {
+            font-size: 0.875rem;
+            margin-bottom: 1.25rem;
+        }
+        .stButton > button {
+            padding: 0.5rem 0.75rem;
+            font-size: 0.85rem;
+        }
+    }
 </style>
 """, unsafe_allow_html=True)
+
 
 
 # --- History Management ---
@@ -118,7 +138,7 @@ else:
 
 
 # --- Singleton Pipeline Caching ---
-@st.cache_resource(show_spinner="Initializing LexFin AI models & index...")
+@st.cache_resource(show_spinner="Initializing ComplyGH models & index...")
 def get_pipeline():
     pipeline = RAGPipeline.get_instance()
     # Warm up collection & embedder
@@ -137,7 +157,7 @@ except Exception as e:
 
 # --- Sidebar Navigation & Settings ---
 with st.sidebar:
-    st.markdown('<div class="sidebar-title">🏦 LexFin AI</div>', unsafe_allow_html=True)
+    st.markdown('<div class="sidebar-title">🛡️ ComplyGH</div>', unsafe_allow_html=True)
     st.caption("Ghana Regulatory Intelligence Assistant")
 
     if st.button("➕ New Chat", use_container_width=True):
@@ -200,7 +220,7 @@ else:
     for msg in st.session_state.messages:
         with st.chat_message(msg["role"]):
             if msg["role"] == "assistant":
-                st.markdown("**LexFin AI**")
+                st.markdown("**ComplyGH**")
             st.markdown(msg["content"])
             if msg.get("sources"):
                 with st.expander(f"📖 View Citations & Sources ({len(msg['sources'])})"):
@@ -225,7 +245,8 @@ if user_input:
 
     # 2. Execute RAG Pipeline
     with st.chat_message("assistant"):
-        st.markdown("**LexFin AI**")
+        st.markdown("**ComplyGH**")
+
         with st.spinner("Analyzing regulations & statutory clauses..."):
             try:
                 # Prepare conversation history for contextual rewriting

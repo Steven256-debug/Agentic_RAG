@@ -77,7 +77,7 @@ async def lifespan(app: FastAPI):
 
 # Initialize FastAPI app
 app = FastAPI(
-    title="LexFin AI - Regulatory Compliance API",
+    title="ComplyGH - Regulatory Compliance API",
     description="Intelligent RAG Assistant for Ghanaian Banking, Financial Services, and Cybersecurity Directives",
     version="2.0.0",
     lifespan=lifespan
@@ -106,7 +106,8 @@ app.mount("/pdfs", StaticFiles(directory=str(RAW_DATA_DIR)), name="pdfs")
 @app.get("/health", tags=["System"])
 async def health_check():
     """Health check endpoint for container probes."""
-    return {"status": "ok", "service": "LexFin AI RAG"}
+    return {"status": "ok", "service": "ComplyGH RAG"}
+
 
 
 @app.get("/documents", response_model=DocumentListResponse, tags=["Documents"])

@@ -134,6 +134,21 @@ export default function ChatArea({
               </motion.button>
             ))}
           </div>
+
+          {error && (
+            <div className="w-full max-w-2xl mt-4 px-2">
+              <div className="p-3 rounded-xl bg-red-500/10 border border-red-500/20 text-xs sm:text-sm text-red-600 dark:text-red-400 flex items-center justify-between">
+                <span>{error}</span>
+                <button
+                  type="button"
+                  onClick={onRetry}
+                  className="ml-3 font-semibold underline hover:no-underline flex-shrink-0"
+                >
+                  Retry
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       ) : (
         // --- ACTIVE CHAT STATE ---
@@ -314,7 +329,13 @@ const MessageBubble = ({ message }: { message: Message }) => {
 
 const SourceCard = ({ source, index }: { source: Source; index: number }) => {
   const [open, setOpen] = useState(false);
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+  let apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+  if (typeof window !== "undefined") {
+    const host = window.location.hostname;
+    if (host && host !== "localhost" && host !== "127.0.0.1") {
+      apiUrl = `http://${host}:8000`;
+    }
+  }
   const pdfUrl = `${apiUrl}/pdfs/${encodeURIComponent(source.source_filename)}#page=${source.page_number}`;
 
   return (

@@ -24,7 +24,7 @@ CHROMA_COLLECTION_NAME = "rag_documents"
 # Model configuration
 EMBEDDING_MODEL_NAME = os.getenv("EMBEDDING_MODEL", "all-MiniLM-L6-v2")
 GENERATION_MODEL_NAME = os.getenv("GENERATION_MODEL", "gemini-3.8-flash")
-FAST_MODEL_NAME = os.getenv("FAST_MODEL", "gemini-3.8-flash-lite")
+FAST_MODEL_NAME = os.getenv("FAST_MODEL", "gemini-3.5-flash-lite")
 
 # RAG hyper-parameters
 DEFAULT_TOP_K = int(os.getenv("TOP_K", "5"))
@@ -45,8 +45,9 @@ SYSTEM_PROMPT = (
 
 
 # API Server configuration
+_default_origins = "http://localhost:3000,http://127.0.0.1:3000,http://localhost:8000,http://127.0.0.1:8000"
 ALLOWED_ORIGINS = [
     origin.strip()
-    for origin in os.getenv("ALLOWED_ORIGINS", "http://localhost:3000,http://127.0.0.1:3000").split(",")
+    for origin in os.getenv("ALLOWED_ORIGINS", _default_origins).split(",")
     if origin.strip()
 ]

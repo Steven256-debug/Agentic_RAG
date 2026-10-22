@@ -64,15 +64,20 @@ class DocumentListResponse(BaseModel):
 # --- Lifespan Context Manager ---
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    logger.info("Initializing LexFin AI RAG Service on startup...")
+    logger.info("Initializing ComplyGH RAG Service on startup...")
     # Pre-warm singleton pipeline instance in background threadpool
     pipeline = await asyncio.to_thread(RAGPipeline.get_instance)
     _ = await asyncio.to_thread(lambda: pipeline.chroma_collection)
     _ = await asyncio.to_thread(lambda: pipeline.embedder)
+    # Pre-warm BM25 inverted index & embedding model so the 1st request responds in seconds
+    logger.info("Warming up BM25 lexical index...")
+    await asyncio.to_thread(pipeline._init_bm25_if_needed)
+    logger.info("Warming up embedding encoder...")
+    await asyncio.to_thread(lambda: pipeline.embedder.encode("warmup query"))
     app.state.pipeline = pipeline
-    logger.info("LexFin AI RAG Service successfully warmed up.")
+    logger.info("ComplyGH RAG Service successfully warmed up.")
     yield
-    logger.info("Shutting down LexFin API server.")
+    logger.info("Shutting down ComplyGH API server.")
 
 
 # Initialize FastAPI app
@@ -86,10 +91,11 @@ app = FastAPI(
 app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
-# CORS Middleware configuration
+# CORS Middleware configuration supporting localhost and local Wi-Fi / mobile LAN IP
 app.add_middleware(
     CORSMiddleware,
     allow_origins=ALLOWED_ORIGINS,
+    allow_origin_regex=r"^https?://(localhost|127\.0\.0\.1|192\.168\.\d+\.\d+|10\.\d+\.\d+\.\d+|172\.(1[6-9]|2\d|3[0-1])\.\d+\.\d+)(:\d+)?$",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

@@ -34,8 +34,8 @@ if not logger.handlers:
 
 class BM25Index:
     """
-    Lightweight, dependency-free BM25 implementation for lexical keyword search
-    across chunks, enabling high-precision hybrid retrieval for statutes and section codes.
+    High-performance inverted-index BM25 implementation for lexical keyword search
+    across chunks, enabling sub-millisecond hybrid retrieval for statutes and section codes.
     """
     def __init__(self, k1: float = 1.5, b: float = 0.75):
         self.k1 = k1
@@ -43,9 +43,10 @@ class BM25Index:
         self.corpus_size = 0
         self.avg_dl = 0.0
         self.doc_lengths: List[int] = []
-        self.doc_tokens: List[List[str]] = []
         self.doc_ids: List[str] = []
         self.idf: Dict[str, float] = {}
+        # Inverted index: term -> list of (doc_idx, tf)
+        self.inverted_index: Dict[str, List[Tuple[int, int]]] = {}
 
     def _tokenize(self, text: str) -> List[str]:
         # Simple, robust alphanumeric tokenizer
@@ -53,17 +54,24 @@ class BM25Index:
         return [w.lower() for w in re.findall(r'\b\w+\b', text) if len(w) > 1]
 
     def fit(self, ids: List[str], documents: List[str]):
+        from collections import Counter, defaultdict
         self.doc_ids = ids
-        self.doc_tokens = [self._tokenize(doc) for doc in documents]
-        self.corpus_size = len(self.doc_tokens)
-        self.doc_lengths = [len(doc) for doc in self.doc_tokens]
-        self.avg_dl = sum(self.doc_lengths) / self.corpus_size if self.corpus_size > 0 else 1.0
+        self.corpus_size = len(documents)
+        self.doc_lengths = []
+        
+        term_postings = defaultdict(list)
+        df: Dict[str, int] = defaultdict(int)
 
-        # Compute document frequencies
-        df: Dict[str, int] = {}
-        for tokens in self.doc_tokens:
-            for term in set(tokens):
-                df[term] = df.get(term, 0) + 1
+        for doc_idx, doc in enumerate(documents):
+            tokens = self._tokenize(doc)
+            self.doc_lengths.append(len(tokens))
+            counts = Counter(tokens)
+            for term, tf in counts.items():
+                term_postings[term].append((doc_idx, tf))
+                df[term] += 1
+
+        self.avg_dl = sum(self.doc_lengths) / self.corpus_size if self.corpus_size > 0 else 1.0
+        self.inverted_index = dict(term_postings)
 
         # Calculate BM25 IDF with smoothing
         for term, freq in df.items():
@@ -72,25 +80,26 @@ class BM25Index:
     def search(self, query: str, top_k: int = 10) -> List[Tuple[str, float]]:
         if self.corpus_size == 0:
             return []
-        query_tokens = self._tokenize(query)
-        scores: List[float] = [0.0] * self.corpus_size
+        query_tokens = set(self._tokenize(query))
+        scores: Dict[int, float] = {}
 
         for term in query_tokens:
             if term not in self.idf:
                 continue
             term_idf = self.idf[term]
-            for doc_idx, tokens in enumerate(self.doc_tokens):
-                tf = tokens.count(term)
-                if tf == 0:
-                    continue
+            postings = self.inverted_index.get(term, [])
+            for doc_idx, tf in postings:
                 dl = self.doc_lengths[doc_idx]
                 numerator = tf * (self.k1 + 1.0)
                 denominator = tf + self.k1 * (1.0 - self.b + self.b * (dl / self.avg_dl))
-                scores[doc_idx] += term_idf * (numerator / denominator)
+                scores[doc_idx] = scores.get(doc_idx, 0.0) + (term_idf * (numerator / denominator))
 
-        # Pair scores with IDs and sort descending
-        ranked = sorted(zip(self.doc_ids, scores), key=lambda x: x[1], reverse=True)
-        return [(doc_id, score) for doc_id, score in ranked[:top_k] if score > 0]
+        if not scores:
+            return []
+
+        # Sort top scores
+        ranked = sorted(scores.items(), key=lambda x: x[1], reverse=True)[:top_k]
+        return [(self.doc_ids[doc_idx], score) for doc_idx, score in ranked if score > 0]
 
 
 class RAGPipeline:
@@ -182,9 +191,17 @@ class RAGPipeline:
         if system:
             config.system_instruction = system
 
-        models_to_try = [model, "gemini-3.8-flash", "gemini-3.8-flash-lite", "gemini-flash-latest", "gemini-2.5-flash", "gemini-3.5-flash"]
+        models_to_try = [
+            model,
+            "gemini-3.8-flash",
+            "gemini-3.7-flash",
+            "gemini-3.6-flash",
+            "gemini-3.5-flash",
+            "gemini-3.5-flash-lite",
+            "gemini-flash-latest"
+        ]
         # Deduplicate preserving order
-        unique_models = list(dict.fromkeys(models_to_try))
+        unique_models = [m for m in dict.fromkeys(models_to_try) if m]
 
         last_error = None
         for current_model in unique_models:
@@ -199,6 +216,12 @@ class RAGPipeline:
                 except Exception as e:
                     last_error = e
                     err_str = str(e)
+                    is_not_found = "404" in err_str or "not found" in err_str.lower()
+                    if is_not_found:
+                        # Model not available in this tier/API version, immediately try next candidate
+                        logger.warning(f"Model {current_model} unavailable (404 Not Found). Trying fallback...")
+                        break
+
                     is_rate_limit = "429" in err_str or "quota" in err_str.lower() or "resource_exhausted" in err_str.lower()
                     is_server_error = "500" in err_str or "503" in err_str or "overloaded" in err_str.lower()
                     is_network_timeout = "timeout" in err_str.lower() or "connect" in err_str.lower() or "10060" in err_str or "10054" in err_str or "connection" in err_str.lower()

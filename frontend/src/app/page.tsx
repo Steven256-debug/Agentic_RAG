@@ -90,20 +90,44 @@ export default function Home() {
         .slice(-historyMsgCount)
         .map(m => ({ role: m.role, content: m.content }));
 
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+      // Dynamically resolve API URL so both localhost and mobile devices on local network connect cleanly
+      let apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+      if (typeof window !== "undefined") {
+        const host = window.location.hostname;
+        if (host && host !== "localhost" && host !== "127.0.0.1") {
+          apiUrl = `http://${host}:8000`;
+        }
+      }
+
+      // Add a 60-second abort timeout for clear UX feedback
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 60000);
       
-      const response = await fetch(`${apiUrl}/ask`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          question: content,
-          history,
-          corrective,
-          routing
-        }),
-      });
+      let response: Response;
+      try {
+        response = await fetch(`${apiUrl}/ask`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            question: content,
+            history,
+            corrective,
+            routing
+          }),
+          signal: controller.signal
+        });
+      } catch (fetchErr: unknown) {
+        clearTimeout(timeoutId);
+        const fErr = fetchErr as Error;
+        if (fErr.name === "AbortError") {
+          throw new Error("Request timed out. The AI model or document retrieval took too long to respond. Please try again.");
+        }
+        throw new Error(`Unable to connect to ComplyGH API (${apiUrl}). Please ensure the backend server is running on port 8000.`);
+      } finally {
+        clearTimeout(timeoutId);
+      }
 
       if (!response.ok) {
         if (response.status === 429) {
@@ -135,12 +159,7 @@ export default function Home() {
         sources: data.sources,
       };
 
-      // Create typewriter effect simulation in state updates, or simply add message and let ChatArea handle visual
-      // For simplicity and stability, we append it. ChatArea has a framer-motion transition.
-      
       // Append the assistant's message to the current session.
-      // We use the `newSessions` array created at the start of the function 
-      // instead of the `sessions` state to avoid a stale closure bug.
       newSessions[sessionIndex].messages.push(assistantMsg);
       newSessions[sessionIndex].updatedAt = Date.now();
       saveSessions([...newSessions]);

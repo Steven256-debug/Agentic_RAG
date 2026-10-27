@@ -4,6 +4,9 @@ import time
 import math
 import random
 import logging
+import queue
+import threading
+from contextlib import contextmanager
 from typing import List, Dict, Any, Optional, Tuple
 from pathlib import Path
 
@@ -111,6 +114,92 @@ class BM25Index:
         return [(self.doc_ids[doc_idx], score) for doc_idx, score in ranked if score > 0]
 
 
+class NeonConnectionPool:
+    """
+    Thread-safe connection pool for Neon Serverless Postgres with pgvector.
+    Maintains a pool of connections with automatic reconnection and liveness
+    validation for serverless scale-to-zero environments.
+    """
+    def __init__(self, dsn: str, max_connections: int = 5, timeout: float = 30.0):
+        self.dsn = dsn
+        self.max_connections = max_connections
+        self.timeout = timeout
+        self._pool: queue.Queue = queue.Queue(maxsize=max_connections)
+        self._lock = threading.Lock()
+        self._current_size = 0
+
+    def _create_connection(self):
+        conn = psycopg.connect(self.dsn, autocommit=True)
+        register_vector(conn)
+        return conn
+
+    def getconn(self):
+        # Try getting an idle connection from the pool without waiting
+        try:
+            conn = self._pool.get_nowait()
+            if not conn.closed:
+                try:
+                    conn.execute("SELECT 1;")
+                    return conn
+                except Exception:
+                    try:
+                        conn.close()
+                    except Exception:
+                        pass
+        except queue.Empty:
+            pass
+
+        # Create new connection if below capacity
+        with self._lock:
+            if self._current_size < self.max_connections:
+                try:
+                    conn = self._create_connection()
+                    self._current_size += 1
+                    return conn
+                except Exception as e:
+                    logger.error(f"Failed to create new Neon connection: {e}")
+                    raise
+
+        # Wait for an available connection if at capacity
+        conn = self._pool.get(timeout=self.timeout)
+        if conn.closed:
+            conn = self._create_connection()
+        return conn
+
+    def putconn(self, conn):
+        if conn and not conn.closed:
+            try:
+                self._pool.put_nowait(conn)
+            except queue.Full:
+                try:
+                    conn.close()
+                except Exception:
+                    pass
+                with self._lock:
+                    self._current_size = max(0, self._current_size - 1)
+        else:
+            with self._lock:
+                self._current_size = max(0, self._current_size - 1)
+
+    @contextmanager
+    def connection(self):
+        conn = self.getconn()
+        try:
+            yield conn
+        finally:
+            self.putconn(conn)
+
+    def closeall(self):
+        while not self._pool.empty():
+            try:
+                conn = self._pool.get_nowait()
+                conn.close()
+            except Exception:
+                pass
+        with self._lock:
+            self._current_size = 0
+
+
 class RAGPipeline:
     """
     Unified RAG orchestration service:
@@ -119,6 +208,7 @@ class RAGPipeline:
     - Dynamic query routing
     - Corrective RAG (Self-reflection and query reformulation)
     - Resilient LLM calling with exponential backoff & jitter
+    - Thread-safe Neon Serverless Postgres connection pooling
     """
     _instance: Optional["RAGPipeline"] = None
 
@@ -129,7 +219,7 @@ class RAGPipeline:
         self._llm_client: Optional[genai.Client] = None
         self._bm25_index: Optional[BM25Index] = None
         self._indexed_docs_cache: Dict[str, Dict[str, Any]] = {}
-        self._pg_conn: Optional[Any] = None
+        self._pg_pool: Optional[NeonConnectionPool] = None
 
     @classmethod
     def get_instance(cls) -> "RAGPipeline":
@@ -141,19 +231,40 @@ class RAGPipeline:
     def is_neon_enabled(self) -> bool:
         return bool(DATABASE_URL and HAS_PSYCOPG)
 
-    def _get_pg_conn(self):
+    def _get_pool(self) -> Optional[NeonConnectionPool]:
         if not self.is_neon_enabled:
             return None
-        if self._pg_conn is None or self._pg_conn.closed:
+        if self._pg_pool is None:
             try:
-                conn = psycopg.connect(DATABASE_URL, autocommit=True)
-                register_vector(conn)
-                self._pg_conn = conn
-                logger.info("Connected to Neon Serverless Postgres.")
+                self._pg_pool = NeonConnectionPool(DATABASE_URL)
+                logger.info("Initialized Neon Serverless Postgres connection pool.")
             except Exception as e:
-                logger.error(f"Failed to connect to Neon Postgres: {e}")
+                logger.error(f"Failed to initialize Neon connection pool: {e}")
                 return None
-        return self._pg_conn
+        return self._pg_pool
+
+    @contextmanager
+    def pg_connection(self):
+        """Thread-safe context manager to checkout and return a connection from the pool."""
+        pool = self._get_pool()
+        if pool is None:
+            yield None
+            return
+        with pool.connection() as conn:
+            yield conn
+
+    def _get_pg_conn(self):
+        """Backwards compatibility helper for warm-up and ping."""
+        pool = self._get_pool()
+        if pool is None:
+            return None
+        try:
+            conn = pool.getconn()
+            pool.putconn(conn)
+            return conn
+        except Exception as e:
+            logger.error(f"Failed to get connection from Neon pool: {e}")
+            return None
 
     @property
     def embedder(self) -> SentenceTransformer:
@@ -221,10 +332,11 @@ class RAGPipeline:
 
         models_to_try = [
             model,
-            "gemini-3.5-flash",
-            "gemini-3.5-flash-lite",
+            "gemini-2.5-flash",
+            "gemini-2.5-flash-lite",
+            "gemini-flash-latest",
             "gemini-flash-lite-latest",
-            "gemini-3.8-flash"
+            "gemini-2.5-pro",
         ]
         # Deduplicate preserving order
         unique_models = [m for m in dict.fromkeys(models_to_try) if m]
@@ -266,16 +378,16 @@ class RAGPipeline:
     def get_available_documents(self) -> List[str]:
         """Returns filenames of regulatory PDFs present in Neon Postgres, disk, or ChromaDB."""
         if self.is_neon_enabled:
-            conn = self._get_pg_conn()
-            if conn:
-                try:
-                    with conn.cursor() as cur:
-                        cur.execute("SELECT filename FROM documents WHERE status = 'ACTIVE' ORDER BY filename;")
-                        rows = cur.fetchall()
-                        if rows:
-                            return [r[0] for r in rows]
-                except Exception as e:
-                    logger.warning(f"Failed to fetch documents from Neon: {e}")
+            try:
+                with self.pg_connection() as conn:
+                    if conn:
+                        with conn.cursor() as cur:
+                            cur.execute("SELECT filename FROM documents WHERE status = 'ACTIVE' ORDER BY filename;")
+                            rows = cur.fetchall()
+                            if rows:
+                                return [r[0] for r in rows]
+            except Exception as e:
+                logger.warning(f"Failed to fetch documents from Neon: {e}")
 
         available_files: List[str] = []
         if RAW_DATA_DIR.exists():
@@ -367,8 +479,7 @@ class RAGPipeline:
         - Lexical full-text search via GIN tsvector index
         - Relational metadata joins (documents + sections + applicability)
         """
-        conn = self._get_pg_conn()
-        if not conn:
+        if not self.is_neon_enabled:
             return [], [], []
 
         query_emb = np.array(self.embedder.encode(query), dtype=np.float32)
@@ -421,9 +532,12 @@ class RAGPipeline:
         LIMIT %s;
         """
 
-        with conn.cursor() as cur:
-            cur.execute(sql, all_params)
-            rows = cur.fetchall()
+        with self.pg_connection() as conn:
+            if not conn:
+                return [], [], []
+            with conn.cursor() as cur:
+                cur.execute(sql, all_params)
+                rows = cur.fetchall()
 
         docs = []
         metas = []
@@ -685,13 +799,13 @@ class RAGPipeline:
         # Record compliance audit log if Neon is available
         if self.is_neon_enabled:
             try:
-                conn = self._get_pg_conn()
-                if conn:
-                    with conn.cursor() as cur:
-                        cur.execute("""
-                        INSERT INTO chat_audit_logs (session_id, user_query, assistant_answer, routed_to, latency_sec)
-                        VALUES (%s, %s, %s, %s, %s);
-                        """, (session_id or "web-session", question, answer, routed_to, elapsed_latency))
+                with self.pg_connection() as conn:
+                    if conn:
+                        with conn.cursor() as cur:
+                            cur.execute("""
+                            INSERT INTO chat_audit_logs (session_id, user_query, assistant_answer, routed_to, latency_sec)
+                            VALUES (%s, %s, %s, %s, %s);
+                            """, (session_id or "web-session", question, answer, routed_to, elapsed_latency))
             except Exception as e:
                 logger.warning(f"Could not record audit log to Neon: {e}")
 

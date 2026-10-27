@@ -1,0 +1,17 @@
+.git
+.gitignore
+.venv
+venv
+env
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+frontend/
+data/archive_duplicates
+data/vectordb_copy
+tests/
+.streamlit
+.next
+node_modules
+.env

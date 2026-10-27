@@ -329,13 +329,17 @@ const MessageBubble = ({ message }: { message: Message }) => {
 
 const SourceCard = ({ source, index }: { source: Source; index: number }) => {
   const [open, setOpen] = useState(false);
-  let apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
-  if (typeof window !== "undefined") {
-    const host = window.location.hostname;
-    if (host && host !== "localhost" && host !== "127.0.0.1") {
-      apiUrl = `http://${host}:8000`;
+  let apiUrl = process.env.NEXT_PUBLIC_API_URL;
+  if (!apiUrl) {
+    apiUrl = "http://127.0.0.1:8000";
+    if (typeof window !== "undefined") {
+      const host = window.location.hostname;
+      if (host && host !== "localhost" && host !== "127.0.0.1") {
+        apiUrl = `http://${host}:8000`;
+      }
     }
   }
+  apiUrl = apiUrl.replace(/\/+$/, "");
   const pdfUrl = `${apiUrl}/pdfs/${encodeURIComponent(source.source_filename)}#page=${source.page_number}`;
 
   return (

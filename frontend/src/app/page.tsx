@@ -90,14 +90,18 @@ export default function Home() {
         .slice(-historyMsgCount)
         .map(m => ({ role: m.role, content: m.content }));
 
-      // Dynamically resolve API URL so both localhost and mobile devices on local network connect cleanly
-      let apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
-      if (typeof window !== "undefined") {
-        const host = window.location.hostname;
-        if (host && host !== "localhost" && host !== "127.0.0.1") {
-          apiUrl = `http://${host}:8000`;
+      // Dynamically resolve API URL: prioritize environment variable (for Vercel/production), fallback to LAN IP for local dev
+      let apiUrl = process.env.NEXT_PUBLIC_API_URL;
+      if (!apiUrl) {
+        apiUrl = "http://127.0.0.1:8000";
+        if (typeof window !== "undefined") {
+          const host = window.location.hostname;
+          if (host && host !== "localhost" && host !== "127.0.0.1") {
+            apiUrl = `http://${host}:8000`;
+          }
         }
       }
+      apiUrl = apiUrl.replace(/\/+$/, "");
 
       // Add a 60-second abort timeout for clear UX feedback
       const controller = new AbortController();

@@ -11,6 +11,11 @@ from typing import List, Dict, Any, Optional, Tuple
 from pathlib import Path
 
 import numpy as np
+try:
+    import torch
+    torch.set_num_threads(1)
+except Exception:
+    pass
 from sentence_transformers import SentenceTransformer
 import chromadb
 from google import genai

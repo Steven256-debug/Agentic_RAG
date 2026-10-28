@@ -66,22 +66,23 @@ class DocumentListResponse(BaseModel):
 # --- Lifespan Context Manager ---
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    logger.info("Initializing ComplyGH RAG Service on startup...")
-    # Pre-warm singleton pipeline instance in background threadpool
-    pipeline = await asyncio.to_thread(RAGPipeline.get_instance)
-    logger.info("Warming up embedding encoder...")
-    await asyncio.to_thread(lambda: pipeline.embedder.encode("warmup query"))
-
-    if pipeline.is_neon_enabled:
-        logger.info("Connecting & warming up Neon Serverless Postgres...")
-        await asyncio.to_thread(pipeline._get_pg_conn)
-    else:
-        logger.info("Warming up ChromaDB & BM25 fallback...")
-        _ = await asyncio.to_thread(lambda: pipeline.chroma_collection)
-        await asyncio.to_thread(pipeline._init_bm25_if_needed)
-
+    logger.info("Initializing ComplyGH RAG API Server...")
+    # Initialize singleton instance immediately
+    pipeline = RAGPipeline.get_instance()
     app.state.pipeline = pipeline
-    logger.info("ComplyGH RAG Service successfully warmed up.")
+
+    # Background non-blocking warm up to allow instant port binding for Render/HF port scanners
+    async def _warmup_background():
+        try:
+            if pipeline.is_neon_enabled:
+                logger.info("Connecting & warming up Neon Serverless Postgres...")
+                await asyncio.to_thread(pipeline._get_pg_conn)
+            logger.info("ComplyGH background initialization complete.")
+        except Exception as e:
+            logger.warning(f"Background warmup notice: {e}")
+
+    asyncio.create_task(_warmup_background())
+    logger.info("ComplyGH HTTP server ready and listening on port.")
     yield
     logger.info("Shutting down ComplyGH API server.")
 

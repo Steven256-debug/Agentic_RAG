@@ -1,7 +1,13 @@
 FROM python:3.11-slim
 
 ENV PYTHONUNBUFFERED=1 \
-    PORT=7860
+    PORT=7860 \
+    OMP_NUM_THREADS=1 \
+    OPENBLAS_NUM_THREADS=1 \
+    MKL_NUM_THREADS=1 \
+    VECLIB_MAXIMUM_THREADS=1 \
+    NUMEXPR_NUM_THREADS=1 \
+    TORCH_NUM_THREADS=1
 
 WORKDIR /app
 
@@ -11,14 +17,17 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
+# Install lightweight CPU-only PyTorch first (reduces memory usage by >70% on Render 512MB)
+RUN pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu
+
 COPY requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Create standard user with UID 1000 for Hugging Face Spaces & Render compatibility
 RUN useradd -m -u 1000 user && \
-    mkdir -p /app/data/raw /app/.cache && \
-    chown -R user:user /app
+    mkdir -p /app/data/raw /app/.cache /home/user/.cache && \
+    chown -R user:user /app /home/user
 
 COPY --chown=user:user . .
 
@@ -29,4 +38,4 @@ ENV HOME=/home/user \
 
 EXPOSE 7860
 
-CMD ["sh", "-c", "uvicorn api:app --host 0.0.0.0 --port ${PORT:-7860}"]
+CMD ["sh", "-c", "uvicorn api:app --host 0.0.0.0 --port ${PORT:-7860} --workers 1"]

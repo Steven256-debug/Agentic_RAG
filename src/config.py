@@ -24,8 +24,8 @@ DATABASE_URL = os.getenv("DATABASE_URL")
 
 # Model configuration
 EMBEDDING_MODEL_NAME = os.getenv("EMBEDDING_MODEL", "all-MiniLM-L6-v2")
-GENERATION_MODEL_NAME = os.getenv("GENERATION_MODEL", "gemini-2.5-flash")
-FAST_MODEL_NAME = os.getenv("FAST_MODEL", "gemini-2.5-flash-lite")
+GENERATION_MODEL_NAME = os.getenv("GENERATION_MODEL", "gemini-3.8-flash")
+FAST_MODEL_NAME = os.getenv("FAST_MODEL", "gemini-3.8-flash")
 
 # RAG hyper-parameters
 DEFAULT_TOP_K = int(os.getenv("TOP_K", "5"))

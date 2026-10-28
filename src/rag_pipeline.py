@@ -337,11 +337,10 @@ class RAGPipeline:
 
         models_to_try = [
             model,
-            "gemini-2.5-flash",
-            "gemini-2.5-flash-lite",
+            "gemini-3.8-flash",
             "gemini-flash-latest",
             "gemini-flash-lite-latest",
-            "gemini-2.5-pro",
+            "gemini-pro-latest"
         ]
         # Deduplicate preserving order
         unique_models = [m for m in dict.fromkeys(models_to_try) if m]

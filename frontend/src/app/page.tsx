@@ -103,9 +103,9 @@ export default function Home() {
       }
       apiUrl = apiUrl.replace(/\/+$/, "");
 
-      // Add a 60-second abort timeout for clear UX feedback
+      // Add a 90-second abort timeout for clear UX feedback on free-tier cold starts
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 60000);
+      const timeoutId = setTimeout(() => controller.abort(), 90000);
       
       let response: Response;
       try {
@@ -127,16 +127,21 @@ export default function Home() {
         clearTimeout(timeoutId);
         const fErr = fetchErr as Error;
         if (fErr.name === "AbortError") {
-          throw new Error("Request timed out. The AI model or document retrieval took too long to respond. Please try again.");
+          throw new Error("Request timed out. The backend server or AI model took too long to respond. Render free tier servers take ~40s to wake up on the first request; please retry now.");
         }
-        throw new Error(`Unable to connect to ComplyGH API (${apiUrl}). Please ensure the backend server is running on port 8000.`);
+        throw new Error(`Unable to connect to ComplyGH API (${apiUrl}). Please ensure your backend service is running.`);
       } finally {
         clearTimeout(timeoutId);
       }
 
       if (!response.ok) {
         if (response.status === 429) {
-          throw new Error("Rate limit exceeded. Please wait a moment and try again.");
+          let detail = "Gemini API daily quota limit reached (Free Tier daily limit exceeded). Please try a fresh Gemini API key in your Render environment variables.";
+          try {
+            const d = await response.json();
+            if (d && d.detail) detail = d.detail;
+          } catch (_) {}
+          throw new Error(detail);
         }
         
         let errorMessage = "Failed to connect to the server.";

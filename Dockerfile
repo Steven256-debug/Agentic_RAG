@@ -29,6 +29,11 @@ RUN useradd -m -u 1000 user && \
     mkdir -p /app/data/raw /app/.cache /home/user/.cache && \
     chown -R user:user /app /home/user
 
+# Pre-cache SentenceTransformer model into image so it loads in <1s at runtime without network calls
+ENV HF_HOME=/home/user/.cache
+RUN python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('all-MiniLM-L6-v2')" && \
+    chown -R user:user /home/user/.cache
+
 COPY --chown=user:user . .
 
 USER user

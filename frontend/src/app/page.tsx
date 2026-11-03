@@ -31,6 +31,25 @@ export default function Home() {
     }
   }, []);
 
+  // Pre-warm the backend as soon as the page loads so cold start
+  // happens silently in the background, not on the user's first query.
+  useEffect(() => {
+    let apiUrl = process.env.NEXT_PUBLIC_API_URL;
+    if (!apiUrl) {
+      if (typeof window !== "undefined") {
+        const host = window.location.hostname;
+        apiUrl = (host && host !== "localhost" && host !== "127.0.0.1")
+          ? `http://${host}:8000`
+          : "http://127.0.0.1:8000";
+      } else {
+        apiUrl = "http://127.0.0.1:8000";
+      }
+    }
+    apiUrl = apiUrl.replace(/\/+$/, "");
+    // Fire-and-forget: just wake the server up, ignore errors
+    fetch(`${apiUrl}/ping`, { method: "GET" }).catch(() => {});
+  }, []);
+
   const saveSessions = (newSessions: ChatSession[]) => {
     setSessions(newSessions);
     const permanentSessions = newSessions.filter(s => !s.isTemporary);

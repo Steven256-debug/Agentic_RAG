@@ -10,6 +10,7 @@ export default function Home() {
   const [currentSessionId, setCurrentSessionId] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [isWarmingUp, setIsWarmingUp] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isTemporary, setIsTemporary] = useState(false);
 
@@ -54,6 +55,7 @@ export default function Home() {
 
   const handleSendMessage = async (content: string, corrective: boolean, routing: boolean) => {
     setError(null);
+    setIsWarmingUp(false);
     
     // Create new message
     const userMsg: Message = { role: "user", content };
@@ -82,103 +84,117 @@ export default function Home() {
     saveSessions(newSessions);
     setIsLoading(true);
 
-    try {
-      // Get last 6 messages (excluding the one we just pushed, to use as history)
-      const historyMsgCount = 6;
-      const history = newSessions[sessionIndex].messages
-        .slice(0, -1)
-        .slice(-historyMsgCount)
-        .map(m => ({ role: m.role, content: m.content }));
-
-      // Dynamically resolve API URL: prioritize environment variable (for Vercel/production), fallback to LAN IP for local dev
-      let apiUrl = process.env.NEXT_PUBLIC_API_URL;
-      if (!apiUrl) {
-        apiUrl = "http://127.0.0.1:8000";
-        if (typeof window !== "undefined") {
-          const host = window.location.hostname;
-          if (host && host !== "localhost" && host !== "127.0.0.1") {
-            apiUrl = `http://${host}:8000`;
-          }
+    // Resolve API URL
+    let apiUrl = process.env.NEXT_PUBLIC_API_URL;
+    if (!apiUrl) {
+      apiUrl = "http://127.0.0.1:8000";
+      if (typeof window !== "undefined") {
+        const host = window.location.hostname;
+        if (host && host !== "localhost" && host !== "127.0.0.1") {
+          apiUrl = `http://${host}:8000`;
         }
       }
-      apiUrl = apiUrl.replace(/\/+$/, "");
+    }
+    apiUrl = apiUrl.replace(/\/+$/, "");
 
-      // Add a 90-second abort timeout for clear UX feedback on free-tier cold starts
+    const doFetch = async (timeoutMs: number): Promise<Response> => {
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 90000);
-      
-      let response: Response;
+      const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
       try {
-        response = await fetch(`${apiUrl}/ask`, {
+        const history = newSessions[sessionIndex].messages
+          .slice(0, -1)
+          .slice(-6)
+          .map(m => ({ role: m.role, content: m.content }));
+
+        const response = await fetch(`${apiUrl}/ask`, {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             question: content,
             history,
             corrective,
             routing,
-            session_id: sessionId
+            session_id: sessionId,
           }),
-          signal: controller.signal
+          signal: controller.signal,
         });
-      } catch (fetchErr: unknown) {
-        clearTimeout(timeoutId);
-        const fErr = fetchErr as Error;
-        if (fErr.name === "AbortError") {
-          throw new Error("Request timed out. The backend server or AI model took too long to respond. Render free tier servers take ~40s to wake up on the first request; please retry now.");
-        }
-        throw new Error(`Unable to connect to ComplyGH API (${apiUrl}). Please ensure your backend service is running.`);
+        return response;
       } finally {
         clearTimeout(timeoutId);
       }
+    };
+
+    try {
+      let response: Response;
+
+      try {
+        // First attempt: 55 second timeout (enough for a warm server)
+        response = await doFetch(55000);
+      } catch (firstErr: unknown) {
+        const e = firstErr as Error;
+        if (e.name === "AbortError") {
+          // Cold start detected — show warm-up notice and retry with a longer timeout
+          setIsWarmingUp(true);
+          try {
+            response = await doFetch(90000);
+          } catch (retryErr: unknown) {
+            const re = retryErr as Error;
+            if (re.name === "AbortError") {
+              throw new Error(
+                "The server is taking longer than usual to wake up. Please wait a moment and try again."
+              );
+            }
+            throw re;
+          } finally {
+            setIsWarmingUp(false);
+          }
+        } else {
+          throw new Error(
+            `Unable to connect to ComplyGH API (${apiUrl}). Please ensure your backend service is running.`
+          );
+        }
+      }
+
+      setIsWarmingUp(false);
 
       if (!response.ok) {
         if (response.status === 429) {
-          let detail = "Gemini API daily quota limit reached (Free Tier daily limit exceeded). Please try a fresh Gemini API key in your Render environment variables.";
+          let detail = "Gemini API daily quota limit reached. Please try again later.";
           try {
             const d = await response.json();
             if (d && d.detail) detail = d.detail;
           } catch (_) {}
           throw new Error(detail);
         }
-        
         let errorMessage = "Failed to connect to the server.";
         try {
           const errorData = await response.json();
           if (errorData && errorData.detail) {
-            if (typeof errorData.detail === 'string') {
-               errorMessage = errorData.detail;
-            } else if (errorData.detail.message) {
-               errorMessage = errorData.detail.message;
-            }
+            errorMessage = typeof errorData.detail === "string"
+              ? errorData.detail
+              : errorData.detail.message ?? errorMessage;
           }
-        } catch (e) {
-          // Ignore JSON parse errors if the response isn't JSON
-        }
-        
+        } catch (_) {}
         throw new Error(errorMessage);
       }
 
       const data = await response.json();
-      
       const assistantMsg: Message = {
         role: "assistant",
         content: data.answer,
         sources: data.sources,
       };
 
-      // Append the assistant's message to the current session.
       newSessions[sessionIndex].messages.push(assistantMsg);
       newSessions[sessionIndex].updatedAt = Date.now();
       saveSessions([...newSessions]);
-      
+
     } catch (err: unknown) {
       const e = err as Error;
       setError(e.message || "An unexpected error occurred.");
     } finally {
       setIsLoading(false);
+      setIsWarmingUp(false);
     }
   };
 
@@ -202,6 +218,7 @@ export default function Home() {
         messages={currentMessages}
         onSendMessage={handleSendMessage}
         isLoading={isLoading}
+        isWarmingUp={isWarmingUp}
         error={error}
         onRetry={() => {
           const lastUserMessage = currentMessages.slice().reverse().find((m) => m.role === "user");

@@ -22,6 +22,7 @@ export default function ChatArea({
   messages,
   onSendMessage,
   isLoading,
+  isWarmingUp,
   error,
   onRetry,
   onToggleSidebar,
@@ -30,6 +31,7 @@ export default function ChatArea({
   messages: Message[];
   onSendMessage: (msg: string, corrective: boolean, routing: boolean) => void;
   isLoading: boolean;
+  isWarmingUp: boolean;
   error: string | null;
   onRetry: () => void;
   onToggleSidebar: () => void;
@@ -168,11 +170,20 @@ export default function ChatArea({
                   <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-1">
                     <ShieldCheck className="w-5 h-5 text-accent animate-pulse" />
                   </div>
-                  <div className="bg-card border border-border p-4 rounded-2xl rounded-tl-sm shadow-sm flex items-center space-x-2">
-                    <span className="w-2 h-2 rounded-full bg-accent animate-bounce" style={{ animationDelay: "0ms" }} />
-                    <span className="w-2 h-2 rounded-full bg-accent animate-bounce" style={{ animationDelay: "150ms" }} />
-                    <span className="w-2 h-2 rounded-full bg-accent animate-bounce" style={{ animationDelay: "300ms" }} />
-                    <span className="text-xs text-gray-400 pl-2">Consulting BOG regulations...</span>
+                  <div className="bg-card border border-border p-4 rounded-2xl rounded-tl-sm shadow-sm flex flex-col space-y-1.5 max-w-xs">
+                    <div className="flex items-center space-x-2">
+                      <span className="w-2 h-2 rounded-full bg-accent animate-bounce" style={{ animationDelay: "0ms" }} />
+                      <span className="w-2 h-2 rounded-full bg-accent animate-bounce" style={{ animationDelay: "150ms" }} />
+                      <span className="w-2 h-2 rounded-full bg-accent animate-bounce" style={{ animationDelay: "300ms" }} />
+                      <span className="text-xs text-gray-400 pl-2">
+                        {isWarmingUp ? "Waking up server…" : "Consulting BOG regulations..."}
+                      </span>
+                    </div>
+                    {isWarmingUp && (
+                      <p className="text-[11px] text-amber-500 dark:text-amber-400 leading-snug pl-1">
+                        ☕ Server was asleep — retrying automatically. This takes ~30s on first load.
+                      </p>
+                    )}
                   </div>
                 </motion.div>
               )}

@@ -2,9 +2,10 @@ import os
 import sys
 import asyncio
 import logging
-from typing import List, Optional, Dict, Any
+from typing import List, Optional
 from contextlib import asynccontextmanager
 
+import httpx
 from fastapi import FastAPI, Request, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
@@ -33,7 +34,7 @@ class ChatMessage(BaseModel):
 
 class AskRequest(BaseModel):
     question: str = Field(..., min_length=1, description="User's query")
-    history: Optional[List[ChatMessage]] = Field(default=[], description="Previous conversation turns")
+    history: Optional[List[ChatMessage]] = Field(default_factory=list, description="Previous conversation turns")
     corrective: bool = Field(default=False, description="Enable self-reflection & query reformulation")
     routing: bool = Field(default=False, description="Enable query routing to specific documents")
     use_hybrid: bool = Field(default=True, description="Enable dense + BM25 hybrid retrieval")
@@ -81,7 +82,27 @@ async def lifespan(app: FastAPI):
         except Exception as e:
             logger.warning(f"Background warmup notice: {e}")
 
+    # Self-ping keep-alive: hits /ping every 10 minutes to prevent Render free tier sleep
+    async def _keep_alive():
+        # Wait for server to fully start before first ping
+        await asyncio.sleep(30)
+        interval = 10 * 60  # 10 minutes
+        while True:
+            render_url = os.environ.get("RENDER_EXTERNAL_URL", "").rstrip("/")
+            if render_url:
+                ping_url = f"{render_url}/ping"
+                try:
+                    async with httpx.AsyncClient(timeout=15.0) as client:
+                        r = await client.get(ping_url)
+                    logger.info(f"Keep-alive ping → {r.status_code} ({ping_url})")
+                except Exception as e:
+                    logger.warning(f"Keep-alive ping failed: {e}")
+            else:
+                logger.debug("RENDER_EXTERNAL_URL not set — keep-alive skipped (local dev).")
+            await asyncio.sleep(interval)
+
     asyncio.create_task(_warmup_background())
+    asyncio.create_task(_keep_alive())
     logger.info("ComplyGH HTTP server ready and listening on port.")
     yield
     logger.info("Shutting down ComplyGH API server.")
@@ -121,6 +142,11 @@ async def health_check():
     """Health check endpoint for container probes."""
     return {"status": "ok", "service": "ComplyGH RAG"}
 
+
+@app.get("/ping", tags=["System"])
+async def ping():
+    """Lightweight keep-alive endpoint. Hit every ~10 min to prevent Render free-tier sleep."""
+    return {"pong": True}
 
 
 @app.get("/documents", response_model=DocumentListResponse, tags=["Documents"])
@@ -164,12 +190,12 @@ async def ask_question(request: Request, body: AskRequest):
 
         sources_formatted = [
             SourceItem(
-                source_filename=s["source_filename"],
-                page_number=str(s["page_number"]),
-                section_title=s["section_title"],
-                text=s["text"]
+                source_filename=s.get("source_filename", "Unknown"),
+                page_number=str(s.get("page_number", "Unknown")),
+                section_title=s.get("section_title") or "Unknown",
+                text=s.get("text", ""),
             )
-            for s in result["sources"]
+            for s in result.get("sources", [])
         ]
 
         return AskResponse(

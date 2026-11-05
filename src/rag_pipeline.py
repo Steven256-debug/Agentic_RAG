@@ -282,7 +282,8 @@ class RAGPipeline:
     def chroma_collection(self):
         if self._collection is None:
             if not VECTORDB_DIR.exists():
-                raise FileNotFoundError(f"ChromaDB directory not found at {VECTORDB_DIR}. Ingest documents first.")
+                logger.warning(f"ChromaDB directory not found at {VECTORDB_DIR}.")
+                return None
             logger.info(f"Connecting to ChromaDB at: {VECTORDB_DIR}")
             self._chroma_client = chromadb.PersistentClient(path=str(VECTORDB_DIR))
             self._collection = self._chroma_client.get_collection(name=CHROMA_COLLECTION_NAME)
@@ -303,6 +304,8 @@ class RAGPipeline:
         if self._bm25_index is None:
             try:
                 coll = self.chroma_collection
+                if coll is None:
+                    return
                 records = coll.get(include=["documents", "metadatas"])
                 ids = records.get("ids", [])
                 docs = records.get("documents", [])
@@ -397,15 +400,17 @@ class RAGPipeline:
         if RAW_DATA_DIR.exists():
             available_files = [f.name for f in RAW_DATA_DIR.glob("*.pdf")]
 
-        if not available_files:
+        if not available_files and VECTORDB_DIR.exists():
             try:
-                results = self.chroma_collection.get(include=["metadatas"])
-                metadatas = results.get("metadatas", [])
-                unique_sources = set()
-                for meta in metadatas:
-                    if meta and "source_filename" in meta:
-                        unique_sources.add(meta["source_filename"])
-                available_files = sorted(list(unique_sources))
+                coll = self.chroma_collection
+                if coll:
+                    results = coll.get(include=["metadatas"])
+                    metadatas = results.get("metadatas", [])
+                    unique_sources = set()
+                    for meta in metadatas:
+                        if meta and "source_filename" in meta:
+                            unique_sources.add(meta["source_filename"])
+                    available_files = sorted(list(unique_sources))
             except Exception:
                 pass
         return sorted(available_files)
@@ -581,10 +586,22 @@ class RAGPipeline:
                     use_hybrid=use_hybrid,
                     institution_type=institution_type
                 )
-                if neon_docs:
-                    return neon_docs, neon_metas, neon_dists
+                # If Neon is enabled and executed successfully, return its results directly
+                return neon_docs, neon_metas, neon_dists
             except Exception as e:
-                logger.warning(f"Neon retrieval failed: {e}. Falling back to local ChromaDB.")
+                logger.warning(f"Neon retrieval failed: {e}. Attempting local ChromaDB fallback.")
+
+        # Ensure local ChromaDB directory exists before attempting ChromaDB fallback
+        if not VECTORDB_DIR.exists():
+            if not self.is_neon_enabled:
+                logger.error(f"Cannot retrieve: DATABASE_URL is not set and local ChromaDB directory not found at {VECTORDB_DIR}.")
+            else:
+                logger.error(f"Cannot retrieve: Neon failed and local ChromaDB directory not found at {VECTORDB_DIR}.")
+            return [], [], []
+
+        coll = self.chroma_collection
+        if coll is None:
+            return [], [], []
 
         query_embedding = self.embedder.encode(query).tolist()
         
@@ -596,7 +613,6 @@ class RAGPipeline:
         if routing_filter:
             dense_kwargs["where"] = routing_filter
 
-        coll = self.chroma_collection
         dense_results = coll.query(**dense_kwargs)
 
         if not dense_results["ids"] or not dense_results["ids"][0]:

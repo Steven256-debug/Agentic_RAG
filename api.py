@@ -77,7 +77,16 @@ async def lifespan(app: FastAPI):
         try:
             if pipeline.is_neon_enabled:
                 logger.info("Connecting & warming up Neon Serverless Postgres...")
-                await asyncio.to_thread(pipeline._get_pg_conn)
+                conn = await asyncio.to_thread(pipeline._get_pg_conn)
+                if conn:
+                    logger.info("Neon PostgreSQL connected and ready.")
+                else:
+                    logger.warning("Could not establish connection to Neon PostgreSQL.")
+            else:
+                logger.warning(
+                    "DATABASE_URL environment variable is NOT set! "
+                    "In cloud deployments (Render), DATABASE_URL must be set in your Environment tab."
+                )
             logger.info("ComplyGH background initialization complete.")
         except Exception as e:
             logger.warning(f"Background warmup notice: {e}")
@@ -140,7 +149,12 @@ app.mount("/pdfs", StaticFiles(directory=str(RAW_DATA_DIR)), name="pdfs")
 @app.get("/health", tags=["System"])
 async def health_check():
     """Health check endpoint for container probes."""
-    return {"status": "ok", "service": "ComplyGH RAG"}
+    pipeline: RAGPipeline = app.state.pipeline
+    return {
+        "status": "ok",
+        "service": "ComplyGH RAG",
+        "neon_configured": pipeline.is_neon_enabled
+    }
 
 
 @app.get("/ping", tags=["System"])

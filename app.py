@@ -3,8 +3,6 @@ import os
 import sys
 import json
 import uuid
-import time
-from pathlib import Path
 
 # Add src to Python path
 sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
@@ -118,9 +116,12 @@ def load_history():
 
 
 def save_history(history):
-    CHAT_HISTORY_FILE.parent.mkdir(parents=True, exist_ok=True)
-    with open(CHAT_HISTORY_FILE, "w", encoding="utf-8") as f:
-        json.dump(history, f, indent=4)
+    try:
+        CHAT_HISTORY_FILE.parent.mkdir(parents=True, exist_ok=True)
+        with open(CHAT_HISTORY_FILE, "w", encoding="utf-8") as f:
+            json.dump(history, f, indent=4, default=str)
+    except Exception as e:
+        st.warning(f"Failed to persist chat history: {e}")
 
 
 if "chat_history" not in st.session_state:
@@ -132,7 +133,7 @@ if "current_session_id" not in st.session_state:
 
 # Synchronize messages for current session
 if st.session_state.current_session_id in st.session_state.chat_history:
-    st.session_state.messages = st.session_state.chat_history[st.session_state.current_session_id]
+    st.session_state.messages = list(st.session_state.chat_history[st.session_state.current_session_id])
 else:
     st.session_state.messages = []
 
@@ -141,8 +142,14 @@ else:
 @st.cache_resource(show_spinner="Initializing ComplyGH models & index...")
 def get_pipeline():
     pipeline = RAGPipeline.get_instance()
-    # Warm up collection & embedder
-    _ = pipeline.chroma_collection
+    # Warm up database / collection & embedder
+    if pipeline.is_neon_enabled:
+        try:
+            _ = pipeline._get_pg_conn()
+        except Exception:
+            pass
+    elif pipeline.chroma_collection is not None:
+        _ = pipeline.chroma_collection
     _ = pipeline.embedder
     return pipeline
 
@@ -176,8 +183,9 @@ with st.sidebar:
 
         title = "New Chat"
         for msg in s_data:
-            if msg["role"] == "user":
-                title = msg["content"][:28] + ("..." if len(msg["content"]) > 28 else "")
+            if isinstance(msg, dict) and msg.get("role") == "user":
+                content = msg.get("content", "")
+                title = content[:28] + ("..." if len(content) > 28 else "")
                 break
 
         if st.button(f"💬 {title}", key=f"session_{s_id}", use_container_width=True):
@@ -218,14 +226,25 @@ if not st.session_state.messages:
 else:
     # Render chat conversation
     for msg in st.session_state.messages:
-        with st.chat_message(msg["role"]):
-            if msg["role"] == "assistant":
+        if not isinstance(msg, dict):
+            continue
+        role = msg.get("role", "user")
+        content = msg.get("content", "")
+        with st.chat_message(role):
+            if role == "assistant":
                 st.markdown("**ComplyGH**")
-            st.markdown(msg["content"])
+            st.markdown(content)
             if msg.get("sources"):
-                with st.expander(f"📖 View Citations & Sources ({len(msg['sources'])})"):
-                    for src in msg["sources"]:
-                        st.markdown(f"- **{src.get('source_filename', 'Document')}** (Page {src.get('page_number', '?')}) — *{src.get('section_title', 'General')}*")
+                sources_list = msg["sources"]
+                with st.expander(f"📖 View Citations & Sources ({len(sources_list)})"):
+                    for src in sources_list:
+                        if isinstance(src, dict):
+                            fn = src.get('source_filename', 'Document')
+                            pg = src.get('page_number', '?')
+                            sec = src.get('section_title', 'General')
+                            st.markdown(f"- **{fn}** (Page {pg}) — *{sec}*")
+                        else:
+                            st.markdown(f"- {src}")
 
 
 # Handle User Prompt Input
@@ -251,8 +270,9 @@ if user_input:
             try:
                 # Prepare conversation history for contextual rewriting
                 history_turns = [
-                    {"role": m["role"], "content": m["content"]}
+                    {"role": m.get("role", "user"), "content": m.get("content", "")}
                     for m in st.session_state.messages[:-1]
+                    if isinstance(m, dict)
                 ]
 
                 rag_result = pipeline.execute_rag(
@@ -264,7 +284,7 @@ if user_input:
                     top_k=top_k_chunks
                 )
 
-                answer_text = rag_result["answer"]
+                answer_text = rag_result.get("answer", "No answer generated.")
                 sources = rag_result.get("sources", [])
                 routed_to = rag_result.get("routed_to")
                 reformulated = rag_result.get("reformulated_query")
@@ -284,13 +304,17 @@ if user_input:
                 if sources:
                     with st.expander(f"📖 View Citations & Sources ({len(sources)}) — Generated in {latency}s"):
                         for s in sources:
-                            fn = s.get('source_filename', 'Document')
-                            pg = s.get('page_number', '?')
-                            sec = s.get('section_title', 'General')
-                            txt = s.get('text', '')
-                            st.markdown(f"**{fn}** (Page {pg}) — *{sec}*")
-                            st.caption(f'"{txt[:280]}..."' if len(txt) > 280 else f'"{txt}"')
-                            st.divider()
+                            if isinstance(s, dict):
+                                fn = s.get('source_filename', 'Document')
+                                pg = s.get('page_number', '?')
+                                sec = s.get('section_title', 'General')
+                                txt = s.get('text', '')
+                                st.markdown(f"**{fn}** (Page {pg}) — *{sec}*")
+                                if txt:
+                                    st.caption(f'"{txt[:280]}..."' if len(txt) > 280 else f'"{txt}"')
+                                st.divider()
+                            else:
+                                st.markdown(f"- {s}")
 
                 # Save assistant response to session
                 st.session_state.messages.append({

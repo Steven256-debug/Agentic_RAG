@@ -13,7 +13,6 @@ import {
   PanelLeftOpen,
   Settings2,
   Globe,
-  FileText,
 } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import { motion, AnimatePresence } from "framer-motion";
@@ -392,7 +391,7 @@ const SourceCard = ({ source, index }: { source: Source; index: number }) => {
               </a>
             </div>
             <p className="text-xs text-gray-600 dark:text-gray-400 line-clamp-4 leading-relaxed font-serif italic bg-gray-50 dark:bg-gray-800/40 p-2.5 rounded-lg border border-border/50">
-              "{source.text}"
+              &ldquo;{source.text}&rdquo;
             </p>
           </motion.div>
         )}

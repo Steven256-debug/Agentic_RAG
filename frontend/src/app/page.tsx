@@ -19,10 +19,8 @@ export default function Home() {
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
-        // eslint-disable-next-line
         setSessions(parsed);
         if (parsed.length > 0) {
-          // eslint-disable-next-line
           setCurrentSessionId(parsed[0].id);
         }
       } catch (e) {
@@ -182,7 +180,7 @@ export default function Home() {
           try {
             const d = await response.json();
             if (d && d.detail) detail = d.detail;
-          } catch (_) {}
+          } catch {}
           throw new Error(detail);
         }
         let errorMessage = "Failed to connect to the server.";
@@ -193,7 +191,7 @@ export default function Home() {
               ? errorData.detail
               : errorData.detail.message ?? errorMessage;
           }
-        } catch (_) {}
+        } catch {}
         throw new Error(errorMessage);
       }
 

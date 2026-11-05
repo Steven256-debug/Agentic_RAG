@@ -15,17 +15,18 @@ export default function Home() {
   const [isTemporary, setIsTemporary] = useState(false);
 
   useEffect(() => {
-    const saved = localStorage.getItem("complygh_sessions");
-    if (saved) {
-      try {
+    try {
+      const saved = localStorage.getItem("complygh_sessions");
+      if (saved) {
         const parsed = JSON.parse(saved);
-        setSessions(parsed);
-        if (parsed.length > 0) {
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          // eslint-disable-next-line react-hooks/set-state-in-effect
+          setSessions(parsed);
           setCurrentSessionId(parsed[0].id);
         }
-      } catch (e) {
-        console.error("Failed to parse sessions", e);
       }
+    } catch (e) {
+      console.error("Failed to parse sessions", e);
     }
   }, []);
 

@@ -46,7 +46,7 @@ export default function Home() {
     }
     apiUrl = apiUrl.replace(/\/+$/, "");
     // Fire-and-forget: just wake the server up, ignore errors
-    fetch(`${apiUrl}/ping`, { method: "GET" }).catch(() => {});
+    fetch(`${apiUrl}/ping`, { method: "GET" }).catch(() => { });
   }, []);
 
   const saveSessions = (newSessions: ChatSession[]) => {
@@ -74,7 +74,7 @@ export default function Home() {
   const handleSendMessage = async (content: string, corrective: boolean, routing: boolean) => {
     setError(null);
     setIsWarmingUp(false);
-    
+
     // Create new message
     const userMsg: Message = { role: "user", content };
     let sessionId = currentSessionId;
@@ -98,7 +98,7 @@ export default function Home() {
       newSessions[sessionIndex].messages.push(userMsg);
       newSessions[sessionIndex].updatedAt = Date.now();
     }
-    
+
     saveSessions(newSessions);
     setIsLoading(true);
 
@@ -159,7 +159,7 @@ export default function Home() {
             const re = retryErr as Error;
             if (re.name === "AbortError") {
               throw new Error(
-                "The server is taking longer than usual to wake up. Please wait a moment and try again."
+                "The server is taking longer than usual to wake up (free instances sleep after inactivity). Please click Retry below to query the freshly awakened server."
               );
             }
             throw re;
@@ -181,7 +181,7 @@ export default function Home() {
           try {
             const d = await response.json();
             if (d && d.detail) detail = d.detail;
-          } catch {}
+          } catch { }
           throw new Error(detail);
         }
         let errorMessage = "Failed to connect to the server.";
@@ -192,7 +192,7 @@ export default function Home() {
               ? errorData.detail
               : errorData.detail.message ?? errorMessage;
           }
-        } catch {}
+        } catch { }
         throw new Error(errorMessage);
       }
 

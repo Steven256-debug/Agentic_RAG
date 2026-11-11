@@ -122,10 +122,10 @@ class BM25Index:
 class NeonConnectionPool:
     """
     Thread-safe connection pool for Neon Serverless Postgres with pgvector.
-    Maintains a pool of connections with automatic reconnection and liveness
-    validation for serverless scale-to-zero environments.
+    Maintains a pool of connections with automatic reconnection, connect timeout,
+    and liveness validation for serverless scale-to-zero environments.
     """
-    def __init__(self, dsn: str, max_connections: int = 5, timeout: float = 30.0):
+    def __init__(self, dsn: str, max_connections: int = 5, timeout: float = 10.0):
         self.dsn = dsn
         self.max_connections = max_connections
         self.timeout = timeout
@@ -134,14 +134,18 @@ class NeonConnectionPool:
         self._current_size = 0
 
     def _create_connection(self):
-        conn = psycopg.connect(self.dsn, autocommit=True)
+        conn = psycopg.connect(self.dsn, autocommit=True, connect_timeout=10)
         register_vector(conn)
         return conn
 
     def getconn(self):
-        # Try getting an idle connection from the pool without waiting
-        try:
-            conn = self._pool.get_nowait()
+        # 1. Drain and validate idle connections from the pool
+        while True:
+            try:
+                conn = self._pool.get_nowait()
+            except queue.Empty:
+                break
+
             if not conn.closed:
                 try:
                     conn.execute("SELECT 1;")
@@ -151,10 +155,12 @@ class NeonConnectionPool:
                         conn.close()
                     except Exception:
                         pass
-        except queue.Empty:
-            pass
 
-        # Create new connection if below capacity
+            # Decrement active count for dead connection removed from pool
+            with self._lock:
+                self._current_size = max(0, self._current_size - 1)
+
+        # 2. Create new connection if below capacity
         with self._lock:
             if self._current_size < self.max_connections:
                 try:
@@ -165,11 +171,30 @@ class NeonConnectionPool:
                     logger.error(f"Failed to create new Neon connection: {e}")
                     raise
 
-        # Wait for an available connection if at capacity
-        conn = self._pool.get(timeout=self.timeout)
-        if conn.closed:
+        # 3. Wait briefly for a connection from another thread if at capacity
+        try:
+            conn = self._pool.get(timeout=self.timeout)
+            if not conn.closed:
+                try:
+                    conn.execute("SELECT 1;")
+                    return conn
+                except Exception:
+                    try:
+                        conn.close()
+                    except Exception:
+                        pass
+            with self._lock:
+                self._current_size = max(0, self._current_size - 1)
+        except queue.Empty:
+            logger.warning("Neon pool wait timed out; resetting pool count and creating fresh connection.")
+            with self._lock:
+                self._current_size = 0
+
+        # Fallback: create fresh connection
+        with self._lock:
             conn = self._create_connection()
-        return conn
+            self._current_size += 1
+            return conn
 
     def putconn(self, conn):
         if conn and not conn.closed:
@@ -296,7 +321,10 @@ class RAGPipeline:
             api_key = os.environ.get("GEMINI_API_KEY")
             if not api_key:
                 raise ValueError("GEMINI_API_KEY environment variable is missing. Set it in .env.")
-            self._llm_client = genai.Client(api_key=api_key)
+            self._llm_client = genai.Client(
+                api_key=api_key,
+                http_options=types.HttpOptions(timeout=12000)
+            )
         return self._llm_client
 
     def _init_bm25_if_needed(self):
@@ -328,10 +356,10 @@ class RAGPipeline:
         prompt: str,
         system: Optional[str] = None,
         model: str = GENERATION_MODEL_NAME,
-        max_retries: int = 3
+        max_retries: int = 2
     ) -> str:
         """
-        Calls Gemini with exponential backoff and jitter for rate-limiting resilience.
+        Calls Gemini with client timeout and rapid failover across models.
         """
         client = self.llm_client
         config = types.GenerateContentConfig()
@@ -340,10 +368,11 @@ class RAGPipeline:
 
         models_to_try = [
             model,
-            "gemini-3.8-flash",
+            "gemini-3.5-flash",
+            "gemini-3.5-flash-lite",
             "gemini-flash-latest",
             "gemini-flash-lite-latest",
-            "gemini-pro-latest"
+            "gemini-3.8-flash"
         ]
         # Deduplicate preserving order
         unique_models = [m for m in dict.fromkeys(models_to_try) if m]
@@ -363,20 +392,25 @@ class RAGPipeline:
                     err_str = str(e)
                     is_not_found = "404" in err_str or "not found" in err_str.lower()
                     if is_not_found:
-                        logger.warning(f"Model {current_model} unavailable (404 Not Found). Trying fallback...")
+                        logger.warning(f"Model {current_model} unavailable (404 Not Found). Switching to next model...")
                         break
 
                     is_rate_limit = "429" in err_str or "quota" in err_str.lower() or "resource_exhausted" in err_str.lower()
                     if is_rate_limit:
-                        logger.warning(f"Model {current_model} quota reached (429 Resource Exhausted). Instantly switching to next model...")
+                        logger.warning(f"Model {current_model} quota reached (429 Resource Exhausted). Switching to next model...")
                         break
 
-                    is_server_error = "500" in err_str or "503" in err_str or "overloaded" in err_str.lower()
+                    is_overloaded = "503" in err_str or "504" in err_str or "overloaded" in err_str.lower() or "unavailable" in err_str.lower() or "deadline expired" in err_str.lower()
+                    if is_overloaded:
+                        logger.warning(f"Model {current_model} overloaded / unavailable (503/504). Switching immediately to next model...")
+                        break
+
+                    is_server_error = "500" in err_str
                     is_network_timeout = "timeout" in err_str.lower() or "connect" in err_str.lower() or "10060" in err_str or "10054" in err_str or "connection" in err_str.lower()
 
                     if (is_server_error or is_network_timeout) and attempt < max_retries - 1:
-                        sleep_seconds = 1.0 + random.uniform(0.2, 0.8)
-                        logger.warning(f"Gemini API transient network failure ({current_model}: {err_str[:80]}...). Retrying in {sleep_seconds:.1f}s...")
+                        sleep_seconds = 0.5 + random.uniform(0.1, 0.4)
+                        logger.warning(f"Gemini API transient failure ({current_model}: {err_str[:80]}...). Retrying in {sleep_seconds:.1f}s...")
                         time.sleep(sleep_seconds)
                         continue
                     break
@@ -482,11 +516,11 @@ class RAGPipeline:
         institution_type: Optional[str] = None
     ) -> Tuple[List[str], List[Dict[str, Any]], List[float]]:
         """
-        Executes single-statement hybrid retrieval on Neon Postgres:
+        Executes high-performance hybrid retrieval on Neon Postgres:
         - Relational filters (status, institution tier, document routing)
         - Dense vector cosine similarity via HNSW index (pgvector)
         - Lexical full-text search via GIN tsvector index
-        - Relational metadata joins (documents + sections + applicability)
+        - Reciprocal Rank Fusion (RRF) combining dense & lexical candidates
         """
         if not self.is_neon_enabled:
             return [], [], []
@@ -506,40 +540,80 @@ class RAGPipeline:
                 where_clauses.append("c.source_filename = ANY(%s)")
                 where_params.append(list(target["$in"]))
 
-        # 2. Relational institution tier filter
+        # 2. Relational institution tier filter using EXISTS to prevent row multiplication
         if institution_type:
-            where_clauses.append("a.institution_type = %s")
+            where_clauses.append("EXISTS (SELECT 1 FROM document_applicability a WHERE a.document_id = d.id AND a.institution_type = %s)")
             where_params.append(institution_type)
 
         where_sql = " AND ".join(where_clauses)
 
-        # Hybrid scoring combining dense cosine similarity (70%) and full-text keyword rank (30%)
         if use_hybrid:
-            order_sql = "((0.7 * (1 - (c.embedding <=> %s))) + (0.3 * LEAST(ts_rank(c.tsv_tokens, plainto_tsquery('english', %s)), 1.0))) DESC"
-            order_params = [query_emb, query]
+            sql = f"""
+            WITH vector_matches AS (
+                SELECT 
+                    c.id,
+                    c.chunk_text,
+                    c.source_filename,
+                    c.page_number,
+                    c.section_title,
+                    c.document_id,
+                    1 - (c.embedding <=> %s) AS cosine_sim,
+                    ROW_NUMBER() OVER (ORDER BY c.embedding <=> %s) AS rank_dense
+                FROM document_chunks c
+                JOIN documents d ON c.document_id = d.id
+                WHERE {where_sql}
+                ORDER BY c.embedding <=> %s
+                LIMIT 30
+            ),
+            text_matches AS (
+                SELECT 
+                    c.id,
+                    c.chunk_text,
+                    c.source_filename,
+                    c.page_number,
+                    c.section_title,
+                    c.document_id,
+                    0.5 AS cosine_sim,
+                    ROW_NUMBER() OVER (ORDER BY ts_rank(c.tsv_tokens, plainto_tsquery('english', %s)) DESC) AS rank_lex
+                FROM document_chunks c
+                JOIN documents d ON c.document_id = d.id
+                WHERE {where_sql} AND c.tsv_tokens @@ plainto_tsquery('english', %s)
+                ORDER BY ts_rank(c.tsv_tokens, plainto_tsquery('english', %s)) DESC
+                LIMIT 30
+            )
+            SELECT 
+                COALESCE(v.chunk_text, t.chunk_text) AS chunk_text,
+                COALESCE(v.source_filename, t.source_filename) AS source_filename,
+                COALESCE(v.page_number, t.page_number) AS page_number,
+                COALESCE(v.section_title, t.section_title) AS section_title,
+                d.title AS doc_title,
+                d.category AS doc_category,
+                COALESCE(v.cosine_sim, 0.5) AS cosine_sim,
+                (COALESCE(1.0 / (60 + v.rank_dense), 0.0) + COALESCE(1.0 / (60 + t.rank_lex), 0.0)) AS rrf_score
+            FROM vector_matches v
+            FULL OUTER JOIN text_matches t ON v.id = t.id
+            JOIN documents d ON COALESCE(v.document_id, t.document_id) = d.id
+            ORDER BY rrf_score DESC
+            LIMIT %s;
+            """
+            all_params = [query_emb, query_emb] + where_params + [query_emb, query] + where_params + [query, query, top_k]
         else:
-            order_sql = "(c.embedding <=> %s) ASC"
-            order_params = [query_emb]
-
-        select_params = [query_emb]
-        all_params = select_params + where_params + order_params + [top_k]
-
-        sql = f"""
-        SELECT 
-            c.chunk_text,
-            c.source_filename,
-            c.page_number,
-            c.section_title,
-            d.title AS doc_title,
-            d.category AS doc_category,
-            1 - (c.embedding <=> %s) AS cosine_sim
-        FROM document_chunks c
-        JOIN documents d ON c.document_id = d.id
-        LEFT JOIN document_applicability a ON d.id = a.document_id
-        WHERE {where_sql}
-        ORDER BY {order_sql}
-        LIMIT %s;
-        """
+            sql = f"""
+            SELECT 
+                c.chunk_text,
+                c.source_filename,
+                c.page_number,
+                c.section_title,
+                d.title AS doc_title,
+                d.category AS doc_category,
+                1 - (c.embedding <=> %s) AS cosine_sim
+            FROM document_chunks c
+            JOIN documents d ON c.document_id = d.id
+            WHERE {where_sql}
+            ORDER BY c.embedding <=> %s
+            LIMIT %s;
+            """
+            all_params = [query_emb] + where_params + [query_emb, top_k]
 
         with self.pg_connection() as conn:
             if not conn:
@@ -552,7 +626,7 @@ class RAGPipeline:
         metas = []
         dists = []
         for r in rows:
-            text, fname, page, section, title, category, sim = r
+            text, fname, page, section, title, category, sim = r[:7]
             docs.append(text)
             metas.append({
                 "source_filename": fname,

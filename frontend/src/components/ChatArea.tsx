@@ -246,11 +246,10 @@ export default function ChatArea({
             <button
               type="button"
               onClick={() => setShowSettings(!showSettings)}
-              className={`p-2.5 rounded-xl transition-colors min-w-[40px] min-h-[40px] flex items-center justify-center ${
-                routing || corrective || showSettings
+              className={`p-2.5 rounded-xl transition-colors min-w-[40px] min-h-[40px] flex items-center justify-center ${routing || corrective || showSettings
                   ? "text-primary dark:text-accent bg-primary/10"
                   : "text-gray-400 hover:text-primary dark:hover:text-accent"
-              }`}
+                }`}
               title="Search Settings (Routing & Corrective RAG)"
               aria-label="Settings"
             >
@@ -304,11 +303,10 @@ const MessageBubble = ({ message }: { message: Message }) => {
       )}
 
       <div
-        className={`max-w-[85%] ${
-          isUser
+        className={`max-w-[85%] ${isUser
             ? "bg-gray-100 dark:bg-gray-800 text-foreground rounded-2xl rounded-tr-sm px-5 py-3 text-[14px] sm:text-[15px] break-words"
             : "w-full min-w-0"
-        }`}
+          }`}
       >
         {isUser ? (
           <p className="whitespace-pre-wrap leading-relaxed">{message.content}</p>

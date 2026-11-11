@@ -45,11 +45,11 @@ def generate_ai_commit_message(diff_text: str, api_key: str) -> str:
     )
     
     models_to_try = [
-        os.getenv("FAST_MODEL", "gemini-3.8-flash"),
+        os.getenv("FAST_MODEL", "gemini-3.5-flash-lite"),
+        "gemini-3.5-flash",
+        "gemini-3.5-flash-lite",
+        "gemini-flash-latest",
         "gemini-3.8-flash",
-        "gemini-2.5-flash",
-        "gemini-2.0-flash",
-        "gemini-1.5-flash",
     ]
     # Deduplicate preserving order
     unique_models = list(dict.fromkeys(models_to_try))

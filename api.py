@@ -87,6 +87,12 @@ async def lifespan(app: FastAPI):
                     "DATABASE_URL environment variable is NOT set! "
                     "In cloud deployments (Render), DATABASE_URL must be set in your Environment tab."
                 )
+
+            # Pre-load embedding model in background so first user query has zero cold-load latency
+            logger.info("Pre-loading embedding model in background...")
+            await asyncio.to_thread(lambda: pipeline.embedder)
+            logger.info("Embedding model pre-loaded and ready.")
+
             logger.info("ComplyGH background initialization complete.")
         except Exception as e:
             logger.warning(f"Background warmup notice: {e}")

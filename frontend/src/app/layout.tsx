@@ -1,33 +1,59 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Host_Grotesk, Atkinson_Hyperlegible_Mono } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const hostGrotesk = Host_Grotesk({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-host-grotesk",
+  display: "swap",
+});
+
+const atkinsonMono = Atkinson_Hyperlegible_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-atkinson-mono",
+  display: "swap",
+  adjustFontFallback: false,
+});
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
   viewportFit: "cover",
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#FFFFFF" },
-    { media: "(prefers-color-scheme: dark)", color: "#171717" },
+    { media: "(prefers-color-scheme: light)", color: "#faf8f4" },
+    { media: "(prefers-color-scheme: dark)", color: "#15171c" },
   ],
 };
 
 export const metadata: Metadata = {
-  title: "ComplyGH - Your AI Guide to Ghana's Financial Regulations",
-  description: "Intelligent AI assistant for Ghanaian banking laws, capital adequacy, cybersecurity, and mobile money compliance.",
+  title: "ComplyGH - Regulatory Compliance Workspace",
+  description:
+    "AI compliance workspace for Ghanaian banking laws, capital adequacy, cybersecurity directives, and mobile money regulations.",
   openGraph: {
-    title: "ComplyGH - Your AI Guide to Ghana's Financial Regulations",
-    description: "Intelligent AI assistant for Ghanaian banking laws, capital adequacy, cybersecurity, and mobile money compliance.",
+    title: "ComplyGH - Regulatory Compliance Workspace",
+    description:
+      "AI compliance workspace for Ghanaian banking laws, capital adequacy, cybersecurity directives, and mobile money regulations.",
   },
   icons: {
     icon: "/favicon.ico",
-  }
+  },
 };
 
+const themeInitScript = `
+(function() {
+  try {
+    var saved = localStorage.getItem("complygh_theme");
+    var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    if (saved === "dark" || (!saved && prefersDark)) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  } catch (e) {}
+})();
+`;
 
 export default function RootLayout({
   children,
@@ -35,11 +61,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full overscroll-none">
-      <body className={`${inter.className} h-full antialiased overscroll-none text-foreground bg-background`}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${hostGrotesk.variable} ${atkinsonMono.variable} h-full overscroll-none`}
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
+      <body className="h-full antialiased overscroll-none text-ink bg-paper">
         {children}
       </body>
     </html>
   );
 }
-

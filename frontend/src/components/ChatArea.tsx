@@ -9,16 +9,30 @@ import {
   ChevronRight,
   Copy,
   CheckCircle2,
-  ShieldCheck,
   PanelLeftOpen,
   Settings2,
-  Globe,
+  FileText,
+  ExternalLink,
+  CornerDownLeft,
+  Loader2,
+  AlertCircle,
 } from "lucide-react";
 import ReactMarkdown from "react-markdown";
-import { motion, AnimatePresence } from "framer-motion";
+import { ComplyMark } from "./Sidebar";
+
+const STARTER_QUERIES = [
+  "What is the minimum capital adequacy ratio for banks?",
+  "What are the KYC rules for mobile money agents?",
+  "What is the penalty for non-compliance?",
+  "Summarize the Cyber Information Security Directive.",
+];
 
 export default function ChatArea({
   messages,
+  currentSessionTitle,
+  isTemporary,
+  isDesktopRailOpen,
+  onToggleDesktopRail,
   onSendMessage,
   isLoading,
   isWarmingUp,
@@ -28,6 +42,10 @@ export default function ChatArea({
   onNewChat,
 }: {
   messages: Message[];
+  currentSessionTitle: string | null;
+  isTemporary: boolean;
+  isDesktopRailOpen: boolean;
+  onToggleDesktopRail: () => void;
   onSendMessage: (msg: string, corrective: boolean, routing: boolean) => void;
   isLoading: boolean;
   isWarmingUp: boolean;
@@ -42,12 +60,34 @@ export default function ChatArea({
   const [showSettings, setShowSettings] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const settingsRef = useRef<HTMLDivElement>(null);
 
   const isEmpty = messages.length === 0;
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, isLoading]);
+
+  useEffect(() => {
+    if (!showSettings) return;
+    const handleOutsideClick = (e: MouseEvent) => {
+      if (
+        settingsRef.current &&
+        !settingsRef.current.contains(e.target as Node)
+      ) {
+        setShowSettings(false);
+      }
+    };
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setShowSettings(false);
+    };
+    document.addEventListener("mousedown", handleOutsideClick);
+    window.addEventListener("keydown", handleEsc);
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+      window.removeEventListener("keydown", handleEsc);
+    };
+  }, [showSettings]);
 
   const handleSubmit = (e?: React.FormEvent) => {
     e?.preventDefault();
@@ -72,167 +112,240 @@ export default function ChatArea({
     e.target.style.height = `${Math.min(e.target.scrollHeight, 150)}px`;
   };
 
-  return (
-    <div className="flex-1 flex flex-col bg-background h-[100dvh] relative overflow-hidden">
-      {/* Mobile Top Header */}
-      <header className="md:hidden h-14 border-b border-border bg-background/95 backdrop-blur-md flex items-center justify-between px-3 sticky top-0 z-30 flex-shrink-0">
-        <button
-          type="button"
-          onClick={onToggleSidebar}
-          className="p-2 -ml-1 text-foreground/80 hover:text-foreground active:bg-gray-100 dark:active:bg-gray-800 rounded-xl transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
-          aria-label="Open sidebar"
-        >
-          <PanelLeftOpen className="w-5 h-5" />
-        </button>
+  const activeTitle = currentSessionTitle || "New regulatory inquiry";
 
-        <div className="flex items-center space-x-2 text-primary dark:text-accent">
-          <ShieldCheck className="w-5 h-5" />
-          <span className="font-bold text-base tracking-tight">ComplyGH</span>
+  return (
+    <main className="flex-1 flex flex-col bg-paper h-[100dvh] min-w-0 relative">
+      {/* Workspace Top Bar */}
+      <header className="min-h-14 border-b border-rule bg-paper-2 flex items-center justify-between gap-2 px-3 sm:px-6 py-2 sticky top-0 z-30 flex-shrink-0">
+        <div className="flex items-center gap-2 min-w-0 flex-1">
+          <button
+            type="button"
+            onClick={onToggleSidebar}
+            className="min-[60rem]:hidden p-2 -ml-1 text-ink-2 hover:text-ink hover:bg-paper-3 active:translate-y-px rounded-pill transition-[background-color,color,transform] min-w-[44px] min-h-[44px] flex items-center justify-center cursor-pointer flex-shrink-0"
+            aria-label="Open sidebar"
+          >
+            <PanelLeftOpen className="w-5 h-5" />
+          </button>
+
+          {!isDesktopRailOpen && (
+            <button
+              type="button"
+              onClick={onToggleDesktopRail}
+              className="hidden min-[60rem]:flex p-2 -ml-1 text-ink-2 hover:text-ink hover:bg-paper-3 active:translate-y-px rounded-pill transition-[background-color,color,transform] min-w-[44px] min-h-[44px] items-center justify-center cursor-pointer flex-shrink-0"
+              aria-label="Expand sidebar"
+              title="Expand sidebar"
+            >
+              <PanelLeftOpen className="w-4 h-4" />
+            </button>
+          )}
+
+          <div className="flex items-center gap-2 min-w-0">
+            <span className="min-[60rem]:hidden w-6 h-6 rounded-pill bg-brand text-brand-ink flex items-center justify-center flex-shrink-0">
+              <ComplyMark className="w-3.5 h-3.5" />
+            </span>
+            <span className="text-sm font-medium text-ink truncate">
+              {activeTitle}
+            </span>
+            {isTemporary && (
+              <span className="text-xs px-2 py-0.5 rounded-pill bg-accent-soft text-accent-text border border-rule font-medium flex-shrink-0">
+                Temporary
+              </span>
+            )}
+          </div>
         </div>
 
-        <button
-          type="button"
-          onClick={onNewChat}
-          className="p-2 -mr-1 text-foreground/80 hover:text-foreground active:bg-gray-100 dark:active:bg-gray-800 rounded-xl transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
-          aria-label="New chat"
-        >
-          <Plus className="w-5 h-5" />
-        </button>
+        <div className="flex items-center gap-1.5 flex-shrink-0">
+          {routing && (
+            <span className="text-xs px-2 py-1 rounded-pill bg-cool-soft text-cool border border-rule font-medium whitespace-nowrap">
+              Routing
+            </span>
+          )}
+          {corrective && (
+            <span className="text-xs px-2 py-1 rounded-pill bg-cool-soft text-cool border border-rule font-medium whitespace-nowrap">
+              Corrective
+            </span>
+          )}
+
+          <button
+            type="button"
+            onClick={onNewChat}
+            className="min-[60rem]:hidden p-2 -mr-1 text-ink-2 hover:text-ink hover:bg-paper-3 active:translate-y-px rounded-pill transition-[background-color,color,transform] min-w-[44px] min-h-[44px] flex items-center justify-center cursor-pointer flex-shrink-0"
+            aria-label="New chat"
+          >
+            <Plus className="w-5 h-5" />
+          </button>
+        </div>
       </header>
 
       {isEmpty ? (
-        // --- EMPTY STATE (ComplyGH Original) ---
-        <div className="flex-1 flex flex-col items-center justify-center p-4 sm:p-6 text-center overflow-y-auto smooth-scroll">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="mb-6 sm:mb-8 flex flex-col items-center max-w-lg"
-          >
-            <ShieldCheck className="w-16 h-16 sm:w-20 sm:h-20 text-primary dark:text-accent mb-3 sm:mb-4 drop-shadow-sm" />
-            <h1 className="text-3xl sm:text-4xl font-bold text-primary dark:text-gray-100 mb-2">ComplyGH</h1>
-            <p className="text-gray-500 dark:text-gray-400 text-sm sm:text-lg">
-              Your AI guide to Ghana&apos;s financial regulations
-            </p>
-          </motion.div>
+        /* --- EMPTY WORKSPACE: STATUTORY INQUIRY LEDGER --- */
+        <div className="flex-1 flex flex-col justify-center px-4 sm:px-6 py-8 overflow-y-auto smooth-scroll">
+          <div className="w-full max-w-3xl mx-auto">
+            <div className="mb-8 flex items-start gap-4">
+              <div className="w-11 h-11 rounded-card bg-brand text-brand-ink flex items-center justify-center flex-shrink-0 mt-0.5">
+                <ComplyMark className="w-6 h-6" />
+              </div>
+              <div className="min-w-0">
+                <h1 className="font-display text-2xl sm:text-3xl font-medium tracking-[-0.03em] text-ink mb-1.5">
+                  ComplyGH
+                </h1>
+                <p className="text-ink-2 text-base leading-relaxed">
+                  Your AI guide to Ghana&apos;s financial regulations
+                </p>
+              </div>
+            </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 w-full max-w-2xl px-2">
-            {[
-              "What is the minimum capital adequacy ratio for banks?",
-              "What are the KYC rules for mobile money agents?",
-              "What is the penalty for non-compliance?",
-              "Summarize the Cyber Information Security Directive.",
-            ].map((q, i) => (
-              <motion.button
-                key={i}
-                type="button"
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: i * 0.08 }}
-                onClick={() => setInput(q)}
-                className="p-3.5 sm:p-4 bg-card border border-border rounded-xl text-left hover:shadow-md hover:border-accent active:bg-gray-100 dark:active:bg-gray-800/80 transition-all text-xs sm:text-sm text-foreground min-h-[56px] flex items-center"
-              >
-                {q}
-              </motion.button>
-            ))}
-          </div>
+            <section
+              aria-labelledby="suggested-queries-heading"
+              className="border border-rule rounded-card bg-paper-2 overflow-hidden divide-y divide-rule"
+            >
+              <div className="px-4 py-2.5 bg-paper-3 flex items-center justify-between">
+                <h2
+                  id="suggested-queries-heading"
+                  className="text-xs font-medium text-ink-2"
+                >
+                  Suggested compliance queries
+                </h2>
+                <span className="measured text-xs text-muted">
+                  04 prompts
+                </span>
+              </div>
+              {STARTER_QUERIES.map((q, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  onClick={() => setInput(q)}
+                  className="group w-full px-4 py-3.5 flex items-center justify-between gap-4 text-left hover:bg-paper-3 active:translate-y-px transition-[background-color,transform] min-h-[52px] cursor-pointer"
+                >
+                  <div className="flex items-baseline gap-3.5 min-w-0">
+                    <span className="measured text-xs font-medium text-cool flex-shrink-0">
+                      0{i + 1}
+                    </span>
+                    <span className="text-sm sm:text-base text-ink leading-snug">
+                      {q}
+                    </span>
+                  </div>
+                  <CornerDownLeft className="w-4 h-4 text-muted group-hover:text-accent-text flex-shrink-0 transition-colors" />
+                </button>
+              ))}
+            </section>
 
-          {error && (
-            <div className="w-full max-w-2xl mt-4 px-2">
-              <div className="p-3 rounded-xl bg-red-500/10 border border-red-500/20 text-xs sm:text-sm text-red-600 dark:text-red-400 flex items-center justify-between">
-                <span>{error}</span>
+            {error && (
+              <div className="mt-4 p-3.5 rounded-card bg-bad-soft border border-bad text-sm text-bad flex items-center justify-between gap-3">
+                <span className="flex items-center gap-2 min-w-0">
+                  <AlertCircle className="w-4 h-4 flex-shrink-0" />
+                  <span>{error}</span>
+                </span>
                 <button
                   type="button"
                   onClick={onRetry}
-                  className="ml-3 font-semibold underline hover:no-underline flex-shrink-0"
+                  className="hit-target font-medium underline hover:no-underline active:translate-y-px flex-shrink-0 min-h-[36px] px-2 rounded-pill cursor-pointer transition-transform"
                 >
                   Retry
                 </button>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       ) : (
-        // --- ACTIVE CHAT STATE ---
-        <div className="flex-1 overflow-y-auto smooth-scroll p-4 sm:p-6 space-y-5 pb-36 sm:pb-40">
-          <div className="max-w-3xl mx-auto space-y-6">
-            <AnimatePresence initial={false}>
-              {messages.map((msg, idx) => (
-                <MessageBubble key={idx} message={msg} />
-              ))}
+        /* --- ACTIVE WORKSPACE THREAD --- */
+        <div className="flex-1 overflow-y-auto smooth-scroll px-4 sm:px-6 py-6">
+          <h1 className="visually-hidden">{activeTitle}</h1>
+          <div className="max-w-3xl mx-auto space-y-6 pb-8">
+            {messages.map((msg, idx) => (
+              <MessageBubble key={idx} message={msg} />
+            ))}
 
-              {isLoading && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="flex space-x-3 items-start"
-                >
-                  <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-1">
-                    <ShieldCheck className="w-5 h-5 text-accent animate-pulse" />
-                  </div>
-                  <div className="bg-card border border-border p-4 rounded-2xl rounded-tl-sm shadow-sm flex flex-col space-y-1.5 max-w-xs">
-                    <div className="flex items-center space-x-2">
-                      <span className="w-2 h-2 rounded-full bg-accent animate-bounce" style={{ animationDelay: "0ms" }} />
-                      <span className="w-2 h-2 rounded-full bg-accent animate-bounce" style={{ animationDelay: "150ms" }} />
-                      <span className="w-2 h-2 rounded-full bg-accent animate-bounce" style={{ animationDelay: "300ms" }} />
-                      <span className="text-xs text-gray-400 pl-2">
-                        {isWarmingUp ? "Waking up server…" : "Consulting BOG regulations..."}
-                      </span>
-                    </div>
-                    {isWarmingUp && (
-                      <p className="text-[11px] text-amber-500 dark:text-amber-400 leading-snug pl-1">
-                        ☕ Server was asleep — retrying automatically. This takes ~30s on first load.
-                      </p>
-                    )}
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
+            {isLoading && (
+              <div className="border border-rule rounded-card bg-paper-2 p-4 flex items-start gap-3">
+                <Loader2 className="w-4 h-4 text-cool animate-spin motion-reduce:animate-none flex-shrink-0 mt-0.5" />
+                <div className="space-y-1 min-w-0">
+                  <p className="text-sm font-medium text-ink">
+                    {isWarmingUp
+                      ? "Waking up server…"
+                      : "Consulting BOG regulations…"}
+                  </p>
+                  {isWarmingUp && (
+                    <p className="text-xs text-cool leading-relaxed">
+                      Server was asleep, retrying automatically. This takes about
+                      30s on first load.
+                    </p>
+                  )}
+                </div>
+              </div>
+            )}
 
             {error && (
-              <div className="p-3 rounded-xl bg-red-500/10 border border-red-500/20 text-xs sm:text-sm text-red-600 dark:text-red-400 flex items-center justify-between">
-                <span>{error}</span>
+              <div className="p-3.5 rounded-card bg-bad-soft border border-bad text-sm text-bad flex items-center justify-between gap-3">
+                <span className="flex items-center gap-2 min-w-0">
+                  <AlertCircle className="w-4 h-4 flex-shrink-0" />
+                  <span>{error}</span>
+                </span>
                 <button
                   type="button"
                   onClick={onRetry}
-                  className="ml-3 font-semibold underline hover:no-underline flex-shrink-0"
+                  className="hit-target font-medium underline hover:no-underline active:translate-y-px flex-shrink-0 min-h-[36px] px-2 rounded-pill cursor-pointer transition-transform"
                 >
                   Retry
                 </button>
               </div>
             )}
 
-            <div ref={messagesEndRef} className="h-4" />
+            <div ref={messagesEndRef} className="h-2" />
           </div>
         </div>
       )}
 
-      {/* Input Area */}
-      <div className="p-3 sm:p-4 bg-background border-t border-border/40 pb-safe">
-        <div className="max-w-3xl mx-auto relative">
-          {/* Advanced Settings Popup */}
+      {/* Composer Area */}
+      <div className="px-3 sm:px-6 py-3 bg-paper border-t border-rule pb-safe flex-shrink-0">
+        <div className="max-w-3xl mx-auto relative" ref={settingsRef}>
+          {/* Search Controls Popover */}
           {showSettings && (
-            <div className="absolute bottom-full mb-2 right-0 bg-card border border-border rounded-xl shadow-xl p-4 w-72 z-30">
-              <h4 className="text-sm font-semibold mb-3 border-b border-border pb-2 text-foreground flex items-center justify-between">
-                <span>Search Controls</span>
-                <span className="text-[10px] font-mono text-gray-400">RAG</span>
-              </h4>
+            <div
+              role="dialog"
+              aria-label="Search controls"
+              className="absolute bottom-full mb-2 left-0 bg-paper-2 border border-rule-2 rounded-card p-4 w-80 max-w-[calc(100vw-2rem)] z-30"
+            >
+              <div className="flex items-center justify-between border-b border-rule pb-2.5 mb-3">
+                <h2 className="text-sm font-medium text-ink">
+                  Search controls
+                </h2>
+                <span className="text-xs text-muted">Retrieval pipeline</span>
+              </div>
+
               <div className="space-y-3">
-                <label className="flex items-center justify-between cursor-pointer py-1">
-                  <span className="text-xs text-foreground/80 font-medium">Query Routing</span>
+                <label className="flex items-start justify-between gap-3 cursor-pointer py-1">
+                  <div>
+                    <span className="text-sm font-medium text-ink block">
+                      Query Routing
+                    </span>
+                    <span className="text-xs text-muted block">
+                      Scope search to matching statutory Acts
+                    </span>
+                  </div>
                   <input
                     type="checkbox"
                     checked={routing}
                     onChange={(e) => setRouting(e.target.checked)}
-                    className="w-4 h-4 accent-primary"
+                    className="w-4 h-4 mt-0.5 accent-cool cursor-pointer flex-shrink-0"
                   />
                 </label>
-                <label className="flex items-center justify-between cursor-pointer py-1">
-                  <span className="text-xs text-foreground/80 font-medium">Corrective Retrieval</span>
+
+                <label className="flex items-start justify-between gap-3 cursor-pointer py-1">
+                  <div>
+                    <span className="text-sm font-medium text-ink block">
+                      Corrective Retrieval
+                    </span>
+                    <span className="text-xs text-muted block">
+                      Reformulate and re-query weak context
+                    </span>
+                  </div>
                   <input
                     type="checkbox"
                     checked={corrective}
                     onChange={(e) => setCorrective(e.target.checked)}
-                    className="w-4 h-4 accent-primary"
+                    className="w-4 h-4 mt-0.5 accent-cool cursor-pointer flex-shrink-0"
                   />
                 </label>
               </div>
@@ -241,19 +354,21 @@ export default function ChatArea({
 
           <form
             onSubmit={handleSubmit}
-            className="relative shadow-sm rounded-2xl bg-card border border-border focus-within:border-primary transition-colors flex items-end p-1.5"
+            className="relative rounded-card bg-paper-3 border border-muted outline-2 outline-transparent -outline-offset-2 has-[textarea:focus-visible]:outline-focus flex items-end p-1.5 gap-1"
           >
             <button
               type="button"
               onClick={() => setShowSettings(!showSettings)}
-              className={`p-2.5 rounded-xl transition-colors min-w-[40px] min-h-[40px] flex items-center justify-center ${routing || corrective || showSettings
-                  ? "text-primary dark:text-accent bg-primary/10"
-                  : "text-gray-400 hover:text-primary dark:hover:text-accent"
-                }`}
-              title="Search Settings (Routing & Corrective RAG)"
-              aria-label="Settings"
+              aria-expanded={showSettings}
+              aria-label="Search controls"
+              title="Search Settings (Routing and Corrective RAG)"
+              className={`p-2 rounded-pill transition-[background-color,color,transform] active:translate-y-px min-w-[40px] min-h-[40px] flex items-center justify-center cursor-pointer flex-shrink-0 ${
+                routing || corrective || showSettings
+                  ? "text-cool bg-cool-soft"
+                  : "text-muted hover:text-ink hover:bg-paper-2"
+              }`}
             >
-              <Settings2 className="w-5 h-5" />
+              <Settings2 className="w-4 h-4" />
             </button>
 
             <textarea
@@ -261,82 +376,92 @@ export default function ChatArea({
               value={input}
               onChange={handleTextareaInput}
               onKeyDown={handleKeyDown}
-              placeholder="Ask about Ghana's financial regulations..."
-              className="flex-1 max-h-[150px] bg-transparent resize-none outline-none py-2.5 px-2 text-foreground text-[16px] sm:text-[15px] placeholder-gray-400 leading-relaxed"
+              placeholder="Ask about Ghana's financial regulations…"
+              aria-label="Ask about Ghana's financial regulations"
+              className="flex-1 max-h-[150px] bg-transparent resize-none outline-none py-2 px-2 text-ink text-base placeholder:text-muted leading-relaxed min-w-0"
               rows={1}
             />
 
             <button
               type="submit"
               disabled={!input.trim() || isLoading}
-              className="m-1 p-2.5 rounded-xl bg-primary text-white disabled:opacity-40 disabled:cursor-not-allowed hover:bg-primary-light active:scale-95 transition-all min-w-[40px] min-h-[40px] flex items-center justify-center"
               aria-label="Send"
+              className="p-2 rounded-pill bg-accent text-accent-ink disabled:opacity-55 disabled:cursor-not-allowed hover:bg-accent-hover active:translate-y-px transition-[background-color,transform] duration-150 min-w-[40px] min-h-[40px] flex items-center justify-center cursor-pointer flex-shrink-0"
             >
               <Send className="w-4 h-4" />
             </button>
           </form>
 
-          <div className="text-center mt-2">
-            <span className="text-[10px] text-gray-400 dark:text-gray-500">
-              ComplyGH can make mistakes. Informational only, not legal advice. Verify against the official documents.
-            </span>
-          </div>
+          <p className="text-center mt-2 text-xs text-muted">
+            ComplyGH can make mistakes. Informational only, not legal advice.
+            Verify against the official documents.
+          </p>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
 
 const MessageBubble = ({ message }: { message: Message }) => {
   const isUser = message.role === "user";
 
+  if (isUser) {
+    return (
+      <div className="flex justify-end">
+        <div className="max-w-[85%] bg-paper-3 border border-rule text-ink rounded-card px-4 py-3 text-base break-words">
+          <p className="whitespace-pre-wrap leading-relaxed">
+            {message.content}
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      className={`flex space-x-3 ${isUser ? "justify-end" : "justify-start"} group`}
-    >
-      {!isUser && (
-        <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-1 shadow-xs">
-          <ShieldCheck className="w-5 h-5 text-accent" />
+    <article className="border border-rule rounded-card bg-paper-2 overflow-hidden">
+      {/* Dossier Header */}
+      <div className="px-4 py-2.5 border-b border-rule flex items-center justify-between gap-3 bg-paper-2">
+        <div className="flex items-center gap-2 min-w-0">
+          <span className="w-6 h-6 rounded-pill bg-brand text-brand-ink flex items-center justify-center flex-shrink-0">
+            <ComplyMark className="w-3.5 h-3.5" />
+          </span>
+          <span className="text-xs font-medium text-ink-2 truncate">
+            Regulatory response
+          </span>
+        </div>
+        <CopyButton text={message.content} />
+      </div>
+
+      {/* Answer Body */}
+      <div className="p-4 sm:p-5 text-ink prose prose-comply max-w-none text-base break-words overflow-x-auto">
+        <ReactMarkdown>{message.content}</ReactMarkdown>
+      </div>
+
+      {/* Statutory Citations */}
+      {message.sources && message.sources.length > 0 && (
+        <div className="border-t border-rule bg-paper-3/40">
+          <div className="px-4 sm:px-5 py-2.5 flex items-center justify-between border-b border-rule">
+            <h2 className="text-xs font-medium text-ink-2">
+              Sources retrieved
+            </h2>
+            <span className="measured text-xs text-muted">
+              {String(message.sources.length).padStart(2, "0")} citations
+            </span>
+          </div>
+          <div className="divide-y divide-rule">
+            {message.sources.map((src, i) => (
+              <SourceCard key={i} source={src} index={i + 1} />
+            ))}
+          </div>
         </div>
       )}
-
-      <div
-        className={`max-w-[85%] ${isUser
-            ? "bg-gray-100 dark:bg-gray-800 text-foreground rounded-2xl rounded-tr-sm px-5 py-3 text-[14px] sm:text-[15px] break-words"
-            : "w-full min-w-0"
-          }`}
-      >
-        {isUser ? (
-          <p className="whitespace-pre-wrap leading-relaxed">{message.content}</p>
-        ) : (
-          <div className="bg-card border border-border p-4 sm:p-5 rounded-2xl rounded-tl-sm shadow-sm text-foreground prose dark:prose-invert max-w-none text-[14px] sm:text-[15px] break-words overflow-x-auto">
-            <ReactMarkdown>{message.content}</ReactMarkdown>
-
-            <div className="mt-4 flex justify-end border-t border-border pt-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity">
-              <CopyButton text={message.content} />
-            </div>
-
-            {message.sources && message.sources.length > 0 && (
-              <div className="mt-4 pt-4 border-t border-border">
-                <h4 className="text-xs font-semibold uppercase text-gray-500 mb-3 tracking-wider">Sources Retrieved</h4>
-                <div className="space-y-2">
-                  {message.sources.map((src, i) => (
-                    <SourceCard key={i} source={src} index={i + 1} />
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-        )}
-      </div>
-    </motion.div>
+    </article>
   );
 };
 
 const SourceCard = ({ source, index }: { source: Source; index: number }) => {
   const [open, setOpen] = useState(false);
+
   let apiUrl = process.env.NEXT_PUBLIC_API_URL;
   if (!apiUrl) {
     apiUrl = "http://127.0.0.1:8000";
@@ -348,73 +473,87 @@ const SourceCard = ({ source, index }: { source: Source; index: number }) => {
     }
   }
   apiUrl = apiUrl.replace(/\/+$/, "");
-  const pdfUrl = `${apiUrl}/pdfs/${encodeURIComponent(source.source_filename)}#page=${source.page_number}`;
+  const pdfUrl = `${apiUrl}/pdfs/${encodeURIComponent(
+    source.source_filename
+  )}#page=${source.page_number}`;
 
   return (
-    <div className="border border-border rounded-xl overflow-hidden text-sm bg-gray-50/70 dark:bg-gray-900/40">
+    <div className="text-sm">
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between p-3 text-left hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors min-h-[44px]"
+        aria-expanded={open}
+        className="w-full flex items-center justify-between px-4 py-2.5 text-left hover:bg-paper-3 active:translate-y-px transition-[background-color,transform] min-h-[44px] gap-3 cursor-pointer"
       >
-        <div className="flex items-center space-x-2 overflow-hidden flex-1 mr-2">
-          <span className="bg-primary/10 text-primary dark:text-accent font-mono text-xs px-2 py-0.5 rounded font-semibold flex-shrink-0">
+        <div className="flex items-center gap-2.5 overflow-hidden flex-1 min-w-0">
+          <span className="measured bg-cool-soft text-cool text-xs px-2 py-0.5 rounded font-medium flex-shrink-0">
             [{index}]
           </span>
-          <span className="font-medium truncate text-foreground">{source.source_filename} (Pg {source.page_number})</span>
+          <span className="font-medium truncate text-ink">
+            {source.source_filename}
+          </span>
+          <span className="measured text-xs text-muted flex-shrink-0">
+            Pg {source.page_number}
+          </span>
         </div>
-        {open ? <ChevronDown className="w-4 h-4 text-gray-500 flex-shrink-0" /> : <ChevronRight className="w-4 h-4 text-gray-500 flex-shrink-0" />}
+        {open ? (
+          <ChevronDown className="w-4 h-4 text-muted flex-shrink-0" />
+        ) : (
+          <ChevronRight className="w-4 h-4 text-muted flex-shrink-0" />
+        )}
       </button>
 
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            className="px-3.5 pb-3.5 pt-1.5 border-t border-border bg-card"
-          >
-            <div className="flex items-center justify-between mb-1.5">
-              <p className="text-xs font-semibold text-gray-500 truncate mr-2">
-                {source.section_title !== "Unknown" ? source.section_title : `Page ${source.page_number}`}
-              </p>
-              <a
-                href={pdfUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[11px] text-primary dark:text-accent font-medium hover:underline flex items-center space-x-1 flex-shrink-0 min-h-[30px]"
-              >
-                <Globe className="w-3 h-3" />
-                <span>Open PDF</span>
-              </a>
-            </div>
-            <p className="text-xs text-gray-600 dark:text-gray-400 line-clamp-4 leading-relaxed font-serif italic bg-gray-50 dark:bg-gray-800/40 p-2.5 rounded-lg border border-border/50">
-              &ldquo;{source.text}&rdquo;
+      {open && (
+        <div className="px-4 pb-4 pt-3 border-t border-rule bg-paper-3 space-y-2">
+          <div className="flex items-center justify-between gap-2">
+            <p className="text-xs font-medium text-ink-2 truncate flex items-center gap-1.5 min-w-0">
+              <FileText className="w-3.5 h-3.5 text-muted flex-shrink-0" />
+              <span className="truncate">
+                {source.section_title !== "Unknown"
+                  ? source.section_title
+                  : `Page ${source.page_number}`}
+              </span>
             </p>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            <a
+              href={pdfUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hit-target text-xs text-cool font-medium hover:underline active:translate-y-px inline-flex items-center gap-1 flex-shrink-0 min-h-[32px] px-1.5 rounded-pill transition-transform"
+            >
+              <span>Open PDF</span>
+              <ExternalLink className="w-3 h-3" />
+            </a>
+          </div>
+          <p className="text-xs text-ink-2 leading-relaxed">
+            &ldquo;{source.text}&rdquo;
+          </p>
+        </div>
+      )}
     </div>
   );
 };
 
 const CopyButton = ({ text }: { text: string }) => {
   const [copied, setCopied] = useState(false);
+
   const handleCopy = () => {
     navigator.clipboard.writeText(text);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
+
   return (
     <button
       type="button"
       onClick={handleCopy}
-      className="flex items-center space-x-1 text-xs text-gray-500 hover:text-primary dark:hover:text-accent transition-colors p-1.5 rounded min-h-[32px]"
+      className="hit-target inline-flex items-center gap-1.5 text-xs font-medium text-muted hover:text-ink active:translate-y-px transition-[background-color,color,transform] px-2 py-1 rounded-pill hover:bg-paper-3 min-h-[32px] cursor-pointer flex-shrink-0"
     >
-      {copied ? <CheckCircle2 className="w-4 h-4 text-emerald-500" /> : <Copy className="w-4 h-4" />}
-      <span>{copied ? "Copied!" : "Copy"}</span>
+      {copied ? (
+        <CheckCircle2 className="w-3.5 h-3.5 text-ok" />
+      ) : (
+        <Copy className="w-3.5 h-3.5" />
+      )}
+      <span>{copied ? "Copied" : "Copy"}</span>
     </button>
   );
 };
-
-

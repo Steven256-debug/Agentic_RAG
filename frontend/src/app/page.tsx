@@ -12,6 +12,7 @@ export default function Home() {
   const [error, setError] = useState<string | null>(null);
   const [isWarmingUp, setIsWarmingUp] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isDesktopRailOpen, setIsDesktopRailOpen] = useState(true);
   const [isTemporary, setIsTemporary] = useState(false);
 
   useEffect(() => {
@@ -86,7 +87,7 @@ export default function Home() {
       sessionId = crypto.randomUUID();
       const newSession: ChatSession = {
         id: sessionId,
-        title: content.length > 30 ? content.slice(0, 30) + "..." : content,
+        title: content.length > 30 ? content.slice(0, 30) + "…" : content,
         messages: [userMsg],
         updatedAt: Date.now(),
         isTemporary,
@@ -151,7 +152,7 @@ export default function Home() {
       } catch (firstErr: unknown) {
         const e = firstErr as Error;
         if (e.name === "AbortError") {
-          // Cold start detected — show warm-up notice and retry with a longer timeout
+          // Cold start detected: show warm-up notice and retry with a longer timeout
           setIsWarmingUp(true);
           try {
             response = await doFetch(90000);
@@ -217,7 +218,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex h-[100dvh] w-full overflow-hidden bg-background">
+    <div className="flex h-[100dvh] w-full overflow-x-clip bg-paper text-ink">
       <Sidebar
         sessions={sessions}
         currentSessionId={currentSessionId}
@@ -229,11 +230,17 @@ export default function Home() {
         onDeleteSession={handleDeleteSession}
         isSidebarOpen={isSidebarOpen}
         setIsSidebarOpen={setIsSidebarOpen}
+        isDesktopRailOpen={isDesktopRailOpen}
+        setIsDesktopRailOpen={setIsDesktopRailOpen}
         isTemporary={isTemporary}
         setIsTemporary={setIsTemporary}
       />
       <ChatArea
         messages={currentMessages}
+        currentSessionTitle={currentSession?.title ?? null}
+        isTemporary={isTemporary}
+        isDesktopRailOpen={isDesktopRailOpen}
+        onToggleDesktopRail={() => setIsDesktopRailOpen((prev) => !prev)}
         onSendMessage={handleSendMessage}
         isLoading={isLoading}
         isWarmingUp={isWarmingUp}
@@ -250,4 +257,3 @@ export default function Home() {
     </div>
   );
 }
-

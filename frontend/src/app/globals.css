@@ -1,72 +1,123 @@
+/* Hallmark · shape: app screen · genre: modern-minimal · theme: Console (deal 3/3, seed regulatory-compliance-workspace-financial-be2f·1e60ac47·2026-11-26·r0) · redesign: full
+ * nav: collapsible session rail and workspace bar · signature: statutory inquiry ledger and cited compliance dossiers · states: loading, warm-up, empty, error, full · console: paper+graphite
+ * axes: dark/grotesk-sans/chromatic-amber · posture: restrained · modes: light+dark · contrast: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R4 V5 · weakest: R, retired decorative bounces, backdrop blurs, and duplicate card shells so one hairline surface carries the workspace */
+/* Hallmark · finish-review: subagent · 8 findings · 8 resolved · gap: no render screenshots (puppeteer-core missing) */
+/* Hallmark · answered F16 · selection, caret-color, and scrollbar-color are themed via tokens in base.css */
 @import "tailwindcss";
+@import "./tokens.css";
+@import "./base.css" layer(base);
 @plugin "@tailwindcss/typography";
 @custom-variant dark (&:is(.dark *));
 
-@theme {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-primary: #0B3D2E;
-  --color-primary-light: #125a44;
-  --color-accent: #F5B700;
-  --color-accent-hover: #d9a100;
-  --color-sidebar: var(--sidebar-bg);
-  --color-card: var(--card-bg);
-  --color-border: var(--border-color);
-}
-
-@layer base {
-  :root {
-    --background: #FFFFFF;
-    --foreground: #0D0D0D;
-    --sidebar-bg: #F9F9F9;
-    --card-bg: #FFFFFF;
-    --border-color: #E5E5E5;
-  }
-
-  .dark {
-    --background: #212121;
-    --foreground: #ECECEC;
-    --sidebar-bg: #171717;
-    --card-bg: #212121;
-    --border-color: #333333;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color var(--dur-short) var(--ease-out), color var(--dur-short) var(--ease-out);
   -webkit-tap-highlight-color: transparent;
-  -webkit-font-smoothing: antialiased;
 }
 
-/* Safe area padding utilities */
 .pt-safe {
-  padding-top: max(1rem, env(safe-area-inset-top));
-}
-.pb-safe {
-  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+  padding-top: max(var(--space-md), env(safe-area-inset-top));
 }
 
-/* Mobile smooth scrolling */
+.pb-safe {
+  padding-bottom: max(var(--space-sm), env(safe-area-inset-bottom));
+}
+
 .smooth-scroll {
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar for chat */
-::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
+/* 44px minimum touch target expansion without altering compact button geometry */
+.hit-target {
+  position: relative;
 }
+
+.hit-target::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+}
+
+/* Measured statutory identifiers and figures */
+.measured {
+  font-family: var(--font-outlier);
+  font-variant-numeric: tabular-nums slashed-zero;
+}
+
+/* Compliance prose styling inside assistant dossiers */
+.prose-comply {
+  --tw-prose-body: var(--color-ink);
+  --tw-prose-headings: var(--color-ink);
+  --tw-prose-lead: var(--color-ink-2);
+  --tw-prose-links: var(--color-cool);
+  --tw-prose-bold: var(--color-ink);
+  --tw-prose-counters: var(--color-muted);
+  --tw-prose-bullets: var(--color-rule-2);
+  --tw-prose-hr: var(--color-rule);
+  --tw-prose-quotes: var(--color-ink-2);
+  --tw-prose-quote-borders: var(--color-cool);
+  --tw-prose-captions: var(--color-muted);
+  --tw-prose-code: var(--color-ink);
+  --tw-prose-pre-code: var(--color-ink);
+  --tw-prose-pre-bg: var(--color-paper-3);
+  --tw-prose-th-borders: var(--color-rule-2);
+  --tw-prose-td-borders: var(--color-rule);
+}
+
+.prose-comply :where(p, ul, ol, blockquote):not(:where([class~="not-prose"] *)) {
+  max-width: 65ch;
+}
+
+.prose-comply :where(h1, h2, h3, h4):not(:where([class~="not-prose"] *)) {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+}
+
+.prose-comply :where(code):not(:where(pre code, [class~="not-prose"] *)) {
+  font-family: var(--font-outlier);
+  font-size: 0.875em;
+  background: var(--color-paper-3);
+  border: 1px solid var(--color-rule);
+  border-radius: 4px;
+  padding: 0.12em 0.35em;
+}
+
+.prose-comply :where(code)::before,
+.prose-comply :where(code)::after {
+  content: none;
+}
+
+.prose-comply :where(table):not(:where([class~="not-prose"] *)) {
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+
+.prose-comply :where(th):not(:where([class~="not-prose"] *)) {
+  font-weight: 500;
+  color: var(--color-ink-2);
+  text-align: left;
+  padding: var(--space-xs) var(--space-sm);
+}
+
+.prose-comply :where(td):not(:where([class~="not-prose"] *)) {
+  padding: var(--space-xs) var(--space-sm);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom scrollbar mapped to Hallmark tokens */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
 ::-webkit-scrollbar-track {
   background: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: var(--color-rule-2);
   border-radius: 9999px;
 }
-.dark ::-webkit-scrollbar-thumb {
-  background: #334155;
-}
-

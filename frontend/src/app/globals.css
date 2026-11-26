@@ -1,5 +1,5 @@
 /* Hallmark · shape: app screen · genre: modern-minimal · theme: Console (deal 3/3, seed regulatory-compliance-workspace-financial-be2f·1e60ac47·2026-11-26·r0) · redesign: full
- * nav: collapsible session rail and workspace bar · signature: statutory inquiry ledger and cited compliance dossiers · states: loading, warm-up, empty, error, full · console: paper+graphite
+ * nav: collapsible session rail and workspace bar · signature: statutory inquiry cards and cited compliance dossiers · states: loading, warm-up, empty, error, full · console: paper+graphite
  * axes: dark/grotesk-sans/chromatic-amber · posture: restrained · modes: light+dark · contrast: pass · v2.0.0 */
 /* Hallmark · pre-emit critique: P5 H5 E5 S5 R4 V5 · weakest: R, retired decorative bounces, backdrop blurs, and duplicate card shells so one hairline surface carries the workspace */
 /* Hallmark · finish-review: subagent · 8 findings · 8 resolved · gap: no render screenshots (puppeteer-core missing) */
@@ -105,6 +105,118 @@ body {
 .prose-comply :where(td):not(:where([class~="not-prose"] *)) {
   padding: var(--space-xs) var(--space-sm);
   font-variant-numeric: tabular-nums;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Thinking indicator animations (ChatGPT + Claude inspired)         */
+/*  Pure transform + opacity; reduced-motion handled in base.css       */
+/* ------------------------------------------------------------------ */
+
+@keyframes thinking-beam {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(360%);
+  }
+}
+
+.thinking-beam {
+  animation: thinking-beam 1.75s var(--ease-in-out) infinite;
+}
+
+@keyframes thinking-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  75%,
+  100% {
+    transform: scale(1.38);
+    opacity: 0;
+  }
+}
+
+.thinking-ring {
+  animation: thinking-ring 2s var(--ease-out) infinite;
+}
+
+@keyframes thinking-breath {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.95);
+    opacity: 0.78;
+  }
+}
+
+.thinking-breath {
+  animation: thinking-breath 2s var(--ease-in-out) infinite;
+}
+
+@keyframes thinking-wave {
+  0%,
+  100% {
+    transform: scaleY(0.35);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.thinking-wave-bar {
+  transform-origin: center;
+  animation: thinking-wave 1.15s var(--ease-in-out) infinite;
+}
+
+.thinking-wave-bar:nth-child(1) {
+  animation-delay: 0ms;
+}
+
+.thinking-wave-bar:nth-child(2) {
+  animation-delay: 140ms;
+}
+
+.thinking-wave-bar:nth-child(3) {
+  animation-delay: 280ms;
+}
+
+.thinking-wave-bar:nth-child(4) {
+  animation-delay: 420ms;
+}
+
+@keyframes thinking-row-sheen {
+  0% {
+    transform: translateX(-110%);
+  }
+  100% {
+    transform: translateX(220%);
+  }
+}
+
+.thinking-row-sheen {
+  animation: thinking-row-sheen 2.1s var(--ease-in-out) infinite;
+}
+
+@keyframes thinking-step-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.84);
+    opacity: 0.5;
+  }
+}
+
+.thinking-step-pulse {
+  animation: thinking-step-pulse 1.5s var(--ease-in-out) infinite;
 }
 
 /* Custom scrollbar mapped to Hallmark tokens */

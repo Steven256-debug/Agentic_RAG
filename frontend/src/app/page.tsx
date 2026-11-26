@@ -202,6 +202,14 @@ export default function Home() {
         role: "assistant",
         content: data.answer,
         sources: data.sources,
+        latencySec:
+          typeof data.latency_sec === "number" ? data.latency_sec : undefined,
+        routedTo:
+          Array.isArray(data.routed_to) && data.routed_to.length > 0
+            ? data.routed_to
+            : undefined,
+        rewrittenQuery: data.rewritten_query || undefined,
+        reformulatedQuery: data.reformulated_query || undefined,
       };
 
       newSessions[sessionIndex].messages.push(assistantMsg);

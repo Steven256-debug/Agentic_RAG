@@ -13,9 +13,9 @@ import {
   Settings2,
   FileText,
   ExternalLink,
-  CornerDownLeft,
-  Loader2,
   AlertCircle,
+  ArrowDown,
+  GitBranch,
 } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import { ComplyMark } from "./Sidebar";
@@ -58,15 +58,34 @@ export default function ChatArea({
   const [corrective, setCorrective] = useState(false);
   const [routing, setRouting] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
+  const [showScrollBottom, setShowScrollBottom] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const settingsRef = useRef<HTMLDivElement>(null);
 
   const isEmpty = messages.length === 0;
+  const hasHistory = messages.length > 1;
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, isLoading]);
+
+  useEffect(() => {
+    const el = textareaRef.current;
+    if (!el) return;
+    el.style.height = "auto";
+    el.style.height = `${Math.min(el.scrollHeight, 150)}px`;
+    if (
+      input &&
+      STARTER_QUERIES.includes(input) &&
+      document.activeElement !== el
+    ) {
+      el.focus();
+      const len = el.value.length;
+      el.setSelectionRange(len, len);
+    }
+  }, [input]);
 
   useEffect(() => {
     if (!showSettings) return;
@@ -88,6 +107,17 @@ export default function ChatArea({
       window.removeEventListener("keydown", handleEsc);
     };
   }, [showSettings]);
+
+  const handleThreadScroll = () => {
+    const el = scrollContainerRef.current;
+    if (!el) return;
+    const distanceFromBottom = el.scrollHeight - el.scrollTop - el.clientHeight;
+    setShowScrollBottom(distanceFromBottom > 180);
+  };
+
+  const scrollToLatest = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   const handleSubmit = (e?: React.FormEvent) => {
     e?.preventDefault();
@@ -179,60 +209,36 @@ export default function ChatArea({
       </header>
 
       {isEmpty ? (
-        /* --- EMPTY WORKSPACE: STATUTORY INQUIRY LEDGER --- */
-        <div className="flex-1 flex flex-col justify-center px-4 sm:px-6 py-8 overflow-y-auto smooth-scroll">
-          <div className="w-full max-w-3xl mx-auto">
-            <div className="mb-8 flex items-start gap-4">
-              <div className="w-11 h-11 rounded-card bg-brand text-brand-ink flex items-center justify-center flex-shrink-0 mt-0.5">
-                <ComplyMark className="w-6 h-6" />
+        /* --- EMPTY STATE: CLASSIC STARTER QUERY CARDS --- */
+        <div className="flex-1 flex flex-col items-center justify-center px-4 sm:px-6 py-8 overflow-y-auto smooth-scroll">
+          <div className="w-full max-w-2xl mx-auto text-center">
+            <div className="mb-8 flex flex-col items-center">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-card bg-brand text-brand-ink flex items-center justify-center mb-4">
+                <ComplyMark className="w-8 h-8 sm:w-9 sm:h-9" />
               </div>
-              <div className="min-w-0">
-                <h1 className="font-display text-2xl sm:text-3xl font-medium tracking-[-0.03em] text-ink mb-1.5">
-                  ComplyGH
-                </h1>
-                <p className="text-ink-2 text-base leading-relaxed">
-                  Your AI guide to Ghana&apos;s financial regulations
-                </p>
-              </div>
+              <h1 className="font-display text-3xl sm:text-4xl font-medium tracking-[-0.03em] text-ink mb-2">
+                ComplyGH
+              </h1>
+              <p className="text-ink-2 text-base sm:text-lg max-w-md leading-relaxed">
+                Your AI guide to Ghana&apos;s financial regulations
+              </p>
             </div>
 
-            <section
-              aria-labelledby="suggested-queries-heading"
-              className="border border-rule rounded-card bg-paper-2 overflow-hidden divide-y divide-rule"
-            >
-              <div className="px-4 py-2.5 bg-paper-3 flex items-center justify-between">
-                <h2
-                  id="suggested-queries-heading"
-                  className="text-xs font-medium text-ink-2"
-                >
-                  Suggested compliance queries
-                </h2>
-                <span className="measured text-xs text-muted">
-                  04 prompts
-                </span>
-              </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
               {STARTER_QUERIES.map((q, i) => (
                 <button
                   key={i}
                   type="button"
                   onClick={() => setInput(q)}
-                  className="group w-full px-4 py-3.5 flex items-center justify-between gap-4 text-left hover:bg-paper-3 active:translate-y-px transition-[background-color,transform] min-h-[52px] cursor-pointer"
+                  className="p-4 bg-paper-2 border border-rule rounded-card text-left hover:bg-paper-3 hover:border-accent active:translate-y-px transition-[background-color,border-color,transform] duration-150 text-sm text-ink leading-snug min-h-[60px] flex items-center cursor-pointer"
                 >
-                  <div className="flex items-baseline gap-3.5 min-w-0">
-                    <span className="measured text-xs font-medium text-cool flex-shrink-0">
-                      0{i + 1}
-                    </span>
-                    <span className="text-sm sm:text-base text-ink leading-snug">
-                      {q}
-                    </span>
-                  </div>
-                  <CornerDownLeft className="w-4 h-4 text-muted group-hover:text-accent-text flex-shrink-0 transition-colors" />
+                  {q}
                 </button>
               ))}
-            </section>
+            </div>
 
             {error && (
-              <div className="mt-4 p-3.5 rounded-card bg-bad-soft border border-bad text-sm text-bad flex items-center justify-between gap-3">
+              <div className="mt-4 p-3.5 rounded-card bg-bad-soft border border-bad text-sm text-bad flex items-center justify-between gap-3 text-left">
                 <span className="flex items-center gap-2 min-w-0">
                   <AlertCircle className="w-4 h-4 flex-shrink-0" />
                   <span>{error}</span>
@@ -250,7 +256,11 @@ export default function ChatArea({
         </div>
       ) : (
         /* --- ACTIVE WORKSPACE THREAD --- */
-        <div className="flex-1 overflow-y-auto smooth-scroll px-4 sm:px-6 py-6">
+        <div
+          ref={scrollContainerRef}
+          onScroll={handleThreadScroll}
+          className="flex-1 overflow-y-auto smooth-scroll px-4 sm:px-6 py-6 relative"
+        >
           <h1 className="visually-hidden">{activeTitle}</h1>
           <div className="max-w-3xl mx-auto space-y-6 pb-8">
             {messages.map((msg, idx) => (
@@ -258,22 +268,12 @@ export default function ChatArea({
             ))}
 
             {isLoading && (
-              <div className="border border-rule rounded-card bg-paper-2 p-4 flex items-start gap-3">
-                <Loader2 className="w-4 h-4 text-cool animate-spin motion-reduce:animate-none flex-shrink-0 mt-0.5" />
-                <div className="space-y-1 min-w-0">
-                  <p className="text-sm font-medium text-ink">
-                    {isWarmingUp
-                      ? "Waking up server…"
-                      : "Consulting BOG regulations…"}
-                  </p>
-                  {isWarmingUp && (
-                    <p className="text-xs text-cool leading-relaxed">
-                      Server was asleep, retrying automatically. This takes about
-                      30s on first load.
-                    </p>
-                  )}
-                </div>
-              </div>
+              <ThinkingIndicator
+                isWarmingUp={isWarmingUp}
+                routing={routing}
+                corrective={corrective}
+                hasHistory={hasHistory}
+              />
             )}
 
             {error && (
@@ -294,6 +294,20 @@ export default function ChatArea({
 
             <div ref={messagesEndRef} className="h-2" />
           </div>
+
+          {showScrollBottom && (
+            <div className="sticky bottom-3 flex justify-center pointer-events-none">
+              <button
+                type="button"
+                onClick={scrollToLatest}
+                aria-label="Scroll to latest message"
+                className="pointer-events-auto inline-flex items-center gap-1.5 px-3 py-1.5 rounded-pill bg-paper-2 border border-rule-2 text-xs font-medium text-ink-2 hover:text-ink hover:bg-paper-3 active:translate-y-px transition-[background-color,color,transform] cursor-pointer min-h-[36px]"
+              >
+                <ArrowDown className="w-3.5 h-3.5" />
+                <span>Latest</span>
+              </button>
+            </div>
+          )}
         </div>
       )}
 
@@ -402,8 +416,191 @@ export default function ChatArea({
   );
 }
 
+/* ------------------------------------------------------------------ */
+/*  Thinking Indicator — ChatGPT cadence + Claude staged reasoning    */
+/* ------------------------------------------------------------------ */
+
+const ThinkingIndicator = ({
+  isWarmingUp,
+  routing,
+  corrective,
+  hasHistory,
+}: {
+  isWarmingUp: boolean;
+  routing: boolean;
+  corrective: boolean;
+  hasHistory: boolean;
+}) => {
+  const [elapsedMs, setElapsedMs] = useState(0);
+
+  useEffect(() => {
+    const start = Date.now();
+    const timer = window.setInterval(() => {
+      setElapsedMs(Date.now() - start);
+    }, 100);
+    return () => window.clearInterval(timer);
+  }, []);
+
+  const stages = [
+    {
+      label: hasHistory
+        ? "Rewriting follow-up with thread context"
+        : "Parsing inquiry & statutory scope",
+      detail: "Normalizing regulatory terms and section references",
+    },
+    {
+      label: routing
+        ? "Routing across Bank of Ghana Acts"
+        : "Searching indexed Ghana statutes & directives",
+      detail: "Hybrid semantic and lexical section retrieval",
+    },
+    {
+      label: corrective
+        ? "Verifying & refining retrieved context"
+        : "Cross-referencing clauses & drafting answer",
+      detail: "Grounding claims against retrieved page excerpts",
+    },
+  ];
+
+  const activeStage = elapsedMs >= 4200 ? 2 : elapsedMs >= 1600 ? 1 : 0;
+  const elapsedFormatted = `${(elapsedMs / 1000).toFixed(1)}s`;
+
+  return (
+    <div
+      role="status"
+      aria-live="polite"
+      className="border border-rule rounded-card bg-paper-2 overflow-hidden"
+    >
+      {/* Top scanning beam */}
+      <div className="h-[2px] w-full overflow-hidden bg-rule">
+        <div
+          className={`thinking-beam motion-reduce:animate-none h-full w-1/3 ${
+            isWarmingUp ? "bg-accent" : "bg-cool"
+          }`}
+        />
+      </div>
+
+      {/* Reasoning Header */}
+      <div className="px-4 py-3 border-b border-rule flex items-center justify-between gap-3">
+        <div className="flex items-center gap-3 min-w-0">
+          {/* Concentric breathing ComplyMark */}
+          <div className="relative flex-shrink-0">
+            <span
+              aria-hidden="true"
+              className={`thinking-ring motion-reduce:animate-none absolute inset-0 rounded-pill border ${
+                isWarmingUp ? "border-accent" : "border-cool"
+              }`}
+            />
+            <div className="thinking-breath motion-reduce:animate-none relative w-7 h-7 rounded-pill bg-brand text-brand-ink flex items-center justify-center">
+              <ComplyMark className="w-4 h-4" />
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2.5 min-w-0">
+            <span className="text-sm font-medium text-ink truncate">
+              {isWarmingUp
+                ? "Waking up ComplyGH server"
+                : "Consulting BoG regulations"}
+            </span>
+
+            {/* 4-bar harmonic cadence indicator */}
+            <span
+              aria-hidden="true"
+              className="inline-flex items-center gap-[3px] h-3.5 flex-shrink-0"
+            >
+              <span className="thinking-wave-bar motion-reduce:animate-none w-[2px] h-full rounded-full bg-cool" />
+              <span className="thinking-wave-bar motion-reduce:animate-none w-[2px] h-full rounded-full bg-cool" />
+              <span className="thinking-wave-bar motion-reduce:animate-none w-[2px] h-full rounded-full bg-cool" />
+              <span className="thinking-wave-bar motion-reduce:animate-none w-[2px] h-full rounded-full bg-cool" />
+            </span>
+          </div>
+        </div>
+
+        <span className="measured text-xs text-cool flex-shrink-0">
+          {elapsedFormatted}
+        </span>
+      </div>
+
+      {/* Stage Trace Body */}
+      <div className="p-4">
+        {isWarmingUp ? (
+          <div className="border-l-2 border-accent pl-3.5 py-0.5 space-y-1">
+            <p className="text-sm font-medium text-accent-text">
+              Cold start detected, retrying automatically
+            </p>
+            <p className="text-xs text-muted leading-relaxed">
+              The server instance slept during inactivity. Initial wake-up takes
+              around 30s before statutory retrieval begins.
+            </p>
+          </div>
+        ) : (
+          <ol className="border-l border-rule-2 ml-2 pl-4 space-y-2.5">
+            {stages.map((stage, idx) => {
+              const isDone = idx < activeStage;
+              const isCurrent = idx === activeStage;
+              return (
+                <li
+                  key={stage.label}
+                  className={`relative rounded-pill transition-colors duration-200 ${
+                    isCurrent ? "bg-paper-3 px-3 py-2 overflow-hidden" : "px-1 py-0.5"
+                  }`}
+                >
+                  {isCurrent && (
+                    <span
+                      aria-hidden="true"
+                      className="thinking-row-sheen motion-reduce:animate-none pointer-events-none absolute inset-y-0 left-0 w-1/2 bg-cool/10"
+                    />
+                  )}
+                  <div className="relative flex items-start gap-2.5">
+                    {isDone ? (
+                      <CheckCircle2 className="w-3.5 h-3.5 text-ok flex-shrink-0 mt-0.5" />
+                    ) : isCurrent ? (
+                      <span
+                        aria-hidden="true"
+                        className="thinking-step-pulse motion-reduce:animate-none w-3.5 h-3.5 rounded-full border-2 border-cool flex-shrink-0 mt-0.5"
+                      />
+                    ) : (
+                      <span
+                        aria-hidden="true"
+                        className="w-3.5 h-3.5 rounded-full border border-rule-2 flex-shrink-0 mt-0.5"
+                      />
+                    )}
+                    <div className="min-w-0">
+                      <p
+                        className={`text-xs font-medium leading-snug ${
+                          isDone
+                            ? "text-ink-2"
+                            : isCurrent
+                            ? "text-ink"
+                            : "text-muted"
+                        }`}
+                      >
+                        {stage.label}
+                      </p>
+                      {isCurrent && (
+                        <p className="text-xs text-muted mt-0.5 leading-snug">
+                          {stage.detail}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                </li>
+              );
+            })}
+          </ol>
+        )}
+      </div>
+    </div>
+  );
+};
+
+/* ------------------------------------------------------------------ */
+/*  Message Bubble & Dossier Citations                                */
+/* ------------------------------------------------------------------ */
+
 const MessageBubble = ({ message }: { message: Message }) => {
   const isUser = message.role === "user";
+  const [traceOpen, setTraceOpen] = useState(false);
 
   if (isUser) {
     return (
@@ -417,6 +614,12 @@ const MessageBubble = ({ message }: { message: Message }) => {
     );
   }
 
+  const hasTrace = Boolean(
+    message.routedTo?.length ||
+      message.rewrittenQuery ||
+      message.reformulatedQuery
+  );
+
   return (
     <article className="border border-rule rounded-card bg-paper-2 overflow-hidden">
       {/* Dossier Header */}
@@ -429,13 +632,69 @@ const MessageBubble = ({ message }: { message: Message }) => {
             Regulatory response
           </span>
         </div>
-        <CopyButton text={message.content} />
+
+        <div className="flex items-center gap-2 flex-shrink-0">
+          {typeof message.latencySec === "number" && (
+            <span
+              className="measured text-xs text-muted"
+              title="Response time"
+            >
+              {message.latencySec.toFixed(1)}s
+            </span>
+          )}
+          <CopyButton text={message.content} />
+        </div>
       </div>
 
       {/* Answer Body */}
       <div className="p-4 sm:p-5 text-ink prose prose-comply max-w-none text-base break-words overflow-x-auto">
         <ReactMarkdown>{message.content}</ReactMarkdown>
       </div>
+
+      {/* Optional Retrieval Trace (only when backend returned trace metadata) */}
+      {hasTrace && (
+        <div className="border-t border-rule bg-paper-3/30">
+          <button
+            type="button"
+            onClick={() => setTraceOpen(!traceOpen)}
+            aria-expanded={traceOpen}
+            className="w-full px-4 sm:px-5 py-2 flex items-center justify-between gap-2 text-xs text-muted hover:text-ink hover:bg-paper-3 transition-colors min-h-[38px] cursor-pointer"
+          >
+            <span className="inline-flex items-center gap-1.5 font-medium">
+              <GitBranch className="w-3.5 h-3.5 text-cool" />
+              <span>Retrieval trace</span>
+            </span>
+            {traceOpen ? (
+              <ChevronDown className="w-3.5 h-3.5 flex-shrink-0" />
+            ) : (
+              <ChevronRight className="w-3.5 h-3.5 flex-shrink-0" />
+            )}
+          </button>
+
+          {traceOpen && (
+            <div className="px-4 sm:px-5 pb-3 pt-1 space-y-1.5 text-xs border-t border-rule bg-paper-3/50">
+              {message.rewrittenQuery && (
+                <p className="text-ink-2">
+                  <span className="text-muted font-medium">Rewritten query: </span>
+                  {message.rewrittenQuery}
+                </p>
+              )}
+              {message.reformulatedQuery && (
+                <p className="text-ink-2">
+                  <span className="text-muted font-medium">Corrective query: </span>
+                  {message.reformulatedQuery}
+                </p>
+              )}
+              {message.routedTo && message.routedTo.length > 0 && (
+                <p className="text-ink-2">
+                  <span className="text-muted font-medium">Routed statutes: </span>
+                  {message.routedTo.join(", ")}
+                </p>
+              )}
+            </div>
+          )}
+        </div>
+      )}
 
       {/* Statutory Citations */}
       {message.sources && message.sources.length > 0 && (

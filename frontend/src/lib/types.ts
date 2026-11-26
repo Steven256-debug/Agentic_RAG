@@ -9,6 +9,10 @@ export interface Message {
   role: "user" | "assistant";
   content: string;
   sources?: Source[];
+  latencySec?: number;
+  routedTo?: string[];
+  rewrittenQuery?: string;
+  reformulatedQuery?: string;
 }
 
 export interface ChatSession {

@@ -134,12 +134,11 @@ class NeonConnectionPool:
         self._current_size = 0
 
     def _create_connection(self):
-        conn = psycopg.connect(
-            self.dsn,
-            autocommit=True,
-            connect_timeout=10,
-            options="-c statement_timeout=15000",
-        )
+        conn = psycopg.connect(self.dsn, autocommit=True, connect_timeout=10)
+        try:
+            conn.execute("SET statement_timeout = '15s';")
+        except Exception:
+            pass
         register_vector(conn)
         return conn
 
@@ -628,6 +627,26 @@ class RAGPipeline:
                 cur.execute(sql, all_params)
                 rows = cur.fetchall()
 
+        if not rows and routing_filter:
+            logger.info("Routing filter returned 0 results. Retrying retrieval across all documents.")
+            return self.retrieve_neon(
+                query=query,
+                top_k=top_k,
+                routing_filter=None,
+                use_hybrid=use_hybrid,
+                institution_type=institution_type
+            )
+
+        if not rows and use_hybrid:
+            logger.info("Hybrid retrieval returned 0 results. Falling back to pure dense vector retrieval.")
+            return self.retrieve_neon(
+                query=query,
+                top_k=top_k,
+                routing_filter=routing_filter,
+                use_hybrid=False,
+                institution_type=institution_type
+            )
+
         docs = []
         metas = []
         dists = []
@@ -865,6 +884,18 @@ class RAGPipeline:
             use_hybrid=use_hybrid,
             institution_type=institution_type
         )
+
+        # Fallback to original user question if rewritten conversational query yielded 0 results
+        if not docs and rewritten_query and rewritten_query != question:
+            logger.info("Rewritten query returned 0 docs; falling back to original user question.")
+            active_query = question
+            docs, metas, dists = self.retrieve(
+                active_query,
+                top_k=top_k,
+                routing_filter=routing_filter,
+                use_hybrid=use_hybrid,
+                institution_type=institution_type
+            )
 
         if not docs:
             return {

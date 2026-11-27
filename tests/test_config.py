@@ -25,6 +25,7 @@ class TestConfig(unittest.TestCase):
         self.assertIn("ComplyGH", SYSTEM_PROMPT)
         self.assertIn("Ghanaian financial regulations", SYSTEM_PROMPT)
         self.assertIn("cite the exact source document name", SYSTEM_PROMPT)
+        self.assertIn("untrusted data", SYSTEM_PROMPT)
 
     def test_allowed_origins(self):
         self.assertIsInstance(ALLOWED_ORIGINS, list)

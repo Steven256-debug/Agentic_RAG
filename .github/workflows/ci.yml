@@ -33,6 +33,10 @@ jobs:
         # Exit-zero treats all errors as warnings
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
         
+    - name: Run Unit Tests
+      run: |
+        python -m unittest discover -s tests -v
+
     - name: Build Vector Database
       # This step rebuilds the ChromaDB vector store from the raw PDFs in the repo
       run: |

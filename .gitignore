@@ -1,24 +1,33 @@
 # Python
 __pycache__/
-*.pyc
-*.pyo
+*.py[cod]
 *.pyd
 .Python
-env/
+.venv/
 venv/
-.env
+env/
 
-# Data
-data/raw/
+# Secrets and local environment
+.env
+.env.*.local
+
+# Data and generated indexes (official source documents may be tracked intentionally)
 data/raw_pdfs/
-data/processed/
 data/chunks/
 data/vectordb/
 data/vectordb_copy/
 data/chat_history.json
 data/eval_results.json
-data/archive_duplicates/
 
-# IDE
+# Node / Next.js
+node_modules/
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.vercel/
+
+# IDE and OS files
 .vscode/
 .idea/
+.DS_Store
+Thumbs.db
